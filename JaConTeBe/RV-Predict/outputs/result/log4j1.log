@@ -1,0 +1,13 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict1838936079406883949
+[RV-Predict] Finished retransforming preloaded classes.
+Exception in thread "main" java.lang.NoClassDefFoundError: edu/illinois/jacontebe/framework/Reporter
+	at Test44032.main(Test44032.java:65)
+Caused by: java.lang.ClassNotFoundException: edu.illinois.jacontebe.framework.Reporter
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 1 more
+No races found.

@@ -1,0 +1,16 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict7597475962021135359
+[RV-Predict] Finished retransforming preloaded classes.
+********************************
+Starting test: derby5447
+Expected bug type: deadlock
+********************************
+
+=============Deadlock detected:==============
+"Thread-2" Id=30 BLOCKED on org.apache.derby.impl.store.raw.data.StoredPage@37aa476 owned by "Thread-1" Id=29
+
+
+"Thread-1" Id=29 BLOCKED on org.apache.derby.impl.store.raw.data.BaseContainerHandle@55fcb21a owned by "Thread-2" Id=30
+
+

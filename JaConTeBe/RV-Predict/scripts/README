@@ -1,0 +1,4 @@
+1. set jacontebe variable to "xxx/softwaretesting/JaConTeBe"
+2. run multiinstall.sh
+3. run multitest.sh
+4. results will be under /softwaretesting/JaConTeBe/outputs/results/

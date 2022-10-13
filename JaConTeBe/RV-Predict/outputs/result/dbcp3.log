@@ -1,0 +1,24 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict9171794134439261545
+[RV-Predict] Finished retransforming preloaded classes.
+********************************
+Starting test: dbcp369
+Expected bug type: race
+********************************
+
+java.util.ConcurrentModificationException
+	at java.util.HashMap$HashIterator.nextNode(HashMap.java:1469)
+	at java.util.HashMap$KeyIterator.next(HashMap.java:1493)
+	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.lambda$rvPredictIteratorNext$1(RVPredictRuntime.java:656)
+	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionAccess(RVPredictRuntime.java:1347)
+	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionReadAccess(RVPredictRuntime.java:1240)
+	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.readUsingIterator(RVPredictRuntime.java:1382)
+	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictIteratorNext(RVPredictRuntime.java:655)
+	at org.apache.commons.dbcp.datasources.InstanceKeyObjectFactory.registerNewInstance(InstanceKeyObjectFactory.java:50)
+	at org.apache.commons.dbcp.datasources.Dbcp369$1.run(Dbcp369.java:81)
+	at java.lang.Thread.run(Thread.java:750)
+[RV-Predict] Error: Window timeout.
+
+Finished test: Bug has been reproduced successfully.
+No races found.

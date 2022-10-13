@@ -1,0 +1,6 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict8623288460707501665
+[RV-Predict] Finished retransforming preloaded classes.
+Error: Could not find or load main class junit.textui.TestRunner
+No races found.

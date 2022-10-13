@@ -1,0 +1,11 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict3092486128364806597
+[RV-Predict] Finished retransforming preloaded classes.
+********************************
+Starting test: groovy4736
+Expected bug type: deadlock
+This test should finish in 10 seconds.
+********************************
+
+Program has been forced to exit from deadlock.

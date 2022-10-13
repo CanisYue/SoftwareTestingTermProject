@@ -1,0 +1,9 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict8129471712847919293
+[RV-Predict] Finished retransforming preloaded classes.
+********************************
+Starting test: groovy5198
+Expected bug type: race
+********************************
+
