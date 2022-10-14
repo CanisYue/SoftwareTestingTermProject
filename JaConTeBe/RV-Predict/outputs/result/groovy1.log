@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict2220898891253788903
+[RV-Predict] Log directory: /tmp/rv-predict2482184834470468663
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: groovy3495
@@ -9,10 +9,10 @@ Expected bug type: race
 
 java.lang.LinkageError: loader (instance of  org/codehaus/groovy/tools/RootLoader): attempted  duplicate class definition for name: "sun/awt/HKSCS"
 	at java.lang.ClassLoader.defineClass1(Native Method)
-	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
 
-Finished test: Bug has been reproduced successfully.	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+Finished test: Bug has been reproduced successfully.	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
 
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
 	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
 	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
 	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)

@@ -1,6 +1,10 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict8623288460707501665
+[RV-Predict] Log directory: /tmp/rv-predict4612299507425295747
 [RV-Predict] Finished retransforming preloaded classes.
-Error: Could not find or load main class junit.textui.TestRunner
-No races found.
+.********************************
+Starting test: lucene2783
+Expected bug type: notify-wait deadlock
+This test should finish in 30 seconds.
+********************************
+

@@ -1,13 +1,17 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict1102509956835108843
+[RV-Predict] Log directory: /tmp/rv-predict1300888688018281255
 [RV-Predict] Finished retransforming preloaded classes.
-Exception in thread "main" java.lang.NoClassDefFoundError: edu/illinois/jacontebe/framework/Reporter
-	at Test6648001.main(Test6648001.java:71)
-Caused by: java.lang.ClassNotFoundException: edu.illinois.jacontebe.framework.Reporter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	... 1 more
-No races found.
+********************************
+Starting test: jdk6648001
+Expected bug type: wait-notify deadlock
+This test should finish in 30 seconds.
+********************************
+
+========Notice!=========
+This bug has been fixed since JDK1.6.0_10.
+You may not reproduce the bug as your current environment does not meet the criteria.
+========================
+Exception in thread "main" java.lang.RuntimeException: test failed error
+	at Test6648001.main(Test6648001.java:107)
+Suspicious forever waiting thread is not detected.

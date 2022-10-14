@@ -1,13 +1,13 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict3876526100535431726
+[RV-Predict] Log directory: /tmp/rv-predict5168790444276298370
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: dbcp271
 Expected bug type: inconsistent synchronization
 ********************************
 
-Proper synchronized version time consumed:611 ms
+Proper synchronized version time consumed:950 ms
 Now executing not synchronized version. It might go into an endless loop:
-Not synchronized version time consumed:1434 ms
+Not synchronized version time consumed:1246 ms
 Program has been forced to exit from endless loop.

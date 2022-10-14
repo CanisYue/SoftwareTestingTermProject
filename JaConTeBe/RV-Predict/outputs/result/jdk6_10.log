@@ -1,13 +1,16 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict8747398129073532675
+[RV-Predict] Log directory: /tmp/rv-predict4119661897778774734
 [RV-Predict] Finished retransforming preloaded classes.
-Exception in thread "main" java.lang.NoClassDefFoundError: edu/illinois/jacontebe/framework/Reporter
-	at Test6927486.main(Test6927486.java:28)
-Caused by: java.lang.ClassNotFoundException: edu.illinois.jacontebe.framework.Reporter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	... 1 more
-No races found.
+********************************
+Starting test: jdk6927486
+Expected bug type: deadlock
+********************************
+
+========Notice!=========
+This bug afftecs from JDK1.6.0 and  has been fixed since JDK1.7.0.
+You may not reproduce the bug as your current environment does not meet the criteria.
+========================
+
+Finished test: Failed to reproduce the bug.
+Program has been forced to exit from deadlock.

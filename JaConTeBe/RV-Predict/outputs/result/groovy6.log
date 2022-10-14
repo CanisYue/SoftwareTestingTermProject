@@ -1,13 +1,24 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict6593887792849060279
+[RV-Predict] Log directory: /tmp/rv-predict2585027890334420858
 [RV-Predict] Finished retransforming preloaded classes.
-Exception in thread "main" java.lang.NoClassDefFoundError: edu/illinois/jacontebe/framework/Reporter
-	at org.codehaus.groovy.ast.Groovy4292.main(Groovy4292.java:35)
-Caused by: java.lang.ClassNotFoundException: edu.illinois.jacontebe.framework.Reporter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	... 1 more
-No races found.
+********************************
+Starting test: groovy4292
+Expected bug type: race
+This test should finish in 30 seconds.
+********************************
+
+starting next loop 1
+started.
+A suspicious endless loop is found
+One of the probable buggy threads is WorkerThread-2
+   at java.util.WeakHashMap.transfer(WeakHashMap.java:528)
+   at java.util.WeakHashMap.resize(WeakHashMap.java:493)
+   at java.util.WeakHashMap.put(WeakHashMap.java:466)
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.lambda$rvPredictMapPut$31(RVPredictRuntime.java:937)
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime$$Lambda$167/1841309354.get(Unknown Source)
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionAccess(RVPredictRuntime.java:1345)
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionWriteAccess(RVPredictRuntime.java:1244)
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictMapPut(RVPredictRuntime.java:936)
+   at org.codehaus.groovy.ast.ClassHelper.makeCached(ClassHelper.java:119)
+   at org.codehaus.groovy.ast.Groovy4292$AsyncWeakRef.run(Groovy4292.java:89)

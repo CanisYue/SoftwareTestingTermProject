@@ -1,13 +1,21 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict4109893103820713218
+[RV-Predict] Log directory: /tmp/rv-predict5842084374679766569
 [RV-Predict] Finished retransforming preloaded classes.
-Exception in thread "main" java.lang.NoClassDefFoundError: edu/illinois/jacontebe/framework/Reporter
-	at Test6492872.main(Test6492872.java:148)
-Caused by: java.lang.ClassNotFoundException: edu.illinois.jacontebe.framework.Reporter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	... 1 more
-No races found.
+********************************
+Starting test: jdk6492872
+Expected bug type: deadlock
+********************************
+
+========Notice!=========
+This bug afftecs from JDK1.6.0 and  has been fixed since JDK1.6.0_02.
+You may not reproduce the bug as your current environment does not meet the criteria.
+========================
+Exception in thread "main" java.io.FileNotFoundException: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/JaConTeBe/source/keystore (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at Test6492872.<init>(Test6492872.java:166)
+	at Test6492872.main(Test6492872.java:154)
+Program has been forced to exit from deadlock.

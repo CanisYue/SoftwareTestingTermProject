@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict1408070556558167522
+[RV-Predict] Log directory: /tmp/rv-predict4650570619942593107
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: dbcp65
@@ -8,9 +8,9 @@ Expected bug type: deadlock
 ********************************
 
 =============Deadlock detected:==============
-"Thread-4" Id=30 BLOCKED on org.apache.commons.pool.impl.GenericKeyedObjectPool@377f22c6 owned by "Thread-3" Id=29
+"Thread-4" Id=30 BLOCKED on org.apache.commons.pool.impl.GenericKeyedObjectPool@61e3a1e8 owned by "Thread-3" Id=29
 
 
-"Thread-3" Id=29 BLOCKED on org.apache.commons.dbcp.PoolingConnection@7d3bf43c owned by "Thread-4" Id=30
+"Thread-3" Id=29 BLOCKED on org.apache.commons.dbcp.PoolingConnection@3950251 owned by "Thread-4" Id=30
 
 

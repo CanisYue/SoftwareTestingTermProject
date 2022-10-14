@@ -1,13 +1,100 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict3473173732693117791
+[RV-Predict] Log directory: /tmp/rv-predict698346376927892653
 [RV-Predict] Finished retransforming preloaded classes.
-Exception in thread "main" java.lang.NoClassDefFoundError: edu/illinois/jacontebe/framework/Reporter
-	at groovy.util.Groovy6068.main(Groovy6068.java:63)
-Caused by: java.lang.ClassNotFoundException: edu.illinois.jacontebe.framework.Reporter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	... 1 more
-No races found.
+********************************
+Starting test: groovy6068
+Expected bug type: race
+********************************
+
+
+Finished test: Bug has been reproduced successfully.
+Exception in thread "main" java.lang.RuntimeException: System.in was altered!
+	at groovy.util.Groovy6068.main(Groovy6068.java:77)
+Data race on field groovy.util.AntBuilder.lastCompletedNode:
+    Write in thread 27
+      > at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:217)
+        at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:217)
+        at groovy.util.Groovy6068$ThreadBuild.run(Groovy6068.java:57)
+    Thread 27 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+    Write in thread 28
+      > at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:217)
+        at groovy.util.Groovy6068$ThreadBuild.run(Groovy6068.java:57)
+    Thread 28 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+
+Data race on field groovy.util.AntBuilder.insideTask:
+    Write in thread 27
+      > at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:189)
+    Thread 27 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+    Write in thread 28
+      > at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:189)
+    Thread 28 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+
+Data race on field groovy.util.AntBuilder.lastCompletedNode:
+    Write in thread 27
+      > at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:192)
+        at groovy.util.Groovy6068$ThreadBuild.run(Groovy6068.java:57)
+    Thread 27 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+    Write in thread 28
+      > at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:217)
+        at groovy.util.Groovy6068$ThreadBuild.run(Groovy6068.java:57)
+    Thread 28 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+
+Data race on field org.apache.tools.ant.Project.defaultInputStream:
+    Read in thread 28
+      > at org.apache.tools.ant.Project.getDefaultInputStream(Project.java:238)
+        at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:209)
+        at groovy.util.Groovy6068$ThreadBuild.run(Groovy6068.java:57)
+    Thread 28 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+    Write in thread 27
+      > at org.apache.tools.ant.Project.setDefaultInputStream(Project.java:228)
+        at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:212)
+        at groovy.util.Groovy6068$ThreadBuild.run(Groovy6068.java:57)
+    Thread 27 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+
+Data race on field org.apache.tools.ant.Project.defaultInputStream:
+    Write in thread 27
+      > at org.apache.tools.ant.Project.setDefaultInputStream(Project.java:228)
+        at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:220)
+        at groovy.util.Groovy6068$ThreadBuild.run(Groovy6068.java:57)
+    Thread 27 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+    Write in thread 28
+      > at org.apache.tools.ant.Project.setDefaultInputStream(Project.java:228)
+        at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:220)
+        at groovy.util.Groovy6068$ThreadBuild.run(Groovy6068.java:57)
+    Thread 28 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+
+Data race on field groovy.util.AntBuilder.lastCompletedNode:
+    Write in thread 27
+      > at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:192)
+        at groovy.util.Groovy6068$ThreadBuild.run(Groovy6068.java:57)
+    Thread 27 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+    Write in thread 28
+      > at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:192)
+        at groovy.util.Groovy6068$ThreadBuild.run(Groovy6068.java:57)
+    Thread 28 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+

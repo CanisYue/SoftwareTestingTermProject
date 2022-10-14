@@ -1,13 +1,28 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict6450439324138403066
+[RV-Predict] Log directory: /tmp/rv-predict8788335497428708234
 [RV-Predict] Finished retransforming preloaded classes.
-Exception in thread "main" java.lang.NoClassDefFoundError: edu/illinois/jacontebe/framework/Reporter
-	at org.apache.commons.pool.Test46.main(Test46.java:69)
-Caused by: java.lang.ClassNotFoundException: edu.illinois.jacontebe.framework.Reporter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	... 1 more
-No races found.
+********************************
+Starting test: pool46
+Expected bug type: inconsistent synchronization
+This test should finish in 30 seconds.
+********************************
+
+Now starting proper synchronized version:
+Proper synchronized version's execution time is 305 ms
+Now starting not synchronized version:
+This could be an endless loop.
+Not synchronized version's execution time is 56 ms
+Data race on field org.apache.commons.pool.BaseObjectPool.closed:
+    Write in thread 50
+      > at org.apache.commons.pool.BaseObjectPool.close(BaseObjectPool.java:62)
+        at org.apache.commons.pool.Test46$Writer.run(Test46.java:166)
+    Thread 50 created by thread 1
+        at org.apache.commons.pool.Test46.runTest(Test46.java:47)
+
+    Read in thread 40
+      > at org.apache.commons.pool.BaseObjectPool.isClosed(BaseObjectPool.java:73)
+    Thread 40 created by thread 1
+        at org.apache.commons.pool.Test46.runTest(Test46.java:44)
+
+

@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict2818763262319992017
+[RV-Predict] Log directory: /tmp/rv-predict7183109386212779955
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: derby4129
@@ -60,7 +60,7 @@ Caused by: java.sql.SQLException: No current connection.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:70)
 	... 8 more
 Operations last 5 seconds: 4
-  Errors: 2
+  Errors: 3
 Operations last 5 seconds: 0
 Operations last 5 seconds: 0
 Operations last 5 seconds: 0

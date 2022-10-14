@@ -1,6 +1,90 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict9061000097324045616
+[RV-Predict] Log directory: /tmp/rv-predict6593257682139707634
 [RV-Predict] Finished retransforming preloaded classes.
-Error: Could not find or load main class junit.textui.TestRunner
-No races found.
+.********************************
+Starting test: lucene1544
+Expected bug type: deadlock
+This test should finish in 30 seconds.
+********************************
+
+IFD [main]: setInfoStream deletionPolicy=org.apache.lucene.index.KeepOnlyLastCommitDeletionPolicy@13650242
+IW 0 [main]: setInfoStream: dir=org.apache.lucene.store.FSDirectory@/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/JaConTeBe/TestDoug2-cold autoCommit=true mergePolicy=org.apache.lucene.index.LogByteSizeMergePolicy@1365f0a0 mergeScheduler=org.apache.lucene.index.ConcurrentMergeScheduler@1365f0ba ramBufferSizeMB=16.0 maxBufferedDocs=11 maxBuffereDeleteTerms=-1 maxFieldLength=10000 index=_0:c11 _1:c1
+IW 0 [main]:   flush: segment=null docStoreSegment=null docStoreOffset=0 flushDocs=false flushDeletes=true flushDocStores=false numDocs=0 numBufDelTerms=0
+IW 0 [main]:   index before flush _0:c11 _1:c1
+IW 0 [main]: optimize: index now _0:c11 _1:c1
+IW 0 [main]:   flush: segment=null docStoreSegment=null docStoreOffset=0 flushDocs=false flushDeletes=true flushDocStores=false numDocs=0 numBufDelTerms=0
+IW 0 [main]:   index before flush _0:c11 _1:c1
+IW 0 [main]: add merge to pendingMerges: _0:c11 _1:c1 [optimize] [total 1 pending]
+IW 0 [main]: CMS: now merge
+IW 0 [main]: CMS:   index: _0:c11 _1:c1
+IW 0 [main]: CMS:   consider merge _0:c11 _1:c1 into _2 [optimize]
+IW 0 [main]: CMS:     launch new thread [Lucene Merge Thread #0]
+IW 0 [main]: CMS:   no more merges pending; now return
+IW 0 [Lucene Merge Thread #0]: CMS:   merge thread: start
+IW 0 [Lucene Merge Thread #0]: now merge
+  merge=_0:c11 _1:c1 into _2 [optimize]
+  merge=org.apache.lucene.index.MergePolicy$OneMerge@13697355
+  index=_0:c11 _1:c1
+IW 0 [Lucene Merge Thread #0]: merging _0:c11 _1:c1 into _2 [optimize]
+IW 0 [Lucene Merge Thread #0]: merge: total 12 docs
+IW 0 [Lucene Merge Thread #0]: commitMerge: _0:c11 _1:c1 into _2 [optimize] index=_0:c11 _1:c1
+IW 0 [Lucene Merge Thread #0]: commitMergeDeletes _0:c11 _1:c1 into _2 [optimize]
+IFD [Lucene Merge Thread #0]: now checkpoint "segments_2" [1 segments ; isCommit = false]
+IFD [Lucene Merge Thread #0]: now checkpoint "segments_2" [1 segments ; isCommit = false]
+IFD [Lucene Merge Thread #0]: delete "_2.fnm"
+IFD [Lucene Merge Thread #0]: delete "_2.frq"
+IFD [Lucene Merge Thread #0]: delete "_2.prx"
+IFD [Lucene Merge Thread #0]: delete "_2.tis"
+IFD [Lucene Merge Thread #0]: delete "_2.tii"
+IFD [Lucene Merge Thread #0]: delete "_2.nrm"
+IFD [Lucene Merge Thread #0]: delete "_2.fdx"
+IFD [Lucene Merge Thread #0]: delete "_2.fdt"
+IW 0 [Lucene Merge Thread #0]: startCommit(): start sizeInBytes=542
+detecting forever waiting threads...
+detecting forever waiting threads...
+========================================================================
+Detected suspicious forever waiting bug, all worker threads are waiting:
+
+Thread[Thread-1,5,main] is waiting:
+   at sun.misc.Unsafe.park(Native Method) 
+   at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:338) 
+   at com.runtimeverification.rvpredict.log.VolatileLoggingEngine$BufferCleaner.run(VolatileLoggingEngine.java:545) 
+
+merge thread: _0:c11 _1:c1 into _2 [optimize] is waiting:
+   at java.lang.Object.wait(Native Method) 
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictWait(RVPredictRuntime.java:216) 
+   at org.apache.lucene.index.IndexWriter.doWait(IndexWriter.java:4491) 
+   at org.apache.lucene.index.IndexWriter.acquireRead(IndexWriter.java:376) 
+   at org.apache.lucene.index.IndexWriter.blockAddIndexes(IndexWriter.java:2811) 
+   at org.apache.lucene.index.IndexWriter.startCommit(IndexWriter.java:4533) 
+   at org.apache.lucene.index.IndexWriter.commit(IndexWriter.java:3342) 
+   at org.apache.lucene.index.IndexWriter.mergeMiddle(IndexWriter.java:4317) 
+   at org.apache.lucene.index.IndexWriter.merge(IndexWriter.java:3877) 
+   at org.apache.lucene.index.ConcurrentMergeScheduler.doMerge(ConcurrentMergeScheduler.java:205) 
+   at org.apache.lucene.index.ConcurrentMergeScheduler$MergeThread.run(ConcurrentMergeScheduler.java:260) 
+
+Thread[main,5,main] is waiting:
+   at java.lang.Object.wait(Native Method) 
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictWait(RVPredictRuntime.java:216) 
+   at org.apache.lucene.index.IndexWriter.doWait(IndexWriter.java:4491) 
+   at org.apache.lucene.index.IndexWriter.optimize(IndexWriter.java:2268) 
+   at org.apache.lucene.index.IndexWriter.optimize(IndexWriter.java:2203) 
+   at org.apache.lucene.index.IndexWriter.optimize(IndexWriter.java:2183) 
+   at org.apache.lucene.index.IndexWriter.addIndexes(IndexWriter.java:3165) 
+   at org.apache.lucene.Test1544.testAddIndexesByIndexReader(Test1544.java:78) 
+   at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+   at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+   at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+   at java.lang.reflect.Method.invoke(Method.java:498) 
+   at junit.framework.TestCase.runTest(TestCase.java:176) 
+   at junit.framework.TestCase.runBare(TestCase.java:141) 
+   at junit.framework.TestResult$1.protect(TestResult.java:122) 
+   at junit.framework.TestResult.runProtected(TestResult.java:142) 
+   at junit.framework.TestResult.run(TestResult.java:125) 
+   at junit.framework.TestCase.run(TestCase.java:129) 
+   at junit.framework.TestSuite.runTest(TestSuite.java:255) 
+   at junit.framework.TestSuite.run(TestSuite.java:250) 
+   at junit.textui.TestRunner.doRun(TestRunner.java:116) 
+   at junit.textui.TestRunner.start(TestRunner.java:183) 
+   at junit.textui.TestRunner.main(TestRunner.java:137) 

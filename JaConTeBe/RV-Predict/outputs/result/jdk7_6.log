@@ -1,13 +1,24 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict1051649543080111815
+[RV-Predict] Log directory: /tmp/rv-predict625190082137950730
 [RV-Predict] Finished retransforming preloaded classes.
-Exception in thread "main" java.lang.NoClassDefFoundError: edu/illinois/jacontebe/framework/Reporter
-	at Test8023541.main(Test8023541.java:73)
-Caused by: java.lang.ClassNotFoundException: edu.illinois.jacontebe.framework.Reporter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	... 1 more
+********************************
+Starting test: jdk8023541
+Expected bug type: race
+This test should finish in 60 seconds.
+********************************
+
+TEST FAILED: 
+Test failed with: could not find class file to install in codebase (try rebuilding the test): /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/JaConTeBe/source/testUtils/ActivatableImpl.class
+java.lang.RuntimeException: could not find class file to install in codebase (try rebuilding the test): /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/JaConTeBe/source/testUtils/ActivatableImpl.class
+	at testUtils.TestLibrary.installClassInCodebase(TestLibrary.java:245)
+	at testUtils.TestLibrary.installClassInCodebase(TestLibrary.java:194)
+	at Test8023541.main(Test8023541.java:82)
+rmid shut down
+Exception in thread "main" testUtils.TestFailedException: TEST FAILED: ; nested exception is: 
+	java.lang.RuntimeException: could not find class file to install in codebase (try rebuilding the test): /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/JaConTeBe/source/testUtils/ActivatableImpl.class
+java.lang.RuntimeException: could not find class file to install in codebase (try rebuilding the test): /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/JaConTeBe/source/testUtils/ActivatableImpl.class
+	at testUtils.TestLibrary.installClassInCodebase(TestLibrary.java:245)
+	at testUtils.TestLibrary.installClassInCodebase(TestLibrary.java:194)
+	at Test8023541.main(Test8023541.java:82)
 No races found.

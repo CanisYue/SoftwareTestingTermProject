@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict822430083813002454
+[RV-Predict] Log directory: /tmp/rv-predict4372577202025793248
 [RV-Predict] Finished retransforming preloaded classes.
 JUnit version 4.11
 .E
@@ -18,9 +18,9 @@ java.lang.NullPointerException
 	at org.powermock.reflect.internal.WhiteboxImpl.doInvokeMethod(WhiteboxImpl.java:885)
 	at org.powermock.reflect.internal.WhiteboxImpl.invokeMethod(WhiteboxImpl.java:859)
 	at org.powermock.reflect.Whitebox.invokeMethod(Whitebox.java:466)
-	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.registerProxyframework(AbstractTestSuiteChunkerImpl.java:154)
-	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.chunkClass(AbstractTestSuiteChunkerImpl.java:173)No races found.
+No races found.	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.registerProxyframework(AbstractTestSuiteChunkerImpl.java:154)
 
+	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.chunkClass(AbstractTestSuiteChunkerImpl.java:173)
 	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.<init>(AbstractTestSuiteChunkerImpl.java:92)
 	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.<init>(AbstractTestSuiteChunkerImpl.java:85)
 	at org.powermock.modules.junit4.common.internal.impl.JUnit4TestSuiteChunkerImpl.<init>(JUnit4TestSuiteChunkerImpl.java:47)

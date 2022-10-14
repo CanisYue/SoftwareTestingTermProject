@@ -1,13 +1,16 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict6859137320517431499
+[RV-Predict] Log directory: /tmp/rv-predict222029428899233541
 [RV-Predict] Finished retransforming preloaded classes.
-Exception in thread "main" java.lang.NoClassDefFoundError: edu/illinois/jacontebe/framework/Reporter
-	at Test4779253.main(Test4779253.java:83)
-Caused by: java.lang.ClassNotFoundException: edu.illinois.jacontebe.framework.Reporter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	... 1 more
+********************************
+Starting test: jdk4779253
+Expected bug type: race
+********************************
+
+========Notice!=========
+This bug has been fixed since JDK1.7.0.
+You may not reproduce the bug as your current environment does not meet the criteria.
+========================
+
+Finished test: Failed to reproduce the bug.
 No races found.

@@ -1,13 +1,115 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict1838936079406883949
+[RV-Predict] Log directory: /tmp/rv-predict5099665617610367905
 [RV-Predict] Finished retransforming preloaded classes.
-Exception in thread "main" java.lang.NoClassDefFoundError: edu/illinois/jacontebe/framework/Reporter
-	at Test44032.main(Test44032.java:65)
-Caused by: java.lang.ClassNotFoundException: edu.illinois.jacontebe.framework.Reporter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	... 1 more
-No races found.
+********************************
+Starting test: log4j44032
+Expected bug type: race
+********************************
+
+Exception in thread "Thread-59" Exception in thread "Thread-99" Exception in thread "Thread-74" Exception in thread "Thread-57" Exception in thread "Thread-101" Exception in thread "Thread-79" Exception in thread "Thread-58" Exception in thread "Thread-72" Exception in thread "Thread-68" Exception in thread "Thread-100" java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+
+Finished test: Bug has been reproduced successfully.java.lang.NullPointerException
+
+	at Test44032$TestThread.run(Test44032.java:58)
+Exception in thread "Thread-55" Exception in thread "Thread-81" Exception in thread "Thread-63" Exception in thread "Thread-65" java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+Exception in thread "Thread-53" java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+Exception in thread "Thread-61" java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+Exception in thread "Thread-66" java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+java.lang.NullPointerException
+	at Test44032$TestThread.run(Test44032.java:58)
+Data race on field org.apache.log4j.spi.ThrowableInformation.rep:
+    Read in thread 28
+      > at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:72)
+        at Test44032$TestThread.run(Test44032.java:52)
+    Thread 28 created by thread 1
+        at Test44032.run(Test44032.java:37)
+
+    Write in thread 29
+      > at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    Thread 29 created by thread 1
+        at Test44032.run(Test44032.java:37)
+
+
+Data race on field org.apache.log4j.spi.ThrowableInformation.rep:
+    Write in thread 27
+      > at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    Thread 27 created by thread 1
+        at Test44032.run(Test44032.java:37)
+
+    Write in thread 29
+      > at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    Thread 29 created by thread 1
+        at Test44032.run(Test44032.java:37)
+
+
+Data race on field org.apache.log4j.spi.ThrowableInformation.rep:
+    Write in thread 29
+      > at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    Thread 29 created by thread 1
+        at Test44032.run(Test44032.java:37)
+
+    Read in thread 27
+      > at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:93)
+        at Test44032$TestThread.run(Test44032.java:52)
+    Thread 27 created by thread 1
+        at Test44032.run(Test44032.java:37)
+
+
+Data race on field org.apache.log4j.spi.ThrowableInformation.rep:
+    Write in thread 29
+      > at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    Thread 29 created by thread 1
+        at Test44032.run(Test44032.java:37)
+
+    Read in thread 27
+      > at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:91)
+        at Test44032$TestThread.run(Test44032.java:52)
+    Thread 27 created by thread 1
+        at Test44032.run(Test44032.java:37)
+
+
+Data race on field org.apache.log4j.spi.ThrowableInformation.rep:
+    Read in thread 29
+      > at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:71)
+        at Test44032$TestThread.run(Test44032.java:52)
+    Thread 29 created by thread 1
+        at Test44032.run(Test44032.java:37)
+
+    Write in thread 27
+      > at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    Thread 27 created by thread 1
+        at Test44032.run(Test44032.java:37)
+
+
