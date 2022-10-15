@@ -1,0 +1,19 @@
+Unexpected problem occured during version sanity check
+Reported exception:
+java.lang.AbstractMethodError: org.apache.logging.slf4j.SLF4JServiceProvider.getRequestedApiVersion()Ljava/lang/String;
+	at org.slf4j.LoggerFactory.versionSanityCheck(LoggerFactory.java:297)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:141)
+	at org.slf4j.LoggerFactory.getProvider(LoggerFactory.java:421)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:407)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:356)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:382)
+	at edu.umd.cs.findbugs.CheckBcel.<clinit>(CheckBcel.java:40)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:99)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)
+M V EI: Test7045594$MyResources0.getContents() may expose internal representation by returning contents  At Test7045594.java:[line 176]
+H D ST: Write to static field RacingThreadsTest.done from instance method RacingThreadsTest.setDone(boolean)  At RacingThreadsTest.java:[line 227]
+H D ST: Write to static field RacingThreadsTest.verbose from instance method RacingThreadsTest.setVerbose(boolean)  At RacingThreadsTest.java:[line 282]
+M V EI: Test7045594$MyResources1.getContents() may expose internal representation by returning contents  At Test7045594.java:[line 186]
+M V EI: Test7045594$MyResources2.getContents() may expose internal representation by returning contents  At Test7045594.java:[line 196]
+M B Dm: Test7045594.executeRace(RacingThreadsTest$WorkerThread) invokes System.exit(...), which shuts down the entire virtual machine  At Test7045594.java:[line 145]
+M D BC: Unchecked/unconfirmed cast from RacingThreadsTest$WorkerThread to Test7045594$MyWorkerThread in Test7045594.executeRace(RacingThreadsTest$WorkerThread)  At Test7045594.java:[line 115]

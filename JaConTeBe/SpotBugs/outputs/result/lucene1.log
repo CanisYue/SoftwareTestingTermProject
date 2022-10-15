@@ -1,0 +1,27 @@
+Unexpected problem occured during version sanity check
+Reported exception:
+java.lang.AbstractMethodError: org.apache.logging.slf4j.SLF4JServiceProvider.getRequestedApiVersion()Ljava/lang/String;
+	at org.slf4j.LoggerFactory.versionSanityCheck(LoggerFactory.java:297)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:141)
+	at org.slf4j.LoggerFactory.getProvider(LoggerFactory.java:421)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:407)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:356)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:382)
+	at edu.umd.cs.findbugs.CheckBcel.<clinit>(CheckBcel.java:40)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:99)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)
+M D SF: Switch statement found in org.apache.lucene.util.English.intToEnglish(int, StringBuffer) where default case is missing  At English.java:[lines 58-81]
+M V EI2: new org.apache.lucene.store.MockRAMOutputStream(MockRAMDirectory, RAMFile, String) may expose internal representation by storing an externally mutable object into MockRAMOutputStream.dir  At MockRAMOutputStream.java:[line 38]
+M D NP: Possible null pointer dereference in org.apache.lucene.util._TestUtil293.rmDir(File) due to return value of called method  Dereferenced at _TestUtil293.java:[line 49]
+H B DMI: Random object created and used only once in org.apache.lucene.util._TestUtil293.getTempDir(String)  At _TestUtil293.java:[line 43]
+H B DMI: Random object created and used only once in org.apache.lucene.util._TestUtil293.getRandomSocketPort()  At _TestUtil293.java:[line 126]
+M B RV: Exceptional return value of java.io.File.delete() ignored in org.apache.lucene.util._TestUtil293.rmDir(File)  At _TestUtil293.java:[line 54]
+H I Dm: Found reliance on default encoding in org.apache.lucene.util._TestUtil293.checkIndex(Directory): java.io.ByteArrayOutputStream.toString()  At _TestUtil293.java:[line 83]
+H I Dm: Found reliance on default encoding in org.apache.lucene.util._TestUtil293.checkIndex(Directory): new java.io.PrintStream(OutputStream)  At _TestUtil293.java:[line 79]
+M V EI2: new org.apache.lucene.index.Test2783$MockIndexWriter(Test2783, Directory, boolean, Analyzer, boolean) may expose internal representation by storing an externally mutable object into Test2783$MockIndexWriter.this$0  At Test2783.java:[line 51]
+M P Bx: org.apache.lucene.store.MockRAMInputStream.close() invokes inefficient new Integer(int) constructor; use Integer.valueOf(int) instead  At MockRAMInputStream.java:[line 58]
+M V EI2: new org.apache.lucene.store.MockRAMInputStream(MockRAMDirectory, String, RAMFile) may expose internal representation by storing an externally mutable object into MockRAMInputStream.dir  At MockRAMInputStream.java:[line 41]
+M P Bx: org.apache.lucene.util.LuceneTestCase293.newRandom(long) invokes inefficient new Long(long) constructor; use Long.valueOf(long) instead  At LuceneTestCase293.java:[line 226]
+M P Bx: org.apache.lucene.store.MockRAMDirectory.openInput(String) invokes inefficient new Integer(int) constructor; use Integer.valueOf(int) instead  At MockRAMDirectory.java:[line 265]
+M D UrF: Unread public/protected field: org.apache.lucene.store.MockRAMDirectory$Failure.doFail  At MockRAMDirectory.java:[line 343]
+M M IS: Inconsistent synchronization of org.apache.lucene.store.MockRAMDirectory.preventDoubleWrite; locked 66% of time  Unsynchronized access at MockRAMDirectory.java:[line 99]

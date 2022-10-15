@@ -1,2 +1,7 @@
 1. Installing
 https://spotbugs.readthedocs.io/en/latest/installing.html
+
+2. Running
+./multiinstall.sh
+./multitest.sh
+

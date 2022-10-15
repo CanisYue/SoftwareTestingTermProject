@@ -1,0 +1,44 @@
+Unexpected problem occured during version sanity check
+Reported exception:
+java.lang.AbstractMethodError: org.apache.logging.slf4j.SLF4JServiceProvider.getRequestedApiVersion()Ljava/lang/String;
+	at org.slf4j.LoggerFactory.versionSanityCheck(LoggerFactory.java:297)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:141)
+	at org.slf4j.LoggerFactory.getProvider(LoggerFactory.java:421)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:407)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:356)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:382)
+	at edu.umd.cs.findbugs.CheckBcel.<clinit>(CheckBcel.java:40)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:99)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)
+M M MWN: Mismatched wait() in edu.illinois.jacontebe.globalevent.GlobalDriver.startStep(int)  At GlobalDriver.java:[line 59]
+M V EI2: new testUtils.StreamPipe(InputStream, OutputStream, String) may expose internal representation by storing an externally mutable object into StreamPipe.out  At StreamPipe.java:[line 52]
+H D DLS: Dead store to $L3 in testUtils.StreamPipe.run()  At StreamPipe.java:[line 59]
+H I Dm: Found reliance on default encoding in testUtils.StreamPipe.run(): new java.io.OutputStreamWriter(OutputStream)  At StreamPipe.java:[line 58]
+H I Dm: Found reliance on default encoding in testUtils.StreamPipe.run(): new java.io.InputStreamReader(InputStream)  At StreamPipe.java:[line 57]
+M P Dm: testUtils.TestLibrary.getBoolean(String) invokes inefficient Boolean constructor; use Boolean.valueOf(...) instead  At TestLibrary.java:[line 103]
+M P Bx: Primitive boxed just to call toString in testUtils.TestLibrary.setBoolean(String, boolean)  At TestLibrary.java:[line 137]
+M P Dm: testUtils.TestLibrary.setBoolean(String, boolean) invokes inefficient Boolean constructor; use Boolean.valueOf(...) instead  At TestLibrary.java:[line 137]
+M P Bx: testUtils.TestLibrary.getInteger(String) invokes inefficient new Integer(int) constructor; use Integer.valueOf(int) instead  At TestLibrary.java:[line 116]
+M X OBL: testUtils.TestLibrary.copyFile(File, File) may fail to clean up java.io.OutputStream on checked exception  Obligation to clean up resource created at TestLibrary.java:[line 279] is not discharged
+M X OBL: testUtils.TestLibrary.copyFile(File, File) may fail to clean up java.io.InputStream on checked exception  Obligation to clean up resource created at TestLibrary.java:[line 278] is not discharged
+M D RV: Return value of Throwable.getMessage() ignored, but method has no side effect  At TestLibrary.java:[line 302]
+H I Dm: Found reliance on default encoding in testUtils.TestLibrary.stackTraceToString(Exception): new java.io.PrintStream(OutputStream)  At TestLibrary.java:[line 342]
+H I Dm: Found reliance on default encoding in testUtils.TestLibrary.stackTraceToString(Exception): java.io.ByteArrayOutputStream.toString()  At TestLibrary.java:[line 345]
+H P Bx: Boxing/unboxing to parse a primitive testUtils.ActivationLibrary.<static initializer for ActivationLibrary>()  At ActivationLibrary.java:[line 47]
+M V EI2: new testUtils.JavaVM(String, String, String, OutputStream, OutputStream) may expose internal representation by storing an externally mutable object into JavaVM.errorStream  At JavaVM.java:[line 81]
+M V EI2: new testUtils.JavaVM(String, String, String, OutputStream, OutputStream) may expose internal representation by storing an externally mutable object into JavaVM.outputStream  At JavaVM.java:[line 80]
+M P SBSC: testUtils.JavaVM.addOptions(String[]) concatenates strings using + in a loop  At JavaVM.java:[line 87]
+M P SBSC: testUtils.JavaVM.addArguments(String[]) concatenates strings using + in a loop  At JavaVM.java:[line 96]
+H C NP: Possible null pointer dereference of ? in testUtils.RMID.shutdown(int)  Dereferenced at RMID.java:[line 263]
+H P Bx: Boxing/unboxing to parse a primitive testUtils.RMID.start(long, String)  At RMID.java:[line 208]
+M D DLS: Dead store to $L2 in testUtils.RMID.makeArgs(boolean, int)  At RMID.java:[line 87]
+M B RV: Exceptional return value of java.io.File.delete() ignored in testUtils.RMID.removeLog()  At RMID.java:[line 167]
+M D DCN: Do not catch NullPointerException like in Test8023541.main(String[])  At Test8023541.java:[line 112]
+H V MS: testUtils.TestParams.testSrc isn't final but should be refactored to be so  At TestParams.java:[line 37]
+H V MS: testUtils.TestParams.testClasses isn't final but should be refactored to be so  At TestParams.java:[line 38]
+H V MS: testUtils.TestParams.defaultPolicy isn't final but should be refactored to be so  At TestParams.java:[line 41]
+H V MS: testUtils.TestParams.defaultRmidPolicy isn't final but should be refactored to be so  At TestParams.java:[line 44]
+H V MS: testUtils.TestParams.defaultSecurityManager isn't final but should be refactored to be so  At TestParams.java:[line 50]
+H V MS: testUtils.RMID.MANAGER_OPTION isn't final but should be  At RMID.java:[line 44]
+H V MS: testUtils.RMID.log isn't final but should be  At RMID.java:[line 50]
+H V MS: testUtils.RMID.LOGDIR isn't final but should be  At RMID.java:[line 52]

@@ -1,0 +1,19 @@
+Unexpected problem occured during version sanity check
+Reported exception:
+java.lang.AbstractMethodError: org.apache.logging.slf4j.SLF4JServiceProvider.getRequestedApiVersion()Ljava/lang/String;
+	at org.slf4j.LoggerFactory.versionSanityCheck(LoggerFactory.java:297)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:141)
+	at org.slf4j.LoggerFactory.getProvider(LoggerFactory.java:421)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:407)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:356)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:382)
+	at edu.umd.cs.findbugs.CheckBcel.<clinit>(CheckBcel.java:40)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:99)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)
+M D ST: Write to static field Test6648001.error from instance method Test6648001$Handler.handle(HttpExchange)  At Test6648001.java:[line 191]
+M D DLS: Dead store to $L3 in Test6648001$Handler.handle(HttpExchange)  At Test6648001.java:[line 183]
+M D ST: Write to static field Test6648001.error from instance method Test6648001$MyAuthenticator.getPasswordAuthentication()  At Test6648001.java:[line 165]
+M D ST: Write to static field Test6648001.error from instance method Test6648001$Runner.run()  At Test6648001.java:[line 136]
+M P UrF: Unread field: Test6648001$Handler.invocation  At Test6648001.java:[line 178]
+M V MS: Test6648001.error should be package protected  At Test6648001.java:[line 157]
+M V MS: Test6648001.count should be package protected  At Test6648001.java:[line 158]
