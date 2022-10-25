@@ -1,0 +1,26 @@
+JavaPathfinder core system v8.0 (rev 45a4450cd0bd1193df5419f7c9d9b89807d00db6) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Test44032.main()
+
+====================================================== search started: 10/14/22 7:35 PM
+********************************
+Starting test: log4j44032
+Expected bug type: race
+********************************
+
+
+Finished test: Failed to reproduce the bug.
+
+Finished test: Failed to reproduce the bug.
+
+Finished test: Failed to reproduce the bug.
+
+Finished test: Failed to reproduce the bug.
+
+Finished test: Failed to reproduce the bug.
+
+Finished test: Failed to reproduce the bug.
+
+Finished test: Failed to reproduce the bug.
