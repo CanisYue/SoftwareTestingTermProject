@@ -1,2 +1,1 @@
-java/lang/String.java:1: equals() was overridden but not hashCode().
-Verification completed: 1 reported messages.
+Verification completed: 0 reported messages.

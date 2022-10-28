@@ -30,7 +30,7 @@ function run()
         cp ${f} ${class_dir}/
     done
     
-    /home/ecelrc/students/ztang/jlint/jlint-3.1.2/bin/jlint ${class_dir}/*.class &> ${experiment_dir}/outputs/result/${test_name}.log
+    /home/ecelrc/students/ztang/jlint/jlint-3.1.2/bin/jlint -inheritance -data_flow ${class_dir}/*.class &> ${experiment_dir}/outputs/result/${test_name}.log
 }
 
 check_env

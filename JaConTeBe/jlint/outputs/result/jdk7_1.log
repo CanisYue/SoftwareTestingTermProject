@@ -1,7 +1,1 @@
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_1/classes/RacingThreadsTest.java:509: Maybe type cast is not correctly applied.
-java/lang/String.java:1: equals() was overridden but not hashCode().
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_1/classes/Test7045594.java:2: Component 'failCnt' in class 'Test7045594' shadows one in base class 'RacingThreadsTest'.
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_1/classes/Test7045594.java:3: Component 'N_THREADS' in class 'Test7045594' shadows one in base class 'RacingThreadsTest'.
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_1/classes/Test7045594.java:4: Component 'N_SECS' in class 'Test7045594' shadows one in base class 'RacingThreadsTest'.
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_1/classes/Test7045594.java:5: Component 'N_LOOPS' in class 'Test7045594' shadows one in base class 'RacingThreadsTest'.
-Verification completed: 6 reported messages.
+Verification completed: 0 reported messages.
