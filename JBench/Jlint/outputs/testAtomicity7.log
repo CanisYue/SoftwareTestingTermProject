@@ -1,0 +1,2 @@
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/testAtomicity7/classes/benchmarks/testcases/TestAtomicity7.java:25: Lock benchmarks/testcases/TestAtomicity7.lock is requested while holding lock benchmarks/testcases/TestAtomicity7.lock, with other thread holding benchmarks/testcases/TestAtomicity7.lock and requesting lock benchmarks/testcases/TestAtomicity7.lock.
+Verification completed: 1 reported messages.

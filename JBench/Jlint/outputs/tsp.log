@@ -1,0 +1,9 @@
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/tsp/classes/benchmarks/tsp/TspSolver.java:238: Field 'last' of class 'benchmarks/tsp/TourElement' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/tsp/classes/benchmarks/tsp/TspSolver.java:238: Field 'index' of class 'benchmarks/tsp/PrioQElement' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/tsp/classes/benchmarks/tsp/TspSolver.java:238: Field 'last' of class 'benchmarks/tsp/TourElement' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/tsp/classes/benchmarks/tsp/TspSolver.java:238: Field 'index' of class 'benchmarks/tsp/PrioQElement' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/tsp/classes/benchmarks/tsp/TspSolver.java:238: Field 'priority' of class 'benchmarks/tsp/PrioQElement' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/tsp/classes/benchmarks/tsp/TspSolver.java:238: Field 'priority' of class 'benchmarks/tsp/PrioQElement' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/tsp/classes/benchmarks/tsp/TspSolver.java:238: Field 'priority' of class 'benchmarks/tsp/PrioQElement' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/tsp/classes/benchmarks/tsp/TspSolver.java:238: Field 'priority' of class 'benchmarks/tsp/PrioQElement' can be accessed from different threads and is not volatile.
+Verification completed: 8 reported messages.

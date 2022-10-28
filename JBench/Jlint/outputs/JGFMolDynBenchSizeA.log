@@ -1,0 +1,11 @@
+java/lang/Runnable.java:1: Method java/lang/Runnable.run() implementing 'Runnable' interface is not synchronized.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:144: Method benchmarks/moldyn/mdRunner.run() implementing 'Runnable' interface is not synchronized.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:528: Field 'interacts' of class 'benchmarks/moldyn/md' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:512: Field 'vir' of class 'benchmarks/moldyn/md' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:512: Field 'vir' of class 'benchmarks/moldyn/md' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:510: Field 'epot' of class 'benchmarks/moldyn/md' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:510: Field 'epot' of class 'benchmarks/moldyn/md' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:491: Field 'one' of class 'benchmarks/moldyn/mdRunner' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:490: Field 'one' of class 'benchmarks/moldyn/mdRunner' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:489: Field 'one' of class 'benchmarks/moldyn/mdRunner' can be accessed from different threads and is not volatile.
+Verification completed: 10 reported messages.

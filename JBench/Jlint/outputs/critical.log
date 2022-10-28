@@ -1,0 +1,2 @@
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/critical/classes/critical/Critical.java:45: Method critical/Section.run() implementing 'Runnable' interface is not synchronized.
+Verification completed: 1 reported messages.

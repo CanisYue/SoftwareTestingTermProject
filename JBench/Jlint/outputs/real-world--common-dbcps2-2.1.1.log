@@ -1,0 +1,1 @@
+jlint: method_desc.cc:3003: void method_desc::parse_code(constant**, const field_desc*): Assertion `sp == stack_bottom' failed.

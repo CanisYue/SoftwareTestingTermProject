@@ -1,0 +1,5 @@
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/boundedbuffer/classes/boundedbuffer/Buffer.java:146: Method wait() can be invoked with monitor of other object locked.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/boundedbuffer/classes/boundedbuffer/BoundedBuffer.java:395: Call sequence to method boundedbuffer/Buffer.deq(java.lang.String) can cause deadlock in wait().
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/boundedbuffer/classes/boundedbuffer/Buffer.java:121: Method wait() can be invoked with monitor of other object locked.
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/boundedbuffer/classes/boundedbuffer/BoundedBuffer.java:377: Call sequence to method boundedbuffer/Buffer.enq(java.lang.Object) can cause deadlock in wait().
+Verification completed: 4 reported messages.

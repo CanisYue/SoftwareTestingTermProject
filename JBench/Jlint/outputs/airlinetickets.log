@@ -1,0 +1,2 @@
+/home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/airlinetickets/classes/airlinetickets/Airlinetickets.java:103: Method airlinetickets/Airlinetickets.run() implementing 'Runnable' interface is not synchronized.
+Verification completed: 1 reported messages.
