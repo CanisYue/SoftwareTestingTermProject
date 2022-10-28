@@ -1,0 +1,18 @@
+Unexpected problem occured during version sanity check
+Reported exception:
+java.lang.AbstractMethodError: org.apache.logging.slf4j.SLF4JServiceProvider.getRequestedApiVersion()Ljava/lang/String;
+	at org.slf4j.LoggerFactory.versionSanityCheck(LoggerFactory.java:297)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:141)
+	at org.slf4j.LoggerFactory.getProvider(LoggerFactory.java:421)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:407)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:356)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:382)
+	at edu.umd.cs.findbugs.CheckBcel.<clinit>(CheckBcel.java:40)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:99)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)
+M D ST: Write to static field benchmarks.testcases.TestAtomicity14.e from instance method benchmarks.testcases.TestAtomicity14$2.run()  At TestAtomicity14.java:[line 29]
+M D ST: Write to static field benchmarks.testcases.TestAtomicity14.c from instance method benchmarks.testcases.TestAtomicity14$2.run()  At TestAtomicity14.java:[line 30]
+M D ST: Write to static field benchmarks.testcases.TestAtomicity14.d from instance method benchmarks.testcases.TestAtomicity14$1.run()  At TestAtomicity14.java:[line 22]
+M D ST: Write to static field benchmarks.testcases.TestAtomicity14.c from instance method benchmarks.testcases.TestAtomicity14$1.run()  At TestAtomicity14.java:[line 21]
+M D ST: Write to static field benchmarks.testcases.TestAtomicity14.a from instance method benchmarks.testcases.TestAtomicity14$1.run()  At TestAtomicity14.java:[line 23]
+M D ST: Write to static field benchmarks.testcases.TestAtomicity14.e from instance method benchmarks.testcases.TestAtomicity14$1.run()  At TestAtomicity14.java:[line 24]

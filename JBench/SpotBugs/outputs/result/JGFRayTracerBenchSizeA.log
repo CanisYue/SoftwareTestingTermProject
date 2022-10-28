@@ -1,0 +1,30 @@
+Unexpected problem occured during version sanity check
+Reported exception:
+java.lang.AbstractMethodError: org.apache.logging.slf4j.SLF4JServiceProvider.getRequestedApiVersion()Ljava/lang/String;
+	at org.slf4j.LoggerFactory.versionSanityCheck(LoggerFactory.java:297)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:141)
+	at org.slf4j.LoggerFactory.getProvider(LoggerFactory.java:421)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:407)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:356)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:382)
+	at edu.umd.cs.findbugs.CheckBcel.<clinit>(CheckBcel.java:40)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:99)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)
+M P SBSC: benchmarks.jgfutil.JGFTimer.printperf() concatenates strings using + in a loop  At JGFTimer.java:[line 128]
+M V EI2: new benchmarks.raytracer.Sphere(Vec, double) may expose internal representation by storing an externally mutable object into Sphere.c  At Sphere.java:[line 34]
+M V EI: benchmarks.raytracer.Sphere.getCenter() may expose internal representation by returning Sphere.c  At Sphere.java:[line 75]
+M V EI2: benchmarks.raytracer.Sphere.setCenter(Vec) may expose internal representation by storing an externally mutable object into Sphere.c  At Sphere.java:[line 78]
+M B Nm: The method name benchmarks.raytracer.Barrier.DoBarrier(int) doesn't start with a lower case letter  In Barrier.java
+M B Nm: The method name benchmarks.raytracer.TournamentBarrier.DoBarrier(int) doesn't start with a lower case letter  At TournamentBarrier.java:[lines 57-88]
+M D SF: Switch statement found in benchmarks.jgfutil.JGFInstrumentor.printHeader(int, int, int) where default case is missing  At JGFInstrumentor.java:[lines 178-186]
+H C IP: The parameter obj to benchmarks.jgfutil.JGFInstrumentor.retrieveData(String, Object) is dead upon entry but overwritten  At JGFInstrumentor.java:[line 163]
+H D DLS: Dead store to obj in benchmarks.jgfutil.JGFInstrumentor.retrieveData(String, Object)  At JGFInstrumentor.java:[line 163]
+M M SSD: Static field "checksum1" is modified by an instance level synchronization lock.  At JGFRayTracerBench.java:[line 175]
+M D UC: Useless object stored in variable row of method benchmarks.raytracer.RayTracer.render(Interval)  At RayTracer.java:[line 184]
+M D DLS: Dead store to col in benchmarks.raytracer.RayTracer.render(Interval)  At RayTracer.java:[line 213]
+H D ST: Write to static field benchmarks.raytracer.JGFRayTracerBench.nthreads from instance method new benchmarks.raytracer.JGFRayTracerBench(int)  At JGFRayTracerBench.java:[line 33]
+M M VO: benchmarks.raytracer.TournamentBarrier.IsDone is a volatile reference to an array; the array elements are non-volatile  In TournamentBarrier.java
+M V MS: benchmarks.JGFRayTracerBenchSizeA.nthreads should be package protected  In JGFRayTracerBenchSizeA.java
+M V MS: benchmarks.raytracer.JGFRayTracerBench.nthreads should be package protected  In JGFRayTracerBench.java
+M V MS: benchmarks.raytracer.JGFRayTracerBench.checksum1 should be package protected  At JGFRayTracerBench.java:[line 29]
+M V MS: benchmarks.raytracer.JGFRayTracerBench.staticnumobjects should be package protected  In JGFRayTracerBench.java

@@ -1,0 +1,19 @@
+Unexpected problem occured during version sanity check
+Reported exception:
+java.lang.AbstractMethodError: org.apache.logging.slf4j.SLF4JServiceProvider.getRequestedApiVersion()Ljava/lang/String;
+	at org.slf4j.LoggerFactory.versionSanityCheck(LoggerFactory.java:297)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:141)
+	at org.slf4j.LoggerFactory.getProvider(LoggerFactory.java:421)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:407)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:356)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:382)
+	at edu.umd.cs.findbugs.CheckBcel.<clinit>(CheckBcel.java:40)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:99)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)
+H D ST: Write to static field account.Account.accounts from instance method account.Account.go(String[])  At Account.java:[line 35]
+M B Dm: account.Account.checkResult(int) invokes System.exit(...), which shuts down the entire virtual machine  At Account.java:[line 87]
+M B Nm: The method name account.Account.Service(int, int) doesn't start with a lower case letter  At Account.java:[lines 97-99]
+H C EC: Call to String.equals(Throwable) in account.Account.checkResult(int)  At Account.java:[line 85]
+M V MS: account.Account.Bank_Total should be package protected  At Account.java:[line 13]
+M V MS: account.Account.accounts should be package protected  In Account.java
+H V MS: account.Account.Bank_random isn't final but should be  At Account.java:[line 19]
