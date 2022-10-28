@@ -1,0 +1,32 @@
+Unexpected problem occured during version sanity check
+Reported exception:
+java.lang.AbstractMethodError: org.apache.logging.slf4j.SLF4JServiceProvider.getRequestedApiVersion()Ljava/lang/String;
+	at org.slf4j.LoggerFactory.versionSanityCheck(LoggerFactory.java:297)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:141)
+	at org.slf4j.LoggerFactory.getProvider(LoggerFactory.java:421)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:407)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:356)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:382)
+	at edu.umd.cs.findbugs.CheckBcel.<clinit>(CheckBcel.java:40)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:99)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)
+M D ST: Write to static field mergesort.MSort.m_iCurrentThreadsAlive from instance method mergesort.MSort.IncreaseThreadCounter()  At MSort.java:[line 32]
+M D ST: Write to static field mergesort.MSort.m_iCurrentThreadsAlive from instance method mergesort.MSort.DecreaseThreadCounter()  At MSort.java:[line 41]
+H D ST: Write to static field mergesort.MSort.m_iCurrentThreadsAlive from instance method mergesort.MSort.ResetThreadCounter()  At MSort.java:[line 101]
+M D ST: Write to static field mergesort.MSort.outputFile from instance method new mergesort.MSort(String[], String)  At MSort.java:[line 119]
+M D ST: Write to static field mergesort.MSort.fWriter from instance method new mergesort.MSort(String[], String)  At MSort.java:[line 123]
+M D ST: Write to static field mergesort.MSort.bWriter from instance method new mergesort.MSort(String[], String)  At MSort.java:[line 124]
+M D ST: Write to static field mergesort.MSort.fWriter from instance method mergesort.MSort.PrintResults()  At MSort.java:[line 159]
+M D ST: Write to static field mergesort.MSort.bWriter from instance method mergesort.MSort.PrintResults()  At MSort.java:[line 160]
+M D ST: Write to static field mergesort.MSort.m_iThreadLimit from instance method mergesort.MSort.Init(String[])  At MSort.java:[line 194]
+M B Dm: new mergesort.MSort(String[], String) invokes System.exit(...), which shuts down the entire virtual machine  At MSort.java:[line 117]
+M B Dm: mergesort.MSort.PrintResults() invokes System.exit(...), which shuts down the entire virtual machine  At MSort.java:[line 152]
+M B Dm: mergesort.MSort.Sorting() invokes System.exit(...), which shuts down the entire virtual machine  At MSort.java:[line 264]
+M V EI2: new mergesort.MSort(int[]) may expose internal representation by storing an externally mutable object into MSort.m_iArray  At MSort.java:[line 107]
+M D SF: Switch statement found in mergesort.MSort.Sorting() where default case is missing  At MSort.java:[lines 245-288]
+H C EC: Call to String.equals(Throwable) in mergesort.MSort.PrintResults()  At MSort.java:[line 150]
+H C EC: Call to String.equals(RuntimeException) in mergesort.MSort.Sorting()  At MSort.java:[line 299]
+H I Dm: Found reliance on default encoding in new mergesort.MSort(String[], String): new java.io.FileWriter(String)  At MSort.java:[line 123]
+H I Dm: Found reliance on default encoding in mergesort.MSort.PrintResults(): new java.io.FileWriter(String)  At MSort.java:[line 159]
+M M SSD: Static field "m_iCurrentThreadsAlive" is modified by an instance level synchronized method.  At MSort.java:[line 32]
+M M SSD: Static field "m_iCurrentThreadsAlive" is modified by an instance level synchronized method.  At MSort.java:[line 41]

@@ -1,0 +1,30 @@
+Unexpected problem occured during version sanity check
+Reported exception:
+java.lang.AbstractMethodError: org.apache.logging.slf4j.SLF4JServiceProvider.getRequestedApiVersion()Ljava/lang/String;
+	at org.slf4j.LoggerFactory.versionSanityCheck(LoggerFactory.java:297)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:141)
+	at org.slf4j.LoggerFactory.getProvider(LoggerFactory.java:421)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:407)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:356)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:382)
+	at edu.umd.cs.findbugs.CheckBcel.<clinit>(CheckBcel.java:40)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:99)
+	at edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)
+H B CN: benchmarks.jpf_test_cases.replicatedcasestudies.Vector defines clone() but doesn't implement Cloneable  At Vector.java:[lines 428-434]
+M M Wa: Wait not in loop in benchmarks.jpf_test_cases.rax.Event.wait_for_event()  At START.java:[line 6]
+M M Wa: Wait not in loop in benchmarks.jpf_test_cases.replicatedcasestudies.StandardCountingSemaphore.await()  At StandardCountingSemaphore.java:[line 14]
+M M NN: Naked notify in benchmarks.jpf_test_cases.readerswriters.RWPrinter.notifyWriter()  At RWVSNTest.java:[line 129]
+M M Wa: Wait not in loop in benchmarks.jpf_test_cases.readerswriters.RWPrinter.beforeRead()  At RWVSNTest.java:[line 98]
+M M Wa: Wait not in loop in benchmarks.jpf_test_cases.readerswriters.RWPrinter.beforeWrite()  At RWVSNTest.java:[line 113]
+H D UC: Useless condition: it's known that n > 0 at this point  At SignsSrcAbs.java:[line 15]
+M V EI2: new benchmarks.jpf_test_cases.replicatedcasestudies.ReplicatedWorkers(Configuration, Collection, Collection, int, int) may expose internal representation by storing an externally mutable object into ReplicatedWorkers.workPool  At ReplicatedWorkers.java:[line 81]
+M B Nm: The field name benchmarks.jpf_test_cases.replicatedcasestudies.ReplicatedWorkers.GlobalDone doesn't start with a lower case letter  In ReplicatedWorkers.java
+M D UrF: Unread public/protected field: benchmarks.jpf_test_cases.replicatedcasestudies.ReplicatedWorkers.numItems  At ReplicatedWorkers.java:[line 78]
+M D UrF: Unread public/protected field: benchmarks.jpf_test_cases.nestedmonitors.Buffer.size  At NestedMonitor.java:[line 24]
+H V MS: benchmarks.jpf_test_cases.MyRandom.rand isn't final but should be  At MyRandom.java:[line 13]
+M M IS: Inconsistent synchronization of benchmarks.jpf_test_cases.replicatedcasestudies.ReplicatedWorkers.stop; locked 50% of time  Unsynchronized access at ReplicatedWorkers.java:[line 265]
+The following classes needed for analysis were missing:
+  benchmarks.jpf_test_cases.readerswriters.Vector
+  benchmarks.jpf_test_cases.boundedbuffer.Buffer
+  benchmarks.jpf_test_cases.boundedbuffer.Producer
+  benchmarks.jpf_test_cases.boundedbuffer.Consumer
