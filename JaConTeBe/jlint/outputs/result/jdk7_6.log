@@ -1,0 +1,13 @@
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:49: Method '<unknown>.notify' is called without synchronizing on '<unknown>'.
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59: Method '<unknown>.wait' is called without synchronizing on '<unknown>'.
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59: Method wait() can be invoked with monitor of other object locked.
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59: Holding 1 lock(s): <new>0.
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_6/classes/testUtils/RMID.java:263: Value of referenced variable '???' may be NULL.
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_6/classes/testUtils/RMID.java:1: Component 'vm' in class 'testUtils/RMID' shadows one in base class 'testUtils/JavaVM'.
+java/lang/String.java:2: equals() was overridden but not hashCode().
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_6/classes/testUtils/RMID.java:261: Method testUtils/TestLibrary.bomb(java.lang.String) can be called from different threads and is not synchronized.
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_6/classes/testUtils/RMID.java:305: Method testUtils/RMID.mesg(java.lang.Object) can be called from different threads and is not synchronized.
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_6/classes/testUtils/RMID.java:299: Method testUtils/RMID.mesg(java.lang.Object) can be called from different threads and is not synchronized.
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_6/classes/testUtils/RMID.java:297: Method testUtils/RMID.mesg(java.lang.Object) can be called from different threads and is not synchronized.
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_6/classes/testUtils/RMID.java:290: Method testUtils/RMID.shutdown(int) can be called from different threads and is not synchronized.
+Verification completed: 11 reported messages.

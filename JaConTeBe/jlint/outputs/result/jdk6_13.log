@@ -1,0 +1,3 @@
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk6_13/classes/Test7100996.java:43: Method Test7100996$2.run() implementing 'Runnable' interface is not synchronized.
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk6_13/classes/Test7100996.java:34: Method Test7100996$1.run() implementing 'Runnable' interface is not synchronized.
+Verification completed: 2 reported messages.

@@ -1,0 +1,3 @@
+java/lang/Runnable.java:1: Method java/lang/Runnable.run() implementing 'Runnable' interface is not synchronized.
+java/nio/ByteBuffer.java:2: equals() was overridden but not hashCode().
+Verification completed: 2 reported messages.

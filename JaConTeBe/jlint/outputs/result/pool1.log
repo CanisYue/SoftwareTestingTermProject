@@ -1,0 +1,3 @@
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/pool1/classes/Test120.java:135: Method Test120$TestThread.run() implementing 'Runnable' interface is not synchronized.
+/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/pool1/classes/Test120.java:71: Method Test120$1.run() implementing 'Runnable' interface is not synchronized.
+Verification completed: 2 reported messages.
