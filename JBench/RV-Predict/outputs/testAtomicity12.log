@@ -1,0 +1,33 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict2349263892959054394
+[RV-Predict] Finished retransforming preloaded classes.
+x = 3
+Data race on field benchmarks.testcases.TestAtomicity12.x:
+    Read in thread 27
+      > at benchmarks.testcases.TestAtomicity12$1.run(TestAtomicity12.java:18)
+    Thread 27 created by thread 1
+        at benchmarks.testcases.TestAtomicity12.main(TestAtomicity12.java:21)
+
+    Write in thread 1
+      > at benchmarks.testcases.TestAtomicity12.h(TestAtomicity12.java:38)
+        at benchmarks.testcases.TestAtomicity12.g(TestAtomicity12.java:32)
+        at benchmarks.testcases.TestAtomicity12.f(TestAtomicity12.java:28)
+        at benchmarks.testcases.TestAtomicity12.main(TestAtomicity12.java:22)
+    Thread 1 is the main thread
+
+
+Data race on field benchmarks.testcases.TestAtomicity12.x:
+    Read in thread 27
+      > at benchmarks.testcases.TestAtomicity12$1.run(TestAtomicity12.java:18)
+    Thread 27 created by thread 1
+        at benchmarks.testcases.TestAtomicity12.main(TestAtomicity12.java:21)
+
+    Write in thread 1
+      > at benchmarks.testcases.TestAtomicity12.h(TestAtomicity12.java:37)
+        at benchmarks.testcases.TestAtomicity12.g(TestAtomicity12.java:32)
+        at benchmarks.testcases.TestAtomicity12.f(TestAtomicity12.java:28)
+        at benchmarks.testcases.TestAtomicity12.main(TestAtomicity12.java:22)
+    Thread 1 is the main thread
+
+

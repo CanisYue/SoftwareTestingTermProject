@@ -1,0 +1,18 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict205481656630614628
+[RV-Predict] Finished retransforming preloaded classes.
+Data race on field benchmarks.testcases.TestAtomicity6.x:
+    Read in thread 27
+      > at benchmarks.testcases.TestAtomicity6$1.run(TestAtomicity6.java:20)
+    Thread 27 created by thread 1
+        at benchmarks.testcases.TestAtomicity6.main(TestAtomicity6.java:23)
+
+    Write in thread 1 holding locks Monitor@2110626898, Monitor@2110626900, Monitor@2110626902
+      > at benchmarks.testcases.TestAtomicity6.main(TestAtomicity6.java:30)
+        - locked Monitor@2110626902 at benchmarks.testcases.TestAtomicity6.main(TestAtomicity6.java:29)
+        - locked Monitor@2110626900 at benchmarks.testcases.TestAtomicity6.main(TestAtomicity6.java:27)
+        - locked Monitor@2110626898 at benchmarks.testcases.TestAtomicity6.main(TestAtomicity6.java:25)
+    Thread 1 is the main thread
+
+

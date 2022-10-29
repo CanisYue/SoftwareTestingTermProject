@@ -1,0 +1,89 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict6522061368850166770
+[RV-Predict] Finished retransforming preloaded classes.
+The airline issued 10 tickets for 9 seats to be sold.
+SOLD 50 Seats !!!
+< output.txt , Concurency=little , Interleaving >
+java.lang.RuntimeException
+	at airlinetickets.Airlinetickets.checkResult(Airlinetickets.java:82)
+	at airlinetickets.Airlinetickets.go(Airlinetickets.java:72)
+	at airlinetickets.Airlinetickets.<init>(Airlinetickets.java:33)
+	at airlinetickets.Airlinetickets.main(Airlinetickets.java:120)
+Data race on field airlinetickets.Airlinetickets.Num_Of_Seats_Sold:
+    Write in thread 30
+      > at airlinetickets.Airlinetickets.run(Airlinetickets.java:104)
+    Thread 30 created by thread 1
+        at airlinetickets.Airlinetickets.go(Airlinetickets.java:60)
+
+    Read in thread 32
+      > at airlinetickets.Airlinetickets.run(Airlinetickets.java:106)
+    Thread 32 created by thread 1
+        at airlinetickets.Airlinetickets.go(Airlinetickets.java:60)
+
+
+Data race on field airlinetickets.Airlinetickets.Num_Of_Seats_Sold:
+    Read in thread 1
+      > at airlinetickets.Airlinetickets.checkResult(Airlinetickets.java:78)
+        at airlinetickets.Airlinetickets.go(Airlinetickets.java:72)
+        at airlinetickets.Airlinetickets.<init>(Airlinetickets.java:33)
+        at airlinetickets.Airlinetickets.main(Airlinetickets.java:120)
+    Thread 1 is the main thread
+
+    Write in thread 30
+      > at airlinetickets.Airlinetickets.run(Airlinetickets.java:104)
+    Thread 30 created by thread 1
+        at airlinetickets.Airlinetickets.go(Airlinetickets.java:60)
+
+
+Data race on field airlinetickets.Airlinetickets.Num_Of_Seats_Sold:
+    Read in thread 1
+      > at airlinetickets.Airlinetickets.go(Airlinetickets.java:62)
+        at airlinetickets.Airlinetickets.<init>(Airlinetickets.java:33)
+        at airlinetickets.Airlinetickets.main(Airlinetickets.java:120)
+    Thread 1 is the main thread
+
+    Write in thread 30
+      > at airlinetickets.Airlinetickets.run(Airlinetickets.java:104)
+    Thread 30 created by thread 1
+        at airlinetickets.Airlinetickets.go(Airlinetickets.java:60)
+
+
+Data race on field airlinetickets.Airlinetickets.Num_Of_Seats_Sold:
+    Read in thread 1
+      > at airlinetickets.Airlinetickets.go(Airlinetickets.java:63)
+        at airlinetickets.Airlinetickets.<init>(Airlinetickets.java:33)
+        at airlinetickets.Airlinetickets.main(Airlinetickets.java:120)
+    Thread 1 is the main thread
+
+    Write in thread 30
+      > at airlinetickets.Airlinetickets.run(Airlinetickets.java:104)
+    Thread 30 created by thread 1
+        at airlinetickets.Airlinetickets.go(Airlinetickets.java:60)
+
+
+Data race on field airlinetickets.Airlinetickets.Num_Of_Seats_Sold:
+    Read in thread 30
+      > at airlinetickets.Airlinetickets.run(Airlinetickets.java:104)
+    Thread 30 created by thread 1
+        at airlinetickets.Airlinetickets.go(Airlinetickets.java:60)
+
+    Write in thread 32
+      > at airlinetickets.Airlinetickets.run(Airlinetickets.java:104)
+    Thread 32 created by thread 1
+        at airlinetickets.Airlinetickets.go(Airlinetickets.java:60)
+
+
+Data race on field airlinetickets.Airlinetickets.Num_Of_Seats_Sold:
+    Write in thread 1
+      > at airlinetickets.Airlinetickets.go(Airlinetickets.java:62)
+        at airlinetickets.Airlinetickets.<init>(Airlinetickets.java:33)
+        at airlinetickets.Airlinetickets.main(Airlinetickets.java:120)
+    Thread 1 is the main thread
+
+    Read in thread 30
+      > at airlinetickets.Airlinetickets.run(Airlinetickets.java:106)
+    Thread 30 created by thread 1
+        at airlinetickets.Airlinetickets.go(Airlinetickets.java:60)
+
+

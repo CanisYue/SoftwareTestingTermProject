@@ -1,0 +1,51 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict1183134432524253991
+[RV-Predict] Finished retransforming preloaded classes.
+Data race on field benchmarks.testcases.TestAtomicity14.a:
+    Write in thread 27
+      > at benchmarks.testcases.TestAtomicity14$1.run(TestAtomicity14.java:23)
+    Thread 27 created by thread 1
+        at benchmarks.testcases.TestAtomicity14.main(TestAtomicity14.java:33)
+
+    Write in thread 1
+      > at benchmarks.testcases.TestAtomicity14.f(TestAtomicity14.java:41)
+    Thread 1 is the main thread
+
+
+Data race on field benchmarks.testcases.TestAtomicity14.c:
+    Write in thread 27
+      > at benchmarks.testcases.TestAtomicity14$1.run(TestAtomicity14.java:21)
+    Thread 27 created by thread 1
+        at benchmarks.testcases.TestAtomicity14.main(TestAtomicity14.java:33)
+
+    Write in thread 28
+      > at benchmarks.testcases.TestAtomicity14$2.run(TestAtomicity14.java:30)
+    Thread 28 created by thread 1
+        at benchmarks.testcases.TestAtomicity14.main(TestAtomicity14.java:34)
+
+
+Data race on field benchmarks.testcases.TestAtomicity14.e:
+    Write in thread 27
+      > at benchmarks.testcases.TestAtomicity14$1.run(TestAtomicity14.java:24)
+    Thread 27 created by thread 1
+        at benchmarks.testcases.TestAtomicity14.main(TestAtomicity14.java:33)
+
+    Write in thread 28
+      > at benchmarks.testcases.TestAtomicity14$2.run(TestAtomicity14.java:29)
+    Thread 28 created by thread 1
+        at benchmarks.testcases.TestAtomicity14.main(TestAtomicity14.java:34)
+
+
+Data race on field benchmarks.testcases.TestAtomicity14.d:
+    Write in thread 27
+      > at benchmarks.testcases.TestAtomicity14$1.run(TestAtomicity14.java:22)
+    Thread 27 created by thread 1
+        at benchmarks.testcases.TestAtomicity14.main(TestAtomicity14.java:33)
+
+    Write in thread 1
+      > at benchmarks.testcases.TestAtomicity14.f(TestAtomicity14.java:42)
+        at benchmarks.testcases.TestAtomicity14.main(TestAtomicity14.java:35)
+    Thread 1 is the main thread
+
+

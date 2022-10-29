@@ -1,0 +1,64 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict3550993468606973154
+[RV-Predict] Finished retransforming preloaded classes.
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)
+java.lang.NullPointerException
+	at pingpong.BuggedProgram.pingPong(BuggedProgram.java:85)
+	at pingpong.BugThread.ping(BugThread.java:38)
+	at pingpong.BugThread.run(BugThread.java:30)

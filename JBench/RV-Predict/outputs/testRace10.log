@@ -1,0 +1,16 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict3801316510410730482
+[RV-Predict] Finished retransforming preloaded classes.
+x = 2
+Data race on field testRace.TestRace10.x:
+    Read in thread 27
+      > at testRace.TestRace10$1.run(TestRace10.java:43)
+    Thread 27 created by thread 1
+        at testRace.TestRace10.main(TestRace10.java:55)
+
+    Write in thread 1
+      > at testRace.TestRace10.main(TestRace10.java:60)
+    Thread 1 is the main thread
+
+

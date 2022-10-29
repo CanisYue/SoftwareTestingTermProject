@@ -1,14 +1,14 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict6403464972109215287
+[RV-Predict] Log directory: /tmp/rv-predict8094944532022172667
 [RV-Predict] Finished retransforming preloaded classes.
 Bank system started
 loop: 2
-loop: 2
 sum: 256
+loop: 2
 sum: -174
-sum: -33
 sum: 76
+sum: -33
 ..
 End of the week.
 Bank records = 125, accounts balance = 125.

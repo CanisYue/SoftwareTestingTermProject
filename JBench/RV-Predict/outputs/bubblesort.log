@@ -1,13 +1,13 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict6801446047552574986
+[RV-Predict] Log directory: /tmp/rv-predict3868150620413238216
 [RV-Predict] Finished retransforming preloaded classes.
 3 5 9 2 0 4 -6 -3 13 10 -1 1 6 7 -5 17 15 -12 -9 11 8 -8 18 -18 -15 
 
-3 5 9 2 0 4 -6 -3 13 10 -1 1 6 7 -5 17 15 -12 -9 11 8 -8 18 -18 -15 
+-6 -6 0 -1 1 2 3 4 5 6 -5 7 9 10 13 -12 -9 11 8 -8 15 -18 -15 17 18 
 
-< Bug Found: The number at place 3(9), is bigger then the number at place 4(2) >
-
+< Bug Found: the number -3, exists in the original array, but does not exist in the printed array >
 java.lang.RuntimeException
+
 	at bubblesort.Reporter.Report(Reporter.java:102)
 	at bubblesort.BubbleSort.main(BubbleSort.java:84)

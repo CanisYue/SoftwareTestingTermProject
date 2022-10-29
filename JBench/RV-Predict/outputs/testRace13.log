@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict8276613867045093008
+[RV-Predict] Log directory: /tmp/rv-predict4990690168797817425
 [RV-Predict] Finished retransforming preloaded classes.
-<BoundedBuffer,Programs succesfuly excecuted,none>
+x = 17
 No races found.

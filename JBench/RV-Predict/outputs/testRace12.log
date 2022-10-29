@@ -1,0 +1,12 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict8101654041548104148
+[RV-Predict] Finished retransforming preloaded classes.
+before join 2
+end Star1
+end Star2
+before join 1
+
+3.8817696E7
+[RV-Predict] Error: Window timeout.
+No races found.

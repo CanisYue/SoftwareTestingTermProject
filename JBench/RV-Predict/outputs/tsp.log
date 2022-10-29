@@ -1,0 +1,13 @@
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /tmp/rv-predict404302613762944810
+[RV-Predict] Finished retransforming preloaded classes.
+java.io.FileNotFoundException: ../src/tspfiles/map16c (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at java.io.FileReader.<init>(FileReader.java:58)
+	at benchmarks.tsp.Tsp.read_tsp(Tsp.java:106)
+	at benchmarks.tsp.Tsp.main(Tsp.java:47)
+No races found.

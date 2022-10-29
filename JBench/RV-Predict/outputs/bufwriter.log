@@ -1,20 +1,8 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict7933909323596872266
+[RV-Predict] Log directory: /tmp/rv-predict6589958092700946444
 [RV-Predict] Finished retransforming preloaded classes.
-<BufWriter,0,[None]>Data race on field bufwriter.SyncWriter.flag:
-    Read in thread 28
-      > at bufwriter.SyncWriter.run(SyncWriter.java:27)
-    Thread 28 created by thread 1
-        at bufwriter.BufWriter.main(BufWriter.java:73)
-
-    Write in thread 1
-      > at bufwriter.SyncWriter.stopWriter(SyncWriter.java:18)
-        at bufwriter.BufWriter.main(BufWriter.java:84)
-    Thread 1 is the main thread
-
-
-Data race on field bufwriter.Checker.flag:
+<BufWriter,0,[None]>Data race on field bufwriter.Checker.flag:
     Read in thread 27
       > at bufwriter.Checker.run(Checker.java:26)
     Thread 27 created by thread 1
@@ -23,6 +11,18 @@ Data race on field bufwriter.Checker.flag:
     Write in thread 1
       > at bufwriter.Checker.stopChecker(Checker.java:17)
         at bufwriter.BufWriter.main(BufWriter.java:91)
+    Thread 1 is the main thread
+
+
+Data race on field bufwriter.SyncWriter.flag:
+    Read in thread 30
+      > at bufwriter.SyncWriter.run(SyncWriter.java:27)
+    Thread 30 created by thread 1
+        at bufwriter.BufWriter.main(BufWriter.java:73)
+
+    Write in thread 1
+      > at bufwriter.SyncWriter.stopWriter(SyncWriter.java:18)
+        at bufwriter.BufWriter.main(BufWriter.java:84)
     Thread 1 is the main thread
 
 
