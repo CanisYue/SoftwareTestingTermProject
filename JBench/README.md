@@ -12,3 +12,8 @@ Jbench
 ```
 export jbench="/your/directory/softwaretesting/JBench"
 ```
+3. Under the /scripts folder, run 
+```
+./evaluate.sh
+```
+It will automatically run the tool and generate a result.txt file.
