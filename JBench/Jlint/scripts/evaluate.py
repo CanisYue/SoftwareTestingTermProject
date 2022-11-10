@@ -53,22 +53,22 @@ def handleSingleFile(path):
                 dic["deadlock"].append({"location": bug_location, "code": "3.1.11-loop_assign2"})
             elif "Method" in line and "is called without synchronizing on name" in line:
                 dic["wait_nosync"].append({"location": bug_location, "code": "3.1.12-wait_nosync"})
-    except :
         with open(output_file, mode = 'a') as filename:
             reg_project_name = re.compile(r'outputs/(.*?).log')
             project_name = re.findall(reg_project_name, path)[0]
-            filename.write("Filename: " + project_name + ", Fail to run the project" + '\n')
-            filename.write('\n')
-    finally:
-        with open(output_file, mode = 'a') as filename:
-            reg_project_name = re.compile(r'outputs/(.*?).log')
-            project_name = re.findall(reg_project_name, path)[0]
-            filename.write("Filename: " + project_name + ", #Bugs found: " + str(total_error_num) + '\n')
+            filename.write("Project name: " + project_name + ", #Bugs found: " + str(total_error_num) + '\n')
             for key in dic:
                 filename.write("Bug Type: " + key + ", #Bugs found: " + str(len(dic[key])) + '\n')
                 for li in dic[key]:
                     filename.write(json.dumps(li) + '\n')
             filename.write('\n')
+    except :
+        with open(output_file, mode = 'a') as filename:
+            reg_project_name = re.compile(r'outputs/(.*?).log')
+            project_name = re.findall(reg_project_name, path)[0]
+            filename.write("Project name: " + project_name + ", Fail to run the project" + '\n')
+            filename.write('\n')
+        
 
 output_file = 'result.txt'
 if os.path.exists(output_file):

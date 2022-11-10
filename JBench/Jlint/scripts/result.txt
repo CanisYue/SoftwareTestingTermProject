@@ -1,15 +1,15 @@
-Filename: account, #Bugs found: 0
+Project name: account, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: airlinetickets, #Bugs found: 1
+Project name: airlinetickets, #Bugs found: 1
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 1
 {"location": "airlinetickets/classes/airlinetickets/Airlinetickets.java:103", "code": "3.1.9-run_nosync"}
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: animator, #Bugs found: 22
+Project name: animator, #Bugs found: 22
 Bug Type: deadlock, #Bugs found: 10
 {"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:679", "code": "3.1.4-wait"}
 {"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:121", "code": "3.1.5-wait_path"}
@@ -36,7 +36,7 @@ Bug Type: race_condition, #Bugs found: 12
 {"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1430", "code": "3.1.8-concurrent_access"}
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: boundedbuffer, #Bugs found: 4
+Project name: boundedbuffer, #Bugs found: 4
 Bug Type: deadlock, #Bugs found: 4
 {"location": "boundedbuffer/classes/boundedbuffer/Buffer.java:146", "code": "3.1.4-wait"}
 {"location": "boundedbuffer/classes/boundedbuffer/BoundedBuffer.java:395", "code": "3.1.5-wait_path"}
@@ -45,84 +45,54 @@ Bug Type: deadlock, #Bugs found: 4
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: bubblesort, #Bugs found: 0
+Project name: bubblesort, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: bufwriter, #Bugs found: 0
+Project name: bufwriter, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: critical, #Bugs found: 1
+Project name: critical, #Bugs found: 1
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 1
 {"location": "critical/classes/critical/Critical.java:45", "code": "3.1.9-run_nosync"}
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: cyclicDemo, #Bugs found: 0
+Project name: cyclicDemo, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: Dacapo, Fail to run the project
+Project name: Dacapo, Fail to run the project
 
-Filename: Dacapo, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Project name: DaCapo-eclipse, Fail to run the project
 
-Filename: DaCapo-eclipse, Fail to run the project
+Project name: DaCapo-luindex, Fail to run the project
 
-Filename: DaCapo-eclipse, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Project name: DaCapo-tomcat, Fail to run the project
 
-Filename: DaCapo-luindex, Fail to run the project
+Project name: DaCapo-tradebeans, Fail to run the project
 
-Filename: DaCapo-luindex, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Project name: DaCapo-tradesoap, Fail to run the project
 
-Filename: DaCapo-tomcat, Fail to run the project
-
-Filename: DaCapo-tomcat, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Filename: DaCapo-tradebeans, Fail to run the project
-
-Filename: DaCapo-tradebeans, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Filename: DaCapo-tradesoap, Fail to run the project
-
-Filename: DaCapo-tradesoap, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Filename: dbcp3, #Bugs found: 2
+Project name: dbcp3, #Bugs found: 2
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 2
 {"location": "dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:93", "code": "3.1.9-run_nosync"}
 {"location": "dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:77", "code": "3.1.9-run_nosync"}
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: derby3, #Bugs found: 2
+Project name: derby3, #Bugs found: 2
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 2
 {"location": "derby3/classes/Derby5561.java:27", "code": "3.1.9-run_nosync"}
 {"location": "derby3/classes/Derby5561.java:43", "code": "3.1.9-run_nosync"}
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: Elevator, #Bugs found: 151
+Project name: Elevator, #Bugs found: 151
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 151
 {"location": "Elevator/classes/elevator/Person.java:80", "code": "3.1.9-run_nosync"}
@@ -278,222 +248,167 @@ Bug Type: race_condition, #Bugs found: 151
 {"location": "Elevator/classes/elevator/Building.java:37", "code": "3.1.7-concurrent_call"}
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: groovy1, #Bugs found: 0
+Project name: groovy1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: groovy5, #Bugs found: 0
+Project name: groovy5, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: groovy6, #Bugs found: 0
+Project name: groovy6, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: JGFMolDynBenchSizeA, Fail to run the project
+Project name: JGFMolDynBenchSizeA, Fail to run the project
 
-Filename: JGFMolDynBenchSizeA, #Bugs found: 10
+Project name: JGFRayTracerBenchSizeA, Fail to run the project
+
+Project name: jpf_test_cases, Fail to run the project
+
+Project name: log4j1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: JGFRayTracerBenchSizeA, Fail to run the project
-
-Filename: JGFRayTracerBenchSizeA, #Bugs found: 2
+Project name: log4j3, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: jpf_test_cases, Fail to run the project
-
-Filename: jpf_test_cases, #Bugs found: 0
+Project name: mergesort, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: log4j1, #Bugs found: 0
+Project name: pingpong, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: log4j3, #Bugs found: 0
+Project name: real-world--common-dbcps2-2.1.1, #Bugs found: 3003
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: mergesort, #Bugs found: 0
+Project name: real-world--ftpserver1.1.0, Fail to run the project
+
+Project name: real-world--guava-21.0, Fail to run the project
+
+Project name: real-world-, #Bugs found: 3003
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: pingpong, #Bugs found: 0
+Project name: real-world--tomcat8.0.26, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: real-world--common-dbcps2-2.1.1, #Bugs found: 3003
+Project name: real-world--zookeeper-3.5.2-alpha, Fail to run the project
+
+Project name: simpleExample, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: real-world--ftpserver1.1.0, Fail to run the project
+Project name: sor, Fail to run the project
 
-Filename: real-world--ftpserver1.1.0, #Bugs found: 0
+Project name: testAtomicity1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: real-world--guava-21.0, Fail to run the project
-
-Filename: real-world--guava-21.0, #Bugs found: 0
+Project name: testAtomicity11, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: real-world-, #Bugs found: 3003
+Project name: testAtomicity12, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: real-world--tomcat8.0.26, #Bugs found: 0
+Project name: testAtomicity13, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: real-world--zookeeper-3.5.2-alpha, Fail to run the project
-
-Filename: real-world--zookeeper-3.5.2-alpha, #Bugs found: 0
+Project name: testAtomicity14, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: simpleExample, #Bugs found: 0
+Project name: testAtomicity4, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: sor, Fail to run the project
-
-Filename: sor, #Bugs found: 149
-Bug Type: deadlock, #Bugs found: 9
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:288", "code": "3.1.11-loop_assign2"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:307", "code": "3.1.4-wait"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/LinkedQueue.java:70", "code": "3.1.11-loop_assign2"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:108", "code": "3.1.4-wait"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Rendezvous.java:332", "code": "3.1.5-wait_path"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:135", "code": "3.1.4-wait"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Rendezvous.java:326", "code": "3.1.5-wait_path"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:108", "code": "3.1.4-wait"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronousChannel.java:243", "code": "3.1.5-wait_path"}
-Bug Type: race_condition, #Bugs found: 11
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/TimeDaemon.java:322", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/QueuedExecutor.java:75", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.java:608", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FutureResult.java:74", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunnerGroup.java:595", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:393", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:517", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:489", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:462", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:422", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:1", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
-
-Filename: testAtomicity1, #Bugs found: 0
+Project name: testAtomicity6, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: testAtomicity11, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Filename: testAtomicity12, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Filename: testAtomicity13, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Filename: testAtomicity14, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Filename: testAtomicity4, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Filename: testAtomicity6, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Filename: testAtomicity7, #Bugs found: 1
+Project name: testAtomicity7, #Bugs found: 1
 Bug Type: deadlock, #Bugs found: 1
 {"location": "testAtomicity7/classes/benchmarks/testcases/TestAtomicity7.java:25", "code": "3.1.3-lock"}
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: testAtomicity8, #Bugs found: 0
+Project name: testAtomicity8, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: testAtomicity9, #Bugs found: 0
+Project name: testAtomicity9, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: testRace1, #Bugs found: 0
+Project name: testRace1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: testRace10, #Bugs found: 0
+Project name: testRace10, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: testRace11, #Bugs found: 0
+Project name: testRace11, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: testRace12, #Bugs found: 0
+Project name: testRace12, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: testRace13, #Bugs found: 0
+Project name: testRace13, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: testRace3, #Bugs found: 0
+Project name: testRace3, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: testRace4, #Bugs found: 0
+Project name: testRace4, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: testRace6, #Bugs found: 0
+Project name: testRace6, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Filename: tsp, #Bugs found: 8
+Project name: tsp, #Bugs found: 8
 Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 8
 {"location": "tsp/classes/benchmarks/tsp/TspSolver.java:238", "code": "3.1.8-concurrent_access"}
