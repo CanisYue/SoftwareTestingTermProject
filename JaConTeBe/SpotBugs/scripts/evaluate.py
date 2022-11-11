@@ -1,6 +1,7 @@
 import os
 import re
 import json
+
 conc_set = set((
     "AT",
     "STCAL",
@@ -10,8 +11,30 @@ conc_set = set((
     "DC",
     "DL",
     "WL",
-
+    "ESync",
+    "MSF",
+    "IS",
+    "NN",
+    "Ru",
+    "SP",
+    "TLW",
+    "UW",
+    "UG",
+    "ML",
+    "WS",
+    "RS",
+    "SC",
+    "Wa",
+    "No",
+    "UL",
+    "MWN",
+    "LI",
+    "JLM",
+    "SWL",
+    "RV",
+    "SSD",
 ))
+
 meanings = {
     "AT": "Sequence of calls to concurrent abstraction may not be atomic",
     "STCAL": "(1)Static Calendar field (2)Static DateFormat (3)Call to static Calendar (4)Call to static DateFormat",
@@ -20,9 +43,29 @@ meanings = {
     "Dm": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method",
     "DC": "(1)Possible double-check of field (2)Possible exposure of partially initialized object",
     "DL": "(1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values",
-    "WL": "",
-    
-
+    "WL": "Synchronization on getClass rather than class literal",
+    "ESync": "Empty synchronized block",
+    "MSF": "Mutable servlet field",
+    "IS": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access",
+    "NN": "Naked notify",
+    "Ru": "Invokes run on a thread (did you mean to start it instead?)",
+    "SP": "Method spins on field",
+    "TLW": "Wait with two locks held",
+    "UW": "Unconditional wait",
+    "UG": "Unsynchronized get method, synchronized set method",
+    "ML": "(1)Synchronization on field in futile attempt to guard that field (2)Method synchronizes on an updated field",
+    "WS": "Class’s writeObject() method is synchronized but nothing else is",
+    "RS": "Class’s readObject() method is synchronized",
+    "SC": "Constructor invokes Thread.start()",
+    "Wa": "(1)Wait not in loop (2)Condition.await() not in loop",
+    "No": "Using notify() rather than notifyAll()",
+    "UL": "(1)Method does not release lock on all paths (2)Method does not release lock on all exception paths",
+    "MWN": "(1)Mismatched wait() (2)Mismatched notify()",
+    "LI": "(1)Incorrect lazy initialization of static field (2)Incorrect lazy initialization and update of static field",
+    "JLM": "(1)Synchronization performed on util.concurrent instance (2)Using monitor style wait methods on util.concurrent abstraction (3)Synchronization performed on Lock",
+    "SWL": "Method calls Thread.sleep() with a lock held",
+    "RV": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused",
+    "SSD": "Instance level lock was used on a shared static data"
 }
 
 def getFilePath(path):
