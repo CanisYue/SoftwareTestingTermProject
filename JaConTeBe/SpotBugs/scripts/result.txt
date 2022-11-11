@@ -1,0 +1,140 @@
+Project name: dbcp1, #Bugs found: 2
+
+Project name: dbcp2, #Bugs found: 0
+
+Project name: dbcp3, #Bugs found: 0
+
+Project name: dbcp4, #Bugs found: 0
+
+Project name: derby1, #Bugs found: 0
+
+Project name: derby2, #Bugs found: 0
+
+Project name: derby3, #Bugs found: 0
+
+Project name: derby4, #Bugs found: 0
+
+Project name: derby5, #Bugs found: 0
+
+Project name: groovy1, #Bugs found: 0
+
+Project name: groovy2, #Bugs found: 0
+
+Project name: groovy3, #Bugs found: 0
+
+Project name: groovy4, #Bugs found: 0
+
+Project name: groovy5, #Bugs found: 0
+
+Project name: groovy6, #Bugs found: 1
+
+Project name: jdk6_1, #Bugs found: 1
+
+Project name: jdk6_10, #Bugs found: 2
+
+Project name: jdk6_11, #Bugs found: 1
+
+Project name: jdk6_12, #Bugs found: 0
+
+Project name: jdk6_13, #Bugs found: 0
+
+Project name: jdk6_14, #Bugs found: 0
+
+Project name: jdk6_2, #Bugs found: 3
+Bug Type: RV, #Bugs found: 3
+{"location": "jdk6_2/classes/Test4742723.java:[line 22]", "code": "3"}
+{"location": "jdk6_2/classes/Test4742723.java:[line 31]", "code": "3"}
+{"location": "jdk6_2/classes/Test4742723.java:[line 60]", "code": "3"}
+
+Project name: jdk6_3, #Bugs found: 0
+
+Project name: jdk6_4, #Bugs found: 0
+
+Project name: jdk6_5, #Bugs found: 0
+
+Project name: jdk6_6, #Bugs found: 0
+
+Project name: jdk6_7, #Bugs found: 0
+
+Project name: jdk6_8, #Bugs found: 0
+
+Project name: jdk6_9, #Bugs found: 7
+
+Project name: jdk7_1, #Bugs found: 7
+Bug Type: Dm, #Bugs found: 1
+{"location": "jdk7_1/classes/Test7045594.java:[line 145]", "code": "4"}
+
+Project name: jdk7_2, #Bugs found: 0
+
+Project name: jdk7_3, #Bugs found: 2
+Bug Type: NP, #Bugs found: 1
+{"location": "jdk7_3/classes/Test7132378.java:[line 116]", "code": "1"}
+
+Project name: jdk7_4, #Bugs found: 2
+Bug Type: RV, #Bugs found: 1
+{"location": "jdk7_4/classes/Test8010939.java:[line 57]", "code": "3"}
+
+Project name: jdk7_5, #Bugs found: 2
+Bug Type: RV, #Bugs found: 1
+{"location": "jdk7_5/classes/Test8012019.java:[line 42]", "code": "3"}
+Bug Type: Dm, #Bugs found: 1
+{"location": "jdk7_5/classes/Test8012019.java:[line 48]", "code": "4"}
+
+Project name: jdk7_6, #Bugs found: 32
+Bug Type: Dm, #Bugs found: 6
+{"location": "jdk7_6/classes/StreamPipe.java:[line 58]", "code": "4"}
+{"location": "jdk7_6/classes/StreamPipe.java:[line 57]", "code": "4"}
+{"location": "jdk7_6/classes/TestLibrary.java:[line 103]", "code": "4"}
+{"location": "jdk7_6/classes/TestLibrary.java:[line 137]", "code": "4"}
+{"location": "jdk7_6/classes/TestLibrary.java:[line 342]", "code": "4"}
+{"location": "jdk7_6/classes/TestLibrary.java:[line 345]", "code": "4"}
+Bug Type: RV, #Bugs found: 2
+{"location": "jdk7_6/classes/TestLibrary.java:[line 302]", "code": "3"}
+{"location": "jdk7_6/classes/RMID.java:[line 167]", "code": "3"}
+Bug Type: NP, #Bugs found: 1
+{"location": "jdk7_6/classes/RMID.java:[line 263]", "code": "1"}
+
+Project name: log4j1, #Bugs found: 1
+
+Project name: log4j2, #Bugs found: 0
+
+Project name: log4j3, #Bugs found: 1
+
+Project name: log4j4, #Bugs found: 1
+
+Project name: log4j5, #Bugs found: 0
+
+Project name: lucene1, #Bugs found: 15
+Bug Type: NP, #Bugs found: 1
+{"location": "lucene1/classes/_TestUtil293.java:[line 49]", "code": "1"}
+Bug Type: DMI, #Bugs found: 2
+{"location": "lucene1/classes/_TestUtil293.java:[line 43]", "code": "2"}
+{"location": "lucene1/classes/_TestUtil293.java:[line 126]", "code": "2"}
+Bug Type: RV, #Bugs found: 1
+{"location": "lucene1/classes/_TestUtil293.java:[line 54]", "code": "3"}
+Bug Type: Dm, #Bugs found: 2
+{"location": "lucene1/classes/_TestUtil293.java:[line 83]", "code": "4"}
+{"location": "lucene1/classes/_TestUtil293.java:[line 79]", "code": "4"}
+
+Project name: lucene2, #Bugs found: 6
+Bug Type: NP, #Bugs found: 1
+{"location": "lucene2/classes/_TestUtil293.java:[line 49]", "code": "1"}
+Bug Type: DMI, #Bugs found: 2
+{"location": "lucene2/classes/_TestUtil293.java:[line 43]", "code": "2"}
+{"location": "lucene2/classes/_TestUtil293.java:[line 126]", "code": "2"}
+Bug Type: RV, #Bugs found: 1
+{"location": "lucene2/classes/_TestUtil293.java:[line 54]", "code": "3"}
+Bug Type: Dm, #Bugs found: 2
+{"location": "lucene2/classes/_TestUtil293.java:[line 83]", "code": "4"}
+{"location": "lucene2/classes/_TestUtil293.java:[line 79]", "code": "4"}
+
+Project name: pool1, #Bugs found: 3
+
+Project name: pool2, #Bugs found: 1
+
+Project name: pool3, #Bugs found: 6
+
+Project name: pool4, #Bugs found: 2
+
+Project name: pool5, #Bugs found: 0
+
