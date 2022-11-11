@@ -18,22 +18,24 @@ Project name: Dacapo, #Bugs found: 0
 
 Project name: Elevator, #Bugs found: 15
 Bug Type: VO, #Bugs found: 13
-{"location": "Elevator/classes/Elevator.java:[line 218]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Elevator.java:[line 238]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Person.java:[line 85]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Person.java:[line 95]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Person.java:[line 111]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Person.java:[line 112]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Person.java:[line 130]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Person.java:[line 146]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Person.java:[line 147]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Person.java:[line 156]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Person.java:[line 171]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Person.java:[line 177]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "Elevator/classes/Person.java:[line 314]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
+Description: (1)A volatile reference to an array doesn’t treat the array elements as volatile (2)An increment to a volatile field isn’t atomic
+{"location": "Elevator/classes/Elevator.java:[line 218]"}
+{"location": "Elevator/classes/Elevator.java:[line 238]"}
+{"location": "Elevator/classes/Person.java:[line 85]"}
+{"location": "Elevator/classes/Person.java:[line 95]"}
+{"location": "Elevator/classes/Person.java:[line 111]"}
+{"location": "Elevator/classes/Person.java:[line 112]"}
+{"location": "Elevator/classes/Person.java:[line 130]"}
+{"location": "Elevator/classes/Person.java:[line 146]"}
+{"location": "Elevator/classes/Person.java:[line 147]"}
+{"location": "Elevator/classes/Person.java:[line 156]"}
+{"location": "Elevator/classes/Person.java:[line 171]"}
+{"location": "Elevator/classes/Person.java:[line 177]"}
+{"location": "Elevator/classes/Person.java:[line 314]"}
 Bug Type: IS, #Bugs found: 2
-{"location": "Elevator/classes/Elevator.java:[line 253]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "Elevator/classes/Elevator.java:[line 113]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "Elevator/classes/Elevator.java:[line 253]"}
+{"location": "Elevator/classes/Elevator.java:[line 113]"}
 
 
 Project name: JGFMolDynBenchSizeA, #Bugs found: 0
@@ -41,69 +43,84 @@ Project name: JGFMolDynBenchSizeA, #Bugs found: 0
 
 Project name: JGFRayTracerBenchSizeA, #Bugs found: 1
 Bug Type: SSD, #Bugs found: 1
-{"location": "JGFRayTracerBenchSizeA/classes/JGFRayTracerBench.java:[line 175]", "code": "Instance level lock was used on a shared static data"}
+Description: Instance level lock was used on a shared static data
+{"location": "JGFRayTracerBenchSizeA/classes/JGFRayTracerBench.java:[line 175]"}
 
 
 Project name: account, #Bugs found: 1
 Bug Type: Dm, #Bugs found: 1
-{"location": "account/classes/Account.java:[line 87]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "account/classes/Account.java:[line 87]"}
 
 
 Project name: airlinetickets, #Bugs found: 1
 Bug Type: Dm, #Bugs found: 1
-{"location": "airlinetickets/classes/Airlinetickets.java:[line 88]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "airlinetickets/classes/Airlinetickets.java:[line 88]"}
 
 
 Project name: animator, #Bugs found: 8
 Bug Type: SWL, #Bugs found: 2
-{"location": "animator/classes/XtangoAnimator.java:[line 1014]", "code": "Method calls Thread.sleep() with a lock held"}
-{"location": "animator/classes/XtangoAnimator.java:[line 1189]", "code": "Method calls Thread.sleep() with a lock held"}
+Description: Method calls Thread.sleep() with a lock held
+{"location": "animator/classes/XtangoAnimator.java:[line 1014]"}
+{"location": "animator/classes/XtangoAnimator.java:[line 1189]"}
 Bug Type: Dm, #Bugs found: 1
-{"location": "animator/classes/XtangoAnimator.java:[line 650]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "animator/classes/XtangoAnimator.java:[line 650]"}
 Bug Type: Wa, #Bugs found: 1
-{"location": "animator/classes/XtangoAnimator.java:[line 679]", "code": "(1)Wait not in loop (2)Condition.await() not in loop"}
+Description: (1)Wait not in loop (2)Condition.await() not in loop
+{"location": "animator/classes/XtangoAnimator.java:[line 679]"}
 Bug Type: NN, #Bugs found: 2
-{"location": "animator/classes/XtangoAnimator.java:[line 107]", "code": "Naked notify"}
-{"location": "animator/classes/XtangoAnimator.java:[line 108]", "code": "Naked notify"}
+Description: Naked notify
+{"location": "animator/classes/XtangoAnimator.java:[line 107]"}
+{"location": "animator/classes/XtangoAnimator.java:[line 108]"}
 Bug Type: IS, #Bugs found: 2
-{"location": "animator/classes/XtangoAnimator.java:[line 723]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "animator/classes/XtangoAnimator.java:[line 760]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "animator/classes/XtangoAnimator.java:[line 723]"}
+{"location": "animator/classes/XtangoAnimator.java:[line 760]"}
 
 
 Project name: boundedbuffer, #Bugs found: 10
 Bug Type: SSD, #Bugs found: 4
-{"location": "boundedbuffer/classes/Buffer.java:[line 150]", "code": "Instance level lock was used on a shared static data"}
-{"location": "boundedbuffer/classes/Buffer.java:[line 128]", "code": "Instance level lock was used on a shared static data"}
-{"location": "boundedbuffer/classes/BoundedBuffer.java:[line 400]", "code": "Instance level lock was used on a shared static data"}
-{"location": "boundedbuffer/classes/BoundedBuffer.java:[line 381]", "code": "Instance level lock was used on a shared static data"}
+Description: Instance level lock was used on a shared static data
+{"location": "boundedbuffer/classes/Buffer.java:[line 150]"}
+{"location": "boundedbuffer/classes/Buffer.java:[line 128]"}
+{"location": "boundedbuffer/classes/BoundedBuffer.java:[line 400]"}
+{"location": "boundedbuffer/classes/BoundedBuffer.java:[line 381]"}
 Bug Type: Dm, #Bugs found: 2
-{"location": "boundedbuffer/classes/BoundedBuffer.java:[line 192]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "boundedbuffer/classes/BoundedBuffer.java:[line 314]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "boundedbuffer/classes/BoundedBuffer.java:[line 192]"}
+{"location": "boundedbuffer/classes/BoundedBuffer.java:[line 314]"}
 Bug Type: IS, #Bugs found: 4
-{"location": "boundedbuffer/classes/Buffer.java:[line 51]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "boundedbuffer/classes/Buffer.java:[line 53]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "boundedbuffer/classes/Buffer.java:[line 52]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "boundedbuffer/classes/Buffer.java:[line 67]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "boundedbuffer/classes/Buffer.java:[line 51]"}
+{"location": "boundedbuffer/classes/Buffer.java:[line 53]"}
+{"location": "boundedbuffer/classes/Buffer.java:[line 52]"}
+{"location": "boundedbuffer/classes/Buffer.java:[line 67]"}
 
 
 Project name: bubblesort, #Bugs found: 5
 Bug Type: Dm, #Bugs found: 4
-{"location": "bubblesort/classes/Reporter.java:[line 113]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "bubblesort/classes/Reporter.java:[line 34]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "bubblesort/classes/Reporter.java:[line 83]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "bubblesort/classes/BubbleSortImpl.java:[line 54]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "bubblesort/classes/Reporter.java:[line 113]"}
+{"location": "bubblesort/classes/Reporter.java:[line 34]"}
+{"location": "bubblesort/classes/Reporter.java:[line 83]"}
+{"location": "bubblesort/classes/BubbleSortImpl.java:[line 54]"}
 Bug Type: SWL, #Bugs found: 1
-{"location": "bubblesort/classes/BubbleSortImpl.java:[line 92]", "code": "Method calls Thread.sleep() with a lock held"}
+Description: Method calls Thread.sleep() with a lock held
+{"location": "bubblesort/classes/BubbleSortImpl.java:[line 92]"}
 
 
 Project name: bufwriter, #Bugs found: 1
 Bug Type: Dm, #Bugs found: 1
-{"location": "bufwriter/classes/Checker.java:[line 62]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "bufwriter/classes/Checker.java:[line 62]"}
 
 
 Project name: critical, #Bugs found: 1
 Bug Type: Dm, #Bugs found: 1
-{"location": "critical/classes/Critical.java:[line 75]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "critical/classes/Critical.java:[line 75]"}
 
 
 Project name: cyclicDemo, #Bugs found: 0
@@ -126,14 +143,17 @@ Project name: groovy6, #Bugs found: 0
 
 Project name: jpf_test_cases, #Bugs found: 6
 Bug Type: Wa, #Bugs found: 4
-{"location": "jpf_test_cases/classes/START.java:[line 6]", "code": "(1)Wait not in loop (2)Condition.await() not in loop"}
-{"location": "jpf_test_cases/classes/StandardCountingSemaphore.java:[line 14]", "code": "(1)Wait not in loop (2)Condition.await() not in loop"}
-{"location": "jpf_test_cases/classes/RWVSNTest.java:[line 98]", "code": "(1)Wait not in loop (2)Condition.await() not in loop"}
-{"location": "jpf_test_cases/classes/RWVSNTest.java:[line 113]", "code": "(1)Wait not in loop (2)Condition.await() not in loop"}
+Description: (1)Wait not in loop (2)Condition.await() not in loop
+{"location": "jpf_test_cases/classes/START.java:[line 6]"}
+{"location": "jpf_test_cases/classes/StandardCountingSemaphore.java:[line 14]"}
+{"location": "jpf_test_cases/classes/RWVSNTest.java:[line 98]"}
+{"location": "jpf_test_cases/classes/RWVSNTest.java:[line 113]"}
 Bug Type: NN, #Bugs found: 1
-{"location": "jpf_test_cases/classes/RWVSNTest.java:[line 129]", "code": "Naked notify"}
+Description: Naked notify
+{"location": "jpf_test_cases/classes/RWVSNTest.java:[line 129]"}
 Bug Type: IS, #Bugs found: 1
-{"location": "jpf_test_cases/classes/ReplicatedWorkers.java:[line 265]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "jpf_test_cases/classes/ReplicatedWorkers.java:[line 265]"}
 
 
 Project name: log4j1, #Bugs found: 0
@@ -144,40 +164,49 @@ Project name: log4j3, #Bugs found: 0
 
 Project name: mergesort, #Bugs found: 7
 Bug Type: Dm, #Bugs found: 5
-{"location": "mergesort/classes/MSort.java:[line 117]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "mergesort/classes/MSort.java:[line 152]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "mergesort/classes/MSort.java:[line 264]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "mergesort/classes/MSort.java:[line 123]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "mergesort/classes/MSort.java:[line 159]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "mergesort/classes/MSort.java:[line 117]"}
+{"location": "mergesort/classes/MSort.java:[line 152]"}
+{"location": "mergesort/classes/MSort.java:[line 264]"}
+{"location": "mergesort/classes/MSort.java:[line 123]"}
+{"location": "mergesort/classes/MSort.java:[line 159]"}
 Bug Type: SSD, #Bugs found: 2
-{"location": "mergesort/classes/MSort.java:[line 32]", "code": "Instance level lock was used on a shared static data"}
-{"location": "mergesort/classes/MSort.java:[line 41]", "code": "Instance level lock was used on a shared static data"}
+Description: Instance level lock was used on a shared static data
+{"location": "mergesort/classes/MSort.java:[line 32]"}
+{"location": "mergesort/classes/MSort.java:[line 41]"}
 
 
 Project name: pingpong, #Bugs found: 3
 Bug Type: Dm, #Bugs found: 1
-{"location": "pingpong/classes/BuggedProgram.java:[line 98]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "pingpong/classes/BuggedProgram.java:[line 98]"}
 Bug Type: RV, #Bugs found: 1
-{"location": "pingpong/classes/BuggedProgram.java:[line 85]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "pingpong/classes/BuggedProgram.java:[line 85]"}
 Bug Type: NP, #Bugs found: 1
-{"location": "pingpong/classes/PingPong.java:[line 63]", "code": "Synchronize and null check on the same field"}
+Description: Synchronize and null check on the same field
+{"location": "pingpong/classes/PingPong.java:[line 63]"}
 
 
 Project name: real-world--common-dbcps2-2.1.1, #Bugs found: 10
 Bug Type: NP, #Bugs found: 4
-{"location": "real-world--common-dbcps2-2.1.1/classes/TesterStatement.java:[line 63]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world--common-dbcps2-2.1.1/classes/TesterPreparedStatement.java:[line 103]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world--common-dbcps2-2.1.1/classes/TesterPreparedStatement.java:[line 87]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world--common-dbcps2-2.1.1/classes/TesterConnection.java:[line 175]", "code": "Synchronize and null check on the same field"}
+Description: Synchronize and null check on the same field
+{"location": "real-world--common-dbcps2-2.1.1/classes/TesterStatement.java:[line 63]"}
+{"location": "real-world--common-dbcps2-2.1.1/classes/TesterPreparedStatement.java:[line 103]"}
+{"location": "real-world--common-dbcps2-2.1.1/classes/TesterPreparedStatement.java:[line 87]"}
+{"location": "real-world--common-dbcps2-2.1.1/classes/TesterConnection.java:[line 175]"}
 Bug Type: Dm, #Bugs found: 4
-{"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 63]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 106]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 123]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 162]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 63]"}
+{"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 106]"}
+{"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 123]"}
+{"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 162]"}
 Bug Type: SWL, #Bugs found: 1
-{"location": "real-world--common-dbcps2-2.1.1/classes/TestBasicDataSource.java:[line 648]", "code": "Method calls Thread.sleep() with a lock held"}
+Description: Method calls Thread.sleep() with a lock held
+{"location": "real-world--common-dbcps2-2.1.1/classes/TestBasicDataSource.java:[line 648]"}
 Bug Type: RV, #Bugs found: 1
-{"location": "real-world--common-dbcps2-2.1.1/classes/TestPStmtPooling.java:[line 84]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "real-world--common-dbcps2-2.1.1/classes/TestPStmtPooling.java:[line 84]"}
 
 
 Project name: real-world--ftpserver1.1.0, #Bugs found: 0
@@ -188,345 +217,359 @@ Project name: real-world--guava-21.0, #Bugs found: 0
 
 Project name: real-world-, #Bugs found: 387
 Bug Type: RV, #Bugs found: 91
-{"location": "real-world-/classes/AsyncAppenderLog4j1LocationBenchmark.java:[line 62]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncAppenderLog4j2LocationBenchmark.java:[line 80]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/FormatterLoggerBenchmark.java:[line 56]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/FormatterLoggerBenchmark.java:[line 65]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/JmsAppenderIT.java:[line 140]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/FileRenameAction.java:[line 111]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/ReconfigurationDeadlockTest.java:[line 121]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/FileRenameActionTest.java:[line 39]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/FileRenameActionTest.java:[line 100]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/FileRenameActionTest.java:[line 114]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/FileRenameActionTest.java:[line 125]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/Log4j2Jira1688AsyncTest.java:[line 90]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 47]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 50]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggersLocationBenchmark.java:[line 66]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggersLocationBenchmark.java:[line 72]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 258]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/RollingAppenderNoUnconditionalDeleteTest.java:[line 103]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncAppenderLogbackBenchmark.java:[line 66]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/XmlFileAppenderTest.java:[line 50]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggersBenchmark.java:[line 68]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggersBenchmark.java:[line 74]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/FileAppenderBenchmark.java:[line 98]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncAppenderLog4j1Benchmark.java:[line 64]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 48]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncAppenderLogbackLocationBenchmark.java:[line 65]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncAppenderLog4j2Benchmark.java:[line 92]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/XmlRandomAccessFileAppenderTest.java:[line 52]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/ConcurrentLoggingWithGelfLayoutTest.java:[line 50]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/XmlCompactFileAsyncAppenderValidationTest.java:[line 57]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/XmlCompactFileAsyncAppenderValidationTest.java:[line 69]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggerLocationTest.java:[line 43]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggerLocationTest.java:[line 68]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AbstractConfiguration.java:[line 704]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/TypeConverterRegistry.java:[line 99]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AbstractRolloverStrategy.java:[line 112]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/CsvParameterLayoutTest.java:[line 111]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/CsvParameterLayoutTest.java:[line 176]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggerTest.java:[line 57]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AbstractAsyncThreadContextTestBase.java:[line 128]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AbstractAsyncThreadContextTestBase.java:[line 189]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/JsonLayoutTest.java:[line 94]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/JsonLayoutTest.java:[line 140]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/MemoryMappedFileManager.java:[line 337]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncAppender.java:[line 471]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/Log4jLogEventNanoTimeTest.java:[line 55]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AdvertiserTest.java:[line 42]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AdvertiserTest.java:[line 63]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/PatternParserTest.java:[line 209]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/Log4j2AppenderComparisonBenchmark.java:[line 128]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggerConfigTest2.java:[line 60]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggerTestNanoTime.java:[line 59]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/NoSqlDatabaseManagerTest.java:[line 95]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/PerfTestDriver.java:[line 306]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/PerfTestDriver.java:[line 342]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/PerfTestDriver.java:[line 344]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/RandomAccessFileManager.java:[line 191]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/RollingRandomAccessFileManager.java:[line 171]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/FileAppenderParamsBenchmark.java:[line 87]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggerConfigTest.java:[line 59]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/SortedArrayStringMapTest.java:[line 116]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/MultiThreadPerfTest.java:[line 65]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/MultiThreadPerfTest.java:[line 66]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/XmlCompactFileAppenderValidationTest.java:[line 66]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/XmlCompactFileAppenderValidationTest.java:[line 80]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/XmlCompactFileAppenderValidationTest.java:[line 92]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/MutableLogEventTest.java:[line 229]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 126]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 133]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 148]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 163]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 178]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/GenerateExtendedLoggerTest.java:[line 67]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/KeyStoreConfigurationTest.java:[line 52]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/Bzip2CompressActionTest.java:[line 69]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/LoggingController.java:[line 110]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/GenerateCustomLoggerTest.java:[line 65]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncRootReloadTest.java:[line 56]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/LoggingApp.java:[line 114]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggerTimestampMessageTest.java:[line 73]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/XmlCompleteFileAppenderTest.java:[line 85]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/XmlCompleteFileAppenderTest.java:[line 148]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/XmlCompactFileAppenderTest.java:[line 49]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggerThreadContextTest.java:[line 58]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggerConfigAutoFlushTest.java:[line 55]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/OnStartupTriggeringPolicyTest.java:[line 61]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggerTestCachedThreadName.java:[line 57]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/ConcurrentLoggingWithJsonLayoutTest.java:[line 52]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/AsyncLoggerTestUncachedThreadName.java:[line 58]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/TrustStoreConfigurationTest.java:[line 50]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "real-world-/classes/ThreadedTest.java:[line 116]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "real-world-/classes/AsyncAppenderLog4j1LocationBenchmark.java:[line 62]"}
+{"location": "real-world-/classes/AsyncAppenderLog4j2LocationBenchmark.java:[line 80]"}
+{"location": "real-world-/classes/FormatterLoggerBenchmark.java:[line 56]"}
+{"location": "real-world-/classes/FormatterLoggerBenchmark.java:[line 65]"}
+{"location": "real-world-/classes/JmsAppenderIT.java:[line 140]"}
+{"location": "real-world-/classes/FileRenameAction.java:[line 111]"}
+{"location": "real-world-/classes/ReconfigurationDeadlockTest.java:[line 121]"}
+{"location": "real-world-/classes/FileRenameActionTest.java:[line 39]"}
+{"location": "real-world-/classes/FileRenameActionTest.java:[line 100]"}
+{"location": "real-world-/classes/FileRenameActionTest.java:[line 114]"}
+{"location": "real-world-/classes/FileRenameActionTest.java:[line 125]"}
+{"location": "real-world-/classes/Log4j2Jira1688AsyncTest.java:[line 90]"}
+{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 47]"}
+{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 50]"}
+{"location": "real-world-/classes/AsyncLoggersLocationBenchmark.java:[line 66]"}
+{"location": "real-world-/classes/AsyncLoggersLocationBenchmark.java:[line 72]"}
+{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 258]"}
+{"location": "real-world-/classes/RollingAppenderNoUnconditionalDeleteTest.java:[line 103]"}
+{"location": "real-world-/classes/AsyncAppenderLogbackBenchmark.java:[line 66]"}
+{"location": "real-world-/classes/XmlFileAppenderTest.java:[line 50]"}
+{"location": "real-world-/classes/AsyncLoggersBenchmark.java:[line 68]"}
+{"location": "real-world-/classes/AsyncLoggersBenchmark.java:[line 74]"}
+{"location": "real-world-/classes/FileAppenderBenchmark.java:[line 98]"}
+{"location": "real-world-/classes/AsyncAppenderLog4j1Benchmark.java:[line 64]"}
+{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 48]"}
+{"location": "real-world-/classes/AsyncAppenderLogbackLocationBenchmark.java:[line 65]"}
+{"location": "real-world-/classes/AsyncAppenderLog4j2Benchmark.java:[line 92]"}
+{"location": "real-world-/classes/XmlRandomAccessFileAppenderTest.java:[line 52]"}
+{"location": "real-world-/classes/ConcurrentLoggingWithGelfLayoutTest.java:[line 50]"}
+{"location": "real-world-/classes/XmlCompactFileAsyncAppenderValidationTest.java:[line 57]"}
+{"location": "real-world-/classes/XmlCompactFileAsyncAppenderValidationTest.java:[line 69]"}
+{"location": "real-world-/classes/AsyncLoggerLocationTest.java:[line 43]"}
+{"location": "real-world-/classes/AsyncLoggerLocationTest.java:[line 68]"}
+{"location": "real-world-/classes/AbstractConfiguration.java:[line 704]"}
+{"location": "real-world-/classes/TypeConverterRegistry.java:[line 99]"}
+{"location": "real-world-/classes/AbstractRolloverStrategy.java:[line 112]"}
+{"location": "real-world-/classes/CsvParameterLayoutTest.java:[line 111]"}
+{"location": "real-world-/classes/CsvParameterLayoutTest.java:[line 176]"}
+{"location": "real-world-/classes/AsyncLoggerTest.java:[line 57]"}
+{"location": "real-world-/classes/AbstractAsyncThreadContextTestBase.java:[line 128]"}
+{"location": "real-world-/classes/AbstractAsyncThreadContextTestBase.java:[line 189]"}
+{"location": "real-world-/classes/JsonLayoutTest.java:[line 94]"}
+{"location": "real-world-/classes/JsonLayoutTest.java:[line 140]"}
+{"location": "real-world-/classes/MemoryMappedFileManager.java:[line 337]"}
+{"location": "real-world-/classes/AsyncAppender.java:[line 471]"}
+{"location": "real-world-/classes/Log4jLogEventNanoTimeTest.java:[line 55]"}
+{"location": "real-world-/classes/AdvertiserTest.java:[line 42]"}
+{"location": "real-world-/classes/AdvertiserTest.java:[line 63]"}
+{"location": "real-world-/classes/PatternParserTest.java:[line 209]"}
+{"location": "real-world-/classes/Log4j2AppenderComparisonBenchmark.java:[line 128]"}
+{"location": "real-world-/classes/AsyncLoggerConfigTest2.java:[line 60]"}
+{"location": "real-world-/classes/AsyncLoggerTestNanoTime.java:[line 59]"}
+{"location": "real-world-/classes/NoSqlDatabaseManagerTest.java:[line 95]"}
+{"location": "real-world-/classes/PerfTestDriver.java:[line 306]"}
+{"location": "real-world-/classes/PerfTestDriver.java:[line 342]"}
+{"location": "real-world-/classes/PerfTestDriver.java:[line 344]"}
+{"location": "real-world-/classes/RandomAccessFileManager.java:[line 191]"}
+{"location": "real-world-/classes/RollingRandomAccessFileManager.java:[line 171]"}
+{"location": "real-world-/classes/FileAppenderParamsBenchmark.java:[line 87]"}
+{"location": "real-world-/classes/AsyncLoggerConfigTest.java:[line 59]"}
+{"location": "real-world-/classes/SortedArrayStringMapTest.java:[line 116]"}
+{"location": "real-world-/classes/MultiThreadPerfTest.java:[line 65]"}
+{"location": "real-world-/classes/MultiThreadPerfTest.java:[line 66]"}
+{"location": "real-world-/classes/XmlCompactFileAppenderValidationTest.java:[line 66]"}
+{"location": "real-world-/classes/XmlCompactFileAppenderValidationTest.java:[line 80]"}
+{"location": "real-world-/classes/XmlCompactFileAppenderValidationTest.java:[line 92]"}
+{"location": "real-world-/classes/MutableLogEventTest.java:[line 229]"}
+{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 126]"}
+{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 133]"}
+{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 148]"}
+{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 163]"}
+{"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 178]"}
+{"location": "real-world-/classes/GenerateExtendedLoggerTest.java:[line 67]"}
+{"location": "real-world-/classes/KeyStoreConfigurationTest.java:[line 52]"}
+{"location": "real-world-/classes/Bzip2CompressActionTest.java:[line 69]"}
+{"location": "real-world-/classes/LoggingController.java:[line 110]"}
+{"location": "real-world-/classes/GenerateCustomLoggerTest.java:[line 65]"}
+{"location": "real-world-/classes/AsyncRootReloadTest.java:[line 56]"}
+{"location": "real-world-/classes/LoggingApp.java:[line 114]"}
+{"location": "real-world-/classes/AsyncLoggerTimestampMessageTest.java:[line 73]"}
+{"location": "real-world-/classes/XmlCompleteFileAppenderTest.java:[line 85]"}
+{"location": "real-world-/classes/XmlCompleteFileAppenderTest.java:[line 148]"}
+{"location": "real-world-/classes/XmlCompactFileAppenderTest.java:[line 49]"}
+{"location": "real-world-/classes/AsyncLoggerThreadContextTest.java:[line 58]"}
+{"location": "real-world-/classes/AsyncLoggerConfigAutoFlushTest.java:[line 55]"}
+{"location": "real-world-/classes/OnStartupTriggeringPolicyTest.java:[line 61]"}
+{"location": "real-world-/classes/AsyncLoggerTestCachedThreadName.java:[line 57]"}
+{"location": "real-world-/classes/ConcurrentLoggingWithJsonLayoutTest.java:[line 52]"}
+{"location": "real-world-/classes/AsyncLoggerTestUncachedThreadName.java:[line 58]"}
+{"location": "real-world-/classes/TrustStoreConfigurationTest.java:[line 50]"}
+{"location": "real-world-/classes/ThreadedTest.java:[line 116]"}
 Bug Type: Dm, #Bugs found: 173
-{"location": "real-world-/classes/AnnotationVsMarkerInterface.java:[line 62]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/MemoryMappedFileAppenderLocationTest.java:[line 78]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/RandomAccessFileAppenderTests.java:[line 83]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/JdbcAppenderH2DataSourceTest.java:[line 35]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/FileRenameAction.java:[line 140]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractSocketServer.java:[line 195]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/FileRenameActionTest.java:[line 55]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/FileRenameActionTest.java:[line 71]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/FileRenameActionTest.java:[line 86]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 52]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/BundleTestInfo.java:[line 39]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerformanceRun.java:[line 72]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerformanceRun.java:[line 127]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerformanceRun.java:[line 133]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoadBundleTest.java:[line 244]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoadBundleTest.java:[line 252]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoadBundleTest.java:[line 281]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoadBundleTest.java:[line 276]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/SocketMessageLossTest.java:[line 67]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerformanceComparison.java:[line 120]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerformanceComparison.java:[line 194]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerformanceComparison.java:[line 200]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/MockTcpSyslogServer.java:[line 58]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/StringEncodingBenchmark.java:[line 67]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/MemoryMappedFileAppenderSimpleTest.java:[line 73]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/XmlFileAppenderTest.java:[line 59]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoaderUtil.java:[line 307]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/JdbcAppenderHsqlDataSourceTest.java:[line 34]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/SocketReconnectTest.java:[line 144]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/JsonCompleteFileAppenderTest.java:[line 77]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 56]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerfTestDriver.java:[line 353]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LowLevelLogUtil.java:[line 53]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LowLevelLogUtil.java:[line 34]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/MemoryMappedFileAppenderRemapTest.java:[line 78]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/XmlRandomAccessFileAppenderTest.java:[line 62]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternSelectorTest.java:[line 34]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AsyncLoggerLocationTest.java:[line 65]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/TlsSyslogInputStreamReader.java:[line 67]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/TlsSyslogInputStreamReader.java:[line 89]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LegacyBsdTlsSyslogInputStreamReader.java:[line 51]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/SimpleSmtpServer.java:[line 108]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/SimpleSmtpServer.java:[line 109]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/NameUtil.java:[line 44]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/StatusData.java:[line 141]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/StatusData.java:[line 140]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractConfiguration.java:[line 427]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/StatusConfiguration.java:[line 124]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractJdbcAppenderFactoryMethodTest.java:[line 61]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractJdbcAppenderFactoryMethodTest.java:[line 64]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/ListAppender.java:[line 145]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/FlumePersistentPerf.java:[line 146]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractJpaAppenderTest.java:[line 92]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractJpaAppenderTest.java:[line 89]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractJpaAppenderTest.java:[line 154]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractJpaAppenderTest.java:[line 151]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/JdbcAppenderH2FactoryMethodTest.java:[line 49]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/JdbcAppenderHsqlFactoryMethodTest.java:[line 48]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/TestLogger.java:[line 80]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/TestLogger.java:[line 81]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/GcFreeLoggingTestUtil.java:[line 151]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/ResolverUtilTest.java:[line 197]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/ResolverUtilTest.java:[line 200]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractJdbcAppenderDataSourceTest.java:[line 83]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractJdbcAppenderDataSourceTest.java:[line 86]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/SimpleLoggerContext.java:[line 91]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/ConfigurationTest.java:[line 147]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AsyncLoggerTest.java:[line 66]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractAsyncThreadContextTestBase.java:[line 174]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/ResponseTimeTest.java:[line 178]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutBenchmark.java:[line 107]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/Log4jLogEventNanoTimeTest.java:[line 70]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/JpaH2AppenderTest.java:[line 39]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/MockUdpSyslogServer.java:[line 50]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AsyncLoggerConfigTest2.java:[line 56]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/JpaAppenderBenchmark.java:[line 171]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/JpaAppenderBenchmark.java:[line 188]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/SimplePerfTest.java:[line 61]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/SimplePerfTest.java:[line 75]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/SimplePerfTest.java:[line 88]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/SimplePerfTest.java:[line 101]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerfTest.java:[line 98]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerfTest.java:[line 136]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerfTest.java:[line 165]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/VelocityTest.java:[line 53]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AsyncLoggerTestNanoTime.java:[line 77]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerfTestDriver.java:[line 302]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 185]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 419]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 457]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 510]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 564]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 95]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 103]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 138]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 167]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 185]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 255]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 309]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 344]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 364]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternLayoutTest.java:[line 384]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/OutputStreamAppenderTest.java:[line 70]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/OutputStreamAppenderTest.java:[line 81]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/MemoryMappedFileManagerTest.java:[line 57]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/MemoryMappedFileManagerTest.java:[line 51]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/JdbcAppenderBenchmark.java:[line 191]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/JdbcAppenderBenchmark.java:[line 199]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AsyncLoggerConfigTest.java:[line 55]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 49]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 58]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 69]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 78]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 87]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 96]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 105]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 114]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 123]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/JpaHyperSqlAppenderTest.java:[line 43]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/ConfiguratorInitializeBenchmark.java:[line 60]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/SortedArrayStringMapTest.java:[line 113]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/FileAppenderTest.java:[line 220]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/FileAppenderTest.java:[line 285]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintStreamCallerInfoTest.java:[line 131]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintStreamCallerInfoTest.java:[line 137]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerBufferedInputStreamCallerInfoTest.java:[line 64]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerInputStreamTest.java:[line 44]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerInputStreamTest.java:[line 60]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerInputStreamTest.java:[line 98]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerInputStreamTest.java:[line 121]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerInputStreamTest.java:[line 128]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerPrintWriterJdbcH2Test.java:[line 57]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerInputStreamCallerInfoTest.java:[line 51]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/ConsoleAppenderTest.java:[line 147]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/ConsoleAppenderTest.java:[line 141]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/Bzip2CompressActionTest.java:[line 62]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/Bzip2CompressActionTest.java:[line 115]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractJmsReceiver.java:[line 43]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/FlumePersistentAppenderTest.java:[line 370]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/FlumeEmbeddedAppenderTest.java:[line 231]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PerfTestResultFormatter.java:[line 172]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AsyncLoggerTimestampMessageTest.java:[line 80]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/XmlCompleteFileAppenderTest.java:[line 78]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/XmlCompleteFileAppenderTest.java:[line 136]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/XmlCompactFileAppenderTest.java:[line 56]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AsyncLoggerThreadContextTest.java:[line 68]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AsyncLoggerConfigAutoFlushTest.java:[line 52]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AsyncLoggerTestCachedThreadName.java:[line 65]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AsyncLoggerTestUncachedThreadName.java:[line 66]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/WriterAppenderTest.java:[line 57]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/WriterAppenderTest.java:[line 88]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/WriterAppenderTest.java:[line 95]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/PatternSelectorTest.java:[line 60]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/TextEncoderHelperBenchmark.java:[line 116]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/FlumeAppenderTest.java:[line 505]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 45]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 50]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 59]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 82]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 88]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 97]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 103]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 94]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 109]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 115]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 121]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 128]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 134]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 137]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/SslConfigurationTest.java:[line 62]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/XIncludeTest.java:[line 129]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/LoggerOutputStreamCallerInfoTest.java:[line 41]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "real-world-/classes/FlumeEmbeddedAgentTest.java:[line 206]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "real-world-/classes/AnnotationVsMarkerInterface.java:[line 62]"}
+{"location": "real-world-/classes/MemoryMappedFileAppenderLocationTest.java:[line 78]"}
+{"location": "real-world-/classes/RandomAccessFileAppenderTests.java:[line 83]"}
+{"location": "real-world-/classes/JdbcAppenderH2DataSourceTest.java:[line 35]"}
+{"location": "real-world-/classes/FileRenameAction.java:[line 140]"}
+{"location": "real-world-/classes/AbstractSocketServer.java:[line 195]"}
+{"location": "real-world-/classes/FileRenameActionTest.java:[line 55]"}
+{"location": "real-world-/classes/FileRenameActionTest.java:[line 71]"}
+{"location": "real-world-/classes/FileRenameActionTest.java:[line 86]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 52]"}
+{"location": "real-world-/classes/BundleTestInfo.java:[line 39]"}
+{"location": "real-world-/classes/PerformanceRun.java:[line 72]"}
+{"location": "real-world-/classes/PerformanceRun.java:[line 127]"}
+{"location": "real-world-/classes/PerformanceRun.java:[line 133]"}
+{"location": "real-world-/classes/AbstractLoadBundleTest.java:[line 244]"}
+{"location": "real-world-/classes/AbstractLoadBundleTest.java:[line 252]"}
+{"location": "real-world-/classes/AbstractLoadBundleTest.java:[line 281]"}
+{"location": "real-world-/classes/AbstractLoadBundleTest.java:[line 276]"}
+{"location": "real-world-/classes/SocketMessageLossTest.java:[line 67]"}
+{"location": "real-world-/classes/PerformanceComparison.java:[line 120]"}
+{"location": "real-world-/classes/PerformanceComparison.java:[line 194]"}
+{"location": "real-world-/classes/PerformanceComparison.java:[line 200]"}
+{"location": "real-world-/classes/MockTcpSyslogServer.java:[line 58]"}
+{"location": "real-world-/classes/StringEncodingBenchmark.java:[line 67]"}
+{"location": "real-world-/classes/MemoryMappedFileAppenderSimpleTest.java:[line 73]"}
+{"location": "real-world-/classes/XmlFileAppenderTest.java:[line 59]"}
+{"location": "real-world-/classes/LoaderUtil.java:[line 307]"}
+{"location": "real-world-/classes/JdbcAppenderHsqlDataSourceTest.java:[line 34]"}
+{"location": "real-world-/classes/SocketReconnectTest.java:[line 144]"}
+{"location": "real-world-/classes/JsonCompleteFileAppenderTest.java:[line 77]"}
+{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 56]"}
+{"location": "real-world-/classes/PerfTestDriver.java:[line 353]"}
+{"location": "real-world-/classes/LowLevelLogUtil.java:[line 53]"}
+{"location": "real-world-/classes/LowLevelLogUtil.java:[line 34]"}
+{"location": "real-world-/classes/MemoryMappedFileAppenderRemapTest.java:[line 78]"}
+{"location": "real-world-/classes/XmlRandomAccessFileAppenderTest.java:[line 62]"}
+{"location": "real-world-/classes/PatternSelectorTest.java:[line 34]"}
+{"location": "real-world-/classes/AsyncLoggerLocationTest.java:[line 65]"}
+{"location": "real-world-/classes/TlsSyslogInputStreamReader.java:[line 67]"}
+{"location": "real-world-/classes/TlsSyslogInputStreamReader.java:[line 89]"}
+{"location": "real-world-/classes/LegacyBsdTlsSyslogInputStreamReader.java:[line 51]"}
+{"location": "real-world-/classes/SimpleSmtpServer.java:[line 108]"}
+{"location": "real-world-/classes/SimpleSmtpServer.java:[line 109]"}
+{"location": "real-world-/classes/NameUtil.java:[line 44]"}
+{"location": "real-world-/classes/StatusData.java:[line 141]"}
+{"location": "real-world-/classes/StatusData.java:[line 140]"}
+{"location": "real-world-/classes/AbstractConfiguration.java:[line 427]"}
+{"location": "real-world-/classes/StatusConfiguration.java:[line 124]"}
+{"location": "real-world-/classes/AbstractJdbcAppenderFactoryMethodTest.java:[line 61]"}
+{"location": "real-world-/classes/AbstractJdbcAppenderFactoryMethodTest.java:[line 64]"}
+{"location": "real-world-/classes/ListAppender.java:[line 145]"}
+{"location": "real-world-/classes/FlumePersistentPerf.java:[line 146]"}
+{"location": "real-world-/classes/AbstractJpaAppenderTest.java:[line 92]"}
+{"location": "real-world-/classes/AbstractJpaAppenderTest.java:[line 89]"}
+{"location": "real-world-/classes/AbstractJpaAppenderTest.java:[line 154]"}
+{"location": "real-world-/classes/AbstractJpaAppenderTest.java:[line 151]"}
+{"location": "real-world-/classes/JdbcAppenderH2FactoryMethodTest.java:[line 49]"}
+{"location": "real-world-/classes/JdbcAppenderHsqlFactoryMethodTest.java:[line 48]"}
+{"location": "real-world-/classes/TestLogger.java:[line 80]"}
+{"location": "real-world-/classes/TestLogger.java:[line 81]"}
+{"location": "real-world-/classes/GcFreeLoggingTestUtil.java:[line 151]"}
+{"location": "real-world-/classes/ResolverUtilTest.java:[line 197]"}
+{"location": "real-world-/classes/ResolverUtilTest.java:[line 200]"}
+{"location": "real-world-/classes/AbstractJdbcAppenderDataSourceTest.java:[line 83]"}
+{"location": "real-world-/classes/AbstractJdbcAppenderDataSourceTest.java:[line 86]"}
+{"location": "real-world-/classes/SimpleLoggerContext.java:[line 91]"}
+{"location": "real-world-/classes/ConfigurationTest.java:[line 147]"}
+{"location": "real-world-/classes/AsyncLoggerTest.java:[line 66]"}
+{"location": "real-world-/classes/AbstractAsyncThreadContextTestBase.java:[line 174]"}
+{"location": "real-world-/classes/ResponseTimeTest.java:[line 178]"}
+{"location": "real-world-/classes/PatternLayoutBenchmark.java:[line 107]"}
+{"location": "real-world-/classes/Log4jLogEventNanoTimeTest.java:[line 70]"}
+{"location": "real-world-/classes/JpaH2AppenderTest.java:[line 39]"}
+{"location": "real-world-/classes/MockUdpSyslogServer.java:[line 50]"}
+{"location": "real-world-/classes/AsyncLoggerConfigTest2.java:[line 56]"}
+{"location": "real-world-/classes/JpaAppenderBenchmark.java:[line 171]"}
+{"location": "real-world-/classes/JpaAppenderBenchmark.java:[line 188]"}
+{"location": "real-world-/classes/SimplePerfTest.java:[line 61]"}
+{"location": "real-world-/classes/SimplePerfTest.java:[line 75]"}
+{"location": "real-world-/classes/SimplePerfTest.java:[line 88]"}
+{"location": "real-world-/classes/SimplePerfTest.java:[line 101]"}
+{"location": "real-world-/classes/PerfTest.java:[line 98]"}
+{"location": "real-world-/classes/PerfTest.java:[line 136]"}
+{"location": "real-world-/classes/PerfTest.java:[line 165]"}
+{"location": "real-world-/classes/VelocityTest.java:[line 53]"}
+{"location": "real-world-/classes/AsyncLoggerTestNanoTime.java:[line 77]"}
+{"location": "real-world-/classes/PerfTestDriver.java:[line 302]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 185]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 419]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 457]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 510]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 564]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 95]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 103]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 138]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 167]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 185]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 255]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 309]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 344]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 364]"}
+{"location": "real-world-/classes/PatternLayoutTest.java:[line 384]"}
+{"location": "real-world-/classes/OutputStreamAppenderTest.java:[line 70]"}
+{"location": "real-world-/classes/OutputStreamAppenderTest.java:[line 81]"}
+{"location": "real-world-/classes/MemoryMappedFileManagerTest.java:[line 57]"}
+{"location": "real-world-/classes/MemoryMappedFileManagerTest.java:[line 51]"}
+{"location": "real-world-/classes/JdbcAppenderBenchmark.java:[line 191]"}
+{"location": "real-world-/classes/JdbcAppenderBenchmark.java:[line 199]"}
+{"location": "real-world-/classes/AsyncLoggerConfigTest.java:[line 55]"}
+{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 49]"}
+{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 58]"}
+{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 69]"}
+{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 78]"}
+{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 87]"}
+{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 96]"}
+{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 105]"}
+{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 114]"}
+{"location": "real-world-/classes/LoggerPrintStreamTest.java:[line 123]"}
+{"location": "real-world-/classes/JpaHyperSqlAppenderTest.java:[line 43]"}
+{"location": "real-world-/classes/ConfiguratorInitializeBenchmark.java:[line 60]"}
+{"location": "real-world-/classes/SortedArrayStringMapTest.java:[line 113]"}
+{"location": "real-world-/classes/FileAppenderTest.java:[line 220]"}
+{"location": "real-world-/classes/FileAppenderTest.java:[line 285]"}
+{"location": "real-world-/classes/LoggerPrintStreamCallerInfoTest.java:[line 131]"}
+{"location": "real-world-/classes/LoggerPrintStreamCallerInfoTest.java:[line 137]"}
+{"location": "real-world-/classes/LoggerBufferedInputStreamCallerInfoTest.java:[line 64]"}
+{"location": "real-world-/classes/LoggerInputStreamTest.java:[line 44]"}
+{"location": "real-world-/classes/LoggerInputStreamTest.java:[line 60]"}
+{"location": "real-world-/classes/LoggerInputStreamTest.java:[line 98]"}
+{"location": "real-world-/classes/LoggerInputStreamTest.java:[line 121]"}
+{"location": "real-world-/classes/LoggerInputStreamTest.java:[line 128]"}
+{"location": "real-world-/classes/LoggerPrintWriterJdbcH2Test.java:[line 57]"}
+{"location": "real-world-/classes/LoggerInputStreamCallerInfoTest.java:[line 51]"}
+{"location": "real-world-/classes/ConsoleAppenderTest.java:[line 147]"}
+{"location": "real-world-/classes/ConsoleAppenderTest.java:[line 141]"}
+{"location": "real-world-/classes/Bzip2CompressActionTest.java:[line 62]"}
+{"location": "real-world-/classes/Bzip2CompressActionTest.java:[line 115]"}
+{"location": "real-world-/classes/AbstractJmsReceiver.java:[line 43]"}
+{"location": "real-world-/classes/FlumePersistentAppenderTest.java:[line 370]"}
+{"location": "real-world-/classes/FlumeEmbeddedAppenderTest.java:[line 231]"}
+{"location": "real-world-/classes/PerfTestResultFormatter.java:[line 172]"}
+{"location": "real-world-/classes/AsyncLoggerTimestampMessageTest.java:[line 80]"}
+{"location": "real-world-/classes/XmlCompleteFileAppenderTest.java:[line 78]"}
+{"location": "real-world-/classes/XmlCompleteFileAppenderTest.java:[line 136]"}
+{"location": "real-world-/classes/XmlCompactFileAppenderTest.java:[line 56]"}
+{"location": "real-world-/classes/AsyncLoggerThreadContextTest.java:[line 68]"}
+{"location": "real-world-/classes/AsyncLoggerConfigAutoFlushTest.java:[line 52]"}
+{"location": "real-world-/classes/AsyncLoggerTestCachedThreadName.java:[line 65]"}
+{"location": "real-world-/classes/AsyncLoggerTestUncachedThreadName.java:[line 66]"}
+{"location": "real-world-/classes/WriterAppenderTest.java:[line 57]"}
+{"location": "real-world-/classes/WriterAppenderTest.java:[line 88]"}
+{"location": "real-world-/classes/WriterAppenderTest.java:[line 95]"}
+{"location": "real-world-/classes/PatternSelectorTest.java:[line 60]"}
+{"location": "real-world-/classes/TextEncoderHelperBenchmark.java:[line 116]"}
+{"location": "real-world-/classes/FlumeAppenderTest.java:[line 505]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 45]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 50]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 59]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 82]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 88]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 97]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 103]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 94]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 109]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 115]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 121]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 128]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 134]"}
+{"location": "real-world-/classes/AbstractLoggerOutputStreamTest.java:[line 137]"}
+{"location": "real-world-/classes/SslConfigurationTest.java:[line 62]"}
+{"location": "real-world-/classes/XIncludeTest.java:[line 129]"}
+{"location": "real-world-/classes/LoggerOutputStreamCallerInfoTest.java:[line 41]"}
+{"location": "real-world-/classes/FlumeEmbeddedAgentTest.java:[line 206]"}
 Bug Type: NP, #Bugs found: 38
-{"location": "real-world-/classes/RollingAppenderDeleteMaxDepthTest.java:[line 87]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderDeleteMaxDepthTest.java:[line 73]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/FormatCache.java:[line 249]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/FileRenameActionTest.java:[line 124]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/FileRenameActionTest.java:[line 113]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 63]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 56]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderCustomDeleteActionTest.java:[line 62]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderNoUnconditionalDeleteTest.java:[line 84]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderNoUnconditionalDeleteTest.java:[line 102]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/SocketReconnectTest.java:[line 146]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 97]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 95]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 58]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 88]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderDeleteScriptTest.java:[line 57]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/ExecutorServices.java:[line 55]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/PatternLayout.java:[line 242]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/ThrowableAttributeConverter.java:[line 167]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/ResolverUtilTest.java:[line 213]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/Rfc5424Layout.java:[line 231]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/ConfigurationFactory.java:[line 427]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/Log4j1ConfigurationConverter.java:[line 163]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/Log4j1ConfigurationConverter.java:[line 165]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderDeleteNestedTest.java:[line 98]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderDeleteNestedTest.java:[line 76]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderCronEvery2Test.java:[line 88]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderCronTest.java:[line 82]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/Log4j2_1482_Test.java:[line 59]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount2Test.java:[line 99]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount2Test.java:[line 77]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderCronEvery2DirectTest.java:[line 79]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedSizeTest.java:[line 60]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderCronOnceADayTest.java:[line 115]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount1Test.java:[line 98]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount1Test.java:[line 77]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/ThreadedTest.java:[line 115]", "code": "Synchronize and null check on the same field"}
-{"location": "real-world-/classes/FlumeEmbeddedAgentTest.java:[line 215]", "code": "Synchronize and null check on the same field"}
+Description: Synchronize and null check on the same field
+{"location": "real-world-/classes/RollingAppenderDeleteMaxDepthTest.java:[line 87]"}
+{"location": "real-world-/classes/RollingAppenderDeleteMaxDepthTest.java:[line 73]"}
+{"location": "real-world-/classes/FormatCache.java:[line 249]"}
+{"location": "real-world-/classes/FileRenameActionTest.java:[line 124]"}
+{"location": "real-world-/classes/FileRenameActionTest.java:[line 113]"}
+{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 63]"}
+{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 56]"}
+{"location": "real-world-/classes/RollingAppenderCustomDeleteActionTest.java:[line 62]"}
+{"location": "real-world-/classes/RollingAppenderNoUnconditionalDeleteTest.java:[line 84]"}
+{"location": "real-world-/classes/RollingAppenderNoUnconditionalDeleteTest.java:[line 102]"}
+{"location": "real-world-/classes/SocketReconnectTest.java:[line 146]"}
+{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 97]"}
+{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 95]"}
+{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 58]"}
+{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 88]"}
+{"location": "real-world-/classes/RollingAppenderDeleteScriptTest.java:[line 57]"}
+{"location": "real-world-/classes/ExecutorServices.java:[line 55]"}
+{"location": "real-world-/classes/PatternLayout.java:[line 242]"}
+{"location": "real-world-/classes/ThrowableAttributeConverter.java:[line 167]"}
+{"location": "real-world-/classes/ResolverUtilTest.java:[line 213]"}
+{"location": "real-world-/classes/Rfc5424Layout.java:[line 231]"}
+{"location": "real-world-/classes/ConfigurationFactory.java:[line 427]"}
+{"location": "real-world-/classes/Log4j1ConfigurationConverter.java:[line 163]"}
+{"location": "real-world-/classes/Log4j1ConfigurationConverter.java:[line 165]"}
+{"location": "real-world-/classes/RollingAppenderDeleteNestedTest.java:[line 98]"}
+{"location": "real-world-/classes/RollingAppenderDeleteNestedTest.java:[line 76]"}
+{"location": "real-world-/classes/RollingAppenderCronEvery2Test.java:[line 88]"}
+{"location": "real-world-/classes/RollingAppenderCronTest.java:[line 82]"}
+{"location": "real-world-/classes/Log4j2_1482_Test.java:[line 59]"}
+{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount2Test.java:[line 99]"}
+{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount2Test.java:[line 77]"}
+{"location": "real-world-/classes/RollingAppenderCronEvery2DirectTest.java:[line 79]"}
+{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedSizeTest.java:[line 60]"}
+{"location": "real-world-/classes/RollingAppenderCronOnceADayTest.java:[line 115]"}
+{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount1Test.java:[line 98]"}
+{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount1Test.java:[line 77]"}
+{"location": "real-world-/classes/ThreadedTest.java:[line 115]"}
+{"location": "real-world-/classes/FlumeEmbeddedAgentTest.java:[line 215]"}
 Bug Type: AT, #Bugs found: 1
-{"location": "real-world-/classes/ThreadLocalVsConcurrentHashMapBenchmark.java:[line 89]", "code": "Sequence of calls to concurrent abstraction may not be atomic"}
+Description: Sequence of calls to concurrent abstraction may not be atomic
+{"location": "real-world-/classes/ThreadLocalVsConcurrentHashMapBenchmark.java:[line 89]"}
 Bug Type: ESync, #Bugs found: 1
-{"location": "real-world-/classes/ThreadDumpMessageTest.java:[line 141]", "code": "Empty synchronized block"}
+Description: Empty synchronized block
+{"location": "real-world-/classes/ThreadDumpMessageTest.java:[line 141]"}
 Bug Type: VO, #Bugs found: 2
-{"location": "real-world-/classes/SocketAppenderTest.java:[line 306]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "real-world-/classes/SocketAppenderTest.java:[line 367]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
+Description: (1)A volatile reference to an array doesn’t treat the array elements as volatile (2)An increment to a volatile field isn’t atomic
+{"location": "real-world-/classes/SocketAppenderTest.java:[line 306]"}
+{"location": "real-world-/classes/SocketAppenderTest.java:[line 367]"}
 Bug Type: NN, #Bugs found: 1
-{"location": "real-world-/classes/SimpleSmtpServer.java:[line 90]", "code": "Naked notify"}
+Description: Naked notify
+{"location": "real-world-/classes/SimpleSmtpServer.java:[line 90]"}
 Bug Type: UW, #Bugs found: 1
-{"location": "real-world-/classes/SimpleSmtpServer.java:[line 271]", "code": "Unconditional wait"}
+Description: Unconditional wait
+{"location": "real-world-/classes/SimpleSmtpServer.java:[line 271]"}
 Bug Type: Wa, #Bugs found: 1
-{"location": "real-world-/classes/SimpleSmtpServer.java:[line 271]", "code": "(1)Wait not in loop (2)Condition.await() not in loop"}
+Description: (1)Wait not in loop (2)Condition.await() not in loop
+{"location": "real-world-/classes/SimpleSmtpServer.java:[line 271]"}
 Bug Type: UL, #Bugs found: 1
-{"location": "real-world-/classes/LockingReliabilityStrategy.java:[line 95]", "code": "(1)Method does not release lock on all paths (2)Method does not release lock on all exception paths"}
+Description: (1)Method does not release lock on all paths (2)Method does not release lock on all exception paths
+{"location": "real-world-/classes/LockingReliabilityStrategy.java:[line 95]"}
 Bug Type: UG, #Bugs found: 1
-{"location": "real-world-/classes/Logger.java:[line 300]", "code": "Unsynchronized get method, synchronized set method"}
+Description: Unsynchronized get method, synchronized set method
+{"location": "real-world-/classes/Logger.java:[line 300]"}
 Bug Type: SC, #Bugs found: 2
-{"location": "real-world-/classes/TcpSocketManager.java:[line 145]", "code": "Constructor invokes Thread.start()"}
-{"location": "real-world-/classes/FlumePersistentManager.java:[line 123]", "code": "Constructor invokes Thread.start()"}
+Description: Constructor invokes Thread.start()
+{"location": "real-world-/classes/TcpSocketManager.java:[line 145]"}
+{"location": "real-world-/classes/FlumePersistentManager.java:[line 123]"}
 Bug Type: SWL, #Bugs found: 1
-{"location": "real-world-/classes/ThreadDumpMessageTest.java:[line 54]", "code": "Method calls Thread.sleep() with a lock held"}
+Description: Method calls Thread.sleep() with a lock held
+{"location": "real-world-/classes/ThreadDumpMessageTest.java:[line 54]"}
 Bug Type: IS, #Bugs found: 12
-{"location": "real-world-/classes/Log4jWebInitializerImpl.java:[line 243]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "real-world-/classes/AsyncLoggerDisruptor.java:[line 181]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "real-world-/classes/AsyncLoggerConfigDisruptor.java:[line 270]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "real-world-/classes/OutputStreamManager.java:[line 323]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "real-world-/classes/RollingFileManager.java:[line 201]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "real-world-/classes/JeroMqAppender.java:[line 168]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "real-world-/classes/FlumeAvroManager.java:[line 261]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "real-world-/classes/TcpSocketManager.java:[line 208]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "real-world-/classes/AsyncLoggerConfigDisruptor.java:[line 295]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "real-world-/classes/MockTlsSyslogServer.java:[line 79]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "real-world-/classes/AsyncLoggerDisruptor.java:[line 146]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "real-world-/classes/JeroMqAppender.java:[line 173]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "real-world-/classes/Log4jWebInitializerImpl.java:[line 243]"}
+{"location": "real-world-/classes/AsyncLoggerDisruptor.java:[line 181]"}
+{"location": "real-world-/classes/AsyncLoggerConfigDisruptor.java:[line 270]"}
+{"location": "real-world-/classes/OutputStreamManager.java:[line 323]"}
+{"location": "real-world-/classes/RollingFileManager.java:[line 201]"}
+{"location": "real-world-/classes/JeroMqAppender.java:[line 168]"}
+{"location": "real-world-/classes/FlumeAvroManager.java:[line 261]"}
+{"location": "real-world-/classes/TcpSocketManager.java:[line 208]"}
+{"location": "real-world-/classes/AsyncLoggerConfigDisruptor.java:[line 295]"}
+{"location": "real-world-/classes/MockTlsSyslogServer.java:[line 79]"}
+{"location": "real-world-/classes/AsyncLoggerDisruptor.java:[line 146]"}
+{"location": "real-world-/classes/JeroMqAppender.java:[line 173]"}
 
 
 Project name: real-world--tomcat8.0.26, #Bugs found: 0
@@ -537,49 +580,62 @@ Project name: real-world--zookeeper-3.5.2-alpha, #Bugs found: 0
 
 Project name: simpleExample, #Bugs found: 2
 Bug Type: SSD, #Bugs found: 2
-{"location": "simpleExample/classes/SimpleExample.java:[line 21]", "code": "Instance level lock was used on a shared static data"}
-{"location": "simpleExample/classes/SimpleExample.java:[line 24]", "code": "Instance level lock was used on a shared static data"}
+Description: Instance level lock was used on a shared static data
+{"location": "simpleExample/classes/SimpleExample.java:[line 21]"}
+{"location": "simpleExample/classes/SimpleExample.java:[line 24]"}
 
 
 Project name: sor, #Bugs found: 26
 Bug Type: Dm, #Bugs found: 2
-{"location": "sor/classes/PropertyChangeMulticaster.java:[line 383]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "sor/classes/VetoableChangeMulticaster.java:[line 482]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "sor/classes/PropertyChangeMulticaster.java:[line 383]"}
+{"location": "sor/classes/VetoableChangeMulticaster.java:[line 482]"}
 Bug Type: NN, #Bugs found: 4
-{"location": "sor/classes/CondVar.java:[line 257]", "code": "Naked notify"}
-{"location": "sor/classes/CondVar.java:[line 262]", "code": "Naked notify"}
-{"location": "sor/classes/WriterPreferenceReadWriteLock.java:[line 191]", "code": "Naked notify"}
-{"location": "sor/classes/WriterPreferenceReadWriteLock.java:[line 267]", "code": "Naked notify"}
+Description: Naked notify
+{"location": "sor/classes/CondVar.java:[line 257]"}
+{"location": "sor/classes/CondVar.java:[line 262]"}
+{"location": "sor/classes/WriterPreferenceReadWriteLock.java:[line 191]"}
+{"location": "sor/classes/WriterPreferenceReadWriteLock.java:[line 267]"}
 Bug Type: UW, #Bugs found: 1
-{"location": "sor/classes/CondVar.java:[line 170]", "code": "Unconditional wait"}
+Description: Unconditional wait
+{"location": "sor/classes/CondVar.java:[line 170]"}
 Bug Type: Wa, #Bugs found: 2
-{"location": "sor/classes/CondVar.java:[line 170]", "code": "(1)Wait not in loop (2)Condition.await() not in loop"}
-{"location": "sor/classes/FJTaskRunnerGroup.java:[line 541]", "code": "(1)Wait not in loop (2)Condition.await() not in loop"}
+Description: (1)Wait not in loop (2)Condition.await() not in loop
+{"location": "sor/classes/CondVar.java:[line 170]"}
+{"location": "sor/classes/FJTaskRunnerGroup.java:[line 541]"}
 Bug Type: RV, #Bugs found: 2
-{"location": "sor/classes/Sor.java:[line 104]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "sor/classes/Sor.java:[line 117]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "sor/classes/Sor.java:[line 104]"}
+{"location": "sor/classes/Sor.java:[line 117]"}
 Bug Type: ML, #Bugs found: 4
-{"location": "sor/classes/LinkedQueue.java:[line 70]", "code": "(1)Synchronization on field in futile attempt to guard that field (2)Method synchronizes on an updated field"}
-{"location": "sor/classes/LinkedQueue.java:[line 85]", "code": "(1)Synchronization on field in futile attempt to guard that field (2)Method synchronizes on an updated field"}
-{"location": "sor/classes/BoundedLinkedQueue.java:[line 198]", "code": "(1)Synchronization on field in futile attempt to guard that field (2)Method synchronizes on an updated field"}
-{"location": "sor/classes/BoundedLinkedQueue.java:[line 288]", "code": "(1)Synchronization on field in futile attempt to guard that field (2)Method synchronizes on an updated field"}
+Description: (1)Synchronization on field in futile attempt to guard that field (2)Method synchronizes on an updated field
+{"location": "sor/classes/LinkedQueue.java:[line 70]"}
+{"location": "sor/classes/LinkedQueue.java:[line 85]"}
+{"location": "sor/classes/BoundedLinkedQueue.java:[line 198]"}
+{"location": "sor/classes/BoundedLinkedQueue.java:[line 288]"}
 Bug Type: RS, #Bugs found: 1
-{"location": "sor/classes/CopyOnWriteArrayList.java:[lines 779-789]", "code": "Class\u2019s readObject() method is synchronized"}
+Description: Class’s readObject() method is synchronized
+{"location": "sor/classes/CopyOnWriteArrayList.java:[lines 779-789]"}
 Bug Type: UG, #Bugs found: 1
-{"location": "sor/classes/CopyOnWriteArrayList.java:[lines 369-371]", "code": "Unsynchronized get method, synchronized set method"}
+Description: Unsynchronized get method, synchronized set method
+{"location": "sor/classes/CopyOnWriteArrayList.java:[lines 369-371]"}
 Bug Type: TLW, #Bugs found: 2
-{"location": "sor/classes/BoundedLinkedQueue.java:[line 307]", "code": "Wait with two locks held"}
-{"location": "sor/classes/BoundedLinkedQueue.java:[line 343]", "code": "Wait with two locks held"}
+Description: Wait with two locks held
+{"location": "sor/classes/BoundedLinkedQueue.java:[line 307]"}
+{"location": "sor/classes/BoundedLinkedQueue.java:[line 343]"}
 Bug Type: NP, #Bugs found: 1
-{"location": "sor/classes/WaitFreeQueue.java:[line 147]", "code": "Synchronize and null check on the same field"}
+Description: Synchronize and null check on the same field
+{"location": "sor/classes/WaitFreeQueue.java:[line 147]"}
 Bug Type: VO, #Bugs found: 2
-{"location": "sor/classes/PooledExecutor.java:[line 470]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
-{"location": "sor/classes/PooledExecutor.java:[line 580]", "code": "(1)A volatile reference to an array doesn\u2019t treat the array elements as volatile (2)An increment to a volatile field isn\u2019t atomic"}
+Description: (1)A volatile reference to an array doesn’t treat the array elements as volatile (2)An increment to a volatile field isn’t atomic
+{"location": "sor/classes/PooledExecutor.java:[line 470]"}
+{"location": "sor/classes/PooledExecutor.java:[line 580]"}
 Bug Type: IS, #Bugs found: 4
-{"location": "sor/classes/WaitFreeQueue.java:[line 184]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "sor/classes/FJTaskRunner.java:[line 926]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "sor/classes/FJTaskRunnerGroup.java:[line 410]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
-{"location": "sor/classes/CopyOnWriteArrayList.java:[line 1059]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "sor/classes/WaitFreeQueue.java:[line 184]"}
+{"location": "sor/classes/FJTaskRunner.java:[line 926]"}
+{"location": "sor/classes/FJTaskRunnerGroup.java:[line 410]"}
+{"location": "sor/classes/CopyOnWriteArrayList.java:[line 1059]"}
 
 
 Project name: testAtomicity1, #Bugs found: 0
@@ -599,7 +655,8 @@ Project name: testAtomicity14, #Bugs found: 0
 
 Project name: testAtomicity4, #Bugs found: 1
 Bug Type: Wa, #Bugs found: 1
-{"location": "testAtomicity4/classes/TestAtomicity4.java:[line 34]", "code": "(1)Wait not in loop (2)Condition.await() not in loop"}
+Description: (1)Wait not in loop (2)Condition.await() not in loop
+{"location": "testAtomicity4/classes/TestAtomicity4.java:[line 34]"}
 
 
 Project name: testAtomicity6, #Bugs found: 0
@@ -607,7 +664,8 @@ Project name: testAtomicity6, #Bugs found: 0
 
 Project name: testAtomicity7, #Bugs found: 1
 Bug Type: ESync, #Bugs found: 1
-{"location": "testAtomicity7/classes/TestAtomicity7.java:[line 27]", "code": "Empty synchronized block"}
+Description: Empty synchronized block
+{"location": "testAtomicity7/classes/TestAtomicity7.java:[line 27]"}
 
 
 Project name: testAtomicity8, #Bugs found: 0
@@ -621,17 +679,20 @@ Project name: testRace1, #Bugs found: 0
 
 Project name: testRace10, #Bugs found: 1
 Bug Type: Wa, #Bugs found: 1
-{"location": "testRace10/classes/TestRace10.java:[line 47]", "code": "(1)Wait not in loop (2)Condition.await() not in loop"}
+Description: (1)Wait not in loop (2)Condition.await() not in loop
+{"location": "testRace10/classes/TestRace10.java:[line 47]"}
 
 
 Project name: testRace11, #Bugs found: 1
 Bug Type: Wa, #Bugs found: 1
-{"location": "testRace11/classes/TestRace11.java:[line 55]", "code": "(1)Wait not in loop (2)Condition.await() not in loop"}
+Description: (1)Wait not in loop (2)Condition.await() not in loop
+{"location": "testRace11/classes/TestRace11.java:[line 55]"}
 
 
 Project name: testRace12, #Bugs found: 1
 Bug Type: Dm, #Bugs found: 1
-{"location": "testRace12/classes/TestRace12.java:[line 104]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "testRace12/classes/TestRace12.java:[line 104]"}
 
 
 Project name: testRace13, #Bugs found: 0
@@ -648,15 +709,120 @@ Project name: testRace6, #Bugs found: 0
 
 Project name: tsp, #Bugs found: 8
 Bug Type: DL, #Bugs found: 6
-{"location": "tsp/classes/TspSolver.java:[line 66]", "code": "(1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values"}
-{"location": "tsp/classes/TspSolver.java:[line 111]", "code": "(1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values"}
-{"location": "tsp/classes/TspSolver.java:[line 150]", "code": "(1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values"}
-{"location": "tsp/classes/TspSolver.java:[line 278]", "code": "(1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values"}
-{"location": "tsp/classes/TspSolver.java:[line 364]", "code": "(1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values"}
-{"location": "tsp/classes/TspSolver.java:[line 456]", "code": "(1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values"}
+Description: (1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values
+{"location": "tsp/classes/TspSolver.java:[line 66]"}
+{"location": "tsp/classes/TspSolver.java:[line 111]"}
+{"location": "tsp/classes/TspSolver.java:[line 150]"}
+{"location": "tsp/classes/TspSolver.java:[line 278]"}
+{"location": "tsp/classes/TspSolver.java:[line 364]"}
+{"location": "tsp/classes/TspSolver.java:[line 456]"}
 Bug Type: NP, #Bugs found: 1
-{"location": "tsp/classes/Tsp.java:[line 111]", "code": "Synchronize and null check on the same field"}
+Description: Synchronize and null check on the same field
+{"location": "tsp/classes/Tsp.java:[line 111]"}
 Bug Type: Dm, #Bugs found: 1
-{"location": "tsp/classes/Tsp.java:[line 106]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "tsp/classes/Tsp.java:[line 106]"}
+
+
+
+
+----------Overall Results for JBench----------
+Number of concurrency bugs found in JBench: 436
+Number of concurrency bug types found in JBench: 19
+
+
+Bug Type: VO
+Description: (1)A volatile reference to an array doesn’t treat the array elements as volatile (2)An increment to a volatile field isn’t atomic
+#Bugs found: 17
+
+
+Bug Type: IS
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+#Bugs found: 25
+
+
+Bug Type: SSD
+Description: Instance level lock was used on a shared static data
+#Bugs found: 9
+
+
+Bug Type: Dm
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+#Bugs found: 198
+
+
+Bug Type: SWL
+Description: Method calls Thread.sleep() with a lock held
+#Bugs found: 5
+
+
+Bug Type: Wa
+Description: (1)Wait not in loop (2)Condition.await() not in loop
+#Bugs found: 11
+
+
+Bug Type: NN
+Description: Naked notify
+#Bugs found: 8
+
+
+Bug Type: RV
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+#Bugs found: 95
+
+
+Bug Type: NP
+Description: Synchronize and null check on the same field
+#Bugs found: 45
+
+
+Bug Type: AT
+Description: Sequence of calls to concurrent abstraction may not be atomic
+#Bugs found: 1
+
+
+Bug Type: ESync
+Description: Empty synchronized block
+#Bugs found: 2
+
+
+Bug Type: UW
+Description: Unconditional wait
+#Bugs found: 2
+
+
+Bug Type: UL
+Description: (1)Method does not release lock on all paths (2)Method does not release lock on all exception paths
+#Bugs found: 1
+
+
+Bug Type: UG
+Description: Unsynchronized get method, synchronized set method
+#Bugs found: 2
+
+
+Bug Type: SC
+Description: Constructor invokes Thread.start()
+#Bugs found: 2
+
+
+Bug Type: ML
+Description: (1)Synchronization on field in futile attempt to guard that field (2)Method synchronizes on an updated field
+#Bugs found: 4
+
+
+Bug Type: RS
+Description: Class’s readObject() method is synchronized
+#Bugs found: 1
+
+
+Bug Type: TLW
+Description: Wait with two locks held
+#Bugs found: 2
+
+
+Bug Type: DL
+Description: (1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values
+#Bugs found: 6
 
 

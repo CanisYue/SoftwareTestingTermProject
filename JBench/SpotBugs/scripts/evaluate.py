@@ -68,6 +68,8 @@ meanings = {
     "SSD": "Instance level lock was used on a shared static data"
 }
 
+
+
 def getFilePath(path):
     file_names = os.listdir(path)
     files_position = []
@@ -126,7 +128,11 @@ def handleSingleFile(path, conc_set):
                     
                     if bug_type not in cur_dic:
                         cur_dic[bug_type] = []
-                    cur_dic[bug_type].append({"location": bug_location, "code": bug_code})
+                    cur_dic[bug_type].append({"location": bug_location})#, "code": bug_code})
+
+                    if bug_type not in all_res:
+                        all_res[bug_type] = 0
+                    all_res[bug_type] += 1
 
                         
 
@@ -134,6 +140,7 @@ def handleSingleFile(path, conc_set):
             filename.write("Project name: " + project_name + ", #Bugs found: " + str(total_error_num) + '\n')
             for key in cur_dic:
                 filename.write("Bug Type: " + key + ", #Bugs found: " + str(len(cur_dic[key])) + '\n')
+                filename.write("Description: " + meanings[key] + "\n")
                 for li in cur_dic[key]:
                     filename.write(json.dumps(li) + "\n")
             filename.write("\n\n")
@@ -146,14 +153,30 @@ def handleSingleFile(path, conc_set):
     
 
     
-
-
 output_file = "result.txt"
 log_path = "../outputs/result"
+
 
 if os.path.exists(output_file):
     os.remove(output_file)
 
+all_res = {}
+all_bugs_num = 0
+
 files_position = getFilePath(log_path)
 for file_name in files_position:
     handleSingleFile(file_name, conc_set)
+
+for key in all_res:
+    all_bugs_num += all_res[key]
+
+with open(output_file, mode = 'a') as filename:
+    filename.write("\n\n----------Overall Results for JBench----------\n")
+    filename.write("Number of concurrency bugs found in JBench: " + str(all_bugs_num) + "\n")
+    filename.write("Number of concurrency bug types found in JBench: " + str(len(all_res)) + "\n")
+    filename.write("\n\n")
+    for key in all_res:
+        filename.write("Bug Type: " + key + "\n")
+        filename.write("Description: " + meanings[key] + "\n")
+        filename.write("#Bugs found: " + str(all_res[key]) + "\n")
+        filename.write("\n\n")

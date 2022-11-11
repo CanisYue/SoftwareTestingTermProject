@@ -30,12 +30,14 @@ Project name: groovy1, #Bugs found: 0
 
 Project name: groovy2, #Bugs found: 5
 Bug Type: Dm, #Bugs found: 3
-{"location": "groovy2/classes/Groovy4736.java:[line 138]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "groovy2/classes/Groovy4736.java:[line 168]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "groovy2/classes/Groovy4736.java:[line 85]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "groovy2/classes/Groovy4736.java:[line 138]"}
+{"location": "groovy2/classes/Groovy4736.java:[line 168]"}
+{"location": "groovy2/classes/Groovy4736.java:[line 85]"}
 Bug Type: RV, #Bugs found: 2
-{"location": "groovy2/classes/Groovy4736.java:[line 61]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "groovy2/classes/Groovy4736.java:[line 62]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "groovy2/classes/Groovy4736.java:[line 61]"}
+{"location": "groovy2/classes/Groovy4736.java:[line 62]"}
 
 
 Project name: groovy3, #Bugs found: 0
@@ -70,9 +72,10 @@ Project name: jdk6_14, #Bugs found: 0
 
 Project name: jdk6_2, #Bugs found: 3
 Bug Type: RV, #Bugs found: 3
-{"location": "jdk6_2/classes/Test4742723.java:[line 22]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "jdk6_2/classes/Test4742723.java:[line 31]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "jdk6_2/classes/Test4742723.java:[line 60]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "jdk6_2/classes/Test4742723.java:[line 22]"}
+{"location": "jdk6_2/classes/Test4742723.java:[line 31]"}
+{"location": "jdk6_2/classes/Test4742723.java:[line 60]"}
 
 
 Project name: jdk6_3, #Bugs found: 0
@@ -86,7 +89,8 @@ Project name: jdk6_5, #Bugs found: 0
 
 Project name: jdk6_6, #Bugs found: 1
 Bug Type: Dm, #Bugs found: 1
-{"location": "jdk6_6/classes/Test6492872.java:[line 323]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "jdk6_6/classes/Test6492872.java:[line 323]"}
 
 
 Project name: jdk6_7, #Bugs found: 0
@@ -100,7 +104,8 @@ Project name: jdk6_9, #Bugs found: 0
 
 Project name: jdk7_1, #Bugs found: 1
 Bug Type: Dm, #Bugs found: 1
-{"location": "jdk7_1/classes/Test7045594.java:[line 145]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "jdk7_1/classes/Test7045594.java:[line 145]"}
 
 
 Project name: jdk7_2, #Bugs found: 0
@@ -108,36 +113,44 @@ Project name: jdk7_2, #Bugs found: 0
 
 Project name: jdk7_3, #Bugs found: 1
 Bug Type: NP, #Bugs found: 1
-{"location": "jdk7_3/classes/Test7132378.java:[line 116]", "code": "Synchronize and null check on the same field"}
+Description: Synchronize and null check on the same field
+{"location": "jdk7_3/classes/Test7132378.java:[line 116]"}
 
 
 Project name: jdk7_4, #Bugs found: 1
 Bug Type: RV, #Bugs found: 1
-{"location": "jdk7_4/classes/Test8010939.java:[line 57]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "jdk7_4/classes/Test8010939.java:[line 57]"}
 
 
 Project name: jdk7_5, #Bugs found: 2
 Bug Type: RV, #Bugs found: 1
-{"location": "jdk7_5/classes/Test8012019.java:[line 42]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "jdk7_5/classes/Test8012019.java:[line 42]"}
 Bug Type: Dm, #Bugs found: 1
-{"location": "jdk7_5/classes/Test8012019.java:[line 48]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "jdk7_5/classes/Test8012019.java:[line 48]"}
 
 
 Project name: jdk7_6, #Bugs found: 10
 Bug Type: MWN, #Bugs found: 1
-{"location": "jdk7_6/classes/GlobalDriver.java:[line 59]", "code": "(1)Mismatched wait() (2)Mismatched notify()"}
+Description: (1)Mismatched wait() (2)Mismatched notify()
+{"location": "jdk7_6/classes/GlobalDriver.java:[line 59]"}
 Bug Type: Dm, #Bugs found: 6
-{"location": "jdk7_6/classes/StreamPipe.java:[line 58]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "jdk7_6/classes/StreamPipe.java:[line 57]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "jdk7_6/classes/TestLibrary.java:[line 103]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "jdk7_6/classes/TestLibrary.java:[line 137]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "jdk7_6/classes/TestLibrary.java:[line 342]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "jdk7_6/classes/TestLibrary.java:[line 345]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "jdk7_6/classes/StreamPipe.java:[line 58]"}
+{"location": "jdk7_6/classes/StreamPipe.java:[line 57]"}
+{"location": "jdk7_6/classes/TestLibrary.java:[line 103]"}
+{"location": "jdk7_6/classes/TestLibrary.java:[line 137]"}
+{"location": "jdk7_6/classes/TestLibrary.java:[line 342]"}
+{"location": "jdk7_6/classes/TestLibrary.java:[line 345]"}
 Bug Type: RV, #Bugs found: 2
-{"location": "jdk7_6/classes/TestLibrary.java:[line 302]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
-{"location": "jdk7_6/classes/RMID.java:[line 167]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "jdk7_6/classes/TestLibrary.java:[line 302]"}
+{"location": "jdk7_6/classes/RMID.java:[line 167]"}
 Bug Type: NP, #Bugs found: 1
-{"location": "jdk7_6/classes/RMID.java:[line 263]", "code": "Synchronize and null check on the same field"}
+Description: Synchronize and null check on the same field
+{"location": "jdk7_6/classes/RMID.java:[line 263]"}
 
 
 Project name: log4j1, #Bugs found: 0
@@ -157,34 +170,43 @@ Project name: log4j5, #Bugs found: 0
 
 Project name: lucene1, #Bugs found: 5
 Bug Type: NP, #Bugs found: 1
-{"location": "lucene1/classes/_TestUtil293.java:[line 49]", "code": "Synchronize and null check on the same field"}
+Description: Synchronize and null check on the same field
+{"location": "lucene1/classes/_TestUtil293.java:[line 49]"}
 Bug Type: RV, #Bugs found: 1
-{"location": "lucene1/classes/_TestUtil293.java:[line 54]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "lucene1/classes/_TestUtil293.java:[line 54]"}
 Bug Type: Dm, #Bugs found: 2
-{"location": "lucene1/classes/_TestUtil293.java:[line 83]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "lucene1/classes/_TestUtil293.java:[line 79]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "lucene1/classes/_TestUtil293.java:[line 83]"}
+{"location": "lucene1/classes/_TestUtil293.java:[line 79]"}
 Bug Type: IS, #Bugs found: 1
-{"location": "lucene1/classes/MockRAMDirectory.java:[line 99]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "lucene1/classes/MockRAMDirectory.java:[line 99]"}
 
 
 Project name: lucene2, #Bugs found: 4
 Bug Type: NP, #Bugs found: 1
-{"location": "lucene2/classes/_TestUtil293.java:[line 49]", "code": "Synchronize and null check on the same field"}
+Description: Synchronize and null check on the same field
+{"location": "lucene2/classes/_TestUtil293.java:[line 49]"}
 Bug Type: RV, #Bugs found: 1
-{"location": "lucene2/classes/_TestUtil293.java:[line 54]", "code": "Return value of putIfAbsent ignored, value passed to putIfAbsent reused"}
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "lucene2/classes/_TestUtil293.java:[line 54]"}
 Bug Type: Dm, #Bugs found: 2
-{"location": "lucene2/classes/_TestUtil293.java:[line 83]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
-{"location": "lucene2/classes/_TestUtil293.java:[line 79]", "code": "(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method"}
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "lucene2/classes/_TestUtil293.java:[line 83]"}
+{"location": "lucene2/classes/_TestUtil293.java:[line 79]"}
 
 
 Project name: pool1, #Bugs found: 1
 Bug Type: IS, #Bugs found: 1
-{"location": "pool1/classes/Test120.java:[line 204]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "pool1/classes/Test120.java:[line 204]"}
 
 
 Project name: pool2, #Bugs found: 1
 Bug Type: IS, #Bugs found: 1
-{"location": "pool2/classes/Test146.java:[line 159]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "pool2/classes/Test146.java:[line 159]"}
 
 
 Project name: pool3, #Bugs found: 0
@@ -192,9 +214,42 @@ Project name: pool3, #Bugs found: 0
 
 Project name: pool4, #Bugs found: 1
 Bug Type: IS, #Bugs found: 1
-{"location": "pool4/classes/Test162.java:[line 79]", "code": "(1)Inconsistent synchronization (2)Field not guarded against concurrent access"}
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "pool4/classes/Test162.java:[line 79]"}
 
 
 Project name: pool5, #Bugs found: 0
+
+
+
+
+----------Overall Results for JaConTeBe----------
+Number of concurrency bugs found in JaConTeBe: 36
+Number of concurrency bug types found in JaConTeBe: 5
+
+
+Bug Type: Dm
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+#Bugs found: 16
+
+
+Bug Type: RV
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+#Bugs found: 11
+
+
+Bug Type: NP
+Description: Synchronize and null check on the same field
+#Bugs found: 4
+
+
+Bug Type: MWN
+Description: (1)Mismatched wait() (2)Mismatched notify()
+#Bugs found: 1
+
+
+Bug Type: IS
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+#Bugs found: 4
 
 
