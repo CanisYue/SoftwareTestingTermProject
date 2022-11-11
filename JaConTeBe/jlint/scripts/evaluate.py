@@ -21,6 +21,8 @@ def handleSingleFile(path):
         # record total error number
         regNum = re.compile(r'\d+')
         total_error_num = re.findall(regNum, lines[-1])[0]
+        if "Verification completed" not in lines[-1]:
+            raise Exception("Fail to run the program")
         for i in range(0, len(lines) - 1):
             line = lines[i]
             reg_bug_location = re.compile(r'JaConTeBe/jlint/outputs/(.*?): ')
@@ -53,7 +55,7 @@ def handleSingleFile(path):
             elif "Method" in line and "is called without synchronizing on name" in line:
                 dic["wait_nosync"].append({"location": bug_location, "code": "3.1.12-wait_nosync"})
         with open(output_file, mode = 'a') as filename:
-            reg_project_name = re.compile(r'outputs/result/(.*?).log')
+            reg_project_name = re.compile(r'outputs/result/(.*).log')
             project_name = re.findall(reg_project_name, path)[0]
             filename.write("Project name: " + project_name + ", #Bugs found: " + str(total_error_num) + '\n')
             for key in dic:
@@ -63,7 +65,7 @@ def handleSingleFile(path):
             filename.write('\n')
     except :
         with open(output_file, mode = 'a') as filename:
-            reg_project_name = re.compile(r'outputs/result/(.*?).log')
+            reg_project_name = re.compile(r'outputs/result/(.*).log')
             project_name = re.findall(reg_project_name, path)[0]
             filename.write("Project name: " + project_name + ", Fail to run the project" + '\n')
             filename.write('\n')

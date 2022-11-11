@@ -1,2 +1,2 @@
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/derby1/classes/Derby4129.java:56: Method Derby4129$1.run() implementing 'Runnable' interface is not synchronized.
+/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/jlint/outputs/derby1/classes/Derby4129.java:56: Method Derby4129$1.run() implementing 'Runnable' interface is not synchronized.
 Verification completed: 1 reported messages.

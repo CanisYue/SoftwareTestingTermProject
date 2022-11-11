@@ -1,2 +1,2 @@
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_5/classes/Test8012019.java:93: Method Test8012019$1.run() implementing 'Runnable' interface is not synchronized.
+/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/jlint/outputs/jdk7_5/classes/Test8012019.java:93: Method Test8012019$1.run() implementing 'Runnable' interface is not synchronized.
 Verification completed: 1 reported messages.
