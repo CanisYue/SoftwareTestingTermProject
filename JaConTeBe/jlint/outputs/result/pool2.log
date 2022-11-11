@@ -1,2 +1,2 @@
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/pool2/classes/Test146.java:97: Method Test146$SimpleTestThread.run() implementing 'Runnable' interface is not synchronized.
+/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/jlint/outputs/pool2/classes/Test146.java:97: Method Test146$SimpleTestThread.run() implementing 'Runnable' interface is not synchronized.
 Verification completed: 1 reported messages.

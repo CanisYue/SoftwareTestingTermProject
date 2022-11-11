@@ -1,5 +1,5 @@
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_4/classes/Test8010939.java:99: Method Test8010939$ReadConfig.run() implementing 'Runnable' interface is not synchronized.
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_4/classes/Test8010939.java:89: Method Test8010939$SetupLogger.run() implementing 'Runnable' interface is not synchronized.
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_4/classes/Test8010939.java:40: Field 'mgr' of class 'Test8010939' can be accessed from different threads and is not volatile.
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/jdk7_4/classes/Test8010939.java:40: Field 'loops' of class 'Test8010939' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/jlint/outputs/jdk7_4/classes/Test8010939.java:99: Method Test8010939$ReadConfig.run() implementing 'Runnable' interface is not synchronized.
+/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/jlint/outputs/jdk7_4/classes/Test8010939.java:89: Method Test8010939$SetupLogger.run() implementing 'Runnable' interface is not synchronized.
+/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/jlint/outputs/jdk7_4/classes/Test8010939.java:40: Field 'mgr' of class 'Test8010939' can be accessed from different threads and is not volatile.
+/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/jlint/outputs/jdk7_4/classes/Test8010939.java:40: Field 'loops' of class 'Test8010939' can be accessed from different threads and is not volatile.
 Verification completed: 4 reported messages.

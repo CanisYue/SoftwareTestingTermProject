@@ -7,7 +7,7 @@ function check_env()
         echo "see README for more information:"
         exit 2
     fi
-    experiment_dir=/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint
+    experiment_dir=${jacontebe}/jlint
 }
 
 
@@ -30,7 +30,7 @@ function run()
         cp ${f} ${class_dir}/
     done
     
-    /home/ecelrc/students/ztang/jlint/jlint-3.1.2/bin/jlint -inheritance -data_flow ${class_dir}/*.class &> ${experiment_dir}/outputs/result/${test_name}.log
+    jlint -inheritance -data_flow ${class_dir}/*.class &> ${experiment_dir}/outputs/result/${test_name}.log
 }
 
 check_env

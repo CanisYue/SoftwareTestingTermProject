@@ -289,19 +289,13 @@ Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 0
 Bug Type: wait_nosync, #Bugs found: 0
 
-Project name: real-world--common-dbcps2-2.1.1, #Bugs found: 3003
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Project name: real-world--common-dbcps2-2.1.1, Fail to run the project
 
 Project name: real-world--ftpserver1.1.0, Fail to run the project
 
 Project name: real-world--guava-21.0, Fail to run the project
 
-Project name: real-world-, #Bugs found: 3003
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Project name: real-world--log4j2.8.1, Fail to run the project
 
 Project name: real-world--tomcat8.0.26, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0

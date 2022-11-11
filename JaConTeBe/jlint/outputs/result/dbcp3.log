@@ -1,3 +1,3 @@
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:93: Method org/apache/commons/dbcp/datasources/Dbcp369$2.run() implementing 'Runnable' interface is not synchronized.
-/home/ecelrc/students/ztang/22f/SoftwareTestingTermProject/JaConTeBe/jlint/outputs/dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:77: Method org/apache/commons/dbcp/datasources/Dbcp369$1.run() implementing 'Runnable' interface is not synchronized.
+/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/jlint/outputs/dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:93: Method org/apache/commons/dbcp/datasources/Dbcp369$2.run() implementing 'Runnable' interface is not synchronized.
+/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/jlint/outputs/dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:77: Method org/apache/commons/dbcp/datasources/Dbcp369$1.run() implementing 'Runnable' interface is not synchronized.
 Verification completed: 2 reported messages.
