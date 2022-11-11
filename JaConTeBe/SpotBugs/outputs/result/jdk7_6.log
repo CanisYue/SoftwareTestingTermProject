@@ -19,8 +19,8 @@ M P Dm: testUtils.TestLibrary.getBoolean(String) invokes inefficient Boolean con
 M P Bx: Primitive boxed just to call toString in testUtils.TestLibrary.setBoolean(String, boolean)  At TestLibrary.java:[line 137]
 M P Dm: testUtils.TestLibrary.setBoolean(String, boolean) invokes inefficient Boolean constructor; use Boolean.valueOf(...) instead  At TestLibrary.java:[line 137]
 M P Bx: testUtils.TestLibrary.getInteger(String) invokes inefficient new Integer(int) constructor; use Integer.valueOf(int) instead  At TestLibrary.java:[line 116]
-M X OBL: testUtils.TestLibrary.copyFile(File, File) may fail to clean up java.io.OutputStream on checked exception  Obligation to clean up resource created at TestLibrary.java:[line 279] is not discharged
 M X OBL: testUtils.TestLibrary.copyFile(File, File) may fail to clean up java.io.InputStream on checked exception  Obligation to clean up resource created at TestLibrary.java:[line 278] is not discharged
+M X OBL: testUtils.TestLibrary.copyFile(File, File) may fail to clean up java.io.OutputStream on checked exception  Obligation to clean up resource created at TestLibrary.java:[line 279] is not discharged
 M D RV: Return value of Throwable.getMessage() ignored, but method has no side effect  At TestLibrary.java:[line 302]
 H I Dm: Found reliance on default encoding in testUtils.TestLibrary.stackTraceToString(Exception): new java.io.PrintStream(OutputStream)  At TestLibrary.java:[line 342]
 H I Dm: Found reliance on default encoding in testUtils.TestLibrary.stackTraceToString(Exception): java.io.ByteArrayOutputStream.toString()  At TestLibrary.java:[line 345]

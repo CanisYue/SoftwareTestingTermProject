@@ -91,7 +91,7 @@ def handleSingleFile(path, conc_set):
     try:
         for cur_row in rows:
             if ":[line" in cur_row:
-                total_error_num += 1
+                
                 #print(cur_row)
                 # get the type of bug
                 bug_type = ""
@@ -106,6 +106,7 @@ def handleSingleFile(path, conc_set):
                     idx += 1
                 
                 if bug_type in conc_set:
+                    total_error_num += 1
                     # is a concurrency bug
 
                     mid_idx = cur_row.find(".java")
@@ -135,13 +136,13 @@ def handleSingleFile(path, conc_set):
                 filename.write("Bug Type: " + key + ", #Bugs found: " + str(len(cur_dic[key])) + '\n')
                 for li in cur_dic[key]:
                     filename.write(json.dumps(li) + "\n")
-            filename.write("\n")
+            filename.write("\n\n")
 
     except:
         print("!!!!!")
         with open(output_file, mode = 'a') as filename:
             filename.write("Project name: " + project_name + ", Fail to run the project" + '\n')
-            filename.write('\n')
+            filename.write("\n\n")
     
 
     
