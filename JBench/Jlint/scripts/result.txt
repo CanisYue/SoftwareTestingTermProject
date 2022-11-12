@@ -415,3 +415,22 @@ Bug Type: race_condition, #Bugs found: 8
 {"location": "tsp/classes/benchmarks/tsp/TspSolver.java:238", "code": "3.1.8-concurrent_access"}
 Bug Type: wait_nosync, #Bugs found: 0
 
+
+
+----------Overall Results for JaConTeBe----------
+Number of concurrency bugs found in JaConTeBe: 244
+Number of concurrency bug types found in JaConTeBe: 3
+
+
+Bug Type: race_condition
+#Bugs found: 188
+
+
+Bug Type: deadlock
+#Bugs found: 25
+
+
+Bug Type: wait_nosync
+#Bugs found: 31
+
+

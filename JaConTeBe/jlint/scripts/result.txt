@@ -179,15 +179,18 @@ Bug Type: race_condition, #Bugs found: 1
 Bug Type: wait_nosync, #Bugs found: 0
 
 Project name: jdk7_6, #Bugs found: 8
-Bug Type: deadlock, #Bugs found: 1
+Bug Type: deadlock, #Bugs found: 2
 {"location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59", "code": "3.1.4-wait"}
+{"location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59", "code": "Holding n lock(s)"}
 Bug Type: race_condition, #Bugs found: 5
 {"location": "jdk7_6/classes/testUtils/RMID.java:261", "code": "3.1.7-concurrent_call"}
 {"location": "jdk7_6/classes/testUtils/RMID.java:305", "code": "3.1.7-concurrent_call"}
 {"location": "jdk7_6/classes/testUtils/RMID.java:299", "code": "3.1.7-concurrent_call"}
 {"location": "jdk7_6/classes/testUtils/RMID.java:297", "code": "3.1.7-concurrent_call"}
 {"location": "jdk7_6/classes/testUtils/RMID.java:290", "code": "3.1.7-concurrent_call"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: wait_nosync, #Bugs found: 2
+{"location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:49", "code": "3.1.12-wait_nosync"}
+{"location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59", "code": "3.1.12-wait_nosync"}
 
 Project name: log4j1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
@@ -254,4 +257,23 @@ Bug Type: deadlock, #Bugs found: 0
 Bug Type: race_condition, #Bugs found: 1
 {"location": "pool5/classes/org/apache/commons/pool/Test46.java:21", "code": "3.1.8-concurrent_access"}
 Bug Type: wait_nosync, #Bugs found: 0
+
+
+
+----------Overall Results for JaConTeBe----------
+Number of concurrency bugs found in JaConTeBe: 28
+Number of concurrency bug types found in JaConTeBe: 3
+
+
+Bug Type: race_condition
+#Bugs found: 24
+
+
+Bug Type: wait_nosync
+#Bugs found: 2
+
+
+Bug Type: deadlock
+#Bugs found: 2
+
 
