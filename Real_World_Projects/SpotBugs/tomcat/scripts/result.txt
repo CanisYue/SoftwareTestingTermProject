@@ -1,0 +1,391 @@
+Project name: tomcat, #Bugs found: 269
+Bug Type: Dm, #Bugs found: 94
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "tomcat/UriUtil.java:[line 51]"}
+{"location": "tomcat/BaseRedirectorHelperTask.java:[line 259]"}
+{"location": "tomcat/AntCompiler.java:[line 322]"}
+{"location": "tomcat/AntCompiler.java:[line 358]"}
+{"location": "tomcat/AntCompiler.java:[line 373]"}
+{"location": "tomcat/StaticMembershipProvider.java:[line 377]"}
+{"location": "tomcat/DaemonWrapper.java:[line 237]"}
+{"location": "tomcat/ServiceBindingPropertySource.java:[line 115]"}
+{"location": "tomcat/CaptureLog.java:[line 32]"}
+{"location": "tomcat/CaptureLog.java:[line 47]"}
+{"location": "tomcat/JavaCharStream.java:[line 482]"}
+{"location": "tomcat/JavaCharStream.java:[line 489]"}
+{"location": "tomcat/JavaCharStream.java:[line 522]"}
+{"location": "tomcat/JavaCharStream.java:[line 529]"}
+{"location": "tomcat/SimpleCharStream.java:[line 324]"}
+{"location": "tomcat/SimpleCharStream.java:[line 331]"}
+{"location": "tomcat/SimpleCharStream.java:[line 364]"}
+{"location": "tomcat/SimpleCharStream.java:[line 371]"}
+{"location": "tomcat/CGIServlet.java:[line 1651]"}
+{"location": "tomcat/Signature.java:[line 131]"}
+{"location": "tomcat/Signature.java:[line 136]"}
+{"location": "tomcat/SystemLogHandler.java:[line 49]"}
+{"location": "tomcat/FileHandler.java:[line 470]"}
+{"location": "tomcat/HttpServlet.java:[line 1020]"}
+{"location": "tomcat/Streams.java:[line 134]"}
+{"location": "tomcat/MultipartStream.java:[line 542]"}
+{"location": "tomcat/GenericXMLWriter.java:[line 64]"}
+{"location": "tomcat/FileResource.java:[line 231]"}
+{"location": "tomcat/PoolProperties.java:[line 1213]"}
+{"location": "tomcat/Bootstrap.java:[line 154]"}
+{"location": "tomcat/TldResourcePath.java:[line 159]"}
+{"location": "tomcat/TldResourcePath.java:[line 166]"}
+{"location": "tomcat/ConnectionPool.java:[line 1239]"}
+{"location": "tomcat/ConnectionPool.java:[line 1237]"}
+{"location": "tomcat/AbstractReplicatedMap.java:[line 1505]"}
+{"location": "tomcat/StandardHost.java:[line 780]"}
+{"location": "tomcat/DiskFileItem.java:[line 351]"}
+{"location": "tomcat/JavacErrorDetail.java:[line 220]"}
+{"location": "tomcat/Catalina.java:[line 676]"}
+{"location": "tomcat/Catalina.java:[line 646]"}
+{"location": "tomcat/Catalina.java:[line 964]"}
+{"location": "tomcat/ProblemReporter.java:[line 12024]"}
+{"location": "tomcat/TypeReference.java:[line 368]"}
+{"location": "tomcat/Util.java:[line 575]"}
+{"location": "tomcat/StandardContext.java:[line 952]"}
+{"location": "tomcat/ExternalAnnotationProvider.java:[line 75]"}
+{"location": "tomcat/ClassFileReader.java:[line 104]"}
+{"location": "tomcat/ClassFileReader.java:[line 94]"}
+{"location": "tomcat/ClassFileReader.java:[line 1452]"}
+{"location": "tomcat/ClassFileReader.java:[line 1444]"}
+{"location": "tomcat/Parser.java:[line 184]"}
+{"location": "tomcat/Compiler.java:[line 291]"}
+{"location": "tomcat/Main.java:[line 1813]"}
+{"location": "tomcat/Main.java:[line 1485]"}
+{"location": "tomcat/Main.java:[line 1521]"}
+{"location": "tomcat/Main.java:[line 3508]"}
+{"location": "tomcat/EclipseFileObject.java:[line 191]"}
+{"location": "tomcat/EclipseFileObject.java:[line 200]"}
+{"location": "tomcat/EclipseFileObject.java:[line 188]"}
+{"location": "tomcat/EclipseFileObject.java:[line 197]"}
+{"location": "tomcat/Main.java:[line 1287]"}
+{"location": "tomcat/EclipseCompilerImpl.java:[line 101]"}
+{"location": "tomcat/JspRuntimeLibrary.java:[line 291]"}
+{"location": "tomcat/JspRuntimeLibrary.java:[line 1025]"}
+{"location": "tomcat/SSIServletExternalResolver.java:[line 537]"}
+{"location": "tomcat/DefaultServlet.java:[line 1990]"}
+{"location": "tomcat/DefaultServlet.java:[line 2425]"}
+{"location": "tomcat/SSIServlet.java:[line 214]"}
+{"location": "tomcat/EclipseCompiler.java:[line 99]"}
+{"location": "tomcat/EclipseCompiler.java:[line 244]"}
+{"location": "tomcat/TcpSender.java:[line 109]"}
+{"location": "tomcat/TcpSender.java:[line 108]"}
+{"location": "tomcat/StandardJarScanner.java:[lines 240-284]"}
+{"location": "tomcat/StandardJarScanner.java:[lines 290-329]"}
+{"location": "tomcat/StandardJarScanner.java:[line 194]"}
+{"location": "tomcat/StandardJarScanner.java:[line 297]"}
+{"location": "tomcat/AsiExtraField.java:[line 112]"}
+{"location": "tomcat/AsiExtraField.java:[line 136]"}
+{"location": "tomcat/AsiExtraField.java:[line 304]"}
+{"location": "tomcat/WebappServiceLoader.java:[line 120]"}
+{"location": "tomcat/WebappServiceLoader.java:[line 154]"}
+{"location": "tomcat/WebappServiceLoader.java:[line 154]"}
+{"location": "tomcat/JDTCompilerAdapter.java:[line 82]"}
+{"location": "tomcat/ContextConfig.java:[line 610]"}
+{"location": "tomcat/PasswdUserDatabase.java:[line 104]"}
+{"location": "tomcat/Constants.java:[line 31]"}
+{"location": "tomcat/JNDIRealm.java:[line 2236]"}
+{"location": "tomcat/SSIFilter.java:[line 163]"}
+{"location": "tomcat/JspC.java:[line 1672]"}
+{"location": "tomcat/JspC.java:[line 1856]"}
+{"location": "tomcat/JspC.java:[line 1867]"}
+{"location": "tomcat/DNSMembershipProvider.java:[line 136]"}
+{"location": "tomcat/DNSMembershipProvider.java:[line 188]"}
+{"location": "tomcat/SSIExec.java:[line 64]"}
+Bug Type: JLM, #Bugs found: 8
+Description: (1)Synchronization performed on util.concurrent instance (2)Using monitor style wait methods on util.concurrent abstraction (3)Synchronization performed on Lock
+{"location": "tomcat/AbstractProcessorLight.java:[line 116]"}
+{"location": "tomcat/AbstractProcessorLight.java:[line 127]"}
+{"location": "tomcat/AbstractProcessorLight.java:[line 142]"}
+{"location": "tomcat/AprEndpoint.java:[line 2541]"}
+{"location": "tomcat/AprEndpoint.java:[line 2559]"}
+{"location": "tomcat/AprEndpoint.java:[line 2756]"}
+{"location": "tomcat/AprEndpoint.java:[line 2769]"}
+{"location": "tomcat/AprEndpoint.java:[line 2782]"}
+Bug Type: NP, #Bugs found: 75
+Description: Synchronize and null check on the same field
+{"location": "tomcat/JRTUtil.java:[line 566]"}
+{"location": "tomcat/EntityTag.java:[line 58]"}
+{"location": "tomcat/ClasspathDirectory.java:[line 350]"}
+{"location": "tomcat/JasperELResolver.java:[line 106]"}
+{"location": "tomcat/ClassPath.java:[line 289]"}
+{"location": "tomcat/JRTUtil.java:[line 208]"}
+{"location": "tomcat/HttpServlet.java:[line 1040]"}
+{"location": "tomcat/CharChunk.java:[line 401]"}
+{"location": "tomcat/AccessRuleSet.java:[line 54]"}
+{"location": "tomcat/ByteChunk.java:[line 533]"}
+{"location": "tomcat/MessageBytes.java:[line 178]"}
+{"location": "tomcat/IntrospectionUtils.java:[line 435]"}
+{"location": "tomcat/JspConfig.java:[line 210]"}
+{"location": "tomcat/AbstractArchiveResource.java:[line 198]"}
+{"location": "tomcat/TypeBinding.java:[line 1282]"}
+{"location": "tomcat/ProblemReporter.java:[line 6881]"}
+{"location": "tomcat/ProblemReporter.java:[line 9968]"}
+{"location": "tomcat/ProblemReporter.java:[line 9990]"}
+{"location": "tomcat/LookupEnvironment.java:[line 2056]"}
+{"location": "tomcat/SourceTypeBinding.java:[line 994]"}
+{"location": "tomcat/SourceTypeBinding.java:[line 1013]"}
+{"location": "tomcat/ImplicitNullAnnotationVerifier.java:[line 494]"}
+{"location": "tomcat/ExpressionParseTree.java:[line 95]"}
+{"location": "tomcat/ClassFile.java:[line 6414]"}
+{"location": "tomcat/ClassFile.java:[line 6303]"}
+{"location": "tomcat/BeanNameELResolver.java:[line 46]"}
+{"location": "tomcat/BeanNameELResolver.java:[line 71]"}
+{"location": "tomcat/BeanNameELResolver.java:[line 108]"}
+{"location": "tomcat/BeanNameELResolver.java:[line 137]"}
+{"location": "tomcat/ClassPath.java:[line 454]"}
+{"location": "tomcat/InferenceContext18.java:[line 883]"}
+{"location": "tomcat/DelegatingConnection.java:[line 721]"}
+{"location": "tomcat/ELSupport.java:[line 252]"}
+{"location": "tomcat/StandardWrapper.java:[line 548]"}
+{"location": "tomcat/TypeDeclaration.java:[line 432]"}
+{"location": "tomcat/TypeSystem.java:[lines 113-114]"}
+{"location": "tomcat/ClassFileReader.java:[line 1230]"}
+{"location": "tomcat/Clinit.java:[line 131]"}
+{"location": "tomcat/Parser.java:[line 2281]"}
+{"location": "tomcat/Compiler.java:[line 586]"}
+{"location": "tomcat/ClasspathJep247.java:[line 259]"}
+{"location": "tomcat/AnnotationValueImpl.java:[line 94]"}
+{"location": "tomcat/FileSystem.java:[line 326]"}
+{"location": "tomcat/ModuleFinder.java:[line 93]"}
+{"location": "tomcat/ModuleFinder.java:[line 73]"}
+{"location": "tomcat/Main.java:[line 4216]"}
+{"location": "tomcat/Main.java:[line 4151]"}
+{"location": "tomcat/Main.java:[line 4216]"}
+{"location": "tomcat/Main.java:[line 4254]"}
+{"location": "tomcat/Main.java:[line 4254]"}
+{"location": "tomcat/Main.java:[line 4151]"}
+{"location": "tomcat/JspReader.java:[line 204]"}
+{"location": "tomcat/Migration.java:[line 178]"}
+{"location": "tomcat/ELResolverImpl.java:[line 46]"}
+{"location": "tomcat/ELResolverImpl.java:[line 68]"}
+{"location": "tomcat/ELResolverImpl.java:[line 92]"}
+{"location": "tomcat/ELResolverImpl.java:[line 107]"}
+{"location": "tomcat/ScopedAttributeELResolver.java:[line 60]"}
+{"location": "tomcat/ScopedAttributeELResolver.java:[line 117]"}
+{"location": "tomcat/ScopedAttributeELResolver.java:[line 129]"}
+{"location": "tomcat/ScopedAttributeELResolver.java:[line 148]"}
+{"location": "tomcat/ImplicitObjectELResolver.java:[line 92]"}
+{"location": "tomcat/ImplicitObjectELResolver.java:[line 129]"}
+{"location": "tomcat/ImplicitObjectELResolver.java:[line 143]"}
+{"location": "tomcat/ImplicitObjectELResolver.java:[line 156]"}
+{"location": "tomcat/ClasspathJep247Jdk12.java:[line 180]"}
+{"location": "tomcat/JDTCompiler.java:[line 207]"}
+{"location": "tomcat/ContextConfig.java:[line 2512]"}
+{"location": "tomcat/AstValue.java:[line 118]"}
+{"location": "tomcat/HostConfig.java:[line 1243]"}
+{"location": "tomcat/HostConfig.java:[line 702]"}
+{"location": "tomcat/HostConfig.java:[line 702]"}
+{"location": "tomcat/HostConfig.java:[line 1216]"}
+{"location": "tomcat/HostConfig.java:[line 1216]"}
+{"location": "tomcat/AnnotationMirrorImpl.java:[line 402]"}
+Bug Type: VO, #Bugs found: 15
+Description: (1)A volatile reference to an array doesn’t treat the array elements as volatile (2)An increment to a volatile field isn’t atomic
+{"location": "tomcat/AprEndpoint.java:[line 1079]"}
+{"location": "tomcat/AprEndpoint.java:[line 1090]"}
+{"location": "tomcat/SlowQueryReport.java:[line 418]"}
+{"location": "tomcat/SlowQueryReport.java:[line 433]"}
+{"location": "tomcat/SlowQueryReport.java:[line 440]"}
+{"location": "tomcat/ThreadPoolExecutor.java:[line 1199]"}
+{"location": "tomcat/HpackDecoder.java:[line 430]"}
+{"location": "tomcat/HpackDecoder.java:[line 434]"}
+{"location": "tomcat/DefaultPooledObject.java:[line 76]"}
+{"location": "tomcat/ManagerBase.java:[line 955]"}
+{"location": "tomcat/Http2UpgradeHandler.java:[line 1257]"}
+{"location": "tomcat/ReplicationValve.java:[line 437]"}
+{"location": "tomcat/ReplicationValve.java:[line 500]"}
+{"location": "tomcat/ReplicationValve.java:[line 531]"}
+{"location": "tomcat/ReplicationValve.java:[line 575]"}
+Bug Type: SC, #Bugs found: 2
+Description: Constructor invokes Thread.start()
+{"location": "tomcat/ReadManager.java:[line 58]"}
+{"location": "tomcat/ProcessTaskManager.java:[line 47]"}
+Bug Type: RV, #Bugs found: 19
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+{"location": "tomcat/ConnectionPool.java:[line 1464]"}
+{"location": "tomcat/StoreFileMover.java:[line 166]"}
+{"location": "tomcat/BranchLabel.java:[line 163]"}
+{"location": "tomcat/BranchLabel.java:[line 167]"}
+{"location": "tomcat/LogFactory.java:[line 88]"}
+{"location": "tomcat/DiskFileItem.java:[line 432]"}
+{"location": "tomcat/DiskFileItem.java:[line 548]"}
+{"location": "tomcat/Util.java:[line 289]"}
+{"location": "tomcat/ClassScope.java:[line 1261]"}
+{"location": "tomcat/ELSupport.java:[line 128]"}
+{"location": "tomcat/RecoveredModuleStatement.java:[line 51]"}
+{"location": "tomcat/RecoveredModuleReference.java:[line 51]"}
+{"location": "tomcat/RecoveredImport.java:[line 53]"}
+{"location": "tomcat/RecoveredAnnotation.java:[line 243]"}
+{"location": "tomcat/InstanceOfExpression.java:[line 294]"}
+{"location": "tomcat/RecoveredUsesStatement.java:[line 33]"}
+{"location": "tomcat/EclipseCompilerImpl.java:[line 405]"}
+{"location": "tomcat/ExpandWar.java:[line 355]"}
+{"location": "tomcat/RecoveredTypeReference.java:[line 50]"}
+Bug Type: ML, #Bugs found: 2
+Description: (1)Synchronization on field in futile attempt to guard that field (2)Method synchronizes on an updated field
+{"location": "tomcat/Membership.java:[line 84]"}
+{"location": "tomcat/AprEndpoint.java:[line 2101]"}
+Bug Type: UL, #Bugs found: 2
+Description: (1)Method does not release lock on all paths (2)Method does not release lock on all exception paths
+{"location": "tomcat/FairBlockingQueue.java:[line 142]"}
+{"location": "tomcat/MultiLockFairBlockingQueue.java:[line 152]"}
+Bug Type: UG, #Bugs found: 9
+Description: Unsynchronized get method, synchronized set method
+{"location": "tomcat/MemberImpl.java:[line 479]"}
+{"location": "tomcat/MemberImpl.java:[line 499]"}
+{"location": "tomcat/MemberImpl.java:[line 504]"}
+{"location": "tomcat/MemberImpl.java:[line 436]"}
+{"location": "tomcat/MemberImpl.java:[line 445]"}
+{"location": "tomcat/MemberImpl.java:[line 489]"}
+{"location": "tomcat/MemberImpl.java:[line 484]"}
+{"location": "tomcat/MemberImpl.java:[line 494]"}
+{"location": "tomcat/LifecycleBase.java:[line 343]"}
+Bug Type: SWL, #Bugs found: 3
+Description: Method calls Thread.sleep() with a lock held
+{"location": "tomcat/StandardContext.java:[line 5393]"}
+{"location": "tomcat/StandardWrapper.java:[line 1303]"}
+{"location": "tomcat/HostConfig.java:[line 1472]"}
+Bug Type: LI, #Bugs found: 1
+Description: (1)Incorrect lazy initialization of static field (2)Incorrect lazy initialization and update of static field
+{"location": "tomcat/FileSystem.java:[lines 308-309]"}
+Bug Type: AT, #Bugs found: 3
+Description: Sequence of calls to concurrent abstraction may not be atomic
+{"location": "tomcat/DataSourceUserDatabase.java:[line 888]"}
+{"location": "tomcat/DataSourceUserDatabase.java:[line 906]"}
+{"location": "tomcat/DataSourceUserDatabase.java:[line 924]"}
+Bug Type: NN, #Bugs found: 2
+Description: Naked notify
+{"location": "tomcat/AprEndpoint.java:[line 1700]"}
+{"location": "tomcat/AprEndpoint.java:[line 2063]"}
+Bug Type: Wa, #Bugs found: 1
+Description: (1)Wait not in loop (2)Condition.await() not in loop
+{"location": "tomcat/WindowAllocationManager.java:[line 151]"}
+Bug Type: IS, #Bugs found: 32
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "tomcat/ReadManager.java:[line 65]"}
+{"location": "tomcat/NioSender.java:[line 210]"}
+{"location": "tomcat/StandardWrapper.java:[line 454]"}
+{"location": "tomcat/ReadManager.java:[line 67]"}
+{"location": "tomcat/ProcessTaskManager.java:[line 117]"}
+{"location": "tomcat/GroupChannel.java:[line 565]"}
+{"location": "tomcat/ClusterSingleSignOn.java:[line 63]"}
+{"location": "tomcat/JspConfig.java:[line 329]"}
+{"location": "tomcat/StandardWrapper.java:[line 503]"}
+{"location": "tomcat/JspConfig.java:[line 332]"}
+{"location": "tomcat/SoftReferenceObjectPool.java:[line 445]"}
+{"location": "tomcat/NioSender.java:[line 203]"}
+{"location": "tomcat/MemberImpl.java:[line 407]"}
+{"location": "tomcat/StandardWrapper.java:[line 455]"}
+{"location": "tomcat/ReadManager.java:[line 76]"}
+{"location": "tomcat/ProcessTaskManager.java:[line 120]"}
+{"location": "tomcat/ReplicationTransmitter.java:[line 80]"}
+{"location": "tomcat/StandardContext.java:[line 1048]"}
+{"location": "tomcat/ReadManager.java:[line 138]"}
+{"location": "tomcat/AuthenticatorBase.java:[line 1179]"}
+{"location": "tomcat/ReadManager.java:[line 66]"}
+{"location": "tomcat/JvmRouteBinderValve.java:[line 249]"}
+{"location": "tomcat/HealthCheckValve.java:[line 92]"}
+{"location": "tomcat/ClasspathJep247.java:[line 207]"}
+{"location": "tomcat/StandardWrapper.java:[line 1512]"}
+{"location": "tomcat/ChannelCoordinator.java:[line 78]"}
+{"location": "tomcat/NioSender.java:[line 203]"}
+{"location": "tomcat/SingleSignOn.java:[line 436]"}
+{"location": "tomcat/SoftReferenceObjectPool.java:[line 441]"}
+{"location": "tomcat/ClasspathJar.java:[line 296]"}
+{"location": "tomcat/BasicDataSource.java:[line 509]"}
+{"location": "tomcat/DeltaManager.java:[line 872]"}
+Bug Type: MSF, #Bugs found: 1
+Description: Mutable servlet field
+{"location": "tomcat/HostManagerServlet.java:[line 161]"}
+
+
+
+
+----------Overall Results for Real World Projects----------
+Number of concurrency bugs found in Real World Projects: 269
+Number of concurrency bug types found in Real World Projects: 16
+
+
+Bug Type: Dm
+Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+#Bugs found: 94
+
+
+Bug Type: JLM
+Description: (1)Synchronization performed on util.concurrent instance (2)Using monitor style wait methods on util.concurrent abstraction (3)Synchronization performed on Lock
+#Bugs found: 8
+
+
+Bug Type: NP
+Description: Synchronize and null check on the same field
+#Bugs found: 75
+
+
+Bug Type: VO
+Description: (1)A volatile reference to an array doesn’t treat the array elements as volatile (2)An increment to a volatile field isn’t atomic
+#Bugs found: 15
+
+
+Bug Type: SC
+Description: Constructor invokes Thread.start()
+#Bugs found: 2
+
+
+Bug Type: RV
+Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+#Bugs found: 19
+
+
+Bug Type: ML
+Description: (1)Synchronization on field in futile attempt to guard that field (2)Method synchronizes on an updated field
+#Bugs found: 2
+
+
+Bug Type: UL
+Description: (1)Method does not release lock on all paths (2)Method does not release lock on all exception paths
+#Bugs found: 2
+
+
+Bug Type: UG
+Description: Unsynchronized get method, synchronized set method
+#Bugs found: 9
+
+
+Bug Type: SWL
+Description: Method calls Thread.sleep() with a lock held
+#Bugs found: 3
+
+
+Bug Type: LI
+Description: (1)Incorrect lazy initialization of static field (2)Incorrect lazy initialization and update of static field
+#Bugs found: 1
+
+
+Bug Type: AT
+Description: Sequence of calls to concurrent abstraction may not be atomic
+#Bugs found: 3
+
+
+Bug Type: NN
+Description: Naked notify
+#Bugs found: 2
+
+
+Bug Type: Wa
+Description: (1)Wait not in loop (2)Condition.await() not in loop
+#Bugs found: 1
+
+
+Bug Type: IS
+Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+#Bugs found: 32
+
+
+Bug Type: MSF
+Description: Mutable servlet field
+#Bugs found: 1
+
+
