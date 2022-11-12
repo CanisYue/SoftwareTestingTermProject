@@ -5,3 +5,4 @@ https://spotbugs.readthedocs.io/en/latest/installing.html
 ./multiinstall.sh
 ./multitest.sh
 
+The results are in scripts/result.txt
