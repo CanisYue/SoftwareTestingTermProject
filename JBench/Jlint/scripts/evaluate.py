@@ -19,16 +19,21 @@ def handleSingleFile(path):
     dic = {"deadlock":[], "race_condition":[], "wait_nosync":[]}
     # record detail info
     try:
-        # record total error number
+    # record total error number
         regNum = re.compile(r'\d+')
         total_error_num = re.findall(regNum, lines[-1])[0]
         if "Verification completed" not in lines[-1]:
             raise Exception("Fail to run the program")
         for i in range(0, len(lines) - 1):
             line = lines[i]
+            # print(line)
+            if "Failed to open file" in line:
+                raise Exception("Fail to run the program")
             reg_bug_location = re.compile(r'/JBench/dataset/benchmark-suite/(.*?): ')
-            bug_location = re.findall(reg_bug_location, line)[0]
-
+            bug_location = re.findall(reg_bug_location, line)
+            if len(bug_location) == 0:
+                continue
+            bug_location = bug_location[0]
             reg_bug_log = re.compile(r': (.*)')
             bug_log = re.findall(reg_bug_log, line)[0]
             bug_type = ""
@@ -97,6 +102,7 @@ def handleSingleFile(path):
 all_res = {}
 all_bugs_num = 0
 
+
 output_file = 'result.txt'
 if os.path.exists(output_file):
     os.remove(output_file)
@@ -108,9 +114,9 @@ for key in all_res:
     all_bugs_num += all_res[key]
 
 with open(output_file, mode = 'a') as filename:
-    filename.write("\n\n----------Overall Results for JaConTeBe----------\n")
-    filename.write("Number of concurrency bugs found in JaConTeBe: " + str(all_bugs_num) + "\n")
-    filename.write("Number of concurrency bug types found in JaConTeBe: " + str(len(all_res)) + "\n")
+    filename.write("\n\n----------Overall Results for JBench----------\n")
+    filename.write("Number of concurrency bugs found in JBench: " + str(all_bugs_num) + "\n")
+    filename.write("Number of concurrency bug types found in JBench: " + str(len(all_res)) + "\n")
     filename.write("\n\n")
     for key in all_res:
         filename.write("Bug Type: " + key + "\n")

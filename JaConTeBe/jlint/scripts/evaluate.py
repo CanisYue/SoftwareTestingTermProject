@@ -25,8 +25,13 @@ def handleSingleFile(path):
             raise Exception("Fail to run the program")
         for i in range(0, len(lines) - 1):
             line = lines[i]
+            if "Failed to open file" in line:
+                raise Exception("Fail to run the program")
             reg_bug_location = re.compile(r'JaConTeBe/jlint/outputs/(.*?): ')
-            bug_location = re.findall(reg_bug_location, line)[0]
+            bug_location = re.findall(reg_bug_location, line)
+            if len(bug_location) == 0:
+                continue
+            bug_location = bug_location[0]
             bug_type = ""
             reg_bug_log = re.compile(r': (.*)')
             bug_log = re.findall(reg_bug_log, line)[0]
