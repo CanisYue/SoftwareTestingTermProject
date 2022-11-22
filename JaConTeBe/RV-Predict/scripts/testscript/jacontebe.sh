@@ -15,8 +15,9 @@ function check_env()
 
 function run() 
 {
+    echo "${test_name}"
     runtime_dependencies=${data_dir}/versions.alt/lib/${test_name}.jar:${experiment_dir}/outputs/${test_name}
-    rv-predict ${Opt} -cp ${runtime_dependencies} ${class_to_run} &> ${experiment_dir}/outputs/result/${test_name}.log
+    rv-predict ${Opt} --base-log-dir ${jacontebe}/RV-Predict/test --log-dirname ${test_name} -cp ${runtime_dependencies} ${class_to_run} &> ${experiment_dir}/outputs/result/${test_name}.log
 }
 
 check_env

@@ -1,24 +1,3 @@
-
-----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict625190082137950730
-[RV-Predict] Finished retransforming preloaded classes.
-********************************
-Starting test: jdk8023541
-Expected bug type: race
-This test should finish in 60 seconds.
-********************************
-
-TEST FAILED: 
-Test failed with: could not find class file to install in codebase (try rebuilding the test): /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/JaConTeBe/source/testUtils/ActivatableImpl.class
-java.lang.RuntimeException: could not find class file to install in codebase (try rebuilding the test): /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/JaConTeBe/source/testUtils/ActivatableImpl.class
-	at testUtils.TestLibrary.installClassInCodebase(TestLibrary.java:245)
-	at testUtils.TestLibrary.installClassInCodebase(TestLibrary.java:194)
-	at Test8023541.main(Test8023541.java:82)
-rmid shut down
-Exception in thread "main" testUtils.TestFailedException: TEST FAILED: ; nested exception is: 
-	java.lang.RuntimeException: could not find class file to install in codebase (try rebuilding the test): /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/JaConTeBe/source/testUtils/ActivatableImpl.class
-java.lang.RuntimeException: could not find class file to install in codebase (try rebuilding the test): /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/JaConTeBe/source/testUtils/ActivatableImpl.class
-	at testUtils.TestLibrary.installClassInCodebase(TestLibrary.java:245)
-	at testUtils.TestLibrary.installClassInCodebase(TestLibrary.java:194)
-	at Test8023541.main(Test8023541.java:82)
-No races found.
+Unrecognized option: --base-log-dir
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.

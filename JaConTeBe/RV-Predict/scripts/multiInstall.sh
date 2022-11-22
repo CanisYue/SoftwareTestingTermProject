@@ -26,11 +26,3 @@ do
         cd ..
     fi
 done
-
-# cd ${subject_dir}/source
-
-# echo compiling application
-
-# find . -name "*.java" | xargs javac -cp ${subject_dir}/versions.alt/lib/$2.jar
-
-#rv-predict -cp '.:/home/ecelrc/students/yxiong/softwaretesting/datasets/JaConTeBe/versions.alt/lib/groovy1.jar' Groovy3495

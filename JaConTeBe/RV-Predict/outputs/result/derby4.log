@@ -1,10 +1,10 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict4372577202025793248
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/derby4
 [RV-Predict] Finished retransforming preloaded classes.
 JUnit version 4.11
 .E
-Time: 0.008
+Time: 0.007
 There was 1 failure:
 1) initializationError(org.apache.derby.impl.services.reflect.Derby764)
 java.lang.NullPointerException
@@ -16,10 +16,10 @@ java.lang.NullPointerException
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.powermock.reflect.internal.WhiteboxImpl.performMethodInvocation(WhiteboxImpl.java:2014)
 	at org.powermock.reflect.internal.WhiteboxImpl.doInvokeMethod(WhiteboxImpl.java:885)
-	at org.powermock.reflect.internal.WhiteboxImpl.invokeMethod(WhiteboxImpl.java:859)
-	at org.powermock.reflect.Whitebox.invokeMethod(Whitebox.java:466)
-No races found.	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.registerProxyframework(AbstractTestSuiteChunkerImpl.java:154)
+No races found.	at org.powermock.reflect.internal.WhiteboxImpl.invokeMethod(WhiteboxImpl.java:859)
 
+	at org.powermock.reflect.Whitebox.invokeMethod(Whitebox.java:466)
+	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.registerProxyframework(AbstractTestSuiteChunkerImpl.java:154)
 	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.chunkClass(AbstractTestSuiteChunkerImpl.java:173)
 	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.<init>(AbstractTestSuiteChunkerImpl.java:92)
 	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.<init>(AbstractTestSuiteChunkerImpl.java:85)

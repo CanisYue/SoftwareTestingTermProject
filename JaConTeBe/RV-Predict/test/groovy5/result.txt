@@ -1,0 +1,12 @@
+Data race on field groovy.util.AntBuilder.insideTask:
+    Write in thread 27
+      > at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:189)
+    Thread 27 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+    Write in thread 28
+      > at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:189)
+    Thread 28 created by thread 1
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+

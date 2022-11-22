@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict6127772626063986779
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/groovy3
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: groovy5198

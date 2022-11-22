@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict7999231671919925050
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/pool3
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: pool149
@@ -22,23 +22,15 @@ Thread[main,5,main] is waiting:
    at Test149.run(Test149.java:36) 
    at Test149.main(Test149.java:59) 
 
-Thread[Thread-5,5,main] is waiting:
+Thread[Thread-1,5,main] is waiting:
+   at sun.misc.Unsafe.park(Native Method) 
+   at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:338) 
+   at com.runtimeverification.rvpredict.log.VolatileLoggingEngine$BufferCleaner.run(VolatileLoggingEngine.java:545) 
+
+Thread[Thread-3,5,main] is waiting:
    at java.lang.Object.wait(Native Method) 
    at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictWait(RVPredictRuntime.java:216) 
    at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictWait(RVPredictRuntime.java:199) 
    at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1090) 
    at Test149$TestThread1.run(Test149.java:102) 
    at java.lang.Thread.run(Thread.java:750) 
-
-Thread[Thread-6,5,main] is waiting:
-   at java.lang.Object.wait(Native Method) 
-   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictWait(RVPredictRuntime.java:216) 
-   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictWait(RVPredictRuntime.java:199) 
-   at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1090) 
-   at Test149$TestThread2.run(Test149.java:123) 
-   at java.lang.Thread.run(Thread.java:750) 
-
-Thread[Thread-1,5,main] is waiting:
-   at sun.misc.Unsafe.park(Native Method) 
-   at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:338) 
-   at com.runtimeverification.rvpredict.log.VolatileLoggingEngine$BufferCleaner.run(VolatileLoggingEngine.java:545) 

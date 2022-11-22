@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict3972318302655678549
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/log4j4
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: log4j38137
@@ -14,8 +14,6 @@ detecting forever waiting threads...
 ========================================================================
 Detected suspicious forever waiting bug, all worker threads are waiting:
 
-Thread[main,5,] is waiting:
-
 Thread[Thread-1,5,main] is waiting:
    at sun.misc.Unsafe.park(Native Method) 
    at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:338) 
@@ -27,4 +25,4 @@ Thread[Dispatcher-Thread-3,1,main] is waiting:
    at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictWait(RVPredictRuntime.java:199) 
    at org.apache.log4j.Dispatcher.run(AsyncAppender.java:312) 
 
-Thread[Appender-1,5,] is waiting:
+Thread[main,5,] is waiting:

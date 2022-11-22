@@ -1,0 +1,220 @@
+Data race on field org.mockito.internal.stubbing.InvocationContainerImpl.invocationForStubbing:
+    Write in thread 29 holding lock Monitor@1528050512
+      > at org.mockito.internal.stubbing.InvocationContainerImpl.resetInvocationForPotentialStubbing(InvocationContainerImpl.java:41)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:100)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:355)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    Thread 29 created by thread 1
+        at Dbcp270.run(Dbcp270.java:89)
+
+    Write in thread 30 holding lock Monitor@1262476121
+      > at org.mockito.internal.stubbing.InvocationContainerImpl.resetInvocationForPotentialStubbing(InvocationContainerImpl.java:41)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:100)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.activateObject(PoolableConnectionFactory.java:368)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    Thread 30 created by thread 1
+        at Dbcp270.run(Dbcp270.java:90)
+
+
+Data race on field org.apache.commons.dbcp.DelegatingConnection._closed:
+    Write in thread 30 holding lock Monitor@1262476121
+      > at org.apache.commons.dbcp.DelegatingConnection.activate(DelegatingConnection.java:296)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    Thread 30 created by thread 1
+        at Dbcp270.run(Dbcp270.java:90)
+
+    Read in thread 29 holding lock Monitor@1528050512
+      > at org.apache.commons.dbcp.DelegatingConnection.checkOpen(DelegatingConnection.java:290)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:351)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    Thread 29 created by thread 1
+        at Dbcp270.run(Dbcp270.java:89)
+
+
+Data race on field org.apache.commons.dbcp.DelegatingConnection._closed:
+    Read in thread 30 holding lock Monitor@1262476121
+      > at org.apache.commons.dbcp.DelegatingConnection.isClosed(DelegatingConnection.java:283)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.validateConnection(PoolableConnectionFactory.java:320)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.validateObject(PoolableConnectionFactory.java:308)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:942)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    Thread 30 created by thread 1
+        at Dbcp270.run(Dbcp270.java:90)
+
+    Write in thread 29 holding lock Monitor@1528050512
+      > at org.apache.commons.dbcp.DelegatingConnection.passivate(DelegatingConnection.java:324)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:358)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    Thread 29 created by thread 1
+        at Dbcp270.run(Dbcp270.java:89)
+
+
+Data race on field org.apache.commons.dbcp.AbandonedTrace.lastUsed:
+    Write in thread 30 holding lock Monitor@1262476121
+      > at org.apache.commons.dbcp.AbandonedTrace.setLastUsed(AbandonedTrace.java:130)
+        at org.apache.commons.dbcp.DelegatingConnection.activate(DelegatingConnection.java:297)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.activateObject(PoolableConnectionFactory.java:364)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    Thread 30 created by thread 1
+        at Dbcp270.run(Dbcp270.java:90)
+
+    Write in thread 29 holding lock Monitor@1528050512
+      > at org.apache.commons.dbcp.AbandonedTrace.setLastUsed(AbandonedTrace.java:143)
+        at org.apache.commons.dbcp.DelegatingConnection.passivate(DelegatingConnection.java:316)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:358)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    Thread 29 created by thread 1
+        at Dbcp270.run(Dbcp270.java:89)
+
+
+Data race on field org.apache.commons.dbcp.DelegatingConnection._closed:
+    Write in thread 30 holding lock Monitor@1262476121
+      > at org.apache.commons.dbcp.DelegatingConnection.activate(DelegatingConnection.java:296)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    Thread 30 created by thread 1
+        at Dbcp270.run(Dbcp270.java:90)
+
+    Write in thread 29 holding lock Monitor@1528050512
+      > at org.apache.commons.dbcp.DelegatingConnection.passivate(DelegatingConnection.java:324)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:358)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    Thread 29 created by thread 1
+        at Dbcp270.run(Dbcp270.java:89)
+
+
+Data race on field org.apache.commons.dbcp.DelegatingConnection._closed:
+    Read in thread 30 holding lock Monitor@1262476121
+      > at org.apache.commons.dbcp.DelegatingConnection.checkOpen(DelegatingConnection.java:290)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.activateObject(PoolableConnectionFactory.java:368)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    Thread 30 created by thread 1
+        at Dbcp270.run(Dbcp270.java:90)
+
+    Write in thread 29 holding lock Monitor@1528050512
+      > at org.apache.commons.dbcp.DelegatingConnection.passivate(DelegatingConnection.java:324)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:358)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    Thread 29 created by thread 1
+        at Dbcp270.run(Dbcp270.java:89)
+
+
+Data race on field org.mockito.internal.stubbing.InvocationContainerImpl.invocationForStubbing:
+    Write in thread 29 holding lock Monitor@1528050512
+      > at org.mockito.internal.stubbing.InvocationContainerImpl.resetInvocationForPotentialStubbing(InvocationContainerImpl.java:41)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:100)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:355)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    Thread 29 created by thread 1
+        at Dbcp270.run(Dbcp270.java:89)
+
+    Write in thread 30 holding lock Monitor@1262476121
+      > at org.mockito.internal.stubbing.InvocationContainerImpl.setInvocationForPotentialStubbing(InvocationContainerImpl.java:37)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:82)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.activateObject(PoolableConnectionFactory.java:368)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    Thread 30 created by thread 1
+        at Dbcp270.run(Dbcp270.java:90)
+
+
+Data race on field org.mockito.internal.stubbing.InvocationContainerImpl.invocationForStubbing:
+    Write in thread 29 holding lock Monitor@1528050512
+      > at org.mockito.internal.stubbing.InvocationContainerImpl.setInvocationForPotentialStubbing(InvocationContainerImpl.java:37)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:82)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:355)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    Thread 29 created by thread 1
+        at Dbcp270.run(Dbcp270.java:89)
+
+    Write in thread 30 holding lock Monitor@1262476121
+      > at org.mockito.internal.stubbing.InvocationContainerImpl.setInvocationForPotentialStubbing(InvocationContainerImpl.java:37)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:82)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.activateObject(PoolableConnectionFactory.java:368)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    Thread 30 created by thread 1
+        at Dbcp270.run(Dbcp270.java:90)
+
+

@@ -1,0 +1,14 @@
+Data race on field org.apache.commons.pool.BaseObjectPool.closed:
+    Write in thread 50
+      > at org.apache.commons.pool.BaseObjectPool.close(BaseObjectPool.java:62)
+        at org.apache.commons.pool.Test46$Writer.run(Test46.java:166)
+    Thread 50 created by thread 1
+        at org.apache.commons.pool.Test46.runTest(Test46.java:47)
+
+    Read in thread 42
+      > at org.apache.commons.pool.BaseObjectPool.isClosed(BaseObjectPool.java:73)
+        at org.apache.commons.pool.Test46$Reader.run(Test46.java:130)
+    Thread 42 created by thread 1
+        at org.apache.commons.pool.Test46.runTest(Test46.java:44)
+
+

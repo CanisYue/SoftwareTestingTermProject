@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict7177789562966088917
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/jdk7_2
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: jdk7122142

@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict8788335497428708234
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/pool5
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: pool46
@@ -9,10 +9,10 @@ This test should finish in 30 seconds.
 ********************************
 
 Now starting proper synchronized version:
-Proper synchronized version's execution time is 305 ms
+Proper synchronized version's execution time is 262 ms
 Now starting not synchronized version:
 This could be an endless loop.
-Not synchronized version's execution time is 56 ms
+Not synchronized version's execution time is 72 ms
 Data race on field org.apache.commons.pool.BaseObjectPool.closed:
     Write in thread 50
       > at org.apache.commons.pool.BaseObjectPool.close(BaseObjectPool.java:62)
@@ -20,9 +20,10 @@ Data race on field org.apache.commons.pool.BaseObjectPool.closed:
     Thread 50 created by thread 1
         at org.apache.commons.pool.Test46.runTest(Test46.java:47)
 
-    Read in thread 40
+    Read in thread 42
       > at org.apache.commons.pool.BaseObjectPool.isClosed(BaseObjectPool.java:73)
-    Thread 40 created by thread 1
+        at org.apache.commons.pool.Test46$Reader.run(Test46.java:130)
+    Thread 42 created by thread 1
         at org.apache.commons.pool.Test46.runTest(Test46.java:44)
 
 

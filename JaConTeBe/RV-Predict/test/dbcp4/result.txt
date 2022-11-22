@@ -1,0 +1,14 @@
+Data race on field org.apache.commons.dbcp.AbandonedTrace.lastUsed:
+    Read in thread 131
+      > at org.apache.commons.dbcp.AbandonedTrace.getLastUsed(AbandonedTrace.java:119)
+        at org.apache.commons.dbcp.Dbcp271$Read.run(Dbcp271.java:88)
+    Thread 131 created by thread 1
+        at org.apache.commons.dbcp.Dbcp271.run(Dbcp271.java:54)
+
+    Write in thread 230
+      > at org.apache.commons.dbcp.AbandonedTrace.setLastUsed(AbandonedTrace.java:143)
+        at org.apache.commons.dbcp.Dbcp271$Write.run(Dbcp271.java:119)
+    Thread 230 created by thread 1
+        at org.apache.commons.dbcp.Dbcp271.run(Dbcp271.java:56)
+
+

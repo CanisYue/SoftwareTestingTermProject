@@ -1,0 +1,28 @@
+Data race on field java.util.WeakHashMap.$state:
+    Write in thread 29
+      > at org.codehaus.groovy.ast.ClassHelper.makeCached(ClassHelper.java:119)
+        at org.codehaus.groovy.ast.Groovy4292$AsyncWeakRef.run(Groovy4292.java:89)
+    Thread 29 created by thread 1
+        at org.codehaus.groovy.ast.Groovy4292.main(Groovy4292.java:49)
+
+    Read in thread 32
+      > at org.codehaus.groovy.ast.ClassHelper.makeCached(ClassHelper.java:119)
+        at org.codehaus.groovy.ast.Groovy4292$AsyncWeakRef.run(Groovy4292.java:89)
+    Thread 32 created by thread 1
+        at org.codehaus.groovy.ast.Groovy4292.main(Groovy4292.java:49)
+
+
+Data race on field java.util.WeakHashMap.$state:
+    Read in thread 32
+      > at org.codehaus.groovy.ast.ClassHelper.makeCached(ClassHelper.java:115)
+        at org.codehaus.groovy.ast.Groovy4292$AsyncWeakRef.run(Groovy4292.java:89)
+    Thread 32 created by thread 1
+        at org.codehaus.groovy.ast.Groovy4292.main(Groovy4292.java:49)
+
+    Write in thread 29
+      > at org.codehaus.groovy.ast.ClassHelper.makeCached(ClassHelper.java:119)
+        at org.codehaus.groovy.ast.Groovy4292$AsyncWeakRef.run(Groovy4292.java:89)
+    Thread 29 created by thread 1
+        at org.codehaus.groovy.ast.Groovy4292.main(Groovy4292.java:49)
+
+

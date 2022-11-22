@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict1067776889078505939
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/groovy2
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: groovy4736
@@ -8,4 +8,15 @@ Expected bug type: deadlock
 This test should finish in 10 seconds.
 ********************************
 
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at Groovy4736$3.run(Groovy4736.java:176)
+Caused by: java.lang.NoClassDefFoundError: test.D3
+	at test.D2.class$(test.D2)
+	at test.D2.$get$$class$test$D3(test.D2)
+	at test.D2.<init>(test.D2:7)
+	... 5 more
 Program has been forced to exit from deadlock.

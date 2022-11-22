@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict5138844275981264091
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/derby3
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: derby5561
@@ -9,10 +9,10 @@ Expected bug type: race
 
 Exception in thread "Thread-3" java.lang.NullPointerException
 	at Derby5561$TestConnection.nativeSQL(Derby5561.java:81)
-	at Derby5561$NativeRunnable.run(Derby5561.java:29)
 
-	at java.lang.Thread.run(Thread.java:750)Finished test: Bug has been reproduced successfully.
+Finished test: Bug has been reproduced successfully.	at Derby5561$NativeRunnable.run(Derby5561.java:29)
 
+	at java.lang.Thread.run(Thread.java:750)
 Data race on field org.apache.derby.client.am.LogicalConnection.physicalConnection_:
     Read in thread 28
       > at org.apache.derby.client.am.LogicalConnection.checkForNullPhysicalConnection(LogicalConnection.java:136)
@@ -20,9 +20,9 @@ Data race on field org.apache.derby.client.am.LogicalConnection.physicalConnecti
     Thread 28 created by thread 1
         at Derby5561.run(Derby5561.java:123)
 
-    Write in thread 27 holding lock Monitor@1311494135
+    Write in thread 27 holding lock Monitor@1343942699
       > at org.apache.derby.client.am.LogicalConnection.nullPhysicalConnection(LogicalConnection.java:64)
-        - locked Monitor@1311494135 at org.apache.derby.client.am.LogicalConnection.nullPhysicalConnection(LogicalConnection.java:n/a)
+        - locked Monitor@1343942699 at org.apache.derby.client.am.LogicalConnection.nullPhysicalConnection(LogicalConnection.java:n/a)
         at Derby5561$NullRunnable.run(Derby5561.java:51)
     Thread 27 created by thread 1
         at Derby5561.run(Derby5561.java:122)

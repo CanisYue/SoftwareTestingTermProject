@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict5772217778615129431
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/jdk6_7
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: jdk6582568
@@ -8,9 +8,9 @@ Expected bug type: deadlock
 ********************************
 
 =============Deadlock detected:==============
-"Thread-4" Id=30 BLOCKED on java.util.Hashtable@61747010 owned by "Thread-3" Id=29
+"Thread-4" Id=30 BLOCKED on java.util.Hashtable@18576238 owned by "Thread-3" Id=29
 
 
-"Thread-3" Id=29 BLOCKED on java.util.Hashtable@61742851 owned by "Thread-4" Id=30
+"Thread-3" Id=29 BLOCKED on java.util.Hashtable@18579c6a owned by "Thread-4" Id=30
 
 

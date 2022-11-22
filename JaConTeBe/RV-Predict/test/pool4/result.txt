@@ -1,0 +1,13 @@
+Data race on field Test162$WaitingTestThread._thrown:
+    Read in thread 1
+      > at Test162$WaitingTestThread.access$000(Test162.java:232)
+        at Test162.testWhenExhaustedBlockInterupt(Test162.java:210)
+        at Test162.main(Test162.java:262)
+    Thread 1 is the main thread
+
+    Write in thread 29
+      > at Test162$WaitingTestThread.run(Test162.java:249)
+    Thread 29 created by thread 1
+        at Test162.testWhenExhaustedBlockInterupt(Test162.java:203)
+
+

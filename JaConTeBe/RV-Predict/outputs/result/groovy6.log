@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict2585027890334420858
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/groovy6
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: groovy4292
@@ -10,15 +10,17 @@ This test should finish in 30 seconds.
 
 starting next loop 1
 started.
+starting next loop 2
+started.
+starting next loop 3
+started.
 A suspicious endless loop is found
-One of the probable buggy threads is WorkerThread-2
-   at java.util.WeakHashMap.transfer(WeakHashMap.java:528)
-   at java.util.WeakHashMap.resize(WeakHashMap.java:493)
-   at java.util.WeakHashMap.put(WeakHashMap.java:466)
-   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.lambda$rvPredictMapPut$31(RVPredictRuntime.java:937)
-   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime$$Lambda$167/1841309354.get(Unknown Source)
-   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionAccess(RVPredictRuntime.java:1345)
-   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionWriteAccess(RVPredictRuntime.java:1244)
-   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictMapPut(RVPredictRuntime.java:936)
-   at org.codehaus.groovy.ast.ClassHelper.makeCached(ClassHelper.java:119)
+One of the probable buggy threads is WorkerThread-3
+   at java.util.WeakHashMap.get(WeakHashMap.java:403)
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.lambda$rvPredictMapGet$29(RVPredictRuntime.java:918)
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime$$Lambda$166/273206560.get(Unknown Source)
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionAccess(RVPredictRuntime.java:1347)
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionReadAccess(RVPredictRuntime.java:1240)
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictMapGet(RVPredictRuntime.java:917)
+   at org.codehaus.groovy.ast.ClassHelper.makeCached(ClassHelper.java:115)
    at org.codehaus.groovy.ast.Groovy4292$AsyncWeakRef.run(Groovy4292.java:89)

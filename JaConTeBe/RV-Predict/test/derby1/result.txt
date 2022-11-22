@@ -1,0 +1,63 @@
+Data race on field org.apache.derby.iapi.services.context.ContextManager.activeThread:
+    Read in thread 33
+      > at org.apache.derby.iapi.services.context.ContextService.getCurrentContextManager(ContextService.java:281)
+        at org.apache.derby.impl.services.monitor.BaseMonitor.getBundle(BaseMonitor.java:2091)
+        at org.apache.derby.iapi.services.i18n.MessageService.getBundle(MessageService.java:300)
+        at org.apache.derby.iapi.services.i18n.MessageService.getCompleteMessage(MessageService.java:98)
+        at org.apache.derby.iapi.error.StandardException.getMessage(StandardException.java:658)
+        at org.apache.derby.iapi.error.StandardException.toString(StandardException.java:685)
+        at org.apache.derby.impl.store.raw.data.OverflowInputStream.fillByteHolder(OverflowInputStream.java:159)
+        at org.apache.derby.impl.store.raw.data.BufferedByteHolderInputStream.read(BufferedByteHolderInputStream.java:44)
+        at org.apache.derby.iapi.types.SQLBinary.readExternal(SQLBinary.java:422)
+        at org.apache.derby.iapi.types.SQLBinary.getValue(SQLBinary.java:241)
+        at org.apache.derby.iapi.types.SQLBinary.getBytes(SQLBinary.java:223)
+        at org.apache.derby.impl.jdbc.EmbedResultSet.getBytes(EmbedResultSet.java:863)
+        at Derby4129$1.run(Derby4129.java:63)
+    Thread 33 created by thread 1
+        at Derby4129.main(Derby4129.java:79)
+
+    Write in thread 32 holding lock Monitor@392954458
+      > at org.apache.derby.iapi.services.context.ContextService.resetCurrentContextManager(ContextService.java:334)
+        at org.apache.derby.impl.jdbc.TransactionResourceImpl.restoreContextStack(TransactionResourceImpl.java:281)
+        at org.apache.derby.impl.jdbc.EmbedConnection.restoreContextStack(EmbedConnection.java:2415)
+        at org.apache.derby.impl.jdbc.ConnectionChild.restoreContextStack(ConnectionChild.java:131)
+        at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1325)
+        - locked Monitor@392954458 at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1168)
+        at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeStatement(EmbedPreparedStatement.java:1648)
+        at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeQuery(EmbedPreparedStatement.java:270)
+        at Derby4129$1.run(Derby4129.java:60)
+    Thread 32 created by thread 1
+        at Derby4129.main(Derby4129.java:78)
+
+
+Data race on field org.apache.derby.iapi.services.context.ContextManager.activeThread:
+    Read in thread 33
+      > at org.apache.derby.iapi.services.context.ContextService.getCurrentContextManager(ContextService.java:281)
+        at org.apache.derby.impl.services.monitor.BaseMonitor.getBundle(BaseMonitor.java:2091)
+        at org.apache.derby.iapi.services.i18n.MessageService.getBundle(MessageService.java:300)
+        at org.apache.derby.iapi.services.i18n.MessageService.getCompleteMessage(MessageService.java:98)
+        at org.apache.derby.iapi.error.StandardException.getMessage(StandardException.java:658)
+        at org.apache.derby.iapi.error.StandardException.toString(StandardException.java:685)
+        at org.apache.derby.impl.store.raw.data.OverflowInputStream.fillByteHolder(OverflowInputStream.java:159)
+        at org.apache.derby.impl.store.raw.data.BufferedByteHolderInputStream.read(BufferedByteHolderInputStream.java:44)
+        at org.apache.derby.iapi.types.SQLBinary.readExternal(SQLBinary.java:422)
+        at org.apache.derby.iapi.types.SQLBinary.getValue(SQLBinary.java:241)
+        at org.apache.derby.iapi.types.SQLBinary.getBytes(SQLBinary.java:223)
+        at org.apache.derby.impl.jdbc.EmbedResultSet.getBytes(EmbedResultSet.java:863)
+        at Derby4129$1.run(Derby4129.java:63)
+    Thread 33 created by thread 1
+        at Derby4129.main(Derby4129.java:79)
+
+    Write in thread 32 holding lock Monitor@392954458
+      > at org.apache.derby.iapi.services.context.ContextService.setCurrentContextManager(ContextService.java:511)
+        at org.apache.derby.impl.jdbc.TransactionResourceImpl.setupContextStack(TransactionResourceImpl.java:274)
+        at org.apache.derby.impl.jdbc.EmbedConnection.setupContextStack(EmbedConnection.java:2389)
+        at org.apache.derby.impl.jdbc.ConnectionChild.setupContextStack(ConnectionChild.java:121)
+        at org.apache.derby.impl.jdbc.EmbedResultSet.movePosition(EmbedResultSet.java:398)
+        - locked Monitor@392954458 at org.apache.derby.impl.jdbc.EmbedResultSet.movePosition(EmbedResultSet.java:396)
+        at org.apache.derby.impl.jdbc.EmbedResultSet.next(EmbedResultSet.java:371)
+        at Derby4129$1.run(Derby4129.java:61)
+    Thread 32 created by thread 1
+        at Derby4129.main(Derby4129.java:78)
+
+

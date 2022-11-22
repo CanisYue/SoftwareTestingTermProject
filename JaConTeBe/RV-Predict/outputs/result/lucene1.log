@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict4612299507425295747
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/lucene1
 [RV-Predict] Finished retransforming preloaded classes.
 .********************************
 Starting test: lucene2783
@@ -8,3 +8,4 @@ Expected bug type: notify-wait deadlock
 This test should finish in 30 seconds.
 ********************************
 
+Program has been forced to exit from forever waiting.

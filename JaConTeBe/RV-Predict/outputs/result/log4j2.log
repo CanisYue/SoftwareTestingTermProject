@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict7371446048434625542
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/log4j2
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: log4j41214
@@ -9,9 +9,9 @@ This test should finish in 20 seconds.
 ********************************
 
 =============Deadlock detected:==============
-"RootLoggerThread" Id=29 BLOCKED on org.apache.log4j.ConsoleAppender@749083e7 owned by "AnObjectThread" Id=30
+"RootLoggerThread" Id=29 BLOCKED on org.apache.log4j.ConsoleAppender@4a690408 owned by "AnObjectThread" Id=30
 
 
-"AnObjectThread" Id=30 BLOCKED on org.apache.log4j.spi.RootLogger@7f010295 owned by "RootLoggerThread" Id=29
+"AnObjectThread" Id=30 BLOCKED on org.apache.log4j.spi.RootLogger@69a3b7af owned by "RootLoggerThread" Id=29
 
 

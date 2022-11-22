@@ -1,0 +1,473 @@
+nohup: ignoring input
+Picked up JAVA_TOOL_OPTIONS:  -javaagent:/home/ecelrc/students/yxiong/RV-Predict/Java/lib/rv-predict.jar='--base-log-dir /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test --log-dirname guava'
+
+----------------Instrumented execution to record the trace-----------------
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/guava
+[RV-Predict] Finished retransforming preloaded classes.
+[INFO] Scanning for projects...
+[WARNING] The project com.google.guava:guava-parent:pom:21.0 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Guava Maven Parent
+[INFO] Guava Unit Tests
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Guava Maven Parent 21.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ guava-parent ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ guava-parent ---
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Guava Unit Tests 21.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ guava-tests ---
+[INFO] Deleting /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ guava-tests ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ guava-tests ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/src
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ guava-tests ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-test-source (add-benchmark-sources) @ guava-tests ---
+[INFO] Test Source directory: /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/benchmark added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ guava-tests ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ guava-tests ---
+[INFO] Compiling 529 source files to /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/target/test-classes
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/test/com/google/common/math/DoubleUtilsTest.java:[25,15] FpUtils is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[32,23] ProviderList is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[33,23] Providers is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[503,33] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[524,27] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[526,27] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[530,65] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[531,41] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[532,34] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[532,55] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/test/com/google/common/math/DoubleUtilsTest.java:[36,19] FpUtils is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[83,4] ProviderList is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[83,29] Providers is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[84,30] ProviderList is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[84,4] Providers is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[90,6] Providers is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/test/com/google/common/util/concurrent/AbstractFutureFallbackAtomicHelperTest.java:[56,45] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/test/com/google/common/util/concurrent/AbstractFutureFallbackAtomicHelperTest.java:[65,22] Unsafe is internal proprietary API and may be removed in a future release
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.7.2:test (default-test) @ guava-tests ---
+[INFO] Surefire report directory: /home/ecelrc/students/yxiong/softwaretesting/JBench/dataset/benchmark-suite/real-world--guava-21.0/src/guava-tests/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.google.common.io.MultiInputStreamTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.165 sec
+Running com.google.common.io.LittleEndianDataInputStreamTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec
+Running com.google.common.io.FlushablesTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.447 sec
+Running com.google.common.io.CharSequenceReaderTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.common.io.ByteSinkTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.139 sec
+Running com.google.common.io.MultiReaderTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.google.common.io.ByteSourceTest
+Tests run: 2182, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.786 sec
+Running com.google.common.io.ResourcesTest
+Tests run: 733, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.035 sec
+Running com.google.common.io.FilesSimplifyPathTest
+Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.053 sec
+Running com.google.common.io.FilesTest
+Tests run: 1045, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.53 sec
+Running com.google.common.io.ByteStreamsTest
+Tests run: 51, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 sec
+Running com.google.common.io.FileBackedOutputStreamTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.356 sec
+Running com.google.common.io.CharStreamsTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running com.google.common.io.CloserTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running com.google.common.io.AppendableWriterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.common.io.CountingOutputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.common.io.CloseablesTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 sec
+Running com.google.common.io.LittleEndianDataOutputStreamTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.common.io.BaseEncodingTest
+Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.199 sec
+Running com.google.common.io.LineBufferTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+Running com.google.common.io.PatternFilenameFilterTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.common.io.CountingInputStreamTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.common.io.CharSourceTest
+Tests run: 1457, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.335 sec
+Running com.google.common.io.FileTreeTraverserTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.common.io.CharSinkTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.common.reflect.ParameterTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec
+Running com.google.common.reflect.ClassPathTest
+Tests run: 33, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.135 sec
+Running com.google.common.reflect.ElementTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running com.google.common.reflect.TypeParameterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running com.google.common.reflect.TypesTest
+Tests run: 26, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.117 sec <<< FAILURE!
+Running com.google.common.reflect.ReflectionTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.common.reflect.TypeTokenResolutionTest
+Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.109 sec
+Running com.google.common.reflect.ImmutableTypeToInstanceMapTest
+Tests run: 712, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.037 sec
+Running com.google.common.reflect.AbstractInvocationHandlerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 sec
+Running com.google.common.reflect.InvokableTest
+Tests run: 52, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 sec
+Running com.google.common.reflect.MutableTypeToInstanceMapTest
+Tests run: 829, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.89 sec
+Running com.google.common.reflect.TypeVisitorTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.google.common.reflect.TypeTokenTest
+Tests run: 167, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.618 sec
+Running com.google.common.reflect.TypeTokenSubtypeTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.103 sec
+Running com.google.common.reflect.TypeResolverTest
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.101 sec
+Running com.google.common.collect.ForwardingSetMultimapTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 sec
+Running com.google.common.collect.OrderingTest
+Tests run: 69, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.93 sec
+Running com.google.common.collect.SynchronizedQueueTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.google.common.collect.MultisetsCollectionTest
+Tests run: 23184, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.309 sec
+Running com.google.common.collect.CountTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.common.collect.AbstractBiMapTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec
+Running com.google.common.collect.AbstractIteratorTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.729 sec
+Running com.google.common.collect.ContiguousSetTest
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 sec
+Running com.google.common.collect.SynchronizedSetTest
+Tests run: 502, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.599 sec
+Running com.google.common.collect.ForwardingSetTest
+Tests run: 435, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.443 sec
+Running com.google.common.collect.TopKSelectorTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.867 sec
+Running com.google.common.collect.ImmutableSetMultimapTest
+Tests run: 8534, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.04 sec
+Running com.google.common.collect.SubMapMultimapAsMapImplementsMapTest
+Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.142 sec
+Running com.google.common.collect.NewCustomTableTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.097 sec
+Running com.google.common.collect.LinkedHashMultisetTest
+Tests run: 1951, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.879 sec
+Running com.google.common.collect.MapsSortedTransformValuesTest
+Tests run: 66, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec
+Running com.google.common.collect.MapsTransformValuesTest
+Tests run: 66, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.google.common.collect.TreeBasedTableTest$TreeRowTest
+Tests run: 60, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 sec
+Running com.google.common.collect.TreeBasedTableTest
+Tests run: 3875, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.577 sec
+Running com.google.common.collect.ForwardingObjectTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.common.collect.RegularImmutableTableTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.google.common.collect.ForwardingCollectionTest
+Tests run: 373, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.357 sec
+Running com.google.common.collect.EnumMultisetTest
+Tests run: 867, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.938 sec
+Running com.google.common.collect.ForwardingSortedMapImplementsMapTest
+Tests run: 59, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec
+Running com.google.common.collect.EnumBiMapTest
+Tests run: 4062, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.873 sec
+Running com.google.common.collect.MultimapsFilterEntriesAsMapTest
+Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.327 sec
+Running com.google.common.collect.WellBehavedMapTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.common.collect.TreeMultimapExplicitTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running com.google.common.collect.ImmutableClassToInstanceMapTest
+Tests run: 1422, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.095 sec
+Running com.google.common.collect.MutableClassToInstanceMapTest
+Tests run: 1749, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.584 sec
+Running com.google.common.collect.ImmutableBiMapTest
+Tests run: 9381, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.205 sec
+Running com.google.common.collect.ListsTest
+Tests run: 5911, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 39.183 sec
+Running com.google.common.collect.ObjectArraysTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Running com.google.common.collect.FilteredMultimapTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Running com.google.common.collect.TransposedTableTest
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
+Running com.google.common.collect.MinMaxPriorityQueueTest
+Tests run: 253, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 111.288 sec
+Running com.google.common.collect.SetsTest
+Tests run: 2272, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.038 sec
+Running com.google.common.collect.MapsTest$FilteredMapTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec
+Running com.google.common.collect.MapsTest$FilteredSortedMapTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.common.collect.MapsTest$FilteredBiMapTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.common.collect.MapsTest
+Tests run: 92, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.228 sec
+Running com.google.common.collect.FilteredCollectionsTest$IterablesFilterArrayListTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.common.collect.FilteredCollectionsTest$Collections2FilterArrayListTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.common.collect.FilteredCollectionsTest$SetsFilterHashSetTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.google.common.collect.FilteredCollectionsTest$SetsFilterSortedSetTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 sec
+Running com.google.common.collect.FilteredCollectionsTest$SetsFilterNavigableSetTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec
+Running com.google.common.collect.FilteredCollectionsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.common.collect.HashBiMapTest
+Tests run: 4458, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.793 sec
+Running com.google.common.collect.RangeTest
+Tests run: 33, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 sec
+Running com.google.common.collect.SortedIterablesTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.common.collect.IteratorsTest
+Tests run: 578, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.261 sec
+Running com.google.common.collect.MultimapsTransformValuesAsMapTest
+Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec
+Running com.google.common.collect.SynchronizedMapTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.common.collect.SingletonImmutableTableTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Running com.google.common.collect.StreamsTest
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.15 sec
+Running com.google.common.collect.ForwardingListIteratorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.common.collect.MultisetsTest
+Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.google.common.collect.SynchronizedDequeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.common.collect.RegularImmutableAsListTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.common.collect.ComparatorsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.common.collect.ForwardingSortedSetTest
+Tests run: 982, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.998 sec
+Running com.google.common.collect.MultimapsTest
+Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.234 sec
+Running com.google.common.collect.ImmutableSetMultimapAsMapImplementsMapTest
+Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+Running com.google.common.collect.SortedListsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec
+Running com.google.common.collect.ImmutableListMultimapTest
+Tests run: 8839, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.102 sec
+Running com.google.common.collect.SynchronizedMultimapTest
+Tests run: 5616, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.875 sec
+Running com.google.common.collect.ForwardingQueueTest
+Tests run: 226, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.282 sec
+Running com.google.common.collect.ImmutableSortedSetTest
+Tests run: 17057, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 46.298 sec
+Running com.google.common.collect.ForwardingListMultimapTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.google.common.collect.FluentIterableTest
+Tests run: 107, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 sec
+Running com.google.common.collect.InternersTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.78 sec
+Running com.google.common.collect.ImmutableSortedMultisetTest
+Tests run: 20530, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.006 sec
+Running com.google.common.collect.ImmutableRangeSetTest
+Tests run: 757, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.909 sec
+Running com.google.common.collect.ForwardingMultimapTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.google.common.collect.ForwardingNavigableMapTest
+Tests run: 32191, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.484 sec
+Running com.google.common.collect.AbstractMapEntryTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.common.collect.UnmodifiableListIteratorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.common.collect.ImmutableMultimapTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.common.collect.TreeMultisetTest
+Tests run: 102585, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 124.872 sec
+Running com.google.common.collect.ForwardingSortedMapTest
+Tests run: 10930, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.948 sec
+Running com.google.common.collect.IterablesTest
+Tests run: 129, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.294 sec
+Running com.google.common.collect.ImmutableEnumMapTest
+Tests run: 1318, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.246 sec
+Running com.google.common.collect.MapsTransformValuesUnmodifiableIteratorTest
+Tests run: 66, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec
+Running com.google.common.collect.DiscreteDomainTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.common.collect.EvictingQueueTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Running com.google.common.collect.SynchronizedNavigableMapTest
+Tests run: 32280, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.804 sec
+Running com.google.common.collect.HashMultimapTest
+Tests run: 5685, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.393 sec
+Running com.google.common.collect.MapsCollectionTest
+Tests run: 234308, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 422.952 sec
+Running com.google.common.collect.MultisetsImmutableEntryTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.common.collect.ImmutableTableTest
+Tests run: 53, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.547 sec
+Running com.google.common.collect.TreeMultimapNaturalTest
+Tests run: 40182, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 63.288 sec
+Running com.google.common.collect.ArrayListMultimapTest
+Tests run: 6014, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.879 sec
+Running com.google.common.collect.UnmodifiableIteratorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.common.collect.RangeNonGwtTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.google.common.collect.ForwardingDequeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.google.common.collect.SetOperationsTest
+Tests run: 1602, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.775 sec
+Running com.google.common.collect.PeekingIteratorTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.903 sec
+Running com.google.common.collect.MoreCollectorsTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.google.common.collect.ForwardingNavigableSetTest
+Tests run: 505, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.652 sec
+Running com.google.common.collect.Collections2Test
+Tests run: 1276, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.537 sec
+Running com.google.common.collect.MultimapBuilderTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.google.common.collect.CollectSpliteratorsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.common.collect.SimpleAbstractMultisetTest
+Tests run: 692, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.56 sec <<< FAILURE!
+Running com.google.common.collect.MapMakerTest$MakerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.common.collect.MapMakerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.common.collect.ForwardingListTest
+Tests run: 719, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.298 sec
+Running com.google.common.collect.ImmutableMapTest
+Tests run: 9694, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 41.312 sec
+Running com.google.common.collect.QueuesTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 46.626 sec
+Running com.google.common.collect.ConcurrentHashMultisetTest
+Tests run: 3333, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 9.464 sec <<< FAILURE!
+Running com.google.common.collect.ImmutableRangeMapTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 350.52 sec
+Running com.google.common.collect.HashMultisetTest
+Tests run: 1849, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.021 sec
+Running com.google.common.collect.TablesTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 sec
+Running com.google.common.collect.MapMakerInternalMapTest
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.252 sec
+Running com.google.common.collect.ForwardingSortedSetMultimapTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Running com.google.common.collect.ImmutableMultimapAsMapImplementsMapTest
+Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Running com.google.common.collect.ImmutableCollectionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.common.collect.ComparisonChainTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.common.collect.HashBasedTableTest
+Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+Running com.google.common.collect.UnmodifiableMultimapAsMapImplementsMapTest
+Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec
+Running com.google.common.collect.FauxveridesTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Running com.google.common.collect.ImmutableMultisetTest
+Tests run: 3085, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.087 sec
+Running com.google.common.collect.TableCollectionTest
+Tests run: 7478, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.842 sec
+Running com.google.common.collect.ForwardingConcurrentMapTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.common.collect.ImmutableSetTest
+Tests run: 1236, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.936 sec
+Running com.google.common.collect.ImmutableSortedMapTest
+Tests run: 66269, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 202.023 sec
+Running com.google.common.collect.ForwardingMultisetTest
+Tests run: 1706, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.906 sec
+Running com.google.common.collect.TreeRangeSetTest
+Tests run: 43, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 539.349 sec
+Running com.google.common.collect.ForMapMultimapAsMapImplementsMapTest
+Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec
+Running com.google.common.collect.TreeTraverserTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Running com.google.common.collect.LinkedListMultimapTest
+Tests run: 6252, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.883 sec
+Running com.google.common.collect.ImmutableListTest
+Tests run: 4254, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 151.602 sec
+Running com.google.common.collect.SynchronizedBiMapTest
+Tests run: 6764, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 58.196 sec
+Running com.google.common.collect.GeneralRangeTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.common.collect.ForwardingMapTest
+Tests run: 1712, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 13.715 sec <<< FAILURE!
+Running com.google.common.collect.EmptyImmutableTableTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running com.google.common.collect.ForwardingSortedMultisetTest
+Tests run: 24078, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 213.842 sec
+Running com.google.common.collect.ForwardingTableTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
+Running com.google.common.collect.LinkedHashMultimapTest
+Tests run: 6032, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 75.744 sec
+Running com.google.common.collect.AbstractSequentialIteratorTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Running com.google.common.collect.EnumHashBiMapTest
+Tests run: 4192, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.045 sec
+Running com.google.common.collect.ArrayTableTest
+Tests run: 53, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec
+Running com.google.common.collect.MultimapsCollectionTest
+Tests run: 37690, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 785.677 sec
+Running com.google.common.collect.SynchronizedNavigableSetTest
+Tests run: 8953, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 94.403 sec
+Running com.google.common.collect.TablesTransformValuesTest
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running com.google.common.math.PairedStatsAccumulatorTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.143 sec
+Running com.google.common.math.StatsTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 sec
+Running com.google.common.math.DoubleMathTest
+Tests run: 68, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4,355.964 sec
+Running com.google.common.math.MathPreconditionsTest
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.common.math.PairedStatsTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.28 sec
+Running com.google.common.math.DoubleUtilsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec
+Running com.google.common.math.QuantilesTest
+Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,318.191 sec
+Running com.google.common.math.LinearTransformationTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.common.math.IntMathTest
+Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.93 sec
+Running com.google.common.math.StatsAccumulatorTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.367 sec
+Running com.google.common.math.QuantilesAlgorithmTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.google.common.math.LongMathTest
+Tests run: 67, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 314.712 sec
+Running com.google.common.math.BigIntegerMathTest
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.681 sec
+Running com.google.common.util.concurrent.ForwardingListeningExecutorServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.49 sec
+Running com.google.common.util.concurrent.SettableFutureTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.818 sec
+Running com.google.common.util.concurrent.AtomicLongMapTest
+Tests run: 32, Failures: 1, Errors: 4, Skipped: 0, Time elapsed: 870.204 sec <<< FAILURE!
+Running com.google.common.util.concurrent.FuturesTest

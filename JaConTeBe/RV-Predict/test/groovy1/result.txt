@@ -1,0 +1,12 @@
+Data race on field Groovy3495.buggy:
+    Write in thread 27
+      > at Groovy3495.access$102(Groovy3495.java:40)
+    Thread 27 created by thread 1
+        at Groovy3495.run(Groovy3495.java:94)
+
+    Write in thread 29
+      > at Groovy3495.access$102(Groovy3495.java:40)
+    Thread 29 created by thread 1
+        at Groovy3495.run(Groovy3495.java:94)
+
+

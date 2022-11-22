@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict1165892652829019651
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/dbcp3
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: dbcp369
@@ -9,9 +9,9 @@ Expected bug type: race
 
 java.util.ConcurrentModificationException
 	at java.util.HashMap$HashIterator.nextNode(HashMap.java:1469)
-	at java.util.HashMap$KeyIterator.next(HashMap.java:1493)
 
 Finished test: Bug has been reproduced successfully.
+	at java.util.HashMap$KeyIterator.next(HashMap.java:1493)
 	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.lambda$rvPredictIteratorNext$1(RVPredictRuntime.java:656)
 	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionAccess(RVPredictRuntime.java:1347)
 	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionReadAccess(RVPredictRuntime.java:1240)
@@ -20,62 +20,5 @@ Finished test: Bug has been reproduced successfully.
 	at org.apache.commons.dbcp.datasources.InstanceKeyObjectFactory.registerNewInstance(InstanceKeyObjectFactory.java:50)
 	at org.apache.commons.dbcp.datasources.Dbcp369$1.run(Dbcp369.java:81)
 	at java.lang.Thread.run(Thread.java:750)
-Data race on field java.util.HashMap.$state:
-    Read in thread 27 holding lock Monitor@1964542273
-      > at org.apache.commons.dbcp.datasources.InstanceKeyObjectFactory.registerNewInstance(InstanceKeyObjectFactory.java:64)
-        - locked Monitor@1964542273 at org.apache.commons.dbcp.datasources.InstanceKeyObjectFactory.registerNewInstance(InstanceKeyObjectFactory.java:n/a)
-        at org.apache.commons.dbcp.datasources.Dbcp369$1.run(Dbcp369.java:81)
-    Thread 27 created by thread 1
-        at org.apache.commons.dbcp.datasources.Dbcp369.main(Dbcp369.java:109)
-
-    Write in thread 28
-      > at org.apache.commons.dbcp.datasources.InstanceKeyObjectFactory.removeInstance(InstanceKeyObjectFactory.java:70)
-        at org.apache.commons.dbcp.datasources.Dbcp369$2.run(Dbcp369.java:101)
-    Thread 28 created by thread 1
-        at org.apache.commons.dbcp.datasources.Dbcp369.main(Dbcp369.java:110)
-
-
-Data race on field java.util.HashMap.$state:
-    Read in thread 27 holding lock Monitor@1964542273
-      > at org.apache.commons.dbcp.datasources.InstanceKeyObjectFactory.registerNewInstance(InstanceKeyObjectFactory.java:49)
-        - locked Monitor@1964542273 at org.apache.commons.dbcp.datasources.InstanceKeyObjectFactory.registerNewInstance(InstanceKeyObjectFactory.java:n/a)
-        at org.apache.commons.dbcp.datasources.Dbcp369$1.run(Dbcp369.java:81)
-    Thread 27 created by thread 1
-        at org.apache.commons.dbcp.datasources.Dbcp369.main(Dbcp369.java:109)
-
-    Write in thread 28
-      > at org.apache.commons.dbcp.datasources.InstanceKeyObjectFactory.removeInstance(InstanceKeyObjectFactory.java:70)
-        at org.apache.commons.dbcp.datasources.Dbcp369$2.run(Dbcp369.java:101)
-    Thread 28 created by thread 1
-        at org.apache.commons.dbcp.datasources.Dbcp369.main(Dbcp369.java:110)
-
-
-Data race on field org.apache.commons.dbcp.datasources.Dbcp369$Datasource.name:
-    Read in thread 28
-      > at org.apache.commons.dbcp.datasources.Dbcp369$Datasource.getName(Dbcp369.java:40)
-        at org.apache.commons.dbcp.datasources.Dbcp369$2.run(Dbcp369.java:100)
-    Thread 28 created by thread 1
-        at org.apache.commons.dbcp.datasources.Dbcp369.main(Dbcp369.java:110)
-
-    Write in thread 27
-      > at org.apache.commons.dbcp.datasources.Dbcp369$Datasource.setName(Dbcp369.java:44)
-        at org.apache.commons.dbcp.datasources.Dbcp369$1.run(Dbcp369.java:82)
-    Thread 27 created by thread 1
-        at org.apache.commons.dbcp.datasources.Dbcp369.main(Dbcp369.java:109)
-
-
-Data race on field java.util.HashMap.$state:
-    Read in thread 27 holding lock Monitor@1964542273
-      > at org.apache.commons.dbcp.datasources.InstanceKeyObjectFactory.registerNewInstance(InstanceKeyObjectFactory.java:50)
-        - locked Monitor@1964542273 at org.apache.commons.dbcp.datasources.InstanceKeyObjectFactory.registerNewInstance(InstanceKeyObjectFactory.java:n/a)
-        at org.apache.commons.dbcp.datasources.Dbcp369$1.run(Dbcp369.java:81)
-    Thread 27 created by thread 1
-        at org.apache.commons.dbcp.datasources.Dbcp369.main(Dbcp369.java:109)
-
-    Write in thread 28
-      > at org.apache.commons.dbcp.datasources.InstanceKeyObjectFactory.removeInstance(InstanceKeyObjectFactory.java:70)
-        at org.apache.commons.dbcp.datasources.Dbcp369$2.run(Dbcp369.java:101)
-    Thread 28 created by thread 1
-        at org.apache.commons.dbcp.datasources.Dbcp369.main(Dbcp369.java:110)
-
-
+[RV-Predict] Error: Window timeout.
+No races found.

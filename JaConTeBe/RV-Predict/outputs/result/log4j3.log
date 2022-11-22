@@ -1,73 +1,51 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict2666673735904172619
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/log4j3
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: log4j54325
 Expected bug type: race
 ********************************
 
-java.lang.ArrayIndexOutOfBoundsException: 925 >= 0
-	at java.util.Vector.elementAt(Vector.java:479)
-	at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:139)
-
-Finished test: Bug has been reproduced successfully.
-	at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
-java.lang.ArrayIndexOutOfBoundsException: 925 >= 0
+java.lang.ArrayIndexOutOfBoundsException: 995 >= 0
 	at java.util.Vector.elementAt(Vector.java:479)
 	at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:139)
 	at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
-Data race on field org.apache.log4j.helpers.AppenderAttachableImpl.appenderList:
-    Write in thread 28
-      > at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:143)
-        at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
-    Thread 28 created by thread 1
-        at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
 
-    Write in thread 27
-      > at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:143)
-        at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
-    Thread 27 created by thread 1
-        at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
+java.lang.ArrayIndexOutOfBoundsException: 995 >= 0Finished test: Bug has been reproduced successfully.
 
-
+	at java.util.Vector.elementAt(Vector.java:479)
+	at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:139)
+	at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
+java.lang.ArrayIndexOutOfBoundsException: 998 >= 0
+	at java.util.Vector.elementAt(Vector.java:479)
+	at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:139)
+	at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
 Data race on field org.apache.log4j.helpers.Test54325.buggy:
-    Write in thread 30
-      > at org.apache.log4j.helpers.Test54325.access$202(Test54325.java:14)
-    Thread 30 created by thread 1
-        at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
-
     Write in thread 29
       > at org.apache.log4j.helpers.Test54325.access$202(Test54325.java:14)
+        at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:48)
     Thread 29 created by thread 1
+        at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
+
+    Write in thread 27
+      > at org.apache.log4j.helpers.Test54325.access$202(Test54325.java:14)
+        at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:48)
+    Thread 27 created by thread 1
         at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
 
 
 Data race on field org.apache.log4j.helpers.AppenderAttachableImpl.appenderList:
-    Read in thread 29
+    Read in thread 27
       > at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:139)
         at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
-    Thread 29 created by thread 1
-        at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
-
-    Write in thread 27
-      > at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:143)
-        at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
     Thread 27 created by thread 1
         at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
 
-
-Data race on field org.apache.log4j.helpers.AppenderAttachableImpl.appenderList:
-    Read in thread 28
-      > at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:142)
-        at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
-    Thread 28 created by thread 1
-        at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
-
-    Write in thread 27
+    Write in thread 30
       > at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:143)
         at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
-    Thread 27 created by thread 1
+    Thread 30 created by thread 1
         at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
 
 

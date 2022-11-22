@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict28079485317053742
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/jdk6_2
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: jdk4742723
@@ -11,8 +11,8 @@ Expected bug type: race
 This bug afftecs from JDK1.6.0 and  has been fixed since JDK1.6.0_02. And affects Windows only.
 You may not reproduce the bug as your current environment does not meet the criteria.
 ========================
-directory B exists
 directory A exists
+directory B exists
 
 Finished test: Failed to reproduce the bug.
 No races found.

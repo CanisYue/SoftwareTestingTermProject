@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict9084615749239285480
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/jdk6_12
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: jdk6977738
@@ -14,10 +14,10 @@ You may not reproduce the bug as your current environment does not meet the crit
 Thread 1 ready
 Thread 2 ready
 #
-#Fri Oct 14 10:09:03 CDT 2022
+#Mon Nov 21 17:38:38 CST 2022
 java.runtime.name=OpenJDK Runtime Environment
-sun.boot.library.path=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/amd64
-java.vm.version=25.345-b01
+sun.boot.library.path=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre/lib/amd64
+java.vm.version=25.352-b08
 java.vm.vendor=Red Hat, Inc.
 java.vendor.url=https\://www.redhat.com/
 path.separator=\:
@@ -28,9 +28,9 @@ sun.java.launcher=SUN_STANDARD
 sun.os.patch.level=unknown
 java.vm.specification.name=Java Virtual Machine Specification
 user.dir=/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/JaConTeBe
-java.runtime.version=1.8.0_345-b01
+java.runtime.version=1.8.0_352-b08
 java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment
-java.endorsed.dirs=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/endorsed
+java.endorsed.dirs=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre/lib/endorsed
 os.arch=amd64
 java.io.tmpdir=/tmp
 line.separator=\n
@@ -51,17 +51,18 @@ java.class.path=/home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/dataset/J
 user.name=yxiong
 java.vm.specification.version=1.8
 sun.java.command=Test6977738
-java.home=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre
+java.home=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre
 sun.arch.data.model=64
 user.language=en
 java.specification.vendor=Oracle Corporation
 awt.toolkit=sun.awt.X11.XToolkit
 java.vm.info=mixed mode
-java.version=1.8.0_345
-java.ext.dirs=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/ext\:/usr/java/packages/lib/ext
+java.version=1.8.0_352
+java.ext.dirs=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre/lib/ext\:/usr/java/packages/lib/ext
 property=value
-sun.boot.class.path=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/resources.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/rt.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/sunrsasign.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/jsse.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/jce.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/charsets.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/jfr.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/classes\:/home/ecelrc/students/yxiong/RV-Predict/Java/lib/rv-predict.jar
+sun.boot.class.path=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre/lib/resources.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre/lib/rt.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre/lib/sunrsasign.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre/lib/jsse.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre/lib/jce.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre/lib/charsets.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre/lib/jfr.jar\:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64/jre/classes\:/home/ecelrc/students/yxiong/RV-Predict/Java/lib/rv-predict.jar
 java.vendor=Red Hat, Inc.
+java.specification.maintenance.version=4
 file.separator=/
 java.vendor.url.bug=https\://bugzilla.redhat.com/enter_bug.cgi?product\=Red%20Hat%20Enterprise%20Linux%207&component\=java-1.8.0-openjdk
 sun.io.unicode.encoding=UnicodeLittle

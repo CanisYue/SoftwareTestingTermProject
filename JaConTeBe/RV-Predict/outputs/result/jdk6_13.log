@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict5818588912995512810
+[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/jdk6_13
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: jdk7100996
@@ -11,6 +11,14 @@ Expected bug type: race
 This bug afftecs from JDK1.6.0 and  has been fixed since JDK1.8.0.
 You may not reproduce the bug as your current environment does not meet the criteria.
 ========================
+java.lang.IndexOutOfBoundsException: start 0, end 3, s.length() 2
+	at java.lang.AbstractStringBuilder.insert(AbstractStringBuilder.java:1160)
 
-Finished test: Failed to reproduce the bug.
+	at java.lang.StringBuffer.insert(StringBuffer.java:554)Finished test: Bug has been reproduced successfully.
+
+	at java.lang.StringBuffer.insert(StringBuffer.java:103)
+	at java.lang.AbstractStringBuilder.insert(AbstractStringBuilder.java:1104)
+	at java.lang.StringBuffer.insert(StringBuffer.java:541)
+	at Test7100996$1.run(Test7100996.java:35)
+	at java.lang.Thread.run(Thread.java:750)
 No races found.

@@ -1,0 +1,433 @@
+Data race on field com.google.common.cache.LocalCache$2.$state:
+    Write in thread 28
+      > at com.google.common.cache.LocalCache$Segment.recordRead(LocalCache.java:2576)
+        at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2196)
+        at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4986)
+        at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4992)
+        at com.google.inject.internal.Annotations$AnnotationChecker.hasAnnotations(Annotations.java:248)
+        at com.google.inject.internal.Annotations.isBindingAnnotation(Annotations.java:314)
+        at com.google.inject.Key.ensureIsBindingAnnotation(Key.java:402)
+        at com.google.inject.Key.strategyFor(Key.java:369)
+        at com.google.inject.Key.get(Key.java:303)
+        at org.eclipse.sisu.plexus.DefaultPlexusBeanLocator.locate(DefaultPlexusBeanLocator.java:64)
+        at org.codehaus.plexus.DefaultPlexusContainer.locate(DefaultPlexusContainer.java:724)
+        at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263)
+        at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255)
+        at org.eclipse.aether.internal.transport.wagon.PlexusWagonProvider.lookup(PlexusWagonProvider.java:65)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.lookupWagon(WagonTransporter.java:279)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:369)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 29
+      > at com.google.common.cache.LocalCache$Segment.recordRead(LocalCache.java:2576)
+        at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4986)
+        at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4992)
+        at com.google.inject.internal.Annotations$AnnotationChecker.hasAnnotations(Annotations.java:248)
+        at com.google.inject.internal.Annotations.isBindingAnnotation(Annotations.java:314)
+        at com.google.inject.Key.ensureIsBindingAnnotation(Key.java:402)
+        at com.google.inject.Key.strategyFor(Key.java:369)
+        at com.google.inject.Key.get(Key.java:303)
+        at org.eclipse.sisu.plexus.DefaultPlexusBeanLocator.locate(DefaultPlexusBeanLocator.java:64)
+        at org.codehaus.plexus.DefaultPlexusContainer.locate(DefaultPlexusContainer.java:724)
+        at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263)
+        at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255)
+        at org.eclipse.aether.internal.transport.wagon.PlexusWagonProvider.lookup(PlexusWagonProvider.java:65)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.lookupWagon(WagonTransporter.java:279)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:369)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 29 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.username:
+    Read in thread 31
+      > at org.apache.maven.wagon.repository.Repository.getUsername(Repository.java:317)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 28
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:152)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.protocol:
+    Read in thread 28
+      > at org.apache.maven.wagon.repository.Repository.getProtocol(Repository.java:255)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:435)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 31
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:143)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.port:
+    Write in thread 28
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:147)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 31
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:147)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.url:
+    Read in thread 31
+      > at org.apache.maven.wagon.repository.Repository.getUrl(Repository.java:176)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.getURL(AbstractHttpClientWagon.java:898)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 28
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:137)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.protocol:
+    Write in thread 31
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:143)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 28
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:143)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.username:
+    Write in thread 28
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:152)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 31
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:152)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.url:
+    Read in thread 31
+      > at org.apache.maven.wagon.repository.Repository.getUrl(Repository.java:174)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 28
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:137)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.url:
+    Write in thread 31
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:137)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 28
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:137)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.host:
+    Write in thread 28
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:145)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 31
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:145)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.host:
+    Read in thread 28
+      > at org.apache.maven.wagon.repository.Repository.getHost(Repository.java:220)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:435)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 31
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:145)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.basedir:
+    Write in thread 28
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:149)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 31
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:149)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.maven.wagon.repository.Repository.host:
+    Read in thread 28
+      > at org.apache.maven.wagon.repository.Repository.getHost(Repository.java:224)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:435)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 28 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 31
+      > at org.apache.maven.wagon.repository.Repository.setUrl(Repository.java:145)
+        at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.openConnectionInternal(AbstractHttpClientWagon.java:413)
+        at org.apache.maven.wagon.AbstractWagon.openConnection(AbstractWagon.java:115)
+        at org.apache.maven.wagon.AbstractWagon.connect(AbstractWagon.java:215)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.connectWagon(WagonTransporter.java:342)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.pollWagon(WagonTransporter.java:370)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.execute(WagonTransporter.java:431)
+        at org.eclipse.aether.transport.wagon.WagonTransporter.get(WagonTransporter.java:412)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:453)
+        at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:360)
+        at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75)
+    Thread 31 created by thread 1
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+

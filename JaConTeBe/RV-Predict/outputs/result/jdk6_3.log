@@ -1,16 +1,3 @@
-
-----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict222029428899233541
-[RV-Predict] Finished retransforming preloaded classes.
-********************************
-Starting test: jdk4779253
-Expected bug type: race
-********************************
-
-========Notice!=========
-This bug has been fixed since JDK1.7.0.
-You may not reproduce the bug as your current environment does not meet the criteria.
-========================
-
-Finished test: Failed to reproduce the bug.
-No races found.
+Unrecognized option: --base-log-dir
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
