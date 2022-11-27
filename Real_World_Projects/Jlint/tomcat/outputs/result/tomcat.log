@@ -1,1 +1,0 @@
-jlint: jlint.cc:375: bool parse_class_file(byte*): Assertion `cp != __null' failed.
