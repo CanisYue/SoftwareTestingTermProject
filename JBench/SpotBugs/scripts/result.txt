@@ -45,24 +45,24 @@ Bug Type: Data race, #Bugs found: 1
 
 
 Project name: account, #Bugs found: 1
-Bug Type: Others, #Bugs found: 1
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "account/classes/Account.java:[line 87]"}
 
 
 Project name: airlinetickets, #Bugs found: 1
-Bug Type: Others, #Bugs found: 1
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "airlinetickets/classes/Airlinetickets.java:[line 88]"}
 
 
 Project name: animator, #Bugs found: 8
-Bug Type: Deadlock, #Bugs found: 5
+Bug Type: Deadlock, #Bugs found: 6
 {"location": "animator/classes/XtangoAnimator.java:[line 1014]"}
 {"location": "animator/classes/XtangoAnimator.java:[line 1189]"}
+{"location": "animator/classes/XtangoAnimator.java:[line 650]"}
 {"location": "animator/classes/XtangoAnimator.java:[line 679]"}
 {"location": "animator/classes/XtangoAnimator.java:[line 723]"}
 {"location": "animator/classes/XtangoAnimator.java:[line 760]"}
-Bug Type: Others, #Bugs found: 3
-{"location": "animator/classes/XtangoAnimator.java:[line 650]"}
+Bug Type: Others, #Bugs found: 2
 {"location": "animator/classes/XtangoAnimator.java:[line 107]"}
 {"location": "animator/classes/XtangoAnimator.java:[line 108]"}
 
@@ -73,10 +73,9 @@ Bug Type: Data race, #Bugs found: 4
 {"location": "boundedbuffer/classes/Buffer.java:[line 128]"}
 {"location": "boundedbuffer/classes/BoundedBuffer.java:[line 400]"}
 {"location": "boundedbuffer/classes/BoundedBuffer.java:[line 381]"}
-Bug Type: Others, #Bugs found: 2
+Bug Type: Deadlock, #Bugs found: 6
 {"location": "boundedbuffer/classes/BoundedBuffer.java:[line 192]"}
 {"location": "boundedbuffer/classes/BoundedBuffer.java:[line 314]"}
-Bug Type: Deadlock, #Bugs found: 4
 {"location": "boundedbuffer/classes/Buffer.java:[line 51]"}
 {"location": "boundedbuffer/classes/Buffer.java:[line 53]"}
 {"location": "boundedbuffer/classes/Buffer.java:[line 52]"}
@@ -84,22 +83,21 @@ Bug Type: Deadlock, #Bugs found: 4
 
 
 Project name: bubblesort, #Bugs found: 5
-Bug Type: Others, #Bugs found: 4
+Bug Type: Deadlock, #Bugs found: 5
 {"location": "bubblesort/classes/Reporter.java:[line 113]"}
 {"location": "bubblesort/classes/Reporter.java:[line 34]"}
 {"location": "bubblesort/classes/Reporter.java:[line 83]"}
-{"location": "bubblesort/classes/BubbleSortImpl.java:[line 54]"}
-Bug Type: Deadlock, #Bugs found: 1
 {"location": "bubblesort/classes/BubbleSortImpl.java:[line 92]"}
+{"location": "bubblesort/classes/BubbleSortImpl.java:[line 54]"}
 
 
 Project name: bufwriter, #Bugs found: 1
-Bug Type: Others, #Bugs found: 1
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "bufwriter/classes/Checker.java:[line 62]"}
 
 
 Project name: critical, #Bugs found: 1
-Bug Type: Others, #Bugs found: 1
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "critical/classes/Critical.java:[line 75]"}
 
 
@@ -139,7 +137,7 @@ Project name: log4j3, #Bugs found: 0
 
 
 Project name: mergesort, #Bugs found: 7
-Bug Type: Others, #Bugs found: 5
+Bug Type: Deadlock, #Bugs found: 5
 {"location": "mergesort/classes/MSort.java:[line 117]"}
 {"location": "mergesort/classes/MSort.java:[line 152]"}
 {"location": "mergesort/classes/MSort.java:[line 264]"}
@@ -151,7 +149,7 @@ Bug Type: Data race, #Bugs found: 2
 
 
 Project name: pingpong, #Bugs found: 3
-Bug Type: Others, #Bugs found: 1
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "pingpong/classes/BuggedProgram.java:[line 98]"}
 Bug Type: Data race, #Bugs found: 2
 {"location": "pingpong/classes/BuggedProgram.java:[line 85]"}
@@ -165,12 +163,11 @@ Bug Type: Data race, #Bugs found: 5
 {"location": "real-world--common-dbcps2-2.1.1/classes/TesterPreparedStatement.java:[line 87]"}
 {"location": "real-world--common-dbcps2-2.1.1/classes/TesterConnection.java:[line 175]"}
 {"location": "real-world--common-dbcps2-2.1.1/classes/TestPStmtPooling.java:[line 84]"}
-Bug Type: Others, #Bugs found: 4
+Bug Type: Deadlock, #Bugs found: 5
 {"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 63]"}
 {"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 106]"}
 {"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 123]"}
 {"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 162]"}
-Bug Type: Deadlock, #Bugs found: 1
 {"location": "real-world--common-dbcps2-2.1.1/classes/TestBasicDataSource.java:[line 648]"}
 
 
@@ -311,7 +308,7 @@ Bug Type: Data race, #Bugs found: 129
 {"location": "real-world-/classes/ThreadedTest.java:[line 115]"}
 {"location": "real-world-/classes/ThreadedTest.java:[line 116]"}
 {"location": "real-world-/classes/FlumeEmbeddedAgentTest.java:[line 215]"}
-Bug Type: Others, #Bugs found: 174
+Bug Type: Deadlock, #Bugs found: 192
 {"location": "real-world-/classes/AnnotationVsMarkerInterface.java:[line 62]"}
 {"location": "real-world-/classes/MemoryMappedFileAppenderLocationTest.java:[line 78]"}
 {"location": "real-world-/classes/RandomAccessFileAppenderTests.java:[line 83]"}
@@ -353,14 +350,18 @@ Bug Type: Others, #Bugs found: 174
 {"location": "real-world-/classes/TlsSyslogInputStreamReader.java:[line 67]"}
 {"location": "real-world-/classes/TlsSyslogInputStreamReader.java:[line 89]"}
 {"location": "real-world-/classes/LegacyBsdTlsSyslogInputStreamReader.java:[line 51]"}
-{"location": "real-world-/classes/SimpleSmtpServer.java:[line 90]"}
+{"location": "real-world-/classes/SimpleSmtpServer.java:[line 271]"}
+{"location": "real-world-/classes/SimpleSmtpServer.java:[line 271]"}
 {"location": "real-world-/classes/SimpleSmtpServer.java:[line 108]"}
 {"location": "real-world-/classes/SimpleSmtpServer.java:[line 109]"}
 {"location": "real-world-/classes/NameUtil.java:[line 44]"}
 {"location": "real-world-/classes/StatusData.java:[line 141]"}
 {"location": "real-world-/classes/StatusData.java:[line 140]"}
+{"location": "real-world-/classes/LockingReliabilityStrategy.java:[line 95]"}
+{"location": "real-world-/classes/Logger.java:[line 300]"}
 {"location": "real-world-/classes/AbstractConfiguration.java:[line 427]"}
 {"location": "real-world-/classes/StatusConfiguration.java:[line 124]"}
+{"location": "real-world-/classes/TcpSocketManager.java:[line 145]"}
 {"location": "real-world-/classes/AbstractJdbcAppenderFactoryMethodTest.java:[line 61]"}
 {"location": "real-world-/classes/AbstractJdbcAppenderFactoryMethodTest.java:[line 64]"}
 {"location": "real-world-/classes/ListAppender.java:[line 145]"}
@@ -382,12 +383,14 @@ Bug Type: Others, #Bugs found: 174
 {"location": "real-world-/classes/ConfigurationTest.java:[line 147]"}
 {"location": "real-world-/classes/AsyncLoggerTest.java:[line 66]"}
 {"location": "real-world-/classes/AbstractAsyncThreadContextTestBase.java:[line 174]"}
+{"location": "real-world-/classes/ThreadDumpMessageTest.java:[line 54]"}
 {"location": "real-world-/classes/ResponseTimeTest.java:[line 178]"}
 {"location": "real-world-/classes/PatternLayoutBenchmark.java:[line 107]"}
 {"location": "real-world-/classes/Log4jLogEventNanoTimeTest.java:[line 70]"}
 {"location": "real-world-/classes/JpaH2AppenderTest.java:[line 39]"}
 {"location": "real-world-/classes/MockUdpSyslogServer.java:[line 50]"}
 {"location": "real-world-/classes/AsyncLoggerConfigTest2.java:[line 56]"}
+{"location": "real-world-/classes/FlumePersistentManager.java:[line 123]"}
 {"location": "real-world-/classes/JpaAppenderBenchmark.java:[line 171]"}
 {"location": "real-world-/classes/JpaAppenderBenchmark.java:[line 188]"}
 {"location": "real-world-/classes/SimplePerfTest.java:[line 61]"}
@@ -486,20 +489,6 @@ Bug Type: Others, #Bugs found: 174
 {"location": "real-world-/classes/XIncludeTest.java:[line 129]"}
 {"location": "real-world-/classes/LoggerOutputStreamCallerInfoTest.java:[line 41]"}
 {"location": "real-world-/classes/FlumeEmbeddedAgentTest.java:[line 206]"}
-Bug Type: Atomicity violation, #Bugs found: 3
-{"location": "real-world-/classes/ThreadLocalVsConcurrentHashMapBenchmark.java:[line 89]"}
-{"location": "real-world-/classes/SocketAppenderTest.java:[line 306]"}
-{"location": "real-world-/classes/SocketAppenderTest.java:[line 367]"}
-Bug Type: Suspension-based locking or Blocking suspension, #Bugs found: 1
-{"location": "real-world-/classes/ThreadDumpMessageTest.java:[line 141]"}
-Bug Type: Deadlock, #Bugs found: 19
-{"location": "real-world-/classes/SimpleSmtpServer.java:[line 271]"}
-{"location": "real-world-/classes/SimpleSmtpServer.java:[line 271]"}
-{"location": "real-world-/classes/LockingReliabilityStrategy.java:[line 95]"}
-{"location": "real-world-/classes/Logger.java:[line 300]"}
-{"location": "real-world-/classes/TcpSocketManager.java:[line 145]"}
-{"location": "real-world-/classes/ThreadDumpMessageTest.java:[line 54]"}
-{"location": "real-world-/classes/FlumePersistentManager.java:[line 123]"}
 {"location": "real-world-/classes/Log4jWebInitializerImpl.java:[line 243]"}
 {"location": "real-world-/classes/AsyncLoggerDisruptor.java:[line 181]"}
 {"location": "real-world-/classes/AsyncLoggerConfigDisruptor.java:[line 270]"}
@@ -512,6 +501,14 @@ Bug Type: Deadlock, #Bugs found: 19
 {"location": "real-world-/classes/MockTlsSyslogServer.java:[line 79]"}
 {"location": "real-world-/classes/AsyncLoggerDisruptor.java:[line 146]"}
 {"location": "real-world-/classes/JeroMqAppender.java:[line 173]"}
+Bug Type: Atomicity violation, #Bugs found: 3
+{"location": "real-world-/classes/ThreadLocalVsConcurrentHashMapBenchmark.java:[line 89]"}
+{"location": "real-world-/classes/SocketAppenderTest.java:[line 306]"}
+{"location": "real-world-/classes/SocketAppenderTest.java:[line 367]"}
+Bug Type: Suspension-based locking or Blocking suspension, #Bugs found: 1
+{"location": "real-world-/classes/ThreadDumpMessageTest.java:[line 141]"}
+Bug Type: Others, #Bugs found: 1
+{"location": "real-world-/classes/SimpleSmtpServer.java:[line 90]"}
 
 
 Project name: real-world--tomcat8.0.26, #Bugs found: 0
@@ -527,16 +524,11 @@ Bug Type: Data race, #Bugs found: 2
 
 
 Project name: sor, #Bugs found: 26
-Bug Type: Others, #Bugs found: 6
+Bug Type: Deadlock, #Bugs found: 17
 {"location": "sor/classes/PropertyChangeMulticaster.java:[line 383]"}
-{"location": "sor/classes/CondVar.java:[line 257]"}
-{"location": "sor/classes/CondVar.java:[line 262]"}
+{"location": "sor/classes/CondVar.java:[line 170]"}
+{"location": "sor/classes/CondVar.java:[line 170]"}
 {"location": "sor/classes/VetoableChangeMulticaster.java:[line 482]"}
-{"location": "sor/classes/WriterPreferenceReadWriteLock.java:[line 191]"}
-{"location": "sor/classes/WriterPreferenceReadWriteLock.java:[line 267]"}
-Bug Type: Deadlock, #Bugs found: 15
-{"location": "sor/classes/CondVar.java:[line 170]"}
-{"location": "sor/classes/CondVar.java:[line 170]"}
 {"location": "sor/classes/LinkedQueue.java:[line 70]"}
 {"location": "sor/classes/LinkedQueue.java:[line 85]"}
 {"location": "sor/classes/CopyOnWriteArrayList.java:[lines 779-789]"}
@@ -550,6 +542,11 @@ Bug Type: Deadlock, #Bugs found: 15
 {"location": "sor/classes/FJTaskRunner.java:[line 926]"}
 {"location": "sor/classes/FJTaskRunnerGroup.java:[line 410]"}
 {"location": "sor/classes/CopyOnWriteArrayList.java:[line 1059]"}
+Bug Type: Others, #Bugs found: 4
+{"location": "sor/classes/CondVar.java:[line 257]"}
+{"location": "sor/classes/CondVar.java:[line 262]"}
+{"location": "sor/classes/WriterPreferenceReadWriteLock.java:[line 191]"}
+{"location": "sor/classes/WriterPreferenceReadWriteLock.java:[line 267]"}
 Bug Type: Data race, #Bugs found: 3
 {"location": "sor/classes/Sor.java:[line 104]"}
 {"location": "sor/classes/Sor.java:[line 117]"}
@@ -607,7 +604,7 @@ Bug Type: Deadlock, #Bugs found: 1
 
 
 Project name: testRace12, #Bugs found: 1
-Bug Type: Others, #Bugs found: 1
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "testRace12/classes/TestRace12.java:[line 104]"}
 
 
@@ -632,7 +629,7 @@ Bug Type: Data race, #Bugs found: 7
 {"location": "tsp/classes/TspSolver.java:[line 364]"}
 {"location": "tsp/classes/TspSolver.java:[line 456]"}
 {"location": "tsp/classes/Tsp.java:[line 111]"}
-Bug Type: Others, #Bugs found: 1
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "tsp/classes/Tsp.java:[line 106]"}
 
 
@@ -648,7 +645,7 @@ Bug Type: Atomicity violation
 
 
 Bug Type: Deadlock
-#Bugs found: 55
+#Bugs found: 253
 
 
 Bug Type: Data race
@@ -656,7 +653,7 @@ Bug Type: Data race
 
 
 Bug Type: Others
-#Bugs found: 206
+#Bugs found: 8
 
 
 Bug Type: Suspension-based locking or Blocking suspension

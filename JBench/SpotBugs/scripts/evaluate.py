@@ -89,7 +89,7 @@ categories = {
     "STCAL": 0,#"(1)Static Calendar field (2)Static DateFormat (3)Call to static Calendar (4)Call to static DateFormat",
     "NP": 0, #"Synchronize and null check on the same field",
     "VO": 8, #"(1)A volatile reference to an array doesn’t treat the array elements as volatile (2)An increment to a volatile field isn’t atomic",
-    "Dm": 11, #"(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method",
+    "Dm": 3, #"(1)Monitor wait() called on Condition (2)A thread was created using the default empty run method",
     "DC": 3, #"(1)Possible double-check of field (2)Possible exposure of partially initialized object",
     "DL": 0, #"(1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values",
     "WL": 0, #"Synchronization on getClass rather than class literal",
