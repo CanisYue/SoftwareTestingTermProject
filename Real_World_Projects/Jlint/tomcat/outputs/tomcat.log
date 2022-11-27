@@ -1,0 +1,2 @@
+/misc/scratch/zttest/22f/projects/classes//tomcat/org/apache/tomcat/jdbc/pool/ConnectionPool.java:1440: Method org/apache/tomcat/jdbc/pool/ConnectionPool$ConnectionFuture.run() implementing 'Runnable' interface is not synchronized.
+Verification completed: 1 reported messages.
