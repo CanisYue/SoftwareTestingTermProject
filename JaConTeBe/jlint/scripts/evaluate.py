@@ -15,7 +15,8 @@ def handleSingleFile(path):
     f = open(path)
     lines = f.readlines()
     total_error_num = 0
-    dic = {"deadlock":[], "race_condition":[], "wait_nosync":[]}
+    # dic = {"deadlock":[], "race_condition":[], "wait_nosync":[]}
+    dic = {"deadlock":[], "data race":[]}
     # record detail info
     try:
         # record total error number
@@ -51,17 +52,25 @@ def handleSingleFile(path):
                 dic["deadlock"].append({"location": bug_location, "code": "3.1.5-wait_path"})
                 bug_type = "deadlock"
             elif "Synchronized method" in line and "is overridden by non-synchronized method of derived class" in line:
-                dic["race_condition"].append({"location": bug_location, "code": "3.1.6-nosync"})
-                bug_type = "race_condition"
+                # dic["race_condition"].append({"location": bug_location, "code": "3.1.6-nosync"})
+                # bug_type = "race_condition"
+                dic["data race"].append({"location": bug_location, "code": "3.1.6-nosync"})
+                bug_type = "data race"
             elif "can be called from different threads and is not synchronized" in line:
-                dic["race_condition"].append({"location": bug_location, "code": "3.1.7-concurrent_call"})
-                bug_type = "race_condition"
+                # dic["race_condition"].append({"location": bug_location, "code": "3.1.7-concurrent_call"})
+                # bug_type = "race_condition"
+                dic["data race"].append({"location": bug_location, "code": "3.1.7-concurrent_call"})
+                bug_type = "data race"
             elif "Field" in line and "of class" in line:
-                dic["race_condition"].append({"location": bug_location, "code": "3.1.8-concurrent_access"})
-                bug_type = "race_condition"
+                # dic["race_condition"].append({"location": bug_location, "code": "3.1.8-concurrent_access"})
+                # bug_type = "race_condition"
+                dic["data race"].append({"location": bug_location, "code": "3.1.8-concurrent_access"})
+                bug_type = "data race"
             elif "implementing 'Runnable' interface is not synchronized" in line:
-                dic["race_condition"].append({"location": bug_location, "code": "3.1.9-run_nosync"})
-                bug_type = "race_condition"
+                # dic["race_condition"].append({"location": bug_location, "code": "3.1.9-run_nosync"})
+                # bug_type = "race_condition"
+                dic["data race"].append({"location": bug_location, "code": "3.1.9-run_nosync"})
+                bug_type = "data race"
             elif "Value of lock" in line and "is changed outside synchronization or constructor" in line:
                 dic["deadlock"].append({"location": bug_location, "code": "3.1.10-loop_assign"})
                 bug_type = "deadlock"
@@ -72,8 +81,10 @@ def handleSingleFile(path):
                 dic["deadlock"].append({"location": bug_location, "code": "Holding n lock(s)"})
                 bug_type = "deadlock"
             elif "Method" in line and "is called without synchronizing on" in line:
-                dic["wait_nosync"].append({"location": bug_location, "code": "3.1.12-wait_nosync"})
-                bug_type = "wait_nosync"
+                # dic["wait_nosync"].append({"location": bug_location, "code": "3.1.12-wait_nosync"})
+                # bug_type = "wait_nosync"
+                dic["data race"].append({"location": bug_location, "code": "3.1.12-wait_nosync"})
+                bug_type = "data race"
             else:
                 print(line)
             if bug_type not in all_res:
@@ -110,7 +121,7 @@ for file_name in files_position:
 
 for key in all_res:
     all_bugs_num += all_res[key]
-
+    
 with open(output_file, mode = 'a') as filename:
     filename.write("\n\n----------Overall Results for JaConTeBe----------\n")
     filename.write("Number of concurrency bugs found in JaConTeBe: " + str(all_bugs_num) + "\n")
@@ -121,3 +132,4 @@ with open(output_file, mode = 'a') as filename:
         # filename.write("Description: " + meanings[key] + "\n")
         filename.write("#Bugs found: " + str(all_res[key]) + "\n")
         filename.write("\n\n")
+

@@ -1,0 +1,246 @@
+Data race on field org.apache.catalina.connector.Request.comet:
+    Read in thread 38 holding lock Monitor@887943059
+      > at org.apache.catalina.connector.Request.isComet(Request.java:2536)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:97)
+        at org.apache.catalina.comet.TestCometProcessor$SimpleCometServlet.event(TestCometProcessor.java:523)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilterEvent(ApplicationFilterChain.java:470)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilterEvent(ApplicationFilterChain.java:363)
+        at org.apache.catalina.core.StandardWrapperValve.event(StandardWrapperValve.java:408)
+        at org.apache.catalina.core.StandardContextValve.event(StandardContextValve.java:129)
+        at org.apache.catalina.valves.ValveBase.event(ValveBase.java:202)
+        at org.apache.catalina.valves.ValveBase.event(ValveBase.java:202)
+        at org.apache.catalina.core.StandardHostValve.event(StandardHostValve.java:221)
+        at org.apache.catalina.valves.ValveBase.event(ValveBase.java:202)
+        at org.apache.catalina.core.StandardEngineValve.event(StandardEngineValve.java:108)
+        at org.apache.catalina.connector.CoyoteAdapter.event(CoyoteAdapter.java:203)
+        at org.apache.coyote.http11.Http11Nio2Processor.event(Http11Nio2Processor.java:97)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:666)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@887943059 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 38 created by thread 36
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 36
+      > at org.apache.catalina.connector.Request.setComet(Request.java:2544)
+        at org.apache.tomcat.util.threads.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:141)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket0(Nio2Endpoint.java:592)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket(Nio2Endpoint.java:578)
+        at org.apache.coyote.http11.Http11Nio2Processor.actionInternal(Http11Nio2Processor.java:524)
+        at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:924)
+        at org.apache.coyote.Request.action(Request.java:380)
+        at org.apache.catalina.connector.Request.cometClose(Request.java:2582)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:98)
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseThread.run(TestCometProcessor.java:665)
+    Thread 36 created by thread 35
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseValve.invoke(TestCometProcessor.java:648)
+
+
+Data race on field org.apache.coyote.RequestInfo.stage:
+    Read in thread 36
+      > at org.apache.coyote.RequestInfo.getStage(RequestInfo.java:172)
+        at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:924)
+        at org.apache.coyote.Request.action(Request.java:380)
+        at org.apache.catalina.connector.Request.cometClose(Request.java:2582)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:98)
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseThread.run(TestCometProcessor.java:665)
+    Thread 36 created by thread 35
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseValve.invoke(TestCometProcessor.java:648)
+
+    Write in thread 35 holding lock Monitor@887943059
+      > at org.apache.coyote.RequestInfo.setStage(RequestInfo.java:176)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1129)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@887943059 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 35 created by thread 34
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field java.util.ArrayList.$state:
+    Write in thread 107 holding lock Monitor@2068536000
+      > at org.apache.catalina.valves.TesterAccessLogValve.log(TesterAccessLogValve.java:48)
+        at org.apache.catalina.core.AccessLogAdapter.log(AccessLogAdapter.java:51)
+        at org.apache.catalina.core.ContainerBase.logAccess(ContainerBase.java:1042)
+        at org.apache.catalina.connector.CoyoteAdapter.event(CoyoteAdapter.java:245)
+        at org.apache.coyote.http11.Http11Nio2Processor.event(Http11Nio2Processor.java:97)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:666)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@2068536000 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket0(Nio2Endpoint.java:594)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket(Nio2Endpoint.java:578)
+        at org.apache.coyote.http11.InternalNio2InputBuffer$1.completed(InternalNio2InputBuffer.java:169)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 107 created by thread 106
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 1
+      > at org.apache.catalina.valves.TesterAccessLogValve.validateAccessLog(TesterAccessLogValve.java:79)
+        at org.apache.catalina.comet.TestCometProcessor.doSimpleCometTest(TestCometProcessor.java:347)
+        at org.apache.catalina.comet.TestCometProcessor.testSimpleCometClientReadFail(TestCometProcessor.java:256)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+
+Data race on field java.util.ArrayList.$state:
+    Write in thread 107 holding lock Monitor@2068536000
+      > at org.apache.catalina.valves.TesterAccessLogValve.log(TesterAccessLogValve.java:48)
+        at org.apache.catalina.core.AccessLogAdapter.log(AccessLogAdapter.java:51)
+        at org.apache.catalina.core.ContainerBase.logAccess(ContainerBase.java:1042)
+        at org.apache.catalina.connector.CoyoteAdapter.event(CoyoteAdapter.java:245)
+        at org.apache.coyote.http11.Http11Nio2Processor.event(Http11Nio2Processor.java:97)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:666)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@2068536000 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket0(Nio2Endpoint.java:594)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket(Nio2Endpoint.java:578)
+        at org.apache.coyote.http11.InternalNio2InputBuffer$1.completed(InternalNio2InputBuffer.java:169)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 107 created by thread 106
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 1
+      > at org.apache.catalina.valves.TesterAccessLogValve.validateAccessLog(TesterAccessLogValve.java:84)
+        at org.apache.catalina.comet.TestCometProcessor.doSimpleCometTest(TestCometProcessor.java:347)
+        at org.apache.catalina.comet.TestCometProcessor.testSimpleCometClientReadFail(TestCometProcessor.java:256)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+
+Data race on field java.util.ArrayList.$state:
+    Write in thread 107 holding lock Monitor@2068536000
+      > at org.apache.catalina.valves.TesterAccessLogValve.log(TesterAccessLogValve.java:48)
+        at org.apache.catalina.core.AccessLogAdapter.log(AccessLogAdapter.java:51)
+        at org.apache.catalina.core.ContainerBase.logAccess(ContainerBase.java:1042)
+        at org.apache.catalina.connector.CoyoteAdapter.event(CoyoteAdapter.java:245)
+        at org.apache.coyote.http11.Http11Nio2Processor.event(Http11Nio2Processor.java:97)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:666)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@2068536000 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket0(Nio2Endpoint.java:594)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket(Nio2Endpoint.java:578)
+        at org.apache.coyote.http11.InternalNio2InputBuffer$1.completed(InternalNio2InputBuffer.java:169)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 107 created by thread 106
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 1
+      > at org.apache.catalina.valves.TesterAccessLogValve.validateAccessLog(TesterAccessLogValve.java:88)
+        at org.apache.catalina.comet.TestCometProcessor.doSimpleCometTest(TestCometProcessor.java:347)
+        at org.apache.catalina.comet.TestCometProcessor.testSimpleCometClientReadFail(TestCometProcessor.java:256)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+
+Data race on field java.util.ArrayList.$state:
+    Write in thread 107 holding lock Monitor@2068536000
+      > at org.apache.catalina.valves.TesterAccessLogValve.log(TesterAccessLogValve.java:48)
+        at org.apache.catalina.core.AccessLogAdapter.log(AccessLogAdapter.java:51)
+        at org.apache.catalina.core.ContainerBase.logAccess(ContainerBase.java:1042)
+        at org.apache.catalina.connector.CoyoteAdapter.event(CoyoteAdapter.java:245)
+        at org.apache.coyote.http11.Http11Nio2Processor.event(Http11Nio2Processor.java:97)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:666)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@2068536000 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket0(Nio2Endpoint.java:594)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket(Nio2Endpoint.java:578)
+        at org.apache.coyote.http11.InternalNio2InputBuffer$1.completed(InternalNio2InputBuffer.java:169)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 107 created by thread 106
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 1
+      > at org.apache.catalina.valves.TesterAccessLogValve.validateAccessLog(TesterAccessLogValve.java:90)
+        at org.apache.catalina.comet.TestCometProcessor.doSimpleCometTest(TestCometProcessor.java:347)
+        at org.apache.catalina.comet.TestCometProcessor.testSimpleCometClientReadFail(TestCometProcessor.java:256)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+

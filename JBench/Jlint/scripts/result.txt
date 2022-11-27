@@ -1,73 +1,3 @@
-Project name: account, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: airlinetickets, #Bugs found: 1
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 1
-{"location": "airlinetickets/classes/airlinetickets/Airlinetickets.java:103", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: animator, #Bugs found: 22
-Bug Type: deadlock, #Bugs found: 10
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:679", "code": "3.1.4-wait"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:121", "code": "3.1.5-wait_path"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1000", "code": "3.1.3-lock"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1180", "code": "3.1.3-lock"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1180", "code": "3.1.3-lock"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1000", "code": "3.1.3-lock"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:613", "code": "3.1.1-sync_loop"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:121", "code": "3.1.1-sync_loop"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:648", "code": "3.1.1-sync_loop"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:121", "code": "3.1.1-sync_loop"}
-Bug Type: race_condition, #Bugs found: 12
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:992", "code": "3.1.9-run_nosync"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1178", "code": "3.1.9-run_nosync"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:769", "code": "3.1.9-run_nosync"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:660", "code": "3.1.8-concurrent_access"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1437", "code": "3.1.8-concurrent_access"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1437", "code": "3.1.8-concurrent_access"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1437", "code": "3.1.8-concurrent_access"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1437", "code": "3.1.8-concurrent_access"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1433", "code": "3.1.8-concurrent_access"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1433", "code": "3.1.8-concurrent_access"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1430", "code": "3.1.8-concurrent_access"}
-{"location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1430", "code": "3.1.8-concurrent_access"}
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: boundedbuffer, #Bugs found: 4
-Bug Type: deadlock, #Bugs found: 4
-{"location": "boundedbuffer/classes/boundedbuffer/Buffer.java:146", "code": "3.1.4-wait"}
-{"location": "boundedbuffer/classes/boundedbuffer/BoundedBuffer.java:395", "code": "3.1.5-wait_path"}
-{"location": "boundedbuffer/classes/boundedbuffer/Buffer.java:121", "code": "3.1.4-wait"}
-{"location": "boundedbuffer/classes/boundedbuffer/BoundedBuffer.java:377", "code": "3.1.5-wait_path"}
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: bubblesort, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: bufwriter, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: critical, #Bugs found: 1
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 1
-{"location": "critical/classes/critical/Critical.java:45", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: cyclicDemo, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: Dacapo, Fail to run the project
-
 Project name: DaCapo-eclipse, Fail to run the project
 
 Project name: DaCapo-luindex, Fail to run the project
@@ -78,232 +8,282 @@ Project name: DaCapo-tradebeans, Fail to run the project
 
 Project name: DaCapo-tradesoap, Fail to run the project
 
-Project name: dbcp3, #Bugs found: 2
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 2
-{"location": "dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:93", "code": "3.1.9-run_nosync"}
-{"location": "dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:77", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: derby3, #Bugs found: 2
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 2
-{"location": "derby3/classes/Derby5561.java:27", "code": "3.1.9-run_nosync"}
-{"location": "derby3/classes/Derby5561.java:43", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
+Project name: Dacapo, Fail to run the project
 
 Project name: Elevator, #Bugs found: 151
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 151
-{"location": "Elevator/classes/elevator/Person.java:80", "code": "3.1.9-run_nosync"}
-{"location": "Elevator/classes/elevator/Elevator.java:104", "code": "3.1.9-run_nosync"}
-{"location": "Elevator/classes/elevator/Person.java:339", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:337", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:332", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:330", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:330", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:329", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Person.java:310", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:314", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Person.java:310", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Person.java:252", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:251", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Person.java:220", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:219", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Person.java:288", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:245", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:244", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Person.java:261", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:260", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Person.java:239", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:238", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Person.java:232", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:231", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Person.java:230", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Person.java:209", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Person.java:208", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Person.java:59", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:146", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:142", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:142", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:139", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:134", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:130", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:130", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:127", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:122", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:118", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:118", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:114", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:108", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:104", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:104", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:101", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:146", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:142", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:139", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:134", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:130", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:127", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:122", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:118", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:114", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:108", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:104", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:101", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:238", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:210", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:195", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:195", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:194", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:195", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:194", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:194", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:80", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:76", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:76", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:73", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:68", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:64", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:64", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:61", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:56", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:52", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:52", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:48", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:42", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:38", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:38", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:35", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:80", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:76", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:73", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:68", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:64", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:61", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:56", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:52", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:48", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:42", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:38", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:35", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:182", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:182", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/ElevatorController.java:172", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:289", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:247", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:242", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:236", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:246", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:241", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:235", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:227", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:222", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:216", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:226", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:221", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:215", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:173", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:168", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:161", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:172", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:167", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:160", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:152", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:151", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:323", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:317", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:312", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:307", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:303", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:299", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:295", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:322", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:316", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:311", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:306", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:302", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:298", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:294", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Elevator.java:80", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Elevator.java:79", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Floor.java:76", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Floor.java:76", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Floor.java:50", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Floor.java:47", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Floor.java:51", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Floor.java:50", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Floor.java:47", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Floor.java:41", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Floor.java:38", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Floor.java:42", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Floor.java:41", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Floor.java:38", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Floor.java:73", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Floor.java:73", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Floor.java:73", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Floor.java:63", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Floor.java:63", "code": "3.1.7-concurrent_call"}
-{"location": "Elevator/classes/elevator/Floor.java:63", "code": "3.1.8-concurrent_access"}
-{"location": "Elevator/classes/elevator/Building.java:37", "code": "3.1.7-concurrent_call"}
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: groovy1, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: groovy5, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
-
-Project name: groovy6, #Bugs found: 0
-Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 151
+{"code": "3.1.9-run_nosync", "location": "Elevator/classes/elevator/Person.java:80"}
+{"code": "3.1.9-run_nosync", "location": "Elevator/classes/elevator/Elevator.java:104"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:339"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:337"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:332"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:330"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:330"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Person.java:329"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:310"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Person.java:314"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Person.java:310"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:252"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Person.java:251"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:220"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Person.java:219"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:288"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:245"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Person.java:244"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:261"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Person.java:260"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:239"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Person.java:238"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:232"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Person.java:231"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Person.java:230"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:209"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Person.java:208"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Person.java:59"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:146"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:142"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:142"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:139"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:134"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:130"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:130"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:127"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:122"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:118"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:118"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:114"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:108"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:104"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:104"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:101"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:146"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:142"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:139"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:134"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:130"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:127"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:122"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:118"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:114"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:108"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:104"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:101"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:238"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:210"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:195"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:195"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:194"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:195"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:194"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:194"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:80"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:76"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:76"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:73"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:68"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:64"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:64"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:61"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:56"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:52"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:52"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:48"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:42"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:38"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:38"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:35"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:80"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:76"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:73"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:68"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:64"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:61"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:56"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:52"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:48"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:42"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:38"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:35"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:182"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/ElevatorController.java:182"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/ElevatorController.java:172"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:289"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:247"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:242"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:236"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:246"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:241"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:235"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:227"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:222"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:216"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:226"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:221"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:215"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:173"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:168"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:161"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:172"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:167"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:160"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:152"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:151"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:323"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:317"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:312"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:307"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:303"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:299"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:295"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:322"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:316"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:311"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:306"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:302"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:298"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:294"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Elevator.java:80"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Elevator.java:79"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Floor.java:76"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Floor.java:76"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Floor.java:50"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Floor.java:47"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Floor.java:51"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Floor.java:50"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Floor.java:47"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Floor.java:41"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Floor.java:38"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Floor.java:42"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Floor.java:41"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Floor.java:38"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Floor.java:73"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Floor.java:73"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Floor.java:73"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Floor.java:63"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Floor.java:63"}
+{"code": "3.1.8-concurrent_access", "location": "Elevator/classes/elevator/Floor.java:63"}
+{"code": "3.1.7-concurrent_call", "location": "Elevator/classes/elevator/Building.java:37"}
 
 Project name: JGFMolDynBenchSizeA, #Bugs found: 10
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 9
-{"location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:144", "code": "3.1.9-run_nosync"}
-{"location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:528", "code": "3.1.8-concurrent_access"}
-{"location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:512", "code": "3.1.8-concurrent_access"}
-{"location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:512", "code": "3.1.8-concurrent_access"}
-{"location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:510", "code": "3.1.8-concurrent_access"}
-{"location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:510", "code": "3.1.8-concurrent_access"}
-{"location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:491", "code": "3.1.8-concurrent_access"}
-{"location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:490", "code": "3.1.8-concurrent_access"}
-{"location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:489", "code": "3.1.8-concurrent_access"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 9
+{"code": "3.1.9-run_nosync", "location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:144"}
+{"code": "3.1.8-concurrent_access", "location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:528"}
+{"code": "3.1.8-concurrent_access", "location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:512"}
+{"code": "3.1.8-concurrent_access", "location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:512"}
+{"code": "3.1.8-concurrent_access", "location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:510"}
+{"code": "3.1.8-concurrent_access", "location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:510"}
+{"code": "3.1.8-concurrent_access", "location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:491"}
+{"code": "3.1.8-concurrent_access", "location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:490"}
+{"code": "3.1.8-concurrent_access", "location": "JGFMolDynBenchSizeA/classes/benchmarks/moldyn/md.java:489"}
 
 Project name: JGFRayTracerBenchSizeA, #Bugs found: 2
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 1
-{"location": "JGFRayTracerBenchSizeA/classes/benchmarks/raytracer/JGFRayTracerBench.java:160", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 1
+{"code": "3.1.9-run_nosync", "location": "JGFRayTracerBenchSizeA/classes/benchmarks/raytracer/JGFRayTracerBench.java:160"}
+
+Project name: account, #Bugs found: 0
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
+
+Project name: airlinetickets, #Bugs found: 1
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 1
+{"code": "3.1.9-run_nosync", "location": "airlinetickets/classes/airlinetickets/Airlinetickets.java:103"}
+
+Project name: animator, #Bugs found: 22
+Bug Type: deadlock, #Bugs found: 10
+{"code": "3.1.4-wait", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:679"}
+{"code": "3.1.5-wait_path", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:121"}
+{"code": "3.1.3-lock", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1000"}
+{"code": "3.1.3-lock", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1180"}
+{"code": "3.1.3-lock", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1180"}
+{"code": "3.1.3-lock", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1000"}
+{"code": "3.1.1-sync_loop", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:613"}
+{"code": "3.1.1-sync_loop", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:121"}
+{"code": "3.1.1-sync_loop", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:648"}
+{"code": "3.1.1-sync_loop", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:121"}
+Bug Type: data race, #Bugs found: 12
+{"code": "3.1.9-run_nosync", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:992"}
+{"code": "3.1.9-run_nosync", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1178"}
+{"code": "3.1.9-run_nosync", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:769"}
+{"code": "3.1.8-concurrent_access", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:660"}
+{"code": "3.1.8-concurrent_access", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1437"}
+{"code": "3.1.8-concurrent_access", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1437"}
+{"code": "3.1.8-concurrent_access", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1437"}
+{"code": "3.1.8-concurrent_access", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1437"}
+{"code": "3.1.8-concurrent_access", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1433"}
+{"code": "3.1.8-concurrent_access", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1433"}
+{"code": "3.1.8-concurrent_access", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1430"}
+{"code": "3.1.8-concurrent_access", "location": "animator/classes/XtangoAnimation/XtangoAnimator.java:1430"}
+
+Project name: boundedbuffer, #Bugs found: 4
+Bug Type: deadlock, #Bugs found: 4
+{"code": "3.1.4-wait", "location": "boundedbuffer/classes/boundedbuffer/Buffer.java:146"}
+{"code": "3.1.5-wait_path", "location": "boundedbuffer/classes/boundedbuffer/BoundedBuffer.java:395"}
+{"code": "3.1.4-wait", "location": "boundedbuffer/classes/boundedbuffer/Buffer.java:121"}
+{"code": "3.1.5-wait_path", "location": "boundedbuffer/classes/boundedbuffer/BoundedBuffer.java:377"}
+Bug Type: data race, #Bugs found: 0
+
+Project name: bubblesort, #Bugs found: 0
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
+
+Project name: bufwriter, #Bugs found: 0
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
+
+Project name: critical, #Bugs found: 1
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 1
+{"code": "3.1.9-run_nosync", "location": "critical/classes/critical/Critical.java:45"}
+
+Project name: cyclicDemo, #Bugs found: 0
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
+
+Project name: dbcp3, #Bugs found: 2
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 2
+{"code": "3.1.9-run_nosync", "location": "dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:93"}
+{"code": "3.1.9-run_nosync", "location": "dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:77"}
+
+Project name: derby3, #Bugs found: 2
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 2
+{"code": "3.1.9-run_nosync", "location": "derby3/classes/Derby5561.java:27"}
+{"code": "3.1.9-run_nosync", "location": "derby3/classes/Derby5561.java:43"}
+
+Project name: groovy1, #Bugs found: 0
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
+
+Project name: groovy5, #Bugs found: 0
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
+
+Project name: groovy6, #Bugs found: 0
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jpf_test_cases, Fail to run the project
 
 Project name: log4j1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: log4j3, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: mergesort, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: pingpong, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: real-world--common-dbcps2-2.1.1, Fail to run the project
 
@@ -315,290 +295,264 @@ Project name: real-world--log4j2.8.1, Fail to run the project
 
 Project name: real-world--tomcat8.0.26, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: real-world--zookeeper-3.5.2-alpha, Fail to run the project
 
 Project name: simpleExample, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: sor, #Bugs found: 149
 Bug Type: deadlock, #Bugs found: 54
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:288", "code": "3.1.11-loop_assign2"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:307", "code": "3.1.4-wait"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:307", "code": "Holding n lock(s)"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/LinkedQueue.java:70", "code": "3.1.11-loop_assign2"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:108", "code": "3.1.4-wait"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Rendezvous.java:332", "code": "3.1.5-wait_path"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:135", "code": "3.1.4-wait"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Rendezvous.java:326", "code": "3.1.5-wait_path"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:108", "code": "3.1.4-wait"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronousChannel.java:243", "code": "3.1.5-wait_path"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:257", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:179", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:257", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:224", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:302", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:179", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:302", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:224", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/CopyOnWriteArrayList.java:1019", "code": "3.1.2-loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/CopyOnWriteArrayList.java:1052", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/VetoableChangeMulticaster.java:278", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/VetoableChangeMulticaster.java:311", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/VetoableChangeMulticaster.java:360", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/VetoableChangeMulticaster.java:538", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedShort.java:47", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedShort.java:55", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedShort.java:94", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedRef.java:48", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedRef.java:56", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedRef.java:95", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedLong.java:55", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedLong.java:90", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedInt.java:47", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedInt.java:55", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedInt.java:93", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedFloat.java:47", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedFloat.java:55", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedFloat.java:94", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedDouble.java:47", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedDouble.java:55", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedDouble.java:94", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedChar.java:47", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedChar.java:55", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedChar.java:94", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedByte.java:47", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedByte.java:55", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedByte.java:94", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedBoolean.java:46", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedBoolean.java:54", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedBoolean.java:92", "code": "3.1.3-lock"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PropertyChangeMulticaster.java:243", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PropertyChangeMulticaster.java:276", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PropertyChangeMulticaster.java:319", "code": "3.1.1-sync_loop"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PropertyChangeMulticaster.java:427", "code": "3.1.1-sync_loop"}
-Bug Type: race_condition, #Bugs found: 64
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/TimeDaemon.java:322", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/QueuedExecutor.java:75", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.java:608", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FutureResult.java:74", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunnerGroup.java:595", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:393", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:517", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:489", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:462", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:422", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:1", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/ClockDaemon.java:360", "code": "3.1.9-run_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableShort.java:84", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableLong.java:84", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableInt.java:84", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableFloat.java:71", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableDouble.java:71", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableChar.java:71", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableByte.java:84", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/TimedCallable.java:1", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/ThreadedExecutor.java:2", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.java:3", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/QueuedSemaphore.java:71", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/QueuedSemaphore.java:79", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/QueuedSemaphore.java:34", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/QueuedSemaphore.java:41", "code": "3.1.6-nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.java:593", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.java:591", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.java:472", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunnerGroup.java:482", "code": "3.1.8-concurrent_access"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunnerGroup.java:481", "code": "3.1.8-concurrent_access"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:910", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:702", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:701", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:699", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:693", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:684", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:666", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:656", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:951", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:950", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:948", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:944", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:937", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:936", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:934", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:928", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:890", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:889", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:887", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:884", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:879", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:878", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:876", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:871", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:849", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:848", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:846", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:842", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:403", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:304", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:303", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:302", "code": "3.1.7-concurrent_call"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/CopyOnWriteArrayList.java:1059", "code": "3.1.8-concurrent_access"}
-Bug Type: wait_nosync, #Bugs found: 31
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedBuffer.java:129", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedBuffer.java:131", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedBuffer.java:170", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedBuffer.java:172", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:229", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:234", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:256", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:262", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:343", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:355", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/CountDown.java:88", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Latch.java:79", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/LinkedQueue.java:122", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/LinkedQueue.java:128", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/LinkedQueue.java:170", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/LinkedQueue.java:177", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Mutex.java:148", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Mutex.java:161", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/ReentrantLock.java:73", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/ReentrantLock.java:91", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:135", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:148", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaiterPreferenceSemaphore.java:76", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaiterPreferenceSemaphore.java:86", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaiterPreferenceSemaphore.java:111", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaiterPreferenceSemaphore.java:128", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:205", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:246", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:281", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:284", "code": "3.1.12-wait_nosync"}
-{"location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:294", "code": "3.1.12-wait_nosync"}
+{"code": "3.1.11-loop_assign2", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:288"}
+{"code": "3.1.4-wait", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:307"}
+{"code": "Holding n lock(s)", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:307"}
+{"code": "3.1.11-loop_assign2", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/LinkedQueue.java:70"}
+{"code": "3.1.4-wait", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:108"}
+{"code": "3.1.5-wait_path", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Rendezvous.java:332"}
+{"code": "3.1.4-wait", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:135"}
+{"code": "3.1.5-wait_path", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Rendezvous.java:326"}
+{"code": "3.1.4-wait", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:108"}
+{"code": "3.1.5-wait_path", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronousChannel.java:243"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:257"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:179"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:257"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:224"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:302"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:179"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:302"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:224"}
+{"code": "3.1.2-loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/CopyOnWriteArrayList.java:1019"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/CopyOnWriteArrayList.java:1052"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/VetoableChangeMulticaster.java:278"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/VetoableChangeMulticaster.java:311"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/VetoableChangeMulticaster.java:360"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/VetoableChangeMulticaster.java:538"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedShort.java:47"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedShort.java:55"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedShort.java:94"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedRef.java:48"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedRef.java:56"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedRef.java:95"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedLong.java:55"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedLong.java:90"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedInt.java:47"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedInt.java:55"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedInt.java:93"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedFloat.java:47"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedFloat.java:55"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedFloat.java:94"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedDouble.java:47"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedDouble.java:55"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedDouble.java:94"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedChar.java:47"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedChar.java:55"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedChar.java:94"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedByte.java:47"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedByte.java:55"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedByte.java:94"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedBoolean.java:46"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedBoolean.java:54"}
+{"code": "3.1.3-lock", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/SynchronizedBoolean.java:92"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PropertyChangeMulticaster.java:243"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PropertyChangeMulticaster.java:276"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PropertyChangeMulticaster.java:319"}
+{"code": "3.1.1-sync_loop", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PropertyChangeMulticaster.java:427"}
+Bug Type: data race, #Bugs found: 95
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedBuffer.java:129"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedBuffer.java:131"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedBuffer.java:170"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedBuffer.java:172"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:229"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:234"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:256"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:262"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:343"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/BoundedLinkedQueue.java:355"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/CountDown.java:88"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Latch.java:79"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/LinkedQueue.java:122"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/LinkedQueue.java:128"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/LinkedQueue.java:170"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/LinkedQueue.java:177"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Mutex.java:148"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Mutex.java:161"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/ReentrantLock.java:73"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/ReentrantLock.java:91"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:135"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/Semaphore.java:148"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaiterPreferenceSemaphore.java:76"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaiterPreferenceSemaphore.java:86"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaiterPreferenceSemaphore.java:111"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaiterPreferenceSemaphore.java:128"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:205"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:246"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:281"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:284"}
+{"code": "3.1.12-wait_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WriterPreferenceReadWriteLock.java:294"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/TimeDaemon.java:322"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/QueuedExecutor.java:75"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.java:608"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FutureResult.java:74"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunnerGroup.java:595"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:393"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:517"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:489"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:462"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:422"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:1"}
+{"code": "3.1.9-run_nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/ClockDaemon.java:360"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableShort.java:84"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableLong.java:84"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableInt.java:84"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableFloat.java:71"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableDouble.java:71"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableChar.java:71"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/WaitableByte.java:84"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/TimedCallable.java:1"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/ThreadedExecutor.java:2"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.java:3"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/QueuedSemaphore.java:71"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/QueuedSemaphore.java:79"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/QueuedSemaphore.java:34"}
+{"code": "3.1.6-nosync", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/QueuedSemaphore.java:41"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.java:593"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.java:591"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.java:472"}
+{"code": "3.1.8-concurrent_access", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunnerGroup.java:482"}
+{"code": "3.1.8-concurrent_access", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunnerGroup.java:481"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:910"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:702"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:701"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:699"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:693"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:684"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:666"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:656"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:951"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:950"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:948"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:944"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:937"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:936"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:934"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:928"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:890"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:889"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:887"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:884"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:879"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:878"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:876"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:871"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:849"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:848"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:846"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:842"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTaskRunner.java:403"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:304"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:303"}
+{"code": "3.1.7-concurrent_call", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/FJTask.java:302"}
+{"code": "3.1.8-concurrent_access", "location": "sor/classes/benchmarks/EDU/oswego/cs/dl/util/concurrent/CopyOnWriteArrayList.java:1059"}
 
 Project name: testAtomicity1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testAtomicity11, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testAtomicity12, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testAtomicity13, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testAtomicity14, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testAtomicity4, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testAtomicity6, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testAtomicity7, #Bugs found: 1
 Bug Type: deadlock, #Bugs found: 1
-{"location": "testAtomicity7/classes/benchmarks/testcases/TestAtomicity7.java:25", "code": "3.1.3-lock"}
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+{"code": "3.1.3-lock", "location": "testAtomicity7/classes/benchmarks/testcases/TestAtomicity7.java:25"}
+Bug Type: data race, #Bugs found: 0
 
 Project name: testAtomicity8, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testAtomicity9, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testRace1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testRace10, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testRace11, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testRace12, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testRace13, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testRace3, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testRace4, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: testRace6, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: tsp, #Bugs found: 8
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 8
-{"location": "tsp/classes/benchmarks/tsp/TspSolver.java:238", "code": "3.1.8-concurrent_access"}
-{"location": "tsp/classes/benchmarks/tsp/TspSolver.java:238", "code": "3.1.8-concurrent_access"}
-{"location": "tsp/classes/benchmarks/tsp/TspSolver.java:238", "code": "3.1.8-concurrent_access"}
-{"location": "tsp/classes/benchmarks/tsp/TspSolver.java:238", "code": "3.1.8-concurrent_access"}
-{"location": "tsp/classes/benchmarks/tsp/TspSolver.java:238", "code": "3.1.8-concurrent_access"}
-{"location": "tsp/classes/benchmarks/tsp/TspSolver.java:238", "code": "3.1.8-concurrent_access"}
-{"location": "tsp/classes/benchmarks/tsp/TspSolver.java:238", "code": "3.1.8-concurrent_access"}
-{"location": "tsp/classes/benchmarks/tsp/TspSolver.java:238", "code": "3.1.8-concurrent_access"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 8
+{"code": "3.1.8-concurrent_access", "location": "tsp/classes/benchmarks/tsp/TspSolver.java:238"}
+{"code": "3.1.8-concurrent_access", "location": "tsp/classes/benchmarks/tsp/TspSolver.java:238"}
+{"code": "3.1.8-concurrent_access", "location": "tsp/classes/benchmarks/tsp/TspSolver.java:238"}
+{"code": "3.1.8-concurrent_access", "location": "tsp/classes/benchmarks/tsp/TspSolver.java:238"}
+{"code": "3.1.8-concurrent_access", "location": "tsp/classes/benchmarks/tsp/TspSolver.java:238"}
+{"code": "3.1.8-concurrent_access", "location": "tsp/classes/benchmarks/tsp/TspSolver.java:238"}
+{"code": "3.1.8-concurrent_access", "location": "tsp/classes/benchmarks/tsp/TspSolver.java:238"}
+{"code": "3.1.8-concurrent_access", "location": "tsp/classes/benchmarks/tsp/TspSolver.java:238"}
 
 
 
 ----------Overall Results for JBench----------
 Number of concurrency bugs found in JBench: 351
-Number of concurrency bug types found in JBench: 3
-
-
-Bug Type: race_condition
-#Bugs found: 251
+Number of concurrency bug types found in JBench: 2
 
 
 Bug Type: deadlock
 #Bugs found: 69
 
 
-Bug Type: wait_nosync
-#Bugs found: 31
+Bug Type: data race
+#Bugs found: 282
 
 

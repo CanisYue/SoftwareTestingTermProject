@@ -1,0 +1,1 @@
+Unable to resolve field com/fasterxml/jackson/databind/DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES in class org/apache/logging/log4j/core/filter/MutableThreadContextMapFilter

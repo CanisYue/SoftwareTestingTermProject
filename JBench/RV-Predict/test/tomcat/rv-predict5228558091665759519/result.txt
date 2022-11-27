@@ -1,0 +1,50 @@
+Data race on field org.apache.catalina.connector.OutputBuffer.suspended:
+    Write in thread 55 holding lock Monitor@302933629
+      > at org.apache.catalina.connector.OutputBuffer.setSuspended(OutputBuffer.java:210)
+        at org.apache.catalina.connector.Response.setSuspended(Response.java:392)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:167)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1526)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1482)
+        - locked Monitor@302933629 at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1481)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 55 created by thread 53
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 56
+      > at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:402)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:97)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:90)
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet$1.run(TestCoyoteAdapter.java:387)
+    Thread 56 created by thread 55
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet.doGet(TestCoyoteAdapter.java:409)
+
+
+Data race on field org.apache.catalina.core.StandardContext.applicationEventListenersObjects:
+    Read in thread 57 holding lock Monitor@302933629
+      > at org.apache.catalina.core.StandardContext.getApplicationEventListeners(StandardContext.java:1155)
+        at org.apache.catalina.core.StandardContext.fireRequestDestroyEvent(StandardContext.java:5920)
+        at org.apache.catalina.connector.CoyoteAdapter.asyncDispatch(CoyoteAdapter.java:282)
+        at org.apache.coyote.http11.AbstractHttp11Processor.asyncDispatch(AbstractHttp11Processor.java:1709)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:651)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1526)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1482)
+        - locked Monitor@302933629 at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1481)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 57 created by thread 53
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 50 holding lock Monitor@1090638535
+      > at org.apache.catalina.core.StandardContext.setApplicationEventListeners(StandardContext.java:1161)
+        at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5390)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1090638535 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1424)
+    Thread 50 created by thread 49
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+

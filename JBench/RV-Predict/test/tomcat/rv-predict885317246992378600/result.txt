@@ -1,0 +1,235 @@
+Data race on field org.apache.tomcat.util.http.HttpMessages.st_200:
+    Write in thread 48 holding lock Monitor@1935195107
+      > at org.apache.tomcat.util.http.HttpMessages.getMessage(HttpMessages.java:73)
+        at org.apache.coyote.http11.AbstractOutputBuffer.<init>(AbstractOutputBuffer.java:134)
+        at org.apache.coyote.http11.Http11Nio2Processor.<init>(Http11Nio2Processor.java:71)
+        at org.apache.coyote.http11.Http11Nio2Protocol$Http11ConnectionHandler.createProcessor(Http11Nio2Protocol.java:233)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1935195107 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 48 created by thread 47
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 45 holding lock Monitor@1832227837
+      > at org.apache.tomcat.util.http.HttpMessages.getMessage(HttpMessages.java:75)
+        at org.apache.coyote.http11.AbstractOutputBuffer.<init>(AbstractOutputBuffer.java:134)
+        at org.apache.coyote.http11.Http11Nio2Processor.<init>(Http11Nio2Processor.java:71)
+        at org.apache.coyote.http11.Http11Nio2Protocol$Http11ConnectionHandler.createProcessor(Http11Nio2Protocol.java:233)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 45 created by thread 43
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.tomcat.util.http.HttpMessages.st_200:
+    Read in thread 45 holding lock Monitor@1832227837
+      > at org.apache.tomcat.util.http.HttpMessages.getMessage(HttpMessages.java:72)
+        at org.apache.coyote.http11.Http11Nio2Processor.<init>(Http11Nio2Processor.java:71)
+        at org.apache.coyote.http11.Http11Nio2Protocol$Http11ConnectionHandler.createProcessor(Http11Nio2Protocol.java:233)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 45 created by thread 43
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 48 holding lock Monitor@1935195107
+      > at org.apache.tomcat.util.http.HttpMessages.getMessage(HttpMessages.java:73)
+        at org.apache.coyote.http11.AbstractOutputBuffer.<init>(AbstractOutputBuffer.java:134)
+        at org.apache.coyote.http11.Http11Nio2Processor.<init>(Http11Nio2Processor.java:71)
+        at org.apache.coyote.http11.Http11Nio2Protocol$Http11ConnectionHandler.createProcessor(Http11Nio2Protocol.java:233)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1935195107 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 48 created by thread 47
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.catalina.core.StandardContext.cookieProcessor:
+    Write in thread 45 holding lock Monitor@1832227837
+      > at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 45 created by thread 43
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 46 holding lock Monitor@107066784
+      > at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@107066784 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 46 created by thread 44
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.catalina.core.StandardContext.cookieProcessor:
+    Read in thread 45 holding lock Monitor@1832227837
+      > at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:827)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 45 created by thread 43
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 46 holding lock Monitor@107066784
+      > at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@107066784 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 46 created by thread 44
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.catalina.core.StandardContext.cookieProcessor:
+    Write in thread 45 holding lock Monitor@1832227837
+      > at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 45 created by thread 43
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 46 holding lock Monitor@107066784
+      > at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:830)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@107066784 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 46 created by thread 44
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.catalina.core.ApplicationFilterFactory.factory:
+    Read in thread 45 holding lock Monitor@1832227837
+      > at org.apache.catalina.core.ApplicationFilterFactory.getInstance(ApplicationFilterFactory.java:54)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:178)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 45 created by thread 43
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 46 holding lock Monitor@107066784
+      > at org.apache.catalina.core.ApplicationFilterFactory.getInstance(ApplicationFilterFactory.java:55)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:182)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@107066784 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 46 created by thread 44
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.catalina.core.ApplicationFilterFactory.factory:
+    Write in thread 46 holding lock Monitor@107066784
+      > at org.apache.catalina.core.ApplicationFilterFactory.getInstance(ApplicationFilterFactory.java:55)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:182)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@107066784 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 46 created by thread 44
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 45 holding lock Monitor@1832227837
+      > at org.apache.catalina.core.ApplicationFilterFactory.getInstance(ApplicationFilterFactory.java:57)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:182)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 45 created by thread 43
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+

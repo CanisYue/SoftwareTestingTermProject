@@ -1,0 +1,5 @@
+Unable to resolve field org/apache/log/Priority.DEBUG in class org/apache/velocity/runtime/log/AvalonLogChute
+Unable to resolve field org/apache/log/Priority.DEBUG in class org/apache/velocity/runtime/log/AvalonLogChute
+Unable to resolve field org/apache/log/Priority.INFO in class org/apache/velocity/runtime/log/AvalonLogChute
+Unable to resolve field org/apache/log/Priority.WARN in class org/apache/velocity/runtime/log/AvalonLogChute
+Unable to resolve field org/apache/log/Priority.ERROR in class org/apache/velocity/runtime/log/AvalonLogChute

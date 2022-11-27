@@ -1,0 +1,21 @@
+Data race on field org.apache.coyote.AbstractProcessor.socketWrapper:
+    Read in thread 50
+      > at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:907)
+        at org.apache.coyote.Request.action(Request.java:378)
+        at org.apache.catalina.core.AsyncContextImpl$RunnableWrapper.run(AsyncContextImpl.java:570)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 50 created by thread 49
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 52 holding lock Monitor@1879373191
+      > at org.apache.coyote.http11.Http11Nio2Processor.recycleInternal(Http11Nio2Processor.java:306)
+        at org.apache.coyote.http11.Http11Nio2Protocol$Http11ConnectionHandler.release(Http11Nio2Protocol.java:174)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:727)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1879373191 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 52 created by thread 50
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+

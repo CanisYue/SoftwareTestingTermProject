@@ -1,0 +1,13 @@
+Unable to find the collection accessed by com.google.common.collect.testing.AbstractIteratorTester$MultiExceptionListIterator@40620d8e
+Unable to find the collection accessed by com.google.common.collect.testing.IteratorTesterTest$ThrowingIterator@5af97169
+Unable to find the collection accessed by com.google.common.collect.testing.IteratorTesterTest$11$1@38eb2fb0
+Unable to find the collection accessed by com.google.common.collect.testing.IteratorTesterTest$10$1@45acdd11
+Unable to find the collection accessed by com.google.common.collect.testing.IteratorTesterTest$IteratorWithSunJavaBug6529795@7e53339
+Unable to find the collection accessed by com.google.common.collect.testing.IteratorTesterTest$8$1@101a461c
+Unable to find the collection accessed by com.google.common.collect.testing.Helpers$2@2e9644dd
+Unable to find the collection accessed by java.util.LinkedHashMap$LinkedKeyIterator@735959be
+Unable to find the collection accessed by java.util.TreeMap$NavigableSubMap$DescendingSubMapKeyIterator@6c75dc1d
+Unable to find the collection accessed by java.util.TreeMap$NavigableSubMap$SubMapKeyIterator@a76197
+Unable to find the collection accessed by java.util.TreeMap$DescendingKeyIterator@3a5430f4
+Unable to find the collection accessed by java.util.concurrent.ConcurrentSkipListMap$SubMap$SubMapKeyIterator@67e575ca
+Unable to find the collection accessed by com.google.common.collect.Iterators$PeekingImpl@24ec31c7

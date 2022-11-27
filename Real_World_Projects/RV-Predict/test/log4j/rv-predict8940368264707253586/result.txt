@@ -1,0 +1,192 @@
+Data race on field org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.loggerConfig:
+    Read in thread 30
+      > at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.access$100(AsyncLoggerConfigDisruptor.java:66)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapperHandler.onEvent(AsyncLoggerConfigDisruptor.java:112)
+        at com.lmax.disruptor.BatchEventProcessor.processEvents(BatchEventProcessor.java:168)
+        at com.lmax.disruptor.BatchEventProcessor.run(BatchEventProcessor.java:125)
+    Thread 30 created by thread 1
+        at com.lmax.disruptor.dsl.BasicExecutor.execute(BasicExecutor.java:30)
+
+    Write in thread 31
+      > at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.access$102(AsyncLoggerConfigDisruptor.java:66)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.lambda$static$1(AsyncLoggerConfigDisruptor.java:148)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$$Lambda$409.translateTo(Unknown:n/a)
+        at com.lmax.disruptor.RingBuffer.translateAndPublish(RingBuffer.java:986)
+        at com.lmax.disruptor.RingBuffer.tryPublishEvent(RingBuffer.java:538)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.tryEnqueue(AsyncLoggerConfigDisruptor.java:387)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.logToAsyncDelegate(AsyncLoggerConfig.java:157)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.log(AsyncLoggerConfig.java:138)
+        at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:560)
+        at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+        at org.apache.logging.log4j.core.Logger.log(Logger.java:162)
+        at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+        at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+        at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+        at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1836)
+        at org.apache.logging.log4j.spi.AbstractLogger.info(AbstractLogger.java:1290)
+        at org.apache.logging.log4j.core.async.QueueFullAsyncLoggerConfigTest.asyncLoggerConfigTest(QueueFullAsyncLoggerConfigTest.java:81)
+        at org.apache.logging.log4j.core.async.QueueFullAsyncLoggerConfigTest.testNormalQueueFullKeepsMessagesInOrder(QueueFullAsyncLoggerConfigTest.java:70)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+    Thread 31 created by thread 1
+        at org.junit.internal.runners.statements.FailOnTimeout.evaluate(FailOnTimeout.java:126)
+
+
+Data race on field org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.event:
+    Read in thread 30
+      > at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.access$000(AsyncLoggerConfigDisruptor.java:66)
+        at com.lmax.disruptor.BatchEventProcessor.run(BatchEventProcessor.java:125)
+    Thread 30 created by thread 1
+        at com.lmax.disruptor.dsl.BasicExecutor.execute(BasicExecutor.java:30)
+
+    Write in thread 31
+      > at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.access$002(AsyncLoggerConfigDisruptor.java:66)
+        at com.lmax.disruptor.RingBuffer.tryPublishEvent(RingBuffer.java:538)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.tryEnqueue(AsyncLoggerConfigDisruptor.java:387)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.logToAsyncDelegate(AsyncLoggerConfig.java:157)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.log(AsyncLoggerConfig.java:138)
+        at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:560)
+        at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+        at org.apache.logging.log4j.core.Logger.log(Logger.java:162)
+        at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+        at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+        at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+        at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1836)
+        at org.apache.logging.log4j.spi.AbstractLogger.info(AbstractLogger.java:1290)
+        at org.apache.logging.log4j.core.async.QueueFullAsyncLoggerConfigTest.asyncLoggerConfigTest(QueueFullAsyncLoggerConfigTest.java:81)
+        at org.apache.logging.log4j.core.async.QueueFullAsyncLoggerConfigTest.testNormalQueueFullKeepsMessagesInOrder(QueueFullAsyncLoggerConfigTest.java:70)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+    Thread 31 created by thread 1
+        at org.junit.internal.runners.statements.FailOnTimeout.evaluate(FailOnTimeout.java:126)
+
+
+Data race on field org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.loggerConfig:
+    Write in thread 31 holding lock Monitor@89691515
+      > at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.access$102(AsyncLoggerConfigDisruptor.java:66)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$$Lambda$409.translateTo(Unknown:n/a)
+        at com.lmax.disruptor.RingBuffer.translateAndPublish(RingBuffer.java:986)
+        at com.lmax.disruptor.RingBuffer.publishEvent(RingBuffer.java:525)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.enqueue(AsyncLoggerConfigDisruptor.java:366)
+        - locked Monitor@89691515 at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.enqueue(AsyncLoggerConfigDisruptor.java:365)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.enqueueEvent(AsyncLoggerConfigDisruptor.java:320)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.logInBackgroundThread(AsyncLoggerConfig.java:181)
+        at org.apache.logging.log4j.core.async.EventRoute$1.logMessage(EventRoute.java:46)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.handleQueueFull(AsyncLoggerConfig.java:171)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.logToAsyncDelegate(AsyncLoggerConfig.java:158)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.log(AsyncLoggerConfig.java:138)
+        at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:560)
+        at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+        at org.apache.logging.log4j.core.Logger.log(Logger.java:162)
+        at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+        at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+        at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+        at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1836)
+        at org.apache.logging.log4j.spi.AbstractLogger.info(AbstractLogger.java:1290)
+        at org.apache.logging.log4j.core.async.QueueFullAsyncLoggerConfigTest.asyncLoggerConfigTest(QueueFullAsyncLoggerConfigTest.java:81)
+        at org.apache.logging.log4j.core.async.QueueFullAsyncLoggerConfigTest.testNormalQueueFullKeepsMessagesInOrder(QueueFullAsyncLoggerConfigTest.java:70)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+    Thread 31 created by thread 1
+        at org.junit.internal.runners.statements.FailOnTimeout.evaluate(FailOnTimeout.java:126)
+
+    Write in thread 30
+      > at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.clear(AsyncLoggerConfigDisruptor.java:81)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapperHandler.onEvent(AsyncLoggerConfigDisruptor.java:113)
+        at com.lmax.disruptor.BatchEventProcessor.processEvents(BatchEventProcessor.java:168)
+        at com.lmax.disruptor.BatchEventProcessor.run(BatchEventProcessor.java:125)
+    Thread 30 created by thread 1
+        at com.lmax.disruptor.dsl.BasicExecutor.execute(BasicExecutor.java:30)
+
+
+Data race on field org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.event:
+    Write in thread 31 holding lock Monitor@89691515
+      > at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.access$002(AsyncLoggerConfigDisruptor.java:66)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$$Lambda$409.translateTo(Unknown:n/a)
+        at com.lmax.disruptor.RingBuffer.translateAndPublish(RingBuffer.java:986)
+        at com.lmax.disruptor.RingBuffer.publishEvent(RingBuffer.java:525)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.enqueue(AsyncLoggerConfigDisruptor.java:366)
+        - locked Monitor@89691515 at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.enqueue(AsyncLoggerConfigDisruptor.java:365)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.enqueueEvent(AsyncLoggerConfigDisruptor.java:320)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.logInBackgroundThread(AsyncLoggerConfig.java:181)
+        at org.apache.logging.log4j.core.async.EventRoute$1.logMessage(EventRoute.java:46)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.handleQueueFull(AsyncLoggerConfig.java:171)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.logToAsyncDelegate(AsyncLoggerConfig.java:158)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.log(AsyncLoggerConfig.java:138)
+        at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:560)
+        at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+        at org.apache.logging.log4j.core.Logger.log(Logger.java:162)
+        at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+        at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+        at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+        at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1836)
+        at org.apache.logging.log4j.spi.AbstractLogger.info(AbstractLogger.java:1290)
+        at org.apache.logging.log4j.core.async.QueueFullAsyncLoggerConfigTest.asyncLoggerConfigTest(QueueFullAsyncLoggerConfigTest.java:81)
+        at org.apache.logging.log4j.core.async.QueueFullAsyncLoggerConfigTest.testNormalQueueFullKeepsMessagesInOrder(QueueFullAsyncLoggerConfigTest.java:70)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+    Thread 31 created by thread 1
+        at org.junit.internal.runners.statements.FailOnTimeout.evaluate(FailOnTimeout.java:126)
+
+    Read in thread 30
+      > at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.clear(AsyncLoggerConfigDisruptor.java:82)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapperHandler.onEvent(AsyncLoggerConfigDisruptor.java:113)
+        at com.lmax.disruptor.BatchEventProcessor.processEvents(BatchEventProcessor.java:168)
+        at com.lmax.disruptor.BatchEventProcessor.run(BatchEventProcessor.java:125)
+    Thread 30 created by thread 1
+        at com.lmax.disruptor.dsl.BasicExecutor.execute(BasicExecutor.java:30)
+
+
+Data race on field org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.event:
+    Write in thread 31 holding lock Monitor@89691515
+      > at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.access$002(AsyncLoggerConfigDisruptor.java:66)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$$Lambda$409.translateTo(Unknown:n/a)
+        at com.lmax.disruptor.RingBuffer.translateAndPublish(RingBuffer.java:986)
+        at com.lmax.disruptor.RingBuffer.publishEvent(RingBuffer.java:525)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.enqueue(AsyncLoggerConfigDisruptor.java:366)
+        - locked Monitor@89691515 at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.enqueue(AsyncLoggerConfigDisruptor.java:365)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor.enqueueEvent(AsyncLoggerConfigDisruptor.java:320)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.logInBackgroundThread(AsyncLoggerConfig.java:181)
+        at org.apache.logging.log4j.core.async.EventRoute$1.logMessage(EventRoute.java:46)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.handleQueueFull(AsyncLoggerConfig.java:171)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.logToAsyncDelegate(AsyncLoggerConfig.java:158)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfig.log(AsyncLoggerConfig.java:138)
+        at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:560)
+        at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+        at org.apache.logging.log4j.core.Logger.log(Logger.java:162)
+        at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+        at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+        at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+        at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1836)
+        at org.apache.logging.log4j.spi.AbstractLogger.info(AbstractLogger.java:1290)
+        at org.apache.logging.log4j.core.async.QueueFullAsyncLoggerConfigTest.asyncLoggerConfigTest(QueueFullAsyncLoggerConfigTest.java:81)
+        at org.apache.logging.log4j.core.async.QueueFullAsyncLoggerConfigTest.testNormalQueueFullKeepsMessagesInOrder(QueueFullAsyncLoggerConfigTest.java:70)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+    Thread 31 created by thread 1
+        at org.junit.internal.runners.statements.FailOnTimeout.evaluate(FailOnTimeout.java:126)
+
+    Write in thread 30
+      > at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapper.clear(AsyncLoggerConfigDisruptor.java:85)
+        at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapperHandler.onEvent(AsyncLoggerConfigDisruptor.java:113)
+        at com.lmax.disruptor.BatchEventProcessor.processEvents(BatchEventProcessor.java:168)
+        at com.lmax.disruptor.BatchEventProcessor.run(BatchEventProcessor.java:125)
+    Thread 30 created by thread 1
+        at com.lmax.disruptor.dsl.BasicExecutor.execute(BasicExecutor.java:30)
+
+

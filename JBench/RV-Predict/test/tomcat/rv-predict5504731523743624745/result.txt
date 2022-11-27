@@ -1,0 +1,104 @@
+Data race on field org.apache.tools.ant.taskdefs.StreamPumper$PostStopHandle.inPostStopTasks:
+    Write in thread 29
+      > at org.apache.tools.ant.taskdefs.StreamPumper$PostStopHandle.access$102(StreamPumper.java:285)
+        at org.apache.tools.ant.taskdefs.StreamPumper.doPostStop(StreamPumper.java:275)
+        at org.apache.tools.ant.taskdefs.StreamPumper.run(StreamPumper.java:147)
+    Thread 29 created by thread 1
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.start(PumpStreamHandler.java:166)
+
+    Read in thread 1
+      > at org.apache.tools.ant.taskdefs.StreamPumper$PostStopHandle.isInPostStopTasks(StreamPumper.java:295)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.finish(PumpStreamHandler.java:199)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.stop(PumpStreamHandler.java:159)
+        at org.apache.tools.ant.taskdefs.Execute.execute(Execute.java:464)
+        at org.apache.tools.ant.taskdefs.ExecTask.runExecute(ExecTask.java:660)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runParallel(ExecuteOn.java:702)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runExec(ExecuteOn.java:474)
+        at org.apache.tools.ant.taskdefs.ExecTask.execute(ExecTask.java:527)
+        at org.apache.tools.ant.taskdefs.Chmod.execute(Chmod.java:186)
+        at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:299)
+        at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:99)
+        at org.apache.tools.ant.Task.perform(Task.java:350)
+        at org.apache.tools.ant.Target.execute(Target.java:449)
+        at org.apache.tools.ant.Target.performTasks(Target.java:470)
+        at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1401)
+        at org.apache.tools.ant.Project.executeTarget(Project.java:1374)
+        at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+        at org.apache.tools.ant.Project.executeTargets(Project.java:1264)
+        at org.apache.tools.ant.Main.runBuild(Main.java:818)
+        at org.apache.tools.ant.Main.startAnt(Main.java:223)
+        at org.apache.tools.ant.launch.Launcher.run(Launcher.java:284)
+        at org.apache.tools.ant.launch.Launcher.main(Launcher.java:101)
+    Thread 1 is the main thread
+
+
+Data race on field org.apache.tools.ant.taskdefs.StreamPumper.postStopHandle:
+    Read in thread 28
+      > at org.apache.tools.ant.taskdefs.StreamPumper.doPostStop(StreamPumper.java:273)
+        at org.apache.tools.ant.taskdefs.StreamPumper.run(StreamPumper.java:147)
+    Thread 28 created by thread 1
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.start(PumpStreamHandler.java:166)
+
+    Write in thread 1 holding lock Monitor@223186532
+      > at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:228)
+        at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:228)
+        - locked Monitor@223186532 at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:n/a)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.finish(PumpStreamHandler.java:197)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.stop(PumpStreamHandler.java:158)
+        at org.apache.tools.ant.taskdefs.Execute.execute(Execute.java:464)
+        at org.apache.tools.ant.taskdefs.ExecTask.runExecute(ExecTask.java:660)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runParallel(ExecuteOn.java:702)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runExec(ExecuteOn.java:474)
+        at org.apache.tools.ant.taskdefs.ExecTask.execute(ExecTask.java:527)
+        at org.apache.tools.ant.taskdefs.Chmod.execute(Chmod.java:186)
+        at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:299)
+        at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:99)
+        at org.apache.tools.ant.Task.perform(Task.java:350)
+        at org.apache.tools.ant.Target.execute(Target.java:449)
+        at org.apache.tools.ant.Target.performTasks(Target.java:470)
+        at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1401)
+        at org.apache.tools.ant.Project.executeTarget(Project.java:1374)
+        at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+        at org.apache.tools.ant.Project.executeTargets(Project.java:1264)
+        at org.apache.tools.ant.Main.runBuild(Main.java:818)
+        at org.apache.tools.ant.Main.startAnt(Main.java:223)
+        at org.apache.tools.ant.launch.Launcher.run(Launcher.java:284)
+        at org.apache.tools.ant.launch.Launcher.main(Launcher.java:101)
+    Thread 1 is the main thread
+
+
+Data race on field org.apache.tools.ant.taskdefs.StreamPumper.postStopHandle:
+    Read in thread 29
+      > at org.apache.tools.ant.taskdefs.StreamPumper.doPostStop(StreamPumper.java:274)
+        at org.apache.tools.ant.taskdefs.StreamPumper.run(StreamPumper.java:147)
+    Thread 29 created by thread 1
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.start(PumpStreamHandler.java:166)
+
+    Write in thread 1 holding lock Monitor@592005669
+      > at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:228)
+        at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:228)
+        - locked Monitor@592005669 at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:n/a)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.finish(PumpStreamHandler.java:197)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.stop(PumpStreamHandler.java:159)
+        at org.apache.tools.ant.taskdefs.Execute.execute(Execute.java:464)
+        at org.apache.tools.ant.taskdefs.ExecTask.runExecute(ExecTask.java:660)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runParallel(ExecuteOn.java:702)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runExec(ExecuteOn.java:474)
+        at org.apache.tools.ant.taskdefs.ExecTask.execute(ExecTask.java:527)
+        at org.apache.tools.ant.taskdefs.Chmod.execute(Chmod.java:186)
+        at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:299)
+        at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:99)
+        at org.apache.tools.ant.Task.perform(Task.java:350)
+        at org.apache.tools.ant.Target.execute(Target.java:449)
+        at org.apache.tools.ant.Target.performTasks(Target.java:470)
+        at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1401)
+        at org.apache.tools.ant.Project.executeTarget(Project.java:1374)
+        at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+        at org.apache.tools.ant.Project.executeTargets(Project.java:1264)
+        at org.apache.tools.ant.Main.runBuild(Main.java:818)
+        at org.apache.tools.ant.Main.startAnt(Main.java:223)
+        at org.apache.tools.ant.launch.Launcher.run(Launcher.java:284)
+        at org.apache.tools.ant.launch.Launcher.main(Launcher.java:101)
+    Thread 1 is the main thread
+
+

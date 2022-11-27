@@ -1,0 +1,601 @@
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg:
+    Write in thread 1 holding locks Monitor@103887628, Monitor@1698023447, Monitor@1131316523, Monitor@387117401
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:197)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@387117401 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@1131316523 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:467)
+        - locked Monitor@1698023447 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:463)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@103887628 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.tearDown(TestNonBlockingCoordinator.java:127)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+    Read in thread 63
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:199)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 63 created by thread 30
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.msgCount:
+    Write in thread 63
+      > at org.apache.catalina.tribes.membership.MemberImpl.inc(MemberImpl.java:155)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:497)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 63 created by thread 30
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+    Read in thread 1 holding locks Monitor@103887628, Monitor@1698023447, Monitor@1131316523, Monitor@387117401
+      > at org.apache.catalina.tribes.membership.MemberImpl.inc(MemberImpl.java:155)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:331)
+        - locked Monitor@387117401 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@1131316523 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:467)
+        - locked Monitor@1698023447 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:463)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@103887628 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.tearDown(TestNonBlockingCoordinator.java:127)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg:
+    Read in thread 63
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:206)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 63 created by thread 30
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+    Write in thread 1 holding locks Monitor@103887628, Monitor@1698023447, Monitor@1131316523, Monitor@387117401
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:286)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@387117401 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@1131316523 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:467)
+        - locked Monitor@1698023447 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:463)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@103887628 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.tearDown(TestNonBlockingCoordinator.java:127)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg:
+    Read in thread 63
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:199)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 63 created by thread 30
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+    Write in thread 1 holding locks Monitor@103887628, Monitor@1698023447, Monitor@1131316523, Monitor@387117401
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:286)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@387117401 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@1131316523 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:467)
+        - locked Monitor@1698023447 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:463)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@103887628 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.tearDown(TestNonBlockingCoordinator.java:127)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.serviceStartTime:
+    Read in thread 63
+      > at org.apache.catalina.tribes.membership.MemberImpl.getServiceStartTime(MemberImpl.java:470)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:203)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 63 created by thread 30
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+    Write in thread 1 holding locks Monitor@103887628, Monitor@1698023447, Monitor@1131316523, Monitor@387117401
+      > at org.apache.catalina.tribes.membership.MemberImpl.setServiceStartTime(MemberImpl.java:590)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:335)
+        - locked Monitor@387117401 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@1131316523 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:467)
+        - locked Monitor@1698023447 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:463)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@103887628 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.tearDown(TestNonBlockingCoordinator.java:127)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg:
+    Write in thread 1 holding locks Monitor@103887628, Monitor@1698023447, Monitor@1131316523, Monitor@387117401
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:197)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@387117401 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@1131316523 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:467)
+        - locked Monitor@1698023447 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:463)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@103887628 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.tearDown(TestNonBlockingCoordinator.java:127)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+    Read in thread 63
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:206)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 63 created by thread 30
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg:
+    Read in thread 63
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 63 created by thread 30
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+    Write in thread 1 holding locks Monitor@103887628, Monitor@1698023447, Monitor@1131316523, Monitor@387117401
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:286)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@387117401 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@1131316523 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:467)
+        - locked Monitor@1698023447 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:463)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@103887628 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.tearDown(TestNonBlockingCoordinator.java:127)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg:
+    Write in thread 1 holding locks Monitor@103887628, Monitor@1698023447, Monitor@1131316523, Monitor@387117401
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:197)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@387117401 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@1131316523 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:467)
+        - locked Monitor@1698023447 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.stop(NonBlockingCoordinator.java:463)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@103887628 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.tearDown(TestNonBlockingCoordinator.java:127)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    Thread 1 is the main thread
+
+    Read in thread 63
+      > at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 63 created by thread 30
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+
+Data race on array element #14:
+    Read in thread 77 holding locks Monitor@11902257, Monitor@275579198
+      > at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:726)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    Thread 77 created by thread 1
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Write in thread 107
+      > at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:482)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 107 created by thread 77
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+
+Data race on array element #15:
+    Read in thread 77 holding locks Monitor@11902257, Monitor@275579198
+      > at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    Thread 77 created by thread 1
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Write in thread 107
+      > at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:480)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 107 created by thread 77
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+
+Data race on array element #21:
+    Read in thread 77 holding locks Monitor@11902257, Monitor@275579198
+      > at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    Thread 77 created by thread 1
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Write in thread 107
+      > at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:468)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 107 created by thread 77
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+
+Data race on array element #20:
+    Read in thread 77 holding locks Monitor@11902257, Monitor@275579198
+      > at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    Thread 77 created by thread 1
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Write in thread 107
+      > at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:470)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 107 created by thread 77
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+
+Data race on array element #16:
+    Read in thread 77 holding locks Monitor@11902257, Monitor@275579198
+      > at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    Thread 77 created by thread 1
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Write in thread 107
+      > at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:478)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 107 created by thread 77
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+
+Data race on array element #17:
+    Read in thread 77 holding locks Monitor@11902257, Monitor@275579198
+      > at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    Thread 77 created by thread 1
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Write in thread 107
+      > at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:476)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 107 created by thread 77
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+
+Data race on array element #18:
+    Read in thread 77 holding locks Monitor@11902257, Monitor@275579198
+      > at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    Thread 77 created by thread 1
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Write in thread 107
+      > at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:474)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 107 created by thread 77
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+
+Data race on array element #19:
+    Read in thread 77 holding locks Monitor@11902257, Monitor@275579198
+      > at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    Thread 77 created by thread 1
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Write in thread 107
+      > at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:472)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    Thread 107 created by thread 77
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+

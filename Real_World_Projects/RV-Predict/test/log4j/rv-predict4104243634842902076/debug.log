@@ -1,0 +1,16 @@
+Unable to find the collection accessed by com.google.common.collect.Iterators$7@30c0ccff
+Unable to find the collection accessed by com.google.common.collect.Iterators$6@664da60d
+Unable to find the collection accessed by org.apache.http.message.BasicListHeaderIterator@3053c099
+Unable to find the collection accessed by com.fasterxml.jackson.databind.introspect.POJOPropertyBuilder$MemberIterator@7fa29b43
+Unable to find the collection accessed by org.apache.http.message.BasicTokenIterator@5a235a58
+Unable to find the collection accessed by org.apache.http.message.BasicHeaderElementIterator@2db66b49
+java.util.NoSuchElementException: No value present
+	at java.util.OptionalInt.getAsInt(OptionalInt.java:118)
+	at com.runtimeverification.rvpredict.trace.TraceState.onStartThread(TraceState.java:339)
+	at com.runtimeverification.rvpredict.trace.TraceState.maintainStateAtCurrentWindowEnd(TraceState.java:247)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.runtimeverification.rvpredict.trace.TraceState.processWindow(TraceState.java:255)
+	at com.runtimeverification.rvpredict.trace.TraceState.initNextTraceWindow(TraceState.java:119)
+	at com.runtimeverification.rvpredict.log.VolatileLoggingEngine.runRaceDetection(VolatileLoggingEngine.java:245)
+	at com.runtimeverification.rvpredict.log.VolatileLoggingEngine.finishLogging(VolatileLoggingEngine.java:146)
+	at com.runtimeverification.rvpredict.engine.main.RVPredict$1.run(RVPredict.java:140)

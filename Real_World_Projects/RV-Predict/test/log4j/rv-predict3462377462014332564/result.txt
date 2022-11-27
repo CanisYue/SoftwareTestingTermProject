@@ -1,0 +1,35 @@
+Data race on field io.netty.util.internal.shaded.org.jctools.queues.MpscUnboundedArrayQueue.$state:
+    Write in thread 48 holding locks WriteLock@57357960, ReadLock@1328563765
+      > at io.netty.util.concurrent.SingleThreadEventExecutor.offerTask(SingleThreadEventExecutor.java:353)
+        at io.netty.util.concurrent.SingleThreadEventExecutor.addTask(SingleThreadEventExecutor.java:344)
+        at io.netty.util.concurrent.SingleThreadEventExecutor.execute(SingleThreadEventExecutor.java:836)
+        at io.netty.util.concurrent.SingleThreadEventExecutor.execute0(SingleThreadEventExecutor.java:827)
+        at io.netty.util.concurrent.SingleThreadEventExecutor.execute(SingleThreadEventExecutor.java:817)
+        at io.netty.channel.AbstractChannelHandlerContext.safeExecute(AbstractChannelHandlerContext.java:989)
+        at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:796)
+        at io.netty.channel.AbstractChannelHandlerContext.writeAndFlush(AbstractChannelHandlerContext.java:758)
+        at io.netty.channel.AbstractChannelHandlerContext.writeAndFlush(AbstractChannelHandlerContext.java:808)
+        at io.netty.channel.DefaultChannelPipeline.writeAndFlush(DefaultChannelPipeline.java:1025)
+        at io.netty.channel.AbstractChannel.writeAndFlush(AbstractChannel.java:306)
+        at org.apache.avro.ipc.netty.NettyTransceiver.writeDataPack(NettyTransceiver.java:478)
+        at org.apache.avro.ipc.netty.NettyTransceiver.transceive(NettyTransceiver.java:440)
+        - locked ReadLock@1328563765 at java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock(ReentrantReadWriteLock.java:n/a)
+        at org.apache.avro.ipc.Requestor.request(Requestor.java:152)
+        - locked WriteLock@57357960 at java.util.concurrent.locks.ReentrantLock(ReentrantLock.java:n/a)
+        at org.apache.avro.ipc.Requestor.request(Requestor.java:135)
+        at org.apache.avro.ipc.specific.SpecificRequestor.invoke(SpecificRequestor.java:105)
+        at org.apache.flume.api.NettyAvroRpcClient$2.call(NettyAvroRpcClient.java:307)
+    Thread 48 created by thread 44
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 46
+      > at io.netty.util.concurrent.SingleThreadEventExecutor.pollTaskFrom(SingleThreadEventExecutor.java:216)
+        at io.netty.util.concurrent.SingleThreadEventExecutor.pollTask(SingleThreadEventExecutor.java:211)
+        at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:460)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+    Thread 46 created by thread 44
+        at io.netty.util.concurrent.ThreadPerTaskExecutor.execute(ThreadPerTaskExecutor.java:32)
+
+

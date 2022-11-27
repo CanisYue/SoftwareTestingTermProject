@@ -1,0 +1,32 @@
+Data race on field org.kframework.parser.concrete2kore.kernel.Grammar$State.counter: {{{
+    Concurrent write in thread T1 (locks held: {})
+ ---->  at org.kframework.parser.concrete2kore.kernel.Grammar$State.<init>(Grammar.java:373)
+        at org.kframework.parser.concrete2kore.kernel.Grammar$NonTerminal.<init>(Grammar.java:287)
+        at org.kframework.parser.concrete2kore.kernel.KSyntax2GrammarStatesFilter.getGrammar(KSyntax2GrammarStatesFilter.java:44)
+        at org.kframework.parser.concrete2kore.ParseInModule.getGrammar(ParseInModule.java:100)
+        at org.kframework.parser.concrete2kore.ParseInModule.parseString(ParseInModule.java:107)
+        at org.kframework.kompile.Kompile.performParse(Kompile.java:406)
+        at org.kframework.kompile.Kompile.lambda$resolveBubbles$30(Kompile.java:315)
+        at org.kframework.kompile.Kompile$$Lambda$110.apply(Unknown:n/a)
+        at org.kframework.kompile.Kompile$$Lambda$102.apply(Unknown:n/a)
+        at org.kframework.definition.DefinitionTransformer.apply(transformers.scala:63)
+        at org.kframework.kompile.Kompile.parseDefinition(Kompile.java:247)
+        at org.kframework.kompile.Kompile.run(Kompile.java:125)
+        at org.kframework.kompile.KompileFrontEnd.run(KompileFrontEnd.java:89)
+        at org.kframework.main.FrontEnd.main(FrontEnd.java:52)
+        at org.kframework.main.Main.runApplication(Main.java:109)
+        at org.kframework.main.Main.runApplication(Main.java:99)
+        at org.kframework.main.Main.main(Main.java:51)
+    T1 is the main thread
+
+    Concurrent read in thread T16 (locks held: {})
+ ---->  at org.kframework.parser.concrete2kore.kernel.Grammar$State.<init>(Grammar.java:373)
+        at org.kframework.parser.concrete2kore.kernel.Grammar$NonTerminal.<init>(Grammar.java:287)
+        at org.kframework.parser.concrete2kore.kernel.KSyntax2GrammarStatesFilter.getGrammar(KSyntax2GrammarStatesFilter.java:44)
+        at org.kframework.parser.concrete2kore.ParseInModule.getGrammar(ParseInModule.java:100)
+        at org.kframework.parser.concrete2kore.ParseInModule.parseString(ParseInModule.java:107)
+        at org.kframework.kompile.Kompile.performParse(Kompile.java:406)
+        at org.kframework.kompile.Kompile.lambda$resolveBubbles$30(Kompile.java:315)
+        at org.kframework.kompile.Kompile$$Lambda$110.apply(Unknown:n/a)
+    T16 is created by n/a
+}}}

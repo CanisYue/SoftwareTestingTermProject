@@ -1,0 +1,48 @@
+Data race on field org.apache.coyote.AbstractProcessor.socketWrapper:
+    Read in thread 42
+      > at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:907)
+        at org.apache.coyote.Response.action(Response.java:179)
+        at org.apache.coyote.Response.setWriteListener(Response.java:603)
+        at org.apache.catalina.connector.OutputBuffer.setWriteListener(OutputBuffer.java:668)
+        at org.apache.catalina.connector.CoyoteOutputStream.setWriteListener(CoyoteOutputStream.java:162)
+        at org.apache.catalina.connector.TestCoyoteOutputStream$NonBlockingWriteServlet$AsyncTask.run(TestCoyoteOutputStream.java:199)
+        at org.apache.catalina.core.AsyncContextImpl$RunnableWrapper.run(AsyncContextImpl.java:562)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 42 created by thread 41
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 41 holding lock Monitor@1644917052
+      > at org.apache.coyote.http11.Http11Processor.recycleInternal(Http11Processor.java:214)
+        at org.apache.coyote.http11.AbstractHttp11Processor.recycle(AbstractHttp11Processor.java:1838)
+        at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.release(Http11Protocol.java:143)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:727)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+        - locked Monitor@1644917052 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 41 created by thread 39
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.coyote.AbstractProcessor.socketWrapper:
+    Write in thread 43 holding lock Monitor@1644917052
+      > at org.apache.coyote.AbstractProcessor.setSocketWrapper(AbstractProcessor.java:145)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:279)
+        - locked Monitor@1644917052 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 43 created by thread 41
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 42
+      > at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:907)
+        at org.apache.coyote.Response.action(Response.java:179)
+        at org.apache.coyote.Response.setWriteListener(Response.java:603)
+        at org.apache.catalina.connector.OutputBuffer.setWriteListener(OutputBuffer.java:668)
+        at org.apache.catalina.connector.CoyoteOutputStream.setWriteListener(CoyoteOutputStream.java:162)
+        at org.apache.catalina.connector.TestCoyoteOutputStream$NonBlockingWriteServlet$AsyncTask.run(TestCoyoteOutputStream.java:199)
+        at org.apache.catalina.core.AsyncContextImpl$RunnableWrapper.run(AsyncContextImpl.java:562)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 42 created by thread 41
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+

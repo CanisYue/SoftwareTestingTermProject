@@ -1,0 +1,24 @@
+Data race on field org.apache.tomcat.util.buf.MessageBytes.hasStrValue:
+    Read in thread 33 holding lock Monitor@401380651
+      > at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:156)
+        at org.apache.catalina.connector.Request.getRequestURI(Request.java:2177)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:202)
+        - locked Monitor@401380651 at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:192)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:187)
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet$1.run(TestAsyncContextImpl.java:710)
+    Thread 33 created by thread 32
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet.doGet(TestAsyncContextImpl.java:715)
+
+    Write in thread 32 holding lock Monitor@1351476368
+      > at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:167)
+        at org.apache.coyote.RequestInfo.updateCounters(RequestInfo.java:167)
+        at org.apache.coyote.Request.updateCounters(Request.java:566)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1153)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+        - locked Monitor@1351476368 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 32 created by thread 30
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+

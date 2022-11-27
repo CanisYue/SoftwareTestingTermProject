@@ -1,0 +1,131 @@
+Missing write events on 1872875924563688202
+Missing write events on 1222652819803208458
+Missing write events on 5088134548823210762
+Missing write events on 4252648905923099402
+Missing write events on 4280852921068813066
+Missing write events on 8228573653080472330
+Cannot retransform org/apache/jsp/unprotected_jsp
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [javax/servlet/http/HttpServlet.class]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1354)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1028)
+	at java.lang.ClassLoader.getResource(ClassLoader.java:1084)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.getResource(ClassFile.java:274)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.getInstance0(ClassFile.java:236)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.getInstance(ClassFile.java:227)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.isAssignableFrom(ClassFile.java:118)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.isAssignableFrom(ClassFile.java:120)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.isSubtypeOf(ClassFile.java:305)
+	at com.runtimeverification.rvpredict.instrument.InstrumentUtils.needToInstrument(InstrumentUtils.java:68)
+	at com.runtimeverification.rvpredict.instrument.Agent.transform(Agent.java:201)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:131)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:62)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:129)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:171)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:375)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1526)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1482)
+	at com.runtimeverification.rvpredict.runtime.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1220)
+	at com.runtimeverification.rvpredict.runtime.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:648)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Missing write events on 5516956216938461962
+Missing write events on 7604569953567505162
+Missing write events on 5275219123758955935
+Missing write events on 3830376856775817994
+Missing write events on 4301662574488845066
+Missing write events on 6206771051787975434
+Missing write events on 6349182976093321994
+Missing write events on 6839428882769115914
+Missing write events on 2509950665552296714
+Missing write events on 3332809826156673802
+Missing write events on 852915835663022858
+Missing write events on 7604314123840519583
+Missing write events on 7399582644977007370
+Missing write events on 5481179298276571914
+Missing write events on 504245438476451231
+Missing write events on 265354495569951498
+Missing write events on 942814448970627850
+Missing write events on 5511975304710585098
+Missing write events on 2817272197104532234
+Cannot retransform org/apache/jsp/WEB_002dINF/jsp/bug53574_jsp
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [javax/servlet/http/HttpServlet.class]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1354)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1028)
+	at java.lang.ClassLoader.getResource(ClassLoader.java:1084)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.getResource(ClassFile.java:274)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.getInstance0(ClassFile.java:236)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.getInstance(ClassFile.java:227)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.isAssignableFrom(ClassFile.java:118)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.isAssignableFrom(ClassFile.java:120)
+	at com.runtimeverification.rvpredict.metadata.ClassFile.isSubtypeOf(ClassFile.java:305)
+	at com.runtimeverification.rvpredict.instrument.InstrumentUtils.needToInstrument(InstrumentUtils.java:68)
+	at com.runtimeverification.rvpredict.instrument.Agent.transform(Agent.java:201)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:131)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:62)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:129)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:171)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:375)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.init(JspServlet.java:138)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1408)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1398)
+	at com.runtimeverification.rvpredict.runtime.java.util.concurrent.FutureTask.run(FutureTask.java:294)
+	at com.runtimeverification.rvpredict.runtime.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1220)
+	at com.runtimeverification.rvpredict.runtime.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:648)
+	at java.lang.Thread.run(Thread.java:750)
+Missing write events on 3902976037599837257
+Missing write events on 3902976037599837259
+Missing write events on 7933924598628743946
+Missing write events on 290587879405517578
+Missing write events on 2407435216445504266
+Missing write events on 1041616018381732618
+Missing write events on 3557640403345734410
+Missing write events on 4460786238017764106
+Missing write events on 9132511041635220234
+Missing write events on 3526764128267926282
+Missing write events on 4210715727168011018
+Missing write events on 8534328200174500618
+Missing write events on 159574776828918538
+Missing write events on 6426886605289552650

@@ -1,0 +1,56 @@
+Data race on field org.apache.coyote.http11.AbstractHttp11Processor.keepAlive:
+    Write in thread 68
+      > at org.apache.coyote.http11.AbstractHttp11Processor.prepareResponse(AbstractHttp11Processor.java:1547)
+        at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:740)
+        at org.apache.coyote.Response.action(Response.java:179)
+        at org.apache.coyote.http11.AbstractOutputBuffer.doWrite(AbstractOutputBuffer.java:249)
+        at org.apache.coyote.Response.doWrite(Response.java:503)
+        at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:388)
+        at org.apache.tomcat.util.buf.ByteChunk.append(ByteChunk.java:315)
+        at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:418)
+        at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:406)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:97)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:90)
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet$1.run(TestCoyoteAdapter.java:387)
+    Thread 68 created by thread 67
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet.doGet(TestCoyoteAdapter.java:409)
+
+    Read in thread 67 holding lock Monitor@222481124
+      > at org.apache.coyote.http11.Http11Nio2Processor.breakKeepAliveLoop(Http11Nio2Processor.java:279)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@222481124 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 67 created by thread 66
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+
+Data race on field org.apache.coyote.http11.AbstractHttp11Processor.keepAlive:
+    Write in thread 68
+      > at org.apache.coyote.http11.AbstractHttp11Processor.prepareResponse(AbstractHttp11Processor.java:1547)
+        at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:740)
+        at org.apache.coyote.Response.action(Response.java:179)
+        at org.apache.coyote.http11.AbstractOutputBuffer.doWrite(AbstractOutputBuffer.java:249)
+        at org.apache.coyote.Response.doWrite(Response.java:503)
+        at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:388)
+        at org.apache.tomcat.util.buf.ByteChunk.append(ByteChunk.java:315)
+        at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:418)
+        at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:406)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:97)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:90)
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet$1.run(TestCoyoteAdapter.java:387)
+    Thread 68 created by thread 67
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet.doGet(TestCoyoteAdapter.java:409)
+
+    Read in thread 67 holding lock Monitor@222481124
+      > at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:998)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@222481124 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 67 created by thread 66
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+

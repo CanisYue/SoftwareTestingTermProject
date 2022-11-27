@@ -1,0 +1,2 @@
+Unable to find the collection accessed by org.h2.mvstore.Cursor@27953a83
+Unable to find the common superclass of org/locationtech/jts/geom/Geometry and java/lang/String while transforming org/h2/value/ValueToObjectConverter

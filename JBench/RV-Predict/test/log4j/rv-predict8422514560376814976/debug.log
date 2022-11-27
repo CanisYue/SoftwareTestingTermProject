@@ -1,0 +1,15 @@
+Unable to resolve field org/apache/log4j/Level.DEBUG in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.DEBUG in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.INFO in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.INFO in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.WARN in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.WARN in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.ERROR in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.ERROR in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.FATAL in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.FATAL in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.ERROR in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.FATAL in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.WARN in class org/apache/commons/logging/impl/Log4JLogger
+Unable to resolve field org/apache/log4j/Level.DEBUG in class org/apache/commons/logging/impl/Log4JLogger
+Unable to find the common superclass of org/apache/log4j/Level and org/apache/log4j/Priority while transforming org/apache/commons/logging/impl/Log4JLogger

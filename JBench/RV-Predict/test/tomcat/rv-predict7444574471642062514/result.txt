@@ -1,0 +1,25 @@
+Data race on field org.apache.catalina.connector.OutputBuffer.suspended:
+    Write in thread 54 holding lock Monitor@1139823033
+      > at org.apache.catalina.connector.OutputBuffer.setSuspended(OutputBuffer.java:210)
+        at org.apache.catalina.connector.Response.setSuspended(Response.java:392)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:167)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+        - locked Monitor@1139823033 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    Thread 54 created by thread 52
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 55
+      > at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:402)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:97)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:90)
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet$1.run(TestCoyoteAdapter.java:387)
+    Thread 55 created by thread 54
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet.doGet(TestCoyoteAdapter.java:409)
+
+

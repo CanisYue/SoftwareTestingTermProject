@@ -1,0 +1,154 @@
+Data race on field com.google.common.base.FinalizableReferenceQueueTest.frq:
+    Write in thread 3366
+      > at com.google.common.base.FinalizableReferenceQueueTest.access$002(FinalizableReferenceQueueTest.java:34)
+        at com.google.common.base.FinalizableReferenceQueueTest$2.finalizeReferent(FinalizableReferenceQueueTest.java:100)
+        at com.google.common.base.internal.Finalizer.cleanUp(Finalizer.java:181)
+        at com.google.common.base.internal.Finalizer.run(Finalizer.java:146)
+    Thread 3366 created by thread 1
+        at com.google.common.base.internal.Finalizer.startFinalizer(Finalizer.java:110)
+
+    Read in thread 1
+      > at com.google.common.base.FinalizableReferenceQueueTest.weaklyReferenceQueue(FinalizableReferenceQueueTest.java:95)
+        at com.google.common.base.FinalizableReferenceQueueTest.testThatFinalizerStops(FinalizableReferenceQueueTest.java:78)
+        at junit.framework.TestCase.runTest(TestCase.java:177)
+        at junit.framework.TestCase.runBare(TestCase.java:142)
+        at junit.framework.TestResult$1.protect(TestResult.java:122)
+        at junit.framework.TestResult.runProtected(TestResult.java:142)
+        at junit.framework.TestResult.run(TestResult.java:125)
+        at junit.framework.TestCase.run(TestCase.java:130)
+        at junit.framework.TestSuite.runTest(TestSuite.java:241)
+        at junit.framework.TestSuite.run(TestSuite.java:236)
+        at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+        at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:115)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+        at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+        at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+        at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+    Thread 1 is the main thread
+
+
+Data race on field com.google.common.base.FinalizableReferenceQueueTest.frq:
+    Write in thread 3366
+      > at com.google.common.base.FinalizableReferenceQueueTest.access$002(FinalizableReferenceQueueTest.java:34)
+        at com.google.common.base.FinalizableReferenceQueueTest$2.finalizeReferent(FinalizableReferenceQueueTest.java:100)
+        at com.google.common.base.internal.Finalizer.cleanUp(Finalizer.java:181)
+        at com.google.common.base.internal.Finalizer.run(Finalizer.java:146)
+    Thread 3366 created by thread 1
+        at com.google.common.base.internal.Finalizer.startFinalizer(Finalizer.java:110)
+
+    Write in thread 1
+      > at com.google.common.base.FinalizableReferenceQueueTest.weaklyReferenceQueue(FinalizableReferenceQueueTest.java:87)
+        at com.google.common.base.FinalizableReferenceQueueTest.weaklyReferenceQueue(FinalizableReferenceQueueTest.java:87)
+        at com.google.common.base.FinalizableReferenceQueueTest.testThatFinalizerStops(FinalizableReferenceQueueTest.java:78)
+        at junit.framework.TestCase.runTest(TestCase.java:177)
+        at junit.framework.TestCase.runBare(TestCase.java:142)
+        at junit.framework.TestResult$1.protect(TestResult.java:122)
+        at junit.framework.TestResult.runProtected(TestResult.java:142)
+        at junit.framework.TestResult.run(TestResult.java:125)
+        at junit.framework.TestCase.run(TestCase.java:130)
+        at junit.framework.TestSuite.runTest(TestSuite.java:241)
+        at junit.framework.TestSuite.run(TestSuite.java:236)
+        at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+        at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:115)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+        at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+        at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+        at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+    Thread 1 is the main thread
+
+
+Data race on field com.google.common.base.FinalizableReferenceQueueTest.frq:
+    Write in thread 3366
+      > at com.google.common.base.FinalizableReferenceQueueTest.access$002(FinalizableReferenceQueueTest.java:34)
+        at com.google.common.base.FinalizableReferenceQueueTest$2.finalizeReferent(FinalizableReferenceQueueTest.java:100)
+        at com.google.common.base.internal.Finalizer.cleanUp(Finalizer.java:181)
+        at com.google.common.base.internal.Finalizer.run(Finalizer.java:146)
+    Thread 3366 created by thread 1
+        at com.google.common.base.internal.Finalizer.startFinalizer(Finalizer.java:110)
+
+    Read in thread 1
+      > at com.google.common.base.FinalizableReferenceQueueTest.weaklyReferenceQueue(FinalizableReferenceQueueTest.java:88)
+        at com.google.common.base.FinalizableReferenceQueueTest.testThatFinalizerStops(FinalizableReferenceQueueTest.java:78)
+        at junit.framework.TestCase.runTest(TestCase.java:177)
+        at junit.framework.TestCase.runBare(TestCase.java:142)
+        at junit.framework.TestResult$1.protect(TestResult.java:122)
+        at junit.framework.TestResult.runProtected(TestResult.java:142)
+        at junit.framework.TestResult.run(TestResult.java:125)
+        at junit.framework.TestCase.run(TestCase.java:130)
+        at junit.framework.TestSuite.runTest(TestSuite.java:241)
+        at junit.framework.TestSuite.run(TestSuite.java:236)
+        at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+        at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:115)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+        at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+        at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+        at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+    Thread 1 is the main thread
+
+
+Data race on field com.google.common.base.FinalizableReferenceQueueTest.reference:
+    Write in thread 3366
+      > at com.google.common.base.FinalizableReferenceQueueTest$2.finalizeReferent(FinalizableReferenceQueueTest.java:99)
+        at com.google.common.base.internal.Finalizer.cleanUp(Finalizer.java:181)
+        at com.google.common.base.internal.Finalizer.run(Finalizer.java:146)
+    Thread 3366 created by thread 1
+        at com.google.common.base.internal.Finalizer.startFinalizer(Finalizer.java:110)
+
+    Write in thread 1
+      > at com.google.common.base.FinalizableReferenceQueueTest.weaklyReferenceQueue(FinalizableReferenceQueueTest.java:95)
+        at com.google.common.base.FinalizableReferenceQueueTest.testThatFinalizerStops(FinalizableReferenceQueueTest.java:78)
+        at junit.framework.TestCase.runTest(TestCase.java:177)
+        at junit.framework.TestCase.runBare(TestCase.java:142)
+        at junit.framework.TestResult$1.protect(TestResult.java:122)
+        at junit.framework.TestResult.runProtected(TestResult.java:142)
+        at junit.framework.TestResult.run(TestResult.java:125)
+        at junit.framework.TestCase.run(TestCase.java:130)
+        at junit.framework.TestSuite.runTest(TestSuite.java:241)
+        at junit.framework.TestSuite.run(TestSuite.java:236)
+        at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+        at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:115)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+        at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+        at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+        at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+    Thread 1 is the main thread
+
+
+Data race on field com.google.common.base.FinalizableReferenceQueueTest.frq:
+    Write in thread 3366
+      > at com.google.common.base.FinalizableReferenceQueueTest.access$002(FinalizableReferenceQueueTest.java:34)
+        at com.google.common.base.FinalizableReferenceQueueTest$2.finalizeReferent(FinalizableReferenceQueueTest.java:100)
+        at com.google.common.base.internal.Finalizer.cleanUp(Finalizer.java:181)
+        at com.google.common.base.internal.Finalizer.run(Finalizer.java:146)
+    Thread 3366 created by thread 1
+        at com.google.common.base.internal.Finalizer.startFinalizer(Finalizer.java:110)
+
+    Write in thread 1
+      > at com.google.common.base.FinalizableReferenceQueueTest.tearDown(FinalizableReferenceQueueTest.java:40)
+        at junit.framework.TestCase.runTest(TestCase.java:177)
+        at junit.framework.TestCase.runBare(TestCase.java:142)
+        at junit.framework.TestResult$1.protect(TestResult.java:122)
+        at junit.framework.TestResult.runProtected(TestResult.java:142)
+        at junit.framework.TestResult.run(TestResult.java:125)
+        at junit.framework.TestCase.run(TestCase.java:130)
+        at junit.framework.TestSuite.runTest(TestSuite.java:241)
+        at junit.framework.TestSuite.run(TestSuite.java:236)
+        at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+        at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:115)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+        at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+        at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+        at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+    Thread 1 is the main thread
+
+

@@ -1,0 +1,42 @@
+Data race on field org.osgi.framework.Version.hash:
+    Read in thread 41 holding locks WriteLock@1215353569, ReadLock@1039655689, Monitor@119803080
+      > at org.osgi.framework.Version.hashCode(Version.java:340)
+        at org.eclipse.osgi.container.ModuleDatabase$Persistence.getStringsVersionsAndMaps(ModuleDatabase.java:1070)
+        at org.eclipse.osgi.container.ModuleDatabase$Persistence.store(ModuleDatabase.java:987)
+        at org.eclipse.osgi.container.ModuleDatabase.store(ModuleDatabase.java:864)
+        at org.eclipse.osgi.storage.Storage.save0(Storage.java:1174)
+        - locked Monitor@119803080 at org.eclipse.osgi.storage.Storage.save0(Storage.java:1166)
+        - locked ReadLock@1039655689 at java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock(ReentrantReadWriteLock.java:n/a)
+        at org.eclipse.osgi.storage.Storage.save(Storage.java:1142)
+        at org.eclipse.osgi.storage.Storage.close(Storage.java:431)
+        at org.eclipse.osgi.internal.framework.EquinoxContainer.close(EquinoxContainer.java:184)
+        at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:194)
+        at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+        at org.eclipse.osgi.container.Module.stop(Module.java:498)
+        at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+        - locked WriteLock@1215353569 at java.util.concurrent.locks.ReentrantLock(ReentrantLock.java:n/a)
+        at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:210)
+    Thread 41 created by thread 1
+        at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.asyncStop(EquinoxBundle.java:216)
+
+    Write in thread 35 holding locks WriteLock@28692953, ReadLock@1496102000, Monitor@346135698
+      > at org.osgi.framework.Version.hashCode(Version.java:349)
+        at org.eclipse.osgi.container.ModuleDatabase$Persistence.getStringsVersionsAndMaps(ModuleDatabase.java:1070)
+        at org.eclipse.osgi.container.ModuleDatabase$Persistence.store(ModuleDatabase.java:987)
+        at org.eclipse.osgi.container.ModuleDatabase.store(ModuleDatabase.java:864)
+        at org.eclipse.osgi.storage.Storage.save0(Storage.java:1174)
+        - locked Monitor@346135698 at org.eclipse.osgi.storage.Storage.save0(Storage.java:1166)
+        - locked ReadLock@1496102000 at java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock(ReentrantReadWriteLock.java:n/a)
+        at org.eclipse.osgi.storage.Storage.save(Storage.java:1142)
+        at org.eclipse.osgi.storage.Storage.close(Storage.java:431)
+        at org.eclipse.osgi.internal.framework.EquinoxContainer.close(EquinoxContainer.java:184)
+        at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:194)
+        at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+        at org.eclipse.osgi.container.Module.stop(Module.java:498)
+        at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+        - locked WriteLock@28692953 at java.util.concurrent.locks.ReentrantLock(ReentrantLock.java:n/a)
+        at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:210)
+    Thread 35 created by thread 1
+        at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.asyncStop(EquinoxBundle.java:216)
+
+

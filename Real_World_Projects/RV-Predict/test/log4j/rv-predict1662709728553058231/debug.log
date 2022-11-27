@@ -1,0 +1,11 @@
+Unable to resolve field com/fasterxml/jackson/databind/DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES in class org/apache/logging/log4j/core/filter/MutableThreadContextMapFilter
+java.util.NoSuchElementException: No value present
+	at java.util.OptionalInt.getAsInt(OptionalInt.java:118)
+	at com.runtimeverification.rvpredict.trace.TraceState.onStartThread(TraceState.java:339)
+	at com.runtimeverification.rvpredict.trace.TraceState.maintainStateAtCurrentWindowEnd(TraceState.java:247)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.runtimeverification.rvpredict.trace.TraceState.processWindow(TraceState.java:255)
+	at com.runtimeverification.rvpredict.trace.TraceState.initNextTraceWindow(TraceState.java:119)
+	at com.runtimeverification.rvpredict.log.VolatileLoggingEngine.runRaceDetection(VolatileLoggingEngine.java:245)
+	at com.runtimeverification.rvpredict.log.VolatileLoggingEngine.finishLogging(VolatileLoggingEngine.java:146)
+	at com.runtimeverification.rvpredict.engine.main.RVPredict$1.run(RVPredict.java:140)

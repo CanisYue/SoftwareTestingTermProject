@@ -1,0 +1,2 @@
+Unable to resolve field org/slf4j/impl/StaticLoggerBinder.REQUESTED_API_VERSION in class org/slf4j/LoggerFactory
+Unable to resolve field org/slf4j/impl/StaticMDCBinder.SINGLETON in class org/slf4j/MDC

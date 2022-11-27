@@ -1,278 +1,231 @@
 Project name: dbcp1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: dbcp2, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: dbcp3, #Bugs found: 2
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 2
-{"location": "dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:93", "code": "3.1.9-run_nosync"}
-{"location": "dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:77", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 2
+{"code": "3.1.9-run_nosync", "location": "dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:93"}
+{"code": "3.1.9-run_nosync", "location": "dbcp3/classes/org/apache/commons/dbcp/datasources/Dbcp369.java:77"}
 
 Project name: dbcp4, #Bugs found: 1
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 1
-{"location": "dbcp4/classes/org/apache/commons/dbcp/Dbcp271.java:21", "code": "3.1.8-concurrent_access"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 1
+{"code": "3.1.8-concurrent_access", "location": "dbcp4/classes/org/apache/commons/dbcp/Dbcp271.java:21"}
 
 Project name: derby1, #Bugs found: 1
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 1
-{"location": "derby1/classes/Derby4129.java:56", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 1
+{"code": "3.1.9-run_nosync", "location": "derby1/classes/Derby4129.java:56"}
 
 Project name: derby2, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: derby3, #Bugs found: 2
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 2
-{"location": "derby3/classes/Derby5561.java:27", "code": "3.1.9-run_nosync"}
-{"location": "derby3/classes/Derby5561.java:43", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 2
+{"code": "3.1.9-run_nosync", "location": "derby3/classes/Derby5561.java:27"}
+{"code": "3.1.9-run_nosync", "location": "derby3/classes/Derby5561.java:43"}
 
 Project name: derby4, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: derby5, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: groovy1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: groovy2, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: groovy3, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: groovy4, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: groovy5, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: groovy6, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_10, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_11, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_12, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_13, #Bugs found: 2
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 2
-{"location": "jdk6_13/classes/Test7100996.java:43", "code": "3.1.9-run_nosync"}
-{"location": "jdk6_13/classes/Test7100996.java:34", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 2
+{"code": "3.1.9-run_nosync", "location": "jdk6_13/classes/Test7100996.java:43"}
+{"code": "3.1.9-run_nosync", "location": "jdk6_13/classes/Test7100996.java:34"}
 
 Project name: jdk6_14, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_2, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_3, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_4, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_5, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
-Project name: jdk6_6, Fail to run the project
+Project name: jdk6_6, #Bugs found: 1
+Bug Type: deadlock, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_7, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_8, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk6_9, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk7_1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk7_2, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk7_3, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: jdk7_4, #Bugs found: 4
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 4
-{"location": "jdk7_4/classes/Test8010939.java:99", "code": "3.1.9-run_nosync"}
-{"location": "jdk7_4/classes/Test8010939.java:89", "code": "3.1.9-run_nosync"}
-{"location": "jdk7_4/classes/Test8010939.java:40", "code": "3.1.8-concurrent_access"}
-{"location": "jdk7_4/classes/Test8010939.java:40", "code": "3.1.8-concurrent_access"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 4
+{"code": "3.1.9-run_nosync", "location": "jdk7_4/classes/Test8010939.java:99"}
+{"code": "3.1.9-run_nosync", "location": "jdk7_4/classes/Test8010939.java:89"}
+{"code": "3.1.8-concurrent_access", "location": "jdk7_4/classes/Test8010939.java:40"}
+{"code": "3.1.8-concurrent_access", "location": "jdk7_4/classes/Test8010939.java:40"}
 
 Project name: jdk7_5, #Bugs found: 1
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 1
-{"location": "jdk7_5/classes/Test8012019.java:93", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 1
+{"code": "3.1.9-run_nosync", "location": "jdk7_5/classes/Test8012019.java:93"}
 
 Project name: jdk7_6, #Bugs found: 8
 Bug Type: deadlock, #Bugs found: 2
-{"location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59", "code": "3.1.4-wait"}
-{"location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59", "code": "Holding n lock(s)"}
-Bug Type: race_condition, #Bugs found: 5
-{"location": "jdk7_6/classes/testUtils/RMID.java:261", "code": "3.1.7-concurrent_call"}
-{"location": "jdk7_6/classes/testUtils/RMID.java:305", "code": "3.1.7-concurrent_call"}
-{"location": "jdk7_6/classes/testUtils/RMID.java:299", "code": "3.1.7-concurrent_call"}
-{"location": "jdk7_6/classes/testUtils/RMID.java:297", "code": "3.1.7-concurrent_call"}
-{"location": "jdk7_6/classes/testUtils/RMID.java:290", "code": "3.1.7-concurrent_call"}
-Bug Type: wait_nosync, #Bugs found: 2
-{"location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:49", "code": "3.1.12-wait_nosync"}
-{"location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59", "code": "3.1.12-wait_nosync"}
+{"code": "3.1.4-wait", "location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59"}
+{"code": "Holding n lock(s)", "location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59"}
+Bug Type: data race, #Bugs found: 7
+{"code": "3.1.12-wait_nosync", "location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:49"}
+{"code": "3.1.12-wait_nosync", "location": "jdk7_6/classes/edu/illinois/jacontebe/globalevent/GlobalDriver.java:59"}
+{"code": "3.1.7-concurrent_call", "location": "jdk7_6/classes/testUtils/RMID.java:261"}
+{"code": "3.1.7-concurrent_call", "location": "jdk7_6/classes/testUtils/RMID.java:305"}
+{"code": "3.1.7-concurrent_call", "location": "jdk7_6/classes/testUtils/RMID.java:299"}
+{"code": "3.1.7-concurrent_call", "location": "jdk7_6/classes/testUtils/RMID.java:297"}
+{"code": "3.1.7-concurrent_call", "location": "jdk7_6/classes/testUtils/RMID.java:290"}
 
 Project name: log4j1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: log4j2, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: log4j3, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: log4j4, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: log4j5, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: lucene1, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: lucene2, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: pool1, #Bugs found: 2
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 2
-{"location": "pool1/classes/Test120.java:135", "code": "3.1.9-run_nosync"}
-{"location": "pool1/classes/Test120.java:71", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 2
+{"code": "3.1.9-run_nosync", "location": "pool1/classes/Test120.java:135"}
+{"code": "3.1.9-run_nosync", "location": "pool1/classes/Test120.java:71"}
 
 Project name: pool2, #Bugs found: 1
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 1
-{"location": "pool2/classes/Test146.java:97", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 1
+{"code": "3.1.9-run_nosync", "location": "pool2/classes/Test146.java:97"}
 
 Project name: pool3, #Bugs found: 2
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 2
-{"location": "pool3/classes/Test149.java:122", "code": "3.1.9-run_nosync"}
-{"location": "pool3/classes/Test149.java:99", "code": "3.1.9-run_nosync"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 2
+{"code": "3.1.9-run_nosync", "location": "pool3/classes/Test149.java:122"}
+{"code": "3.1.9-run_nosync", "location": "pool3/classes/Test149.java:99"}
 
 Project name: pool4, #Bugs found: 0
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 0
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 0
 
 Project name: pool5, #Bugs found: 1
 Bug Type: deadlock, #Bugs found: 0
-Bug Type: race_condition, #Bugs found: 1
-{"location": "pool5/classes/org/apache/commons/pool/Test46.java:21", "code": "3.1.8-concurrent_access"}
-Bug Type: wait_nosync, #Bugs found: 0
+Bug Type: data race, #Bugs found: 1
+{"code": "3.1.8-concurrent_access", "location": "pool5/classes/org/apache/commons/pool/Test46.java:21"}
 
 
 
 ----------Overall Results for JaConTeBe----------
 Number of concurrency bugs found in JaConTeBe: 28
-Number of concurrency bug types found in JaConTeBe: 3
-
-
-Bug Type: race_condition
-#Bugs found: 24
-
-
-Bug Type: wait_nosync
-#Bugs found: 2
+Number of concurrency bug types found in JaConTeBe: 2
 
 
 Bug Type: deadlock
 #Bugs found: 2
+
+
+Bug Type: data race
+#Bugs found: 26
+
 

@@ -1,0 +1,407 @@
+Cannot retransform com/google/common/base/EnumsBenchmark$LargeEnum
+java.lang.RuntimeException: Method code too large!
+	at com.runtimeverification.rvpredict.internal.org.objectweb.asm.MethodWriter.a(Unknown Source)
+	at com.runtimeverification.rvpredict.internal.org.objectweb.asm.ClassWriter.toByteArray(Unknown Source)
+	at com.runtimeverification.rvpredict.instrument.transformer.ClassTransformer.transform(ClassTransformer.java:34)
+	at com.runtimeverification.rvpredict.instrument.Agent.transform(Agent.java:202)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.maven.surefire.util.DefaultDirectoryScanner.loadClass(DefaultDirectoryScanner.java:105)
+	at org.apache.maven.surefire.util.DefaultDirectoryScanner.locateTestClasses(DefaultDirectoryScanner.java:78)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.scanClassPath(JUnit4Provider.java:164)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy2.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+Cannot retransform com/google/common/base/CharMatcherBenchmark$CharSamples
+java.lang.RuntimeException: Method code too large!
+	at com.runtimeverification.rvpredict.internal.org.objectweb.asm.MethodWriter.a(Unknown Source)
+	at com.runtimeverification.rvpredict.internal.org.objectweb.asm.ClassWriter.toByteArray(Unknown Source)
+	at com.runtimeverification.rvpredict.instrument.transformer.ClassTransformer.transform(ClassTransformer.java:34)
+	at com.runtimeverification.rvpredict.instrument.Agent.transform(Agent.java:202)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.apache.maven.surefire.util.DefaultDirectoryScanner.loadClass(DefaultDirectoryScanner.java:105)
+	at org.apache.maven.surefire.util.DefaultDirectoryScanner.locateTestClasses(DefaultDirectoryScanner.java:78)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.scanClassPath(JUnit4Provider.java:164)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy2.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+Unable to find the collection accessed by com.google.common.base.AbstractIteratorTest$3@47629063
+Unable to find the collection accessed by com.google.common.base.AbstractIteratorTest$1@1d7f0cd0
+Unable to find the collection accessed by com.google.common.base.AbstractIteratorTest$5@723f8990
+Unable to find the collection accessed by com.google.common.base.AbstractIteratorTest$7@43c64d6f
+Unable to find the collection accessed by com.google.common.base.AbstractIteratorTest$6@3df54fd5
+Unable to find the collection accessed by com.google.common.base.AbstractIteratorTest$4@141c66db
+Unable to find the collection accessed by com.google.common.base.AbstractIteratorTest$2@a2ca681
+Missing write events on 1600232109283212619
+Unable to find the collection accessed by com.google.common.base.Splitter$1$1@2e1212f4
+Unable to find the collection accessed by com.google.common.base.Splitter$2$1@63d10a3b
+Missing write events on 9139898441218915180
+Missing write events on 9139898441218915180
+Missing write events on 6681727643689156082
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 5388207730357960178
+Missing write events on 1014709203618495985
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 759916316097248754
+Missing write events on 6248633462366928370
+Missing write events on 257127069102636530
+Missing write events on 3816616327020280620
+Missing write events on 6179704790658842098
+Missing write events on 6179704790658842098
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 4578884528554114546
+Missing write events on 7809950466413952498
+Missing write events on 3816616327020280620
+Missing write events on 1014709203618495986
+Missing write events on 759916316097248754
+Missing write events on 7008208195420159473
+Missing write events on 4095854824065596914
+Missing write events on 3816616327020280620
+Missing write events on 1981736908677447154
+Missing write events on 3816616327020280620
+Missing write events on 1014709203618495986
+Missing write events on 8618161920228195826
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 4095854824065596914
+Missing write events on 4095854824065596913
+Missing write events on 3816616327020280620
+Missing write events on 6179704790658842098
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 4520769300302134770
+Missing write events on 6613219019782618610
+Missing write events on 6248633462366928370
+Missing write events on 4872482823551843826
+Missing write events on 165068950533570034
+Missing write events on 4520769300302134770
+Missing write events on 3185420275273432021
+Missing write events on 3185420275273432021
+Missing write events on 3185420275273432021
+Missing write events on 321207487237717490
+Missing write events on 7044151393740914162
+Missing write events on 4578884528554114546
+Missing write events on 321207487237717490
+Missing write events on 6613219019782618610
+Missing write events on 3185420275273432021
+Missing write events on 3185420275273432021
+Missing write events on 8618161920228195826
+Missing write events on 8618161920228195825
+Missing write events on 7044151393740914162
+Missing write events on 257127069102636529
+Missing write events on 6613219019782618610
+Missing write events on 8867910613473426930
+Missing write events on 6613219019782618610
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 6197831004346908146
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 1014709203618495986
+Missing write events on 8867910613473426930
+Missing write events on 2396889207718018546
+Missing write events on 3816616327020280620
+Missing write events on 1014709203618495986
+Missing write events on 3816616327020280620
+Missing write events on 6197831004346908146
+Missing write events on 3816616327020280620
+Missing write events on 759916316097248754
+Missing write events on 1014709203618495986
+Missing write events on 6179704790658842098
+Missing write events on 4095854824065596914
+Missing write events on 4872482823551843826
+Missing write events on 7050250277366005234
+Missing write events on 4872482823551843826
+Missing write events on 3816616327020280620
+Missing write events on 7008208195420159474
+Missing write events on 8867910613473426930
+Missing write events on 6248633462366928370
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 4872482823551843826
+Missing write events on 257127069102636530
+Missing write events on 4520769300302134770
+Missing write events on 3816616327020280620
+Missing write events on 6613219019782618610
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 759916316097248754
+Missing write events on 8867910613473426930
+Missing write events on 6613219019782618610
+Missing write events on 4493634517264760306
+Missing write events on 4520769300302134770
+Missing write events on 5388207730357960178
+Missing write events on 4520769300302134770
+Missing write events on 4578884528554114546
+Missing write events on 4390527715585818098
+Missing write events on 3816616327020280620
+Missing write events on 165068950533570034
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 4493634517264760306
+Missing write events on 2863839521017953778
+Missing write events on 257127069102636530
+Missing write events on 8867910613473426930
+Missing write events on 257127069102636530
+Missing write events on 2863839521017953778
+Missing write events on 5388207730357960178
+Missing write events on 5388207730357960177
+Missing write events on 3816616327020280620
+Missing write events on 5388207730357960178
+Missing write events on 5388207730357960177
+Missing write events on 8867910613473426930
+Missing write events on 8867910613473426930
+Missing write events on 5388207730357960178
+Missing write events on 3816616327020280620
+Missing write events on 165068950533570034
+Missing write events on 759916316097248754
+Missing write events on 4390527715585818098
+Missing write events on 3816616327020280620
+Missing write events on 2863839521017953778
+Missing write events on 3816616327020280620
+Missing write events on 8867910613473426930
+Missing write events on 8867910613473426930
+Missing write events on 8867910613473426930
+Missing write events on 4095854824065596914
+Missing write events on 1454093579294080498
+Missing write events on 3816616327020280620
+Missing write events on 8867910613473426930
+Missing write events on 8618161920228195826
+Missing write events on 257127069102636530
+Missing write events on 5022134022608780786
+Missing write events on 933653279433293298
+Missing write events on 7809950466413952498
+Missing write events on 8618161920228195826
+Missing write events on 4872482823551843826
+Missing write events on 4493634517264760306
+Missing write events on 321207487237717490
+Missing write events on 4493634517264760306
+Missing write events on 321207487237717490
+Missing write events on 6197831004346908146
+Missing write events on 6179704790658842098
+Missing write events on 321207487237717490
+Missing write events on 6248633462366928370
+Missing write events on 1014709203618495986
+Missing write events on 8867910613473426930
+Missing write events on 2863839521017953778
+Missing write events on 5772269590071475698
+Missing write events on 759916316097248754
+Missing write events on 3816616327020280620
+Missing write events on 7809950466413952498
+Missing write events on 5498609890471443954
+Missing write events on 4520769300302134770
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 6563536715003198962
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 4872482823551843826
+Missing write events on 4520769300302134770
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 6197831004346908146
+Missing write events on 933653279433293298
+Missing write events on 759916316097248754
+Missing write events on 4390527715585818098
+Missing write events on 759916316097248754
+Missing write events on 3816616327020280620
+Missing write events on 933653279433293298
+Missing write events on 3767374754604908018
+Missing write events on 3816616327020280620
+Missing write events on 5498609890471443954
+Missing write events on 6179704790658842098
+Missing write events on 5498609890471443954
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 7008208195420159474
+Missing write events on 933653279433293298
+Missing write events on 4390527715585818098
+Missing write events on 933653279433293298
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 933653279433293298
+Missing write events on 3816616327020280620
+Missing write events on 8867910613473426930
+Missing write events on 8867910613473426930
+Missing write events on 4520769300302134770
+Missing write events on 3767374754604908018
+Missing write events on 8867910613473426930
+Missing write events on 4872482823551843826
+Missing write events on 4493634517264760306
+Missing write events on 3816616327020280620
+Missing write events on 4520769300302134770
+Missing write events on 3816616327020280620
+Missing write events on 5498609890471443954
+Missing write events on 6613219019782618610
+Missing write events on 1454093579294080498
+Missing write events on 4872482823551843826
+Missing write events on 759916316097248754
+Missing write events on 3816616327020280620
+Missing write events on 321207487237717490
+Missing write events on 6248633462366928370
+Missing write events on 3816616327020280620
+Missing write events on 257127069102636530
+Missing write events on 4872482823551843826
+Missing write events on 3816616327020280620
+Missing write events on 933653279433293298
+Missing write events on 4520769300302134770
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 759916316097248754
+Missing write events on 759916316097248753
+Missing write events on 8618161920228195826
+Missing write events on 8618161920228195825
+Missing write events on 8867910613473426930
+Missing write events on 3816616327020280620
+Missing write events on 5498609890471443954
+Missing write events on 4578884528554114546
+Missing write events on 7044151393740914162
+Missing write events on 8618161920228195826
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 4578884528554114546
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 2396889207718018546
+Missing write events on 4390527715585818098
+Missing write events on 4578884528554114546
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 1454093579294080498
+Missing write events on 4520769300302134770
+Missing write events on 8618161920228195826
+Missing write events on 1454093579294080498
+Missing write events on 8618161920228195826
+Missing write events on 7008208195420159474
+Missing write events on 7050250277366005234
+Missing write events on 7008208195420159474
+Missing write events on 6197831004346908146
+Missing write events on 7050250277366005234
+Missing write events on 1454093579294080498
+Missing write events on 8867910613473426930
+Missing write events on 933653279433293298
+Missing write events on 6197831004346908146
+Missing write events on 3816616327020280620
+Missing write events on 6197831004346908146
+Missing write events on 165068950533570034
+Missing write events on 6197831004346908146
+Missing write events on 4520769300302134770
+Missing write events on 7050250277366005234
+Missing write events on 4520769300302134770
+Missing write events on 3816616327020280620
+Missing write events on 4493634517264760306
+Missing write events on 2863839521017953778
+Missing write events on 2396889207718018546
+Missing write events on 1014709203618495986
+Missing write events on 1014709203618495986
+Missing write events on 257127069102636530
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 7809950466413952498
+Missing write events on 6613219019782618610
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 6613219019782618610
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 321207487237717490
+Missing write events on 7809950466413952498
+Missing write events on 5772269590071475698
+Missing write events on 4493634517264760306
+Missing write events on 5772269590071475698
+Missing write events on 7809950466413952498
+Missing write events on 5772269590071475698
+Missing write events on 3816616327020280620
+Missing write events on 4493634517264760306
+Missing write events on 3816616327020280620
+Missing write events on 7050250277366005234
+Missing write events on 5022134022608780786
+Missing write events on 759916316097248754
+Missing write events on 4872482823551843826
+Missing write events on 3816616327020280620
+Missing write events on 4095854824065596914
+Missing write events on 4520769300302134770
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 2396889207718018546
+Missing write events on 2863839521017953778
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 7044151393740914162
+Missing write events on 6248633462366928370
+Missing write events on 6248633462366928370
+Missing write events on 6248633462366928370
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 933653279433293298
+Missing write events on 3816616327020280620
+Missing write events on 165068950533570034
+Missing write events on 2396889207718018546
+Missing write events on 933653279433293298
+Missing write events on 165068950533570034
+Missing write events on 4390527715585818098
+Missing write events on 4872482823551843826
+Missing write events on 4390527715585818098
+Missing write events on 4390527715585818098
+Unable to find the collection accessed by com.google.common.cache.LocalCache$KeyIterator@3f1d8110
+Unable to find the collection accessed by com.google.common.cache.LocalCache$ValueIterator@6a28d1f5
+Unable to find the collection accessed by com.google.common.cache.LocalCache$EntryIterator@22f3ba28
+Unable to find the collection accessed by com.google.common.collect.Iterators$ArrayItr@6cccf63e
+Unable to find the collection accessed by com.google.common.collect.Iterators$6@7f386284
+Unable to find the collection accessed by com.google.common.collect.Iterators$ConcatenatedIterator@399c7b85

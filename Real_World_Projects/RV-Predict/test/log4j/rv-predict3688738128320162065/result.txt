@@ -1,0 +1,155 @@
+Data race on field org.h2.mvstore.Chunk.pageCountLive:
+    Write in thread 32 holding lock WriteLock@517693873
+      > at org.h2.mvstore.Chunk.accountForRemovedPage(Chunk.java:509)
+        at org.h2.mvstore.MVStore.acceptChunkOccupancyChanges(MVStore.java:1883)
+        at org.h2.mvstore.MVStore.serializeToBuffer(MVStore.java:1675)
+        at org.h2.mvstore.MVStore.serializeAndStore(MVStore.java:1598)
+        - locked WriteLock@517693873 at java.util.concurrent.locks.ReentrantLock(ReentrantLock.java:n/a)
+        at org.h2.mvstore.MVStore.lambda$storeNow$4(MVStore.java:1518)
+        at org.h2.mvstore.MVStore$$Lambda$473.run(Unknown:n/a)
+    Thread 32 created by thread 30
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 30
+      > at org.h2.mvstore.Chunk.isRewritable(Chunk.java:377)
+        at org.h2.mvstore.MVStore.isRewritable(MVStore.java:2494)
+        at org.h2.mvstore.MVStore.getChunksFillRate(MVStore.java:2372)
+        at org.h2.mvstore.MVStore.getRewritableChunksFillRate(MVStore.java:2364)
+        at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:3233)
+        at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3775)
+    Thread 30 created by thread 1
+        at org.h2.mvstore.MVStore.setAutoCommitDelay(MVStore.java:3421)
+
+
+Data race on field org.h2.mvstore.Chunk.pageCountLive:
+    Write in thread 32 holding lock WriteLock@517693873
+      > at org.h2.mvstore.Chunk.accountForRemovedPage(Chunk.java:509)
+        at org.h2.mvstore.MVStore.acceptChunkOccupancyChanges(MVStore.java:1883)
+        at org.h2.mvstore.MVStore.serializeToBuffer(MVStore.java:1675)
+        at org.h2.mvstore.MVStore.serializeAndStore(MVStore.java:1598)
+        - locked WriteLock@517693873 at java.util.concurrent.locks.ReentrantLock(ReentrantLock.java:n/a)
+        at org.h2.mvstore.MVStore.lambda$storeNow$4(MVStore.java:1518)
+        at org.h2.mvstore.MVStore$$Lambda$473.run(Unknown:n/a)
+    Thread 32 created by thread 30
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 30
+      > at org.h2.mvstore.Chunk.isLive(Chunk.java:372)
+        at org.h2.mvstore.Chunk.isRewritable(Chunk.java:377)
+        at org.h2.mvstore.MVStore.isRewritable(MVStore.java:2494)
+        at org.h2.mvstore.MVStore.getChunksFillRate(MVStore.java:2372)
+        at org.h2.mvstore.MVStore.getRewritableChunksFillRate(MVStore.java:2364)
+        at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:3233)
+        at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3775)
+    Thread 30 created by thread 1
+        at org.h2.mvstore.MVStore.setAutoCommitDelay(MVStore.java:3421)
+
+
+Data race on field org.h2.mvstore.MVStore.unsavedMemory:
+    Read in thread 32 holding lock WriteLock@517693873
+      > at org.h2.mvstore.MVStore.registerUnsavedMemory(MVStore.java:2858)
+        at org.h2.mvstore.MVStore.serializeAndStore(MVStore.java:1595)
+        - locked WriteLock@517693873 at java.util.concurrent.locks.ReentrantLock(ReentrantLock.java:n/a)
+        at org.h2.mvstore.MVStore.lambda$storeNow$4(MVStore.java:1518)
+        at org.h2.mvstore.MVStore$$Lambda$473.run(Unknown:n/a)
+    Thread 32 created by thread 30
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Write in thread 30 holding lock WriteLock@812143047
+      > at org.h2.mvstore.MVStore.storeNow(MVStore.java:1525)
+        at org.h2.mvstore.MVStore.store(MVStore.java:1496)
+        at org.h2.mvstore.MVStore.tryCommit(MVStore.java:1432)
+        - locked WriteLock@812143047 at java.util.concurrent.locks.ReentrantLock(ReentrantLock.java:n/a)
+        at org.h2.mvstore.MVStore.tryCommit(MVStore.java:1421)
+        at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:3214)
+        at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3775)
+    Thread 30 created by thread 1
+        at org.h2.mvstore.MVStore.setAutoCommitDelay(MVStore.java:3421)
+
+
+Data race on field org.h2.mvstore.FreeSpaceBitSet.failureFlags:
+    Write in thread 32 holding locks WriteLock@517693873, WriteLock@314364096
+      > at org.h2.mvstore.FreeSpaceBitSet.allocate(FreeSpaceBitSet.java:161)
+        at org.h2.mvstore.FreeSpaceBitSet.predictAllocation(FreeSpaceBitSet.java:133)
+        at org.h2.mvstore.FileStore.predictAllocation(FileStore.java:370)
+        at org.h2.mvstore.MVStore.serializeToBuffer(MVStore.java:1725)
+        - locked WriteLock@314364096 at java.util.concurrent.locks.ReentrantLock(ReentrantLock.java:n/a)
+        at org.h2.mvstore.MVStore.serializeAndStore(MVStore.java:1598)
+        - locked WriteLock@517693873 at java.util.concurrent.locks.ReentrantLock(ReentrantLock.java:n/a)
+        at org.h2.mvstore.MVStore.lambda$storeNow$4(MVStore.java:1518)
+        at org.h2.mvstore.MVStore$$Lambda$473.run(Unknown:n/a)
+    Thread 32 created by thread 30
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Read in thread 30
+      > at org.h2.mvstore.FreeSpaceBitSet.isFragmented(FreeSpaceBitSet.java:137)
+        at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3775)
+    Thread 30 created by thread 1
+        at org.h2.mvstore.MVStore.setAutoCommitDelay(MVStore.java:3421)
+
+
+Data race on field org.h2.mvstore.MVStore.unsavedMemory:
+    Write in thread 1 holding locks Monitor@417875774, Monitor@857394605
+      > at org.h2.mvstore.MVStore.registerUnsavedMemory(MVStore.java:2858)
+        at org.h2.mvstore.db.MVTable.addRow(MVTable.java:519)
+        at org.h2.engine.Database.addMeta(Database.java:729)
+        at org.h2.engine.Database.addSchemaObject(Database.java:909)
+        - locked Monitor@857394605 at org.h2.engine.Database.addSchemaObject(Database.java:907)
+        at org.h2.command.ddl.CreateTable.update(CreateTable.java:125)
+        at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+        at org.h2.command.Command.executeUpdate(Command.java:252)
+        at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+        - locked Monitor@417875774 at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:187)
+        at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:143)
+        at org.apache.logging.log4j.junit.JdbcRule$1.evaluate(JdbcRule.java:67)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+        at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+        at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+        at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+        at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+        at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+        at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+        at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator$$Lambda$389.accept(Unknown:n/a)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+        at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+        at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:135)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+    Thread 1 is the main thread
+
+    Read in thread 30 holding lock WriteLock@812143047
+      > at org.h2.mvstore.MVStore.storeNow(MVStore.java:1510)
+        at org.h2.mvstore.MVStore.store(MVStore.java:1496)
+        at org.h2.mvstore.MVStore.tryCommit(MVStore.java:1432)
+        - locked WriteLock@812143047 at java.util.concurrent.locks.ReentrantLock(ReentrantLock.java:n/a)
+        at org.h2.mvstore.MVStore.tryCommit(MVStore.java:1421)
+        at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:3214)
+        at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3775)
+    Thread 30 created by thread 1
+        at org.h2.mvstore.MVStore.setAutoCommitDelay(MVStore.java:3421)
+
+
