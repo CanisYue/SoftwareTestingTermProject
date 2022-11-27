@@ -17,8 +17,7 @@ Project name: Dacapo, #Bugs found: 0
 
 
 Project name: Elevator, #Bugs found: 15
-Bug Type: VO, #Bugs found: 13
-Description: (1)A volatile reference to an array doesn’t treat the array elements as volatile (2)An increment to a volatile field isn’t atomic
+Bug Type: Atomicity violation, #Bugs found: 13
 {"location": "Elevator/classes/Elevator.java:[line 218]"}
 {"location": "Elevator/classes/Elevator.java:[line 238]"}
 {"location": "Elevator/classes/Person.java:[line 85]"}
@@ -32,8 +31,7 @@ Description: (1)A volatile reference to an array doesn’t treat the array eleme
 {"location": "Elevator/classes/Person.java:[line 171]"}
 {"location": "Elevator/classes/Person.java:[line 177]"}
 {"location": "Elevator/classes/Person.java:[line 314]"}
-Bug Type: IS, #Bugs found: 2
-Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+Bug Type: Deadlock, #Bugs found: 2
 {"location": "Elevator/classes/Elevator.java:[line 253]"}
 {"location": "Elevator/classes/Elevator.java:[line 113]"}
 
@@ -42,57 +40,43 @@ Project name: JGFMolDynBenchSizeA, #Bugs found: 0
 
 
 Project name: JGFRayTracerBenchSizeA, #Bugs found: 1
-Bug Type: SSD, #Bugs found: 1
-Description: Instance level lock was used on a shared static data
+Bug Type: Data race, #Bugs found: 1
 {"location": "JGFRayTracerBenchSizeA/classes/JGFRayTracerBench.java:[line 175]"}
 
 
 Project name: account, #Bugs found: 1
-Bug Type: Dm, #Bugs found: 1
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+Bug Type: Others, #Bugs found: 1
 {"location": "account/classes/Account.java:[line 87]"}
 
 
 Project name: airlinetickets, #Bugs found: 1
-Bug Type: Dm, #Bugs found: 1
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+Bug Type: Others, #Bugs found: 1
 {"location": "airlinetickets/classes/Airlinetickets.java:[line 88]"}
 
 
 Project name: animator, #Bugs found: 8
-Bug Type: SWL, #Bugs found: 2
-Description: Method calls Thread.sleep() with a lock held
+Bug Type: Deadlock, #Bugs found: 5
 {"location": "animator/classes/XtangoAnimator.java:[line 1014]"}
 {"location": "animator/classes/XtangoAnimator.java:[line 1189]"}
-Bug Type: Dm, #Bugs found: 1
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
-{"location": "animator/classes/XtangoAnimator.java:[line 650]"}
-Bug Type: Wa, #Bugs found: 1
-Description: (1)Wait not in loop (2)Condition.await() not in loop
 {"location": "animator/classes/XtangoAnimator.java:[line 679]"}
-Bug Type: NN, #Bugs found: 2
-Description: Naked notify
-{"location": "animator/classes/XtangoAnimator.java:[line 107]"}
-{"location": "animator/classes/XtangoAnimator.java:[line 108]"}
-Bug Type: IS, #Bugs found: 2
-Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
 {"location": "animator/classes/XtangoAnimator.java:[line 723]"}
 {"location": "animator/classes/XtangoAnimator.java:[line 760]"}
+Bug Type: Others, #Bugs found: 3
+{"location": "animator/classes/XtangoAnimator.java:[line 650]"}
+{"location": "animator/classes/XtangoAnimator.java:[line 107]"}
+{"location": "animator/classes/XtangoAnimator.java:[line 108]"}
 
 
 Project name: boundedbuffer, #Bugs found: 10
-Bug Type: SSD, #Bugs found: 4
-Description: Instance level lock was used on a shared static data
+Bug Type: Data race, #Bugs found: 4
 {"location": "boundedbuffer/classes/Buffer.java:[line 150]"}
 {"location": "boundedbuffer/classes/Buffer.java:[line 128]"}
 {"location": "boundedbuffer/classes/BoundedBuffer.java:[line 400]"}
 {"location": "boundedbuffer/classes/BoundedBuffer.java:[line 381]"}
-Bug Type: Dm, #Bugs found: 2
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+Bug Type: Others, #Bugs found: 2
 {"location": "boundedbuffer/classes/BoundedBuffer.java:[line 192]"}
 {"location": "boundedbuffer/classes/BoundedBuffer.java:[line 314]"}
-Bug Type: IS, #Bugs found: 4
-Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+Bug Type: Deadlock, #Bugs found: 4
 {"location": "boundedbuffer/classes/Buffer.java:[line 51]"}
 {"location": "boundedbuffer/classes/Buffer.java:[line 53]"}
 {"location": "boundedbuffer/classes/Buffer.java:[line 52]"}
@@ -100,26 +84,22 @@ Description: (1)Inconsistent synchronization (2)Field not guarded against concur
 
 
 Project name: bubblesort, #Bugs found: 5
-Bug Type: Dm, #Bugs found: 4
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+Bug Type: Others, #Bugs found: 4
 {"location": "bubblesort/classes/Reporter.java:[line 113]"}
 {"location": "bubblesort/classes/Reporter.java:[line 34]"}
 {"location": "bubblesort/classes/Reporter.java:[line 83]"}
 {"location": "bubblesort/classes/BubbleSortImpl.java:[line 54]"}
-Bug Type: SWL, #Bugs found: 1
-Description: Method calls Thread.sleep() with a lock held
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "bubblesort/classes/BubbleSortImpl.java:[line 92]"}
 
 
 Project name: bufwriter, #Bugs found: 1
-Bug Type: Dm, #Bugs found: 1
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+Bug Type: Others, #Bugs found: 1
 {"location": "bufwriter/classes/Checker.java:[line 62]"}
 
 
 Project name: critical, #Bugs found: 1
-Bug Type: Dm, #Bugs found: 1
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+Bug Type: Others, #Bugs found: 1
 {"location": "critical/classes/Critical.java:[line 75]"}
 
 
@@ -142,18 +122,14 @@ Project name: groovy6, #Bugs found: 0
 
 
 Project name: jpf_test_cases, #Bugs found: 6
-Bug Type: Wa, #Bugs found: 4
-Description: (1)Wait not in loop (2)Condition.await() not in loop
+Bug Type: Deadlock, #Bugs found: 5
 {"location": "jpf_test_cases/classes/START.java:[line 6]"}
 {"location": "jpf_test_cases/classes/StandardCountingSemaphore.java:[line 14]"}
 {"location": "jpf_test_cases/classes/RWVSNTest.java:[line 98]"}
 {"location": "jpf_test_cases/classes/RWVSNTest.java:[line 113]"}
-Bug Type: NN, #Bugs found: 1
-Description: Naked notify
-{"location": "jpf_test_cases/classes/RWVSNTest.java:[line 129]"}
-Bug Type: IS, #Bugs found: 1
-Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
 {"location": "jpf_test_cases/classes/ReplicatedWorkers.java:[line 265]"}
+Bug Type: Others, #Bugs found: 1
+{"location": "jpf_test_cases/classes/RWVSNTest.java:[line 129]"}
 
 
 Project name: log4j1, #Bugs found: 0
@@ -163,50 +139,39 @@ Project name: log4j3, #Bugs found: 0
 
 
 Project name: mergesort, #Bugs found: 7
-Bug Type: Dm, #Bugs found: 5
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+Bug Type: Others, #Bugs found: 5
 {"location": "mergesort/classes/MSort.java:[line 117]"}
 {"location": "mergesort/classes/MSort.java:[line 152]"}
 {"location": "mergesort/classes/MSort.java:[line 264]"}
 {"location": "mergesort/classes/MSort.java:[line 123]"}
 {"location": "mergesort/classes/MSort.java:[line 159]"}
-Bug Type: SSD, #Bugs found: 2
-Description: Instance level lock was used on a shared static data
+Bug Type: Data race, #Bugs found: 2
 {"location": "mergesort/classes/MSort.java:[line 32]"}
 {"location": "mergesort/classes/MSort.java:[line 41]"}
 
 
 Project name: pingpong, #Bugs found: 3
-Bug Type: Dm, #Bugs found: 1
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+Bug Type: Others, #Bugs found: 1
 {"location": "pingpong/classes/BuggedProgram.java:[line 98]"}
-Bug Type: RV, #Bugs found: 1
-Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+Bug Type: Data race, #Bugs found: 2
 {"location": "pingpong/classes/BuggedProgram.java:[line 85]"}
-Bug Type: NP, #Bugs found: 1
-Description: Synchronize and null check on the same field
 {"location": "pingpong/classes/PingPong.java:[line 63]"}
 
 
 Project name: real-world--common-dbcps2-2.1.1, #Bugs found: 10
-Bug Type: NP, #Bugs found: 4
-Description: Synchronize and null check on the same field
+Bug Type: Data race, #Bugs found: 5
 {"location": "real-world--common-dbcps2-2.1.1/classes/TesterStatement.java:[line 63]"}
 {"location": "real-world--common-dbcps2-2.1.1/classes/TesterPreparedStatement.java:[line 103]"}
 {"location": "real-world--common-dbcps2-2.1.1/classes/TesterPreparedStatement.java:[line 87]"}
 {"location": "real-world--common-dbcps2-2.1.1/classes/TesterConnection.java:[line 175]"}
-Bug Type: Dm, #Bugs found: 4
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "real-world--common-dbcps2-2.1.1/classes/TestPStmtPooling.java:[line 84]"}
+Bug Type: Others, #Bugs found: 4
 {"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 63]"}
 {"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 106]"}
 {"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 123]"}
 {"location": "real-world--common-dbcps2-2.1.1/classes/TestDriverAdapterCPDS.java:[line 162]"}
-Bug Type: SWL, #Bugs found: 1
-Description: Method calls Thread.sleep() with a lock held
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "real-world--common-dbcps2-2.1.1/classes/TestBasicDataSource.java:[line 648]"}
-Bug Type: RV, #Bugs found: 1
-Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
-{"location": "real-world--common-dbcps2-2.1.1/classes/TestPStmtPooling.java:[line 84]"}
 
 
 Project name: real-world--ftpserver1.1.0, #Bugs found: 0
@@ -216,25 +181,34 @@ Project name: real-world--guava-21.0, #Bugs found: 0
 
 
 Project name: real-world-, #Bugs found: 387
-Bug Type: RV, #Bugs found: 91
-Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
+Bug Type: Data race, #Bugs found: 129
 {"location": "real-world-/classes/AsyncAppenderLog4j1LocationBenchmark.java:[line 62]"}
 {"location": "real-world-/classes/AsyncAppenderLog4j2LocationBenchmark.java:[line 80]"}
+{"location": "real-world-/classes/RollingAppenderDeleteMaxDepthTest.java:[line 87]"}
+{"location": "real-world-/classes/RollingAppenderDeleteMaxDepthTest.java:[line 73]"}
+{"location": "real-world-/classes/FormatCache.java:[line 249]"}
 {"location": "real-world-/classes/FormatterLoggerBenchmark.java:[line 56]"}
 {"location": "real-world-/classes/FormatterLoggerBenchmark.java:[line 65]"}
 {"location": "real-world-/classes/JmsAppenderIT.java:[line 140]"}
 {"location": "real-world-/classes/FileRenameAction.java:[line 111]"}
 {"location": "real-world-/classes/ReconfigurationDeadlockTest.java:[line 121]"}
+{"location": "real-world-/classes/FileRenameActionTest.java:[line 124]"}
+{"location": "real-world-/classes/FileRenameActionTest.java:[line 113]"}
 {"location": "real-world-/classes/FileRenameActionTest.java:[line 39]"}
 {"location": "real-world-/classes/FileRenameActionTest.java:[line 100]"}
 {"location": "real-world-/classes/FileRenameActionTest.java:[line 114]"}
 {"location": "real-world-/classes/FileRenameActionTest.java:[line 125]"}
 {"location": "real-world-/classes/Log4j2Jira1688AsyncTest.java:[line 90]"}
+{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 63]"}
+{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 56]"}
 {"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 47]"}
 {"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 50]"}
 {"location": "real-world-/classes/AsyncLoggersLocationBenchmark.java:[line 66]"}
 {"location": "real-world-/classes/AsyncLoggersLocationBenchmark.java:[line 72]"}
+{"location": "real-world-/classes/RollingAppenderCustomDeleteActionTest.java:[line 62]"}
 {"location": "real-world-/classes/AbstractStringLayoutStringEncodingBenchmark.java:[line 258]"}
+{"location": "real-world-/classes/RollingAppenderNoUnconditionalDeleteTest.java:[line 84]"}
+{"location": "real-world-/classes/RollingAppenderNoUnconditionalDeleteTest.java:[line 102]"}
 {"location": "real-world-/classes/RollingAppenderNoUnconditionalDeleteTest.java:[line 103]"}
 {"location": "real-world-/classes/AsyncAppenderLogbackBenchmark.java:[line 66]"}
 {"location": "real-world-/classes/XmlFileAppenderTest.java:[line 50]"}
@@ -242,20 +216,31 @@ Description: Return value of putIfAbsent ignored, value passed to putIfAbsent re
 {"location": "real-world-/classes/AsyncLoggersBenchmark.java:[line 74]"}
 {"location": "real-world-/classes/FileAppenderBenchmark.java:[line 98]"}
 {"location": "real-world-/classes/AsyncAppenderLog4j1Benchmark.java:[line 64]"}
+{"location": "real-world-/classes/SocketReconnectTest.java:[line 146]"}
+{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 97]"}
+{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 95]"}
+{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 58]"}
+{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 88]"}
 {"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 48]"}
 {"location": "real-world-/classes/AsyncAppenderLogbackLocationBenchmark.java:[line 65]"}
 {"location": "real-world-/classes/AsyncAppenderLog4j2Benchmark.java:[line 92]"}
 {"location": "real-world-/classes/XmlRandomAccessFileAppenderTest.java:[line 52]"}
+{"location": "real-world-/classes/RollingAppenderDeleteScriptTest.java:[line 57]"}
 {"location": "real-world-/classes/ConcurrentLoggingWithGelfLayoutTest.java:[line 50]"}
 {"location": "real-world-/classes/XmlCompactFileAsyncAppenderValidationTest.java:[line 57]"}
 {"location": "real-world-/classes/XmlCompactFileAsyncAppenderValidationTest.java:[line 69]"}
 {"location": "real-world-/classes/AsyncLoggerLocationTest.java:[line 43]"}
 {"location": "real-world-/classes/AsyncLoggerLocationTest.java:[line 68]"}
+{"location": "real-world-/classes/ExecutorServices.java:[line 55]"}
+{"location": "real-world-/classes/PatternLayout.java:[line 242]"}
 {"location": "real-world-/classes/AbstractConfiguration.java:[line 704]"}
 {"location": "real-world-/classes/TypeConverterRegistry.java:[line 99]"}
 {"location": "real-world-/classes/AbstractRolloverStrategy.java:[line 112]"}
+{"location": "real-world-/classes/ThrowableAttributeConverter.java:[line 167]"}
 {"location": "real-world-/classes/CsvParameterLayoutTest.java:[line 111]"}
 {"location": "real-world-/classes/CsvParameterLayoutTest.java:[line 176]"}
+{"location": "real-world-/classes/ResolverUtilTest.java:[line 213]"}
+{"location": "real-world-/classes/Rfc5424Layout.java:[line 231]"}
 {"location": "real-world-/classes/AsyncLoggerTest.java:[line 57]"}
 {"location": "real-world-/classes/AbstractAsyncThreadContextTestBase.java:[line 128]"}
 {"location": "real-world-/classes/AbstractAsyncThreadContextTestBase.java:[line 189]"}
@@ -266,18 +251,25 @@ Description: Return value of putIfAbsent ignored, value passed to putIfAbsent re
 {"location": "real-world-/classes/Log4jLogEventNanoTimeTest.java:[line 55]"}
 {"location": "real-world-/classes/AdvertiserTest.java:[line 42]"}
 {"location": "real-world-/classes/AdvertiserTest.java:[line 63]"}
+{"location": "real-world-/classes/ConfigurationFactory.java:[line 427]"}
 {"location": "real-world-/classes/PatternParserTest.java:[line 209]"}
 {"location": "real-world-/classes/Log4j2AppenderComparisonBenchmark.java:[line 128]"}
 {"location": "real-world-/classes/AsyncLoggerConfigTest2.java:[line 60]"}
+{"location": "real-world-/classes/Log4j1ConfigurationConverter.java:[line 163]"}
+{"location": "real-world-/classes/Log4j1ConfigurationConverter.java:[line 165]"}
 {"location": "real-world-/classes/AsyncLoggerTestNanoTime.java:[line 59]"}
 {"location": "real-world-/classes/NoSqlDatabaseManagerTest.java:[line 95]"}
 {"location": "real-world-/classes/PerfTestDriver.java:[line 306]"}
 {"location": "real-world-/classes/PerfTestDriver.java:[line 342]"}
 {"location": "real-world-/classes/PerfTestDriver.java:[line 344]"}
+{"location": "real-world-/classes/RollingAppenderDeleteNestedTest.java:[line 98]"}
+{"location": "real-world-/classes/RollingAppenderDeleteNestedTest.java:[line 76]"}
 {"location": "real-world-/classes/RandomAccessFileManager.java:[line 191]"}
+{"location": "real-world-/classes/RollingAppenderCronEvery2Test.java:[line 88]"}
 {"location": "real-world-/classes/RollingRandomAccessFileManager.java:[line 171]"}
 {"location": "real-world-/classes/FileAppenderParamsBenchmark.java:[line 87]"}
 {"location": "real-world-/classes/AsyncLoggerConfigTest.java:[line 59]"}
+{"location": "real-world-/classes/RollingAppenderCronTest.java:[line 82]"}
 {"location": "real-world-/classes/SortedArrayStringMapTest.java:[line 116]"}
 {"location": "real-world-/classes/MultiThreadPerfTest.java:[line 65]"}
 {"location": "real-world-/classes/MultiThreadPerfTest.java:[line 66]"}
@@ -294,7 +286,11 @@ Description: Return value of putIfAbsent ignored, value passed to putIfAbsent re
 {"location": "real-world-/classes/KeyStoreConfigurationTest.java:[line 52]"}
 {"location": "real-world-/classes/Bzip2CompressActionTest.java:[line 69]"}
 {"location": "real-world-/classes/LoggingController.java:[line 110]"}
+{"location": "real-world-/classes/Log4j2_1482_Test.java:[line 59]"}
+{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount2Test.java:[line 99]"}
+{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount2Test.java:[line 77]"}
 {"location": "real-world-/classes/GenerateCustomLoggerTest.java:[line 65]"}
+{"location": "real-world-/classes/RollingAppenderCronEvery2DirectTest.java:[line 79]"}
 {"location": "real-world-/classes/AsyncRootReloadTest.java:[line 56]"}
 {"location": "real-world-/classes/LoggingApp.java:[line 114]"}
 {"location": "real-world-/classes/AsyncLoggerTimestampMessageTest.java:[line 73]"}
@@ -305,12 +301,17 @@ Description: Return value of putIfAbsent ignored, value passed to putIfAbsent re
 {"location": "real-world-/classes/AsyncLoggerConfigAutoFlushTest.java:[line 55]"}
 {"location": "real-world-/classes/OnStartupTriggeringPolicyTest.java:[line 61]"}
 {"location": "real-world-/classes/AsyncLoggerTestCachedThreadName.java:[line 57]"}
+{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedSizeTest.java:[line 60]"}
 {"location": "real-world-/classes/ConcurrentLoggingWithJsonLayoutTest.java:[line 52]"}
 {"location": "real-world-/classes/AsyncLoggerTestUncachedThreadName.java:[line 58]"}
 {"location": "real-world-/classes/TrustStoreConfigurationTest.java:[line 50]"}
+{"location": "real-world-/classes/RollingAppenderCronOnceADayTest.java:[line 115]"}
+{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount1Test.java:[line 98]"}
+{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount1Test.java:[line 77]"}
+{"location": "real-world-/classes/ThreadedTest.java:[line 115]"}
 {"location": "real-world-/classes/ThreadedTest.java:[line 116]"}
-Bug Type: Dm, #Bugs found: 173
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+{"location": "real-world-/classes/FlumeEmbeddedAgentTest.java:[line 215]"}
+Bug Type: Others, #Bugs found: 174
 {"location": "real-world-/classes/AnnotationVsMarkerInterface.java:[line 62]"}
 {"location": "real-world-/classes/MemoryMappedFileAppenderLocationTest.java:[line 78]"}
 {"location": "real-world-/classes/RandomAccessFileAppenderTests.java:[line 83]"}
@@ -352,6 +353,7 @@ Description: (1)Monitor wait() called on Condition (2)A thread was created using
 {"location": "real-world-/classes/TlsSyslogInputStreamReader.java:[line 67]"}
 {"location": "real-world-/classes/TlsSyslogInputStreamReader.java:[line 89]"}
 {"location": "real-world-/classes/LegacyBsdTlsSyslogInputStreamReader.java:[line 51]"}
+{"location": "real-world-/classes/SimpleSmtpServer.java:[line 90]"}
 {"location": "real-world-/classes/SimpleSmtpServer.java:[line 108]"}
 {"location": "real-world-/classes/SimpleSmtpServer.java:[line 109]"}
 {"location": "real-world-/classes/NameUtil.java:[line 44]"}
@@ -484,80 +486,20 @@ Description: (1)Monitor wait() called on Condition (2)A thread was created using
 {"location": "real-world-/classes/XIncludeTest.java:[line 129]"}
 {"location": "real-world-/classes/LoggerOutputStreamCallerInfoTest.java:[line 41]"}
 {"location": "real-world-/classes/FlumeEmbeddedAgentTest.java:[line 206]"}
-Bug Type: NP, #Bugs found: 38
-Description: Synchronize and null check on the same field
-{"location": "real-world-/classes/RollingAppenderDeleteMaxDepthTest.java:[line 87]"}
-{"location": "real-world-/classes/RollingAppenderDeleteMaxDepthTest.java:[line 73]"}
-{"location": "real-world-/classes/FormatCache.java:[line 249]"}
-{"location": "real-world-/classes/FileRenameActionTest.java:[line 124]"}
-{"location": "real-world-/classes/FileRenameActionTest.java:[line 113]"}
-{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 63]"}
-{"location": "real-world-/classes/RollingAppenderDeleteScriptFri13thTest.java:[line 56]"}
-{"location": "real-world-/classes/RollingAppenderCustomDeleteActionTest.java:[line 62]"}
-{"location": "real-world-/classes/RollingAppenderNoUnconditionalDeleteTest.java:[line 84]"}
-{"location": "real-world-/classes/RollingAppenderNoUnconditionalDeleteTest.java:[line 102]"}
-{"location": "real-world-/classes/SocketReconnectTest.java:[line 146]"}
-{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 97]"}
-{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 95]"}
-{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 58]"}
-{"location": "real-world-/classes/RollingRandomAccessFileAppenderRolloverTest.java:[line 88]"}
-{"location": "real-world-/classes/RollingAppenderDeleteScriptTest.java:[line 57]"}
-{"location": "real-world-/classes/ExecutorServices.java:[line 55]"}
-{"location": "real-world-/classes/PatternLayout.java:[line 242]"}
-{"location": "real-world-/classes/ThrowableAttributeConverter.java:[line 167]"}
-{"location": "real-world-/classes/ResolverUtilTest.java:[line 213]"}
-{"location": "real-world-/classes/Rfc5424Layout.java:[line 231]"}
-{"location": "real-world-/classes/ConfigurationFactory.java:[line 427]"}
-{"location": "real-world-/classes/Log4j1ConfigurationConverter.java:[line 163]"}
-{"location": "real-world-/classes/Log4j1ConfigurationConverter.java:[line 165]"}
-{"location": "real-world-/classes/RollingAppenderDeleteNestedTest.java:[line 98]"}
-{"location": "real-world-/classes/RollingAppenderDeleteNestedTest.java:[line 76]"}
-{"location": "real-world-/classes/RollingAppenderCronEvery2Test.java:[line 88]"}
-{"location": "real-world-/classes/RollingAppenderCronTest.java:[line 82]"}
-{"location": "real-world-/classes/Log4j2_1482_Test.java:[line 59]"}
-{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount2Test.java:[line 99]"}
-{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount2Test.java:[line 77]"}
-{"location": "real-world-/classes/RollingAppenderCronEvery2DirectTest.java:[line 79]"}
-{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedSizeTest.java:[line 60]"}
-{"location": "real-world-/classes/RollingAppenderCronOnceADayTest.java:[line 115]"}
-{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount1Test.java:[line 98]"}
-{"location": "real-world-/classes/RollingAppenderDeleteAccumulatedCount1Test.java:[line 77]"}
-{"location": "real-world-/classes/ThreadedTest.java:[line 115]"}
-{"location": "real-world-/classes/FlumeEmbeddedAgentTest.java:[line 215]"}
-Bug Type: AT, #Bugs found: 1
-Description: Sequence of calls to concurrent abstraction may not be atomic
+Bug Type: Atomicity violation, #Bugs found: 3
 {"location": "real-world-/classes/ThreadLocalVsConcurrentHashMapBenchmark.java:[line 89]"}
-Bug Type: ESync, #Bugs found: 1
-Description: Empty synchronized block
-{"location": "real-world-/classes/ThreadDumpMessageTest.java:[line 141]"}
-Bug Type: VO, #Bugs found: 2
-Description: (1)A volatile reference to an array doesn’t treat the array elements as volatile (2)An increment to a volatile field isn’t atomic
 {"location": "real-world-/classes/SocketAppenderTest.java:[line 306]"}
 {"location": "real-world-/classes/SocketAppenderTest.java:[line 367]"}
-Bug Type: NN, #Bugs found: 1
-Description: Naked notify
-{"location": "real-world-/classes/SimpleSmtpServer.java:[line 90]"}
-Bug Type: UW, #Bugs found: 1
-Description: Unconditional wait
+Bug Type: Suspension-based locking or Blocking suspension, #Bugs found: 1
+{"location": "real-world-/classes/ThreadDumpMessageTest.java:[line 141]"}
+Bug Type: Deadlock, #Bugs found: 19
 {"location": "real-world-/classes/SimpleSmtpServer.java:[line 271]"}
-Bug Type: Wa, #Bugs found: 1
-Description: (1)Wait not in loop (2)Condition.await() not in loop
 {"location": "real-world-/classes/SimpleSmtpServer.java:[line 271]"}
-Bug Type: UL, #Bugs found: 1
-Description: (1)Method does not release lock on all paths (2)Method does not release lock on all exception paths
 {"location": "real-world-/classes/LockingReliabilityStrategy.java:[line 95]"}
-Bug Type: UG, #Bugs found: 1
-Description: Unsynchronized get method, synchronized set method
 {"location": "real-world-/classes/Logger.java:[line 300]"}
-Bug Type: SC, #Bugs found: 2
-Description: Constructor invokes Thread.start()
 {"location": "real-world-/classes/TcpSocketManager.java:[line 145]"}
-{"location": "real-world-/classes/FlumePersistentManager.java:[line 123]"}
-Bug Type: SWL, #Bugs found: 1
-Description: Method calls Thread.sleep() with a lock held
 {"location": "real-world-/classes/ThreadDumpMessageTest.java:[line 54]"}
-Bug Type: IS, #Bugs found: 12
-Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "real-world-/classes/FlumePersistentManager.java:[line 123]"}
 {"location": "real-world-/classes/Log4jWebInitializerImpl.java:[line 243]"}
 {"location": "real-world-/classes/AsyncLoggerDisruptor.java:[line 181]"}
 {"location": "real-world-/classes/AsyncLoggerConfigDisruptor.java:[line 270]"}
@@ -579,63 +521,42 @@ Project name: real-world--zookeeper-3.5.2-alpha, #Bugs found: 0
 
 
 Project name: simpleExample, #Bugs found: 2
-Bug Type: SSD, #Bugs found: 2
-Description: Instance level lock was used on a shared static data
+Bug Type: Data race, #Bugs found: 2
 {"location": "simpleExample/classes/SimpleExample.java:[line 21]"}
 {"location": "simpleExample/classes/SimpleExample.java:[line 24]"}
 
 
 Project name: sor, #Bugs found: 26
-Bug Type: Dm, #Bugs found: 2
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+Bug Type: Others, #Bugs found: 6
 {"location": "sor/classes/PropertyChangeMulticaster.java:[line 383]"}
-{"location": "sor/classes/VetoableChangeMulticaster.java:[line 482]"}
-Bug Type: NN, #Bugs found: 4
-Description: Naked notify
 {"location": "sor/classes/CondVar.java:[line 257]"}
 {"location": "sor/classes/CondVar.java:[line 262]"}
+{"location": "sor/classes/VetoableChangeMulticaster.java:[line 482]"}
 {"location": "sor/classes/WriterPreferenceReadWriteLock.java:[line 191]"}
 {"location": "sor/classes/WriterPreferenceReadWriteLock.java:[line 267]"}
-Bug Type: UW, #Bugs found: 1
-Description: Unconditional wait
+Bug Type: Deadlock, #Bugs found: 15
 {"location": "sor/classes/CondVar.java:[line 170]"}
-Bug Type: Wa, #Bugs found: 2
-Description: (1)Wait not in loop (2)Condition.await() not in loop
 {"location": "sor/classes/CondVar.java:[line 170]"}
-{"location": "sor/classes/FJTaskRunnerGroup.java:[line 541]"}
-Bug Type: RV, #Bugs found: 2
-Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
-{"location": "sor/classes/Sor.java:[line 104]"}
-{"location": "sor/classes/Sor.java:[line 117]"}
-Bug Type: ML, #Bugs found: 4
-Description: (1)Synchronization on field in futile attempt to guard that field (2)Method synchronizes on an updated field
 {"location": "sor/classes/LinkedQueue.java:[line 70]"}
 {"location": "sor/classes/LinkedQueue.java:[line 85]"}
-{"location": "sor/classes/BoundedLinkedQueue.java:[line 198]"}
-{"location": "sor/classes/BoundedLinkedQueue.java:[line 288]"}
-Bug Type: RS, #Bugs found: 1
-Description: Class’s readObject() method is synchronized
 {"location": "sor/classes/CopyOnWriteArrayList.java:[lines 779-789]"}
-Bug Type: UG, #Bugs found: 1
-Description: Unsynchronized get method, synchronized set method
 {"location": "sor/classes/CopyOnWriteArrayList.java:[lines 369-371]"}
-Bug Type: TLW, #Bugs found: 2
-Description: Wait with two locks held
+{"location": "sor/classes/FJTaskRunnerGroup.java:[line 541]"}
 {"location": "sor/classes/BoundedLinkedQueue.java:[line 307]"}
 {"location": "sor/classes/BoundedLinkedQueue.java:[line 343]"}
-Bug Type: NP, #Bugs found: 1
-Description: Synchronize and null check on the same field
-{"location": "sor/classes/WaitFreeQueue.java:[line 147]"}
-Bug Type: VO, #Bugs found: 2
-Description: (1)A volatile reference to an array doesn’t treat the array elements as volatile (2)An increment to a volatile field isn’t atomic
-{"location": "sor/classes/PooledExecutor.java:[line 470]"}
-{"location": "sor/classes/PooledExecutor.java:[line 580]"}
-Bug Type: IS, #Bugs found: 4
-Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
+{"location": "sor/classes/BoundedLinkedQueue.java:[line 198]"}
+{"location": "sor/classes/BoundedLinkedQueue.java:[line 288]"}
 {"location": "sor/classes/WaitFreeQueue.java:[line 184]"}
 {"location": "sor/classes/FJTaskRunner.java:[line 926]"}
 {"location": "sor/classes/FJTaskRunnerGroup.java:[line 410]"}
 {"location": "sor/classes/CopyOnWriteArrayList.java:[line 1059]"}
+Bug Type: Data race, #Bugs found: 3
+{"location": "sor/classes/Sor.java:[line 104]"}
+{"location": "sor/classes/Sor.java:[line 117]"}
+{"location": "sor/classes/WaitFreeQueue.java:[line 147]"}
+Bug Type: Atomicity violation, #Bugs found: 2
+{"location": "sor/classes/PooledExecutor.java:[line 470]"}
+{"location": "sor/classes/PooledExecutor.java:[line 580]"}
 
 
 Project name: testAtomicity1, #Bugs found: 0
@@ -654,8 +575,7 @@ Project name: testAtomicity14, #Bugs found: 0
 
 
 Project name: testAtomicity4, #Bugs found: 1
-Bug Type: Wa, #Bugs found: 1
-Description: (1)Wait not in loop (2)Condition.await() not in loop
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "testAtomicity4/classes/TestAtomicity4.java:[line 34]"}
 
 
@@ -663,8 +583,7 @@ Project name: testAtomicity6, #Bugs found: 0
 
 
 Project name: testAtomicity7, #Bugs found: 1
-Bug Type: ESync, #Bugs found: 1
-Description: Empty synchronized block
+Bug Type: Suspension-based locking or Blocking suspension, #Bugs found: 1
 {"location": "testAtomicity7/classes/TestAtomicity7.java:[line 27]"}
 
 
@@ -678,20 +597,17 @@ Project name: testRace1, #Bugs found: 0
 
 
 Project name: testRace10, #Bugs found: 1
-Bug Type: Wa, #Bugs found: 1
-Description: (1)Wait not in loop (2)Condition.await() not in loop
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "testRace10/classes/TestRace10.java:[line 47]"}
 
 
 Project name: testRace11, #Bugs found: 1
-Bug Type: Wa, #Bugs found: 1
-Description: (1)Wait not in loop (2)Condition.await() not in loop
+Bug Type: Deadlock, #Bugs found: 1
 {"location": "testRace11/classes/TestRace11.java:[line 55]"}
 
 
 Project name: testRace12, #Bugs found: 1
-Bug Type: Dm, #Bugs found: 1
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+Bug Type: Others, #Bugs found: 1
 {"location": "testRace12/classes/TestRace12.java:[line 104]"}
 
 
@@ -708,19 +624,15 @@ Project name: testRace6, #Bugs found: 0
 
 
 Project name: tsp, #Bugs found: 8
-Bug Type: DL, #Bugs found: 6
-Description: (1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values
+Bug Type: Data race, #Bugs found: 7
 {"location": "tsp/classes/TspSolver.java:[line 66]"}
 {"location": "tsp/classes/TspSolver.java:[line 111]"}
 {"location": "tsp/classes/TspSolver.java:[line 150]"}
 {"location": "tsp/classes/TspSolver.java:[line 278]"}
 {"location": "tsp/classes/TspSolver.java:[line 364]"}
 {"location": "tsp/classes/TspSolver.java:[line 456]"}
-Bug Type: NP, #Bugs found: 1
-Description: Synchronize and null check on the same field
 {"location": "tsp/classes/Tsp.java:[line 111]"}
-Bug Type: Dm, #Bugs found: 1
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
+Bug Type: Others, #Bugs found: 1
 {"location": "tsp/classes/Tsp.java:[line 106]"}
 
 
@@ -728,101 +640,26 @@ Description: (1)Monitor wait() called on Condition (2)A thread was created using
 
 ----------Overall Results for JBench----------
 Number of concurrency bugs found in JBench: 436
-Number of concurrency bug types found in JBench: 19
+Number of concurrency bug types found in JBench: 5
 
 
-Bug Type: VO
-Description: (1)A volatile reference to an array doesn’t treat the array elements as volatile (2)An increment to a volatile field isn’t atomic
-#Bugs found: 17
+Bug Type: Atomicity violation
+#Bugs found: 18
 
 
-Bug Type: IS
-Description: (1)Inconsistent synchronization (2)Field not guarded against concurrent access
-#Bugs found: 25
+Bug Type: Deadlock
+#Bugs found: 55
 
 
-Bug Type: SSD
-Description: Instance level lock was used on a shared static data
-#Bugs found: 9
+Bug Type: Data race
+#Bugs found: 155
 
 
-Bug Type: Dm
-Description: (1)Monitor wait() called on Condition (2)A thread was created using the default empty run method
-#Bugs found: 198
+Bug Type: Others
+#Bugs found: 206
 
 
-Bug Type: SWL
-Description: Method calls Thread.sleep() with a lock held
-#Bugs found: 5
-
-
-Bug Type: Wa
-Description: (1)Wait not in loop (2)Condition.await() not in loop
-#Bugs found: 11
-
-
-Bug Type: NN
-Description: Naked notify
-#Bugs found: 8
-
-
-Bug Type: RV
-Description: Return value of putIfAbsent ignored, value passed to putIfAbsent reused
-#Bugs found: 95
-
-
-Bug Type: NP
-Description: Synchronize and null check on the same field
-#Bugs found: 45
-
-
-Bug Type: AT
-Description: Sequence of calls to concurrent abstraction may not be atomic
-#Bugs found: 1
-
-
-Bug Type: ESync
-Description: Empty synchronized block
+Bug Type: Suspension-based locking or Blocking suspension
 #Bugs found: 2
-
-
-Bug Type: UW
-Description: Unconditional wait
-#Bugs found: 2
-
-
-Bug Type: UL
-Description: (1)Method does not release lock on all paths (2)Method does not release lock on all exception paths
-#Bugs found: 1
-
-
-Bug Type: UG
-Description: Unsynchronized get method, synchronized set method
-#Bugs found: 2
-
-
-Bug Type: SC
-Description: Constructor invokes Thread.start()
-#Bugs found: 2
-
-
-Bug Type: ML
-Description: (1)Synchronization on field in futile attempt to guard that field (2)Method synchronizes on an updated field
-#Bugs found: 4
-
-
-Bug Type: RS
-Description: Class’s readObject() method is synchronized
-#Bugs found: 1
-
-
-Bug Type: TLW
-Description: Wait with two locks held
-#Bugs found: 2
-
-
-Bug Type: DL
-Description: (1)Synchronization on interned String (2)Synchronization on Boolean (3)Synchronization on boxed primitive (4)Synchronization on boxed primitive values
-#Bugs found: 6
 
 
