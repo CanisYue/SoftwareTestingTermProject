@@ -1,2 +1,5 @@
-/misc/scratch/zttest/22f/projects/classes//tomcat/org/apache/tomcat/jdbc/pool/ConnectionPool.java:1440: Method org/apache/tomcat/jdbc/pool/ConnectionPool$ConnectionFuture.run() implementing 'Runnable' interface is not synchronized.
-Verification completed: 1 reported messages.
+jlint: method_desc.cc:3003: void method_desc::parse_code(constant**, const field_desc*): Assertion `sp == stack_bottom' failed.
+/misc/scratch/zttest/22f/projects/classes/tomcat/org/apache/tomcat/util/net/AprEndpoint.java:2037: Value of lock socket is changed while (potentially) owning it.
+/misc/scratch/zttest/22f/projects/classes/tomcat/org/apache/tomcat/util/net/AprEndpoint.java:2045: Value of lock socket is changed while (potentially) owning it.
+/misc/scratch/zttest/22f/projects/classes/tomcat/org/apache/tomcat/util/net/AprEndpoint.java:2053: Value of lock socket is changed outside synchronization or constructor.
+/misc/scratch/zttest/22f/projects/classes/tomcat/org/apache/tomcat/util/net/AprEndpoint.java:2053: Value of lock socket is changed outside synchronization or constructor.

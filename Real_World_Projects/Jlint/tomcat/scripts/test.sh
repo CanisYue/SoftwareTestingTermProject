@@ -1,9 +1,9 @@
 #!/bin/bash
 
-target_dir=/misc/scratch/zttest/22f/projects/tomcat-8.5.84/modules/jdbc-pool/target/classes/org/apache/tomcat
+target_dir=/misc/scratch/zttest/22f/projects/tomcat-8.5.84/output
 cd ${target_dir}
 
-root_dir=/misc/scratch/zttest/22f/projects/classes/
+root_dir=/misc/scratch/zttest/22f/projects/classes
 
 if [ ! -d "${root_dir}/tomcat" ]
 then
