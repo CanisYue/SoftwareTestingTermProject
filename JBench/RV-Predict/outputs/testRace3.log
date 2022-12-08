@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict8752080700813125425
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/testRace3
 [RV-Predict] Finished retransforming preloaded classes.
 x = 2
 Data race on field testRace.TestRace3.x:

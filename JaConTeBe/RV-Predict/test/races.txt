@@ -1,0 +1,1242 @@
+Total Races Found:  39
+Data race on array element #0: {{{
+    Concurrent Write in thread 28 (locks held: {})
+ ---->  at org.codehaus.groovy.runtime.callsite.CallSiteArray.replaceCallSite(CallSiteArray.java:156)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createPojoSite(CallSiteArray.java:114)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallSite(CallSiteArray.java:148)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    28 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.codehaus.groovy.runtime.callsite.CallSiteArray.replaceCallSite(CallSiteArray.java:156)
+        at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.<init>(PojoMetaMethodSite.java:42)
+        at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.createNonAwareCallSite(PojoMetaMethodSite.java:170)
+        at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.createPojoMetaMethodSite(PojoMetaMethodSite.java:149)
+        at groovy.lang.MetaClassImpl.createPojoCallSite(MetaClassImpl.java:3003)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createPojoSite(CallSiteArray.java:114)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallSite(CallSiteArray.java:148)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    27 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on array element #0: {{{
+    Concurrent Read in thread 42 (locks held: {})
+ ---->  at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    42 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.codehaus.groovy.runtime.callsite.CallSiteArray.replaceCallSite(CallSiteArray.java:156)
+        at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.<init>(PojoMetaMethodSite.java:42)
+        at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.createNonAwareCallSite(PojoMetaMethodSite.java:170)
+        at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.createPojoMetaMethodSite(PojoMetaMethodSite.java:149)
+        at groovy.lang.MetaClassImpl.createPojoCallSite(MetaClassImpl.java:3003)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createPojoSite(CallSiteArray.java:114)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallSite(CallSiteArray.java:148)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    27 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on array element #1: {{{
+    Concurrent Read in thread 28 (locks held: {})
+ ---->  at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    28 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.codehaus.groovy.runtime.callsite.AbstractCallSite.createPogoGetPropertySite(AbstractCallSite.java:333)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.createGroovyObjectGetPropertySite(AbstractCallSite.java:273)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.acceptGroovyObjectGetProperty(AbstractCallSite.java:247)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:239)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    27 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on array element #29: {{{
+    Concurrent Read in thread 28 (locks held: {})
+ ---->  at org.codehaus.groovy.util.AbstractConcurrentMap$Segment.getOrPut(AbstractConcurrentMap.java:79)
+        at org.codehaus.groovy.util.AbstractConcurrentMap.getOrPut(AbstractConcurrentMap.java:35)
+        at org.codehaus.groovy.reflection.ClassInfo.getClassInfo(ClassInfo.java:103)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    28 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.codehaus.groovy.util.AbstractConcurrentMap$Segment.put(AbstractConcurrentMap.java:158)
+        at org.codehaus.groovy.util.AbstractConcurrentMap$Segment.put(AbstractConcurrentMap.java:157)
+        at org.codehaus.groovy.util.AbstractConcurrentMap$Segment.getOrPut(AbstractConcurrentMap.java:97)
+        at org.codehaus.groovy.util.AbstractConcurrentMap.getOrPut(AbstractConcurrentMap.java:35)
+        at org.codehaus.groovy.reflection.ClassInfo.getClassInfo(ClassInfo.java:103)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    27 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on array element #2: {{{
+    Concurrent Read in thread 28 (locks held: {})
+ ---->  at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    28 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.codehaus.groovy.runtime.callsite.CallSiteArray.replaceCallSite(CallSiteArray.java:156)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallCurrentSite(CallSiteArray.java:99)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    27 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on field Groovy3495.buggy: {{{
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at Groovy3495.access$102(Groovy3495.java:40)
+    27 is created by 
+        at Groovy3495.run(Groovy3495.java:94)
+
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at Groovy3495.access$102(Groovy3495.java:40)
+    29 is created by 
+        at Groovy3495.run(Groovy3495.java:94)
+
+}}} 
+
+Data race on field Test162$WaitingTestThread._thrown: {{{
+    Concurrent Read in thread 1 (locks held: {})
+ ---->  at Test162$WaitingTestThread.access$000(Test162.java:232)
+        at Test162.testWhenExhaustedBlockInterupt(Test162.java:210)
+        at Test162.main(Test162.java:262)
+    1 is the main thread
+
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at Test162$WaitingTestThread.run(Test162.java:249)
+    29 is created by 
+        at Test162.testWhenExhaustedBlockInterupt(Test162.java:203)
+
+}}} 
+
+Data race on field groovy.util.AntBuilder.insideTask: {{{
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:189)
+    27 is created by 
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+    Concurrent Write in thread 28 (locks held: {})
+ ---->  at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:189)
+    28 is created by 
+        at groovy.util.Groovy6068.run(Groovy6068.java:45)
+
+}}} 
+
+Data race on field java.util.WeakHashMap.$state: {{{
+    Concurrent Read in thread 29 (locks held: {})
+ ---->  at org.codehaus.groovy.ast.ClassHelper.makeCached(ClassHelper.java:115)
+        at org.codehaus.groovy.ast.Groovy4292$AsyncWeakRef.run(Groovy4292.java:89)
+    29 is created by 
+        at org.codehaus.groovy.ast.Groovy4292.main(Groovy4292.java:49)
+
+    Concurrent Write in thread 32 (locks held: {})
+ ---->  at org.codehaus.groovy.ast.ClassHelper.makeCached(ClassHelper.java:119)
+        at org.codehaus.groovy.ast.Groovy4292$AsyncWeakRef.run(Groovy4292.java:89)
+    32 is created by 
+        at org.codehaus.groovy.ast.Groovy4292.main(Groovy4292.java:49)
+
+}}} 
+
+Data race on field java.util.WeakHashMap.$state: {{{
+    Concurrent Write in thread 32 (locks held: {})
+ ---->  at org.codehaus.groovy.ast.ClassHelper.makeCached(ClassHelper.java:119)
+        at org.codehaus.groovy.ast.Groovy4292$AsyncWeakRef.run(Groovy4292.java:89)
+    32 is created by 
+        at org.codehaus.groovy.ast.Groovy4292.main(Groovy4292.java:49)
+
+    Concurrent Read in thread 29 (locks held: {})
+ ---->  at org.codehaus.groovy.ast.ClassHelper.makeCached(ClassHelper.java:119)
+        at org.codehaus.groovy.ast.Groovy4292$AsyncWeakRef.run(Groovy4292.java:89)
+    29 is created by 
+        at org.codehaus.groovy.ast.Groovy4292.main(Groovy4292.java:49)
+
+}}} 
+
+Data race on field org.apache.commons.dbcp.AbandonedTrace.lastUsed: {{{
+    Concurrent Read in thread 131 (locks held: {})
+ ---->  at org.apache.commons.dbcp.AbandonedTrace.getLastUsed(AbandonedTrace.java:119)
+        at org.apache.commons.dbcp.Dbcp271$Read.run(Dbcp271.java:88)
+    131 is created by 
+        at org.apache.commons.dbcp.Dbcp271.run(Dbcp271.java:54)
+
+    Concurrent Write in thread 230 (locks held: {})
+ ---->  at org.apache.commons.dbcp.AbandonedTrace.setLastUsed(AbandonedTrace.java:143)
+        at org.apache.commons.dbcp.Dbcp271$Write.run(Dbcp271.java:119)
+    230 is created by 
+        at org.apache.commons.dbcp.Dbcp271.run(Dbcp271.java:56)
+
+}}} 
+
+Data race on field org.apache.commons.dbcp.AbandonedTrace.lastUsed: {{{
+    Concurrent Write in thread 30 (locks held: {})
+ ---->  at org.apache.commons.dbcp.AbandonedTrace.setLastUsed(AbandonedTrace.java:130)
+        at org.apache.commons.dbcp.DelegatingConnection.activate(DelegatingConnection.java:297)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.activateObject(PoolableConnectionFactory.java:364)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    30 is created by 
+        at Dbcp270.run(Dbcp270.java:90)
+
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.apache.commons.dbcp.AbandonedTrace.setLastUsed(AbandonedTrace.java:143)
+        at org.apache.commons.dbcp.DelegatingConnection.passivate(DelegatingConnection.java:316)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:358)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    29 is created by 
+        at Dbcp270.run(Dbcp270.java:89)
+
+}}} 
+
+Data race on field org.apache.commons.dbcp.DelegatingConnection._closed: {{{
+    Concurrent Read in thread 30 (locks held: {})
+ ---->  at org.apache.commons.dbcp.DelegatingConnection.isClosed(DelegatingConnection.java:283)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.validateConnection(PoolableConnectionFactory.java:320)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.validateObject(PoolableConnectionFactory.java:308)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:942)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    30 is created by 
+        at Dbcp270.run(Dbcp270.java:90)
+
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.apache.commons.dbcp.DelegatingConnection.passivate(DelegatingConnection.java:324)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:358)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    29 is created by 
+        at Dbcp270.run(Dbcp270.java:89)
+
+}}} 
+
+Data race on field org.apache.commons.dbcp.DelegatingConnection._closed: {{{
+    Concurrent Read in thread 30 (locks held: {})
+ ---->  at org.apache.commons.dbcp.DelegatingConnection.checkOpen(DelegatingConnection.java:290)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.activateObject(PoolableConnectionFactory.java:368)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    30 is created by 
+        at Dbcp270.run(Dbcp270.java:90)
+
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.apache.commons.dbcp.DelegatingConnection.passivate(DelegatingConnection.java:324)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:358)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    29 is created by 
+        at Dbcp270.run(Dbcp270.java:89)
+
+}}} 
+
+Data race on field org.apache.commons.dbcp.DelegatingConnection._closed: {{{
+    Concurrent Write in thread 30 (locks held: {})
+ ---->  at org.apache.commons.dbcp.DelegatingConnection.activate(DelegatingConnection.java:296)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    30 is created by 
+        at Dbcp270.run(Dbcp270.java:90)
+
+    Concurrent Read in thread 29 (locks held: {})
+ ---->  at org.apache.commons.dbcp.DelegatingConnection.checkOpen(DelegatingConnection.java:290)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:351)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    29 is created by 
+        at Dbcp270.run(Dbcp270.java:89)
+
+}}} 
+
+Data race on field org.apache.commons.dbcp.DelegatingConnection._closed: {{{
+    Concurrent Write in thread 30 (locks held: {})
+ ---->  at org.apache.commons.dbcp.DelegatingConnection.activate(DelegatingConnection.java:296)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    30 is created by 
+        at Dbcp270.run(Dbcp270.java:90)
+
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.apache.commons.dbcp.DelegatingConnection.passivate(DelegatingConnection.java:324)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:358)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    29 is created by 
+        at Dbcp270.run(Dbcp270.java:89)
+
+}}} 
+
+Data race on field org.apache.commons.pool.BaseObjectPool.closed: {{{
+    Concurrent Write in thread 50 (locks held: {})
+ ---->  at org.apache.commons.pool.BaseObjectPool.close(BaseObjectPool.java:62)
+        at org.apache.commons.pool.Test46$Writer.run(Test46.java:166)
+    50 is created by 
+        at org.apache.commons.pool.Test46.runTest(Test46.java:47)
+
+    Concurrent Read in thread 42 (locks held: {})
+ ---->  at org.apache.commons.pool.BaseObjectPool.isClosed(BaseObjectPool.java:73)
+        at org.apache.commons.pool.Test46$Reader.run(Test46.java:130)
+    42 is created by 
+        at org.apache.commons.pool.Test46.runTest(Test46.java:44)
+
+}}} 
+
+Data race on field org.apache.derby.client.am.LogicalConnection.physicalConnection_: {{{
+    Concurrent Read in thread 28 (locks held: {})
+ ---->  at org.apache.derby.client.am.LogicalConnection.checkForNullPhysicalConnection(LogicalConnection.java:136)
+        at Derby5561$NativeRunnable.run(Derby5561.java:29)
+    28 is created by 
+        at Derby5561.run(Derby5561.java:123)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.apache.derby.client.am.LogicalConnection.nullPhysicalConnection(LogicalConnection.java:64)
+        - locked Monitor@1343942699 at org.apache.derby.client.am.LogicalConnection.nullPhysicalConnection(LogicalConnection.java:n/a)
+        at Derby5561$NullRunnable.run(Derby5561.java:51)
+    27 is created by 
+        at Derby5561.run(Derby5561.java:122)
+
+}}} 
+
+Data race on field org.apache.derby.iapi.services.context.ContextManager.activeThread: {{{
+    Concurrent Read in thread 33 (locks held: {})
+ ---->  at org.apache.derby.iapi.services.context.ContextService.getCurrentContextManager(ContextService.java:281)
+        at org.apache.derby.impl.services.monitor.BaseMonitor.getBundle(BaseMonitor.java:2091)
+        at org.apache.derby.iapi.services.i18n.MessageService.getBundle(MessageService.java:300)
+        at org.apache.derby.iapi.services.i18n.MessageService.getCompleteMessage(MessageService.java:98)
+        at org.apache.derby.iapi.error.StandardException.getMessage(StandardException.java:658)
+        at org.apache.derby.iapi.error.StandardException.toString(StandardException.java:685)
+        at org.apache.derby.impl.store.raw.data.OverflowInputStream.fillByteHolder(OverflowInputStream.java:159)
+        at org.apache.derby.impl.store.raw.data.BufferedByteHolderInputStream.read(BufferedByteHolderInputStream.java:44)
+        at org.apache.derby.iapi.types.SQLBinary.readExternal(SQLBinary.java:422)
+        at org.apache.derby.iapi.types.SQLBinary.getValue(SQLBinary.java:241)
+        at org.apache.derby.iapi.types.SQLBinary.getBytes(SQLBinary.java:223)
+        at org.apache.derby.impl.jdbc.EmbedResultSet.getBytes(EmbedResultSet.java:863)
+        at Derby4129$1.run(Derby4129.java:63)
+    33 is created by 
+        at Derby4129.main(Derby4129.java:79)
+
+    Concurrent Write in thread 32 (locks held: {})
+ ---->  at org.apache.derby.iapi.services.context.ContextService.resetCurrentContextManager(ContextService.java:334)
+        at org.apache.derby.impl.jdbc.TransactionResourceImpl.restoreContextStack(TransactionResourceImpl.java:281)
+        at org.apache.derby.impl.jdbc.EmbedConnection.restoreContextStack(EmbedConnection.java:2415)
+        at org.apache.derby.impl.jdbc.ConnectionChild.restoreContextStack(ConnectionChild.java:131)
+        at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1325)
+        - locked Monitor@392954458 at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1168)
+        at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeStatement(EmbedPreparedStatement.java:1648)
+        at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeQuery(EmbedPreparedStatement.java:270)
+        at Derby4129$1.run(Derby4129.java:60)
+    32 is created by 
+        at Derby4129.main(Derby4129.java:78)
+
+}}} 
+
+Data race on field org.apache.derby.iapi.services.context.ContextManager.activeThread: {{{
+    Concurrent Read in thread 33 (locks held: {})
+ ---->  at org.apache.derby.iapi.services.context.ContextService.getCurrentContextManager(ContextService.java:281)
+        at org.apache.derby.impl.services.monitor.BaseMonitor.getBundle(BaseMonitor.java:2091)
+        at org.apache.derby.iapi.services.i18n.MessageService.getBundle(MessageService.java:300)
+        at org.apache.derby.iapi.services.i18n.MessageService.getCompleteMessage(MessageService.java:98)
+        at org.apache.derby.iapi.error.StandardException.getMessage(StandardException.java:658)
+        at org.apache.derby.iapi.error.StandardException.toString(StandardException.java:685)
+        at org.apache.derby.impl.store.raw.data.OverflowInputStream.fillByteHolder(OverflowInputStream.java:159)
+        at org.apache.derby.impl.store.raw.data.BufferedByteHolderInputStream.read(BufferedByteHolderInputStream.java:44)
+        at org.apache.derby.iapi.types.SQLBinary.readExternal(SQLBinary.java:422)
+        at org.apache.derby.iapi.types.SQLBinary.getValue(SQLBinary.java:241)
+        at org.apache.derby.iapi.types.SQLBinary.getBytes(SQLBinary.java:223)
+        at org.apache.derby.impl.jdbc.EmbedResultSet.getBytes(EmbedResultSet.java:863)
+        at Derby4129$1.run(Derby4129.java:63)
+    33 is created by 
+        at Derby4129.main(Derby4129.java:79)
+
+    Concurrent Write in thread 32 (locks held: {})
+ ---->  at org.apache.derby.iapi.services.context.ContextService.setCurrentContextManager(ContextService.java:511)
+        at org.apache.derby.impl.jdbc.TransactionResourceImpl.setupContextStack(TransactionResourceImpl.java:274)
+        at org.apache.derby.impl.jdbc.EmbedConnection.setupContextStack(EmbedConnection.java:2389)
+        at org.apache.derby.impl.jdbc.ConnectionChild.setupContextStack(ConnectionChild.java:121)
+        at org.apache.derby.impl.jdbc.EmbedResultSet.movePosition(EmbedResultSet.java:398)
+        - locked Monitor@392954458 at org.apache.derby.impl.jdbc.EmbedResultSet.movePosition(EmbedResultSet.java:396)
+        at org.apache.derby.impl.jdbc.EmbedResultSet.next(EmbedResultSet.java:371)
+        at Derby4129$1.run(Derby4129.java:61)
+    32 is created by 
+        at Derby4129.main(Derby4129.java:78)
+
+}}} 
+
+Data race on field org.apache.log4j.helpers.AppenderAttachableImpl.appenderList: {{{
+    Concurrent Read in thread 27 (locks held: {})
+ ---->  at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:139)
+        at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
+    27 is created by 
+        at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
+
+    Concurrent Write in thread 30 (locks held: {})
+ ---->  at org.apache.log4j.helpers.AppenderAttachableImpl.removeAllAppenders(AppenderAttachableImpl.java:143)
+        at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:46)
+    30 is created by 
+        at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
+
+}}} 
+
+Data race on field org.apache.log4j.helpers.Test54325.buggy: {{{
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.apache.log4j.helpers.Test54325.access$202(Test54325.java:14)
+        at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:48)
+    29 is created by 
+        at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.apache.log4j.helpers.Test54325.access$202(Test54325.java:14)
+        at org.apache.log4j.helpers.Test54325$RemoveThread.run(Test54325.java:48)
+    27 is created by 
+        at org.apache.log4j.helpers.Test54325.run(Test54325.java:32)
+
+}}} 
+
+Data race on field org.apache.log4j.spi.ThrowableInformation.rep: {{{
+    Concurrent Read in thread 29 (locks held: {})
+ ---->  at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:71)
+        at Test44032$TestThread.run(Test44032.java:52)
+    29 is created by 
+        at Test44032.run(Test44032.java:37)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    27 is created by 
+        at Test44032.run(Test44032.java:37)
+
+}}} 
+
+Data race on field org.apache.log4j.spi.ThrowableInformation.rep: {{{
+    Concurrent Read in thread 28 (locks held: {})
+ ---->  at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:72)
+        at Test44032$TestThread.run(Test44032.java:52)
+    28 is created by 
+        at Test44032.run(Test44032.java:37)
+
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    29 is created by 
+        at Test44032.run(Test44032.java:37)
+
+}}} 
+
+Data race on field org.apache.log4j.spi.ThrowableInformation.rep: {{{
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    27 is created by 
+        at Test44032.run(Test44032.java:37)
+
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    29 is created by 
+        at Test44032.run(Test44032.java:37)
+
+}}} 
+
+Data race on field org.apache.log4j.spi.ThrowableInformation.rep: {{{
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    29 is created by 
+        at Test44032.run(Test44032.java:37)
+
+    Concurrent Read in thread 27 (locks held: {})
+ ---->  at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:91)
+        at Test44032$TestThread.run(Test44032.java:52)
+    27 is created by 
+        at Test44032.run(Test44032.java:37)
+
+}}} 
+
+Data race on field org.apache.log4j.spi.ThrowableInformation.rep: {{{
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:90)
+        at Test44032$TestThread.run(Test44032.java:52)
+    29 is created by 
+        at Test44032.run(Test44032.java:37)
+
+    Concurrent Read in thread 27 (locks held: {})
+ ---->  at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:93)
+        at Test44032$TestThread.run(Test44032.java:52)
+    27 is created by 
+        at Test44032.run(Test44032.java:37)
+
+}}} 
+
+Data race on field org.apache.lucene.index.ConcurrentMergeScheduler.writer: {{{
+    Concurrent Read in thread 31 (locks held: {})
+ ---->  at org.apache.lucene.index.ConcurrentMergeScheduler.doMerge(ConcurrentMergeScheduler.java:235)
+        at org.apache.lucene.index.ConcurrentMergeScheduler$MergeThread.run(ConcurrentMergeScheduler.java:291)
+    31 is created by 
+        at org.apache.lucene.index.ConcurrentMergeScheduler.merge(ConcurrentMergeScheduler.java:221)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.lucene.index.ConcurrentMergeScheduler.merge(ConcurrentMergeScheduler.java:155)
+        at org.apache.lucene.index.IndexWriter.maybeMerge(IndexWriter.java:3070)
+        at org.apache.lucene.index.IndexWriter.maybeMerge(IndexWriter.java:3065)
+        at org.apache.lucene.index.IndexWriter.maybeMerge(IndexWriter.java:3061)
+        at org.apache.lucene.index.IndexWriter.flush(IndexWriter.java:4256)
+        at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:2546)
+        at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:2500)
+        at org.apache.lucene.index.Test2783.runTest(Test2783.java:157)
+        at org.apache.lucene.index.Test2783.testAtomicUpdates(Test2783.java:209)
+        at junit.framework.TestCase.runTest(TestCase.java:176)
+        at junit.framework.TestCase.runBare(TestCase.java:141)
+        at org.apache.lucene.util.LuceneTestCase293.runBare(LuceneTestCase293.java:234)
+        at junit.framework.TestResult$1.protect(TestResult.java:122)
+        at junit.framework.TestResult.runProtected(TestResult.java:142)
+        at junit.framework.TestResult.run(TestResult.java:125)
+        at junit.framework.TestCase.run(TestCase.java:129)
+        at junit.framework.TestSuite.runTest(TestSuite.java:255)
+        at junit.framework.TestSuite.run(TestSuite.java:250)
+        at junit.textui.TestRunner.doRun(TestRunner.java:116)
+        at junit.textui.TestRunner.start(TestRunner.java:183)
+        at junit.textui.TestRunner.main(TestRunner.java:137)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.lucene.store.RAMFile.length: {{{
+    Concurrent Read in thread 31 (locks held: {})
+ ---->  at org.apache.lucene.store.MockRAMDirectory.getRecomputedActualSizeInBytes(MockRAMDirectory.java:295)
+        - locked Monitor@292061095 at org.apache.lucene.store.MockRAMDirectory.getRecomputedActualSizeInBytes(MockRAMDirectory.java:n/a)
+        at org.apache.lucene.store.MockRAMOutputStream.close(MockRAMOutputStream.java:47)
+        at org.apache.lucene.index.FieldInfos.write(FieldInfos.java:311)
+        at org.apache.lucene.index.SegmentMerger.mergeFields(SegmentMerger.java:317)
+        at org.apache.lucene.index.SegmentMerger.merge(SegmentMerger.java:153)
+        at org.apache.lucene.index.IndexWriter.mergeMiddle(IndexWriter.java:5112)
+        at org.apache.lucene.index.IndexWriter.merge(IndexWriter.java:4675)
+        at org.apache.lucene.index.ConcurrentMergeScheduler.doMerge(ConcurrentMergeScheduler.java:235)
+        at org.apache.lucene.index.ConcurrentMergeScheduler$MergeThread.run(ConcurrentMergeScheduler.java:291)
+    31 is created by 
+        at org.apache.lucene.index.ConcurrentMergeScheduler.merge(ConcurrentMergeScheduler.java:221)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.lucene.store.RAMFile.setLength(RAMFile.java:50)
+        - locked Monitor@1041146493 at org.apache.lucene.store.RAMFile.setLength(RAMFile.java:n/a)
+        at org.apache.lucene.store.RAMOutputStream.setFileLength(RAMOutputStream.java:141)
+        at org.apache.lucene.store.RAMOutputStream.flush(RAMOutputStream.java:147)
+        at org.apache.lucene.store.MockRAMOutputStream.flush(MockRAMOutputStream.java:55)
+        at org.apache.lucene.store.RAMOutputStream.close(RAMOutputStream.java:83)
+        at org.apache.lucene.store.MockRAMOutputStream.close(MockRAMOutputStream.java:43)
+        at org.apache.lucene.index.FieldsWriter.close(FieldsWriter.java:144)
+        at org.apache.lucene.index.StoredFieldsWriter.closeDocStore(StoredFieldsWriter.java:84)
+        - locked Monitor@801740080 at org.apache.lucene.index.StoredFieldsWriter.closeDocStore(StoredFieldsWriter.java:n/a)
+        at org.apache.lucene.index.DocFieldProcessor.closeDocStore(DocFieldProcessor.java:50)
+        at org.apache.lucene.index.DocumentsWriter.closeDocStore(DocumentsWriter.java:426)
+        at org.apache.lucene.index.DocumentsWriter.flush(DocumentsWriter.java:627)
+        - locked Monitor@1733568579 at org.apache.lucene.index.DocumentsWriter.flush(DocumentsWriter.java:n/a)
+        at org.apache.lucene.index.IndexWriter.doFlushInternal(IndexWriter.java:4374)
+        at org.apache.lucene.index.IndexWriter.doFlush(IndexWriter.java:4264)
+        - locked Monitor@280705438 at org.apache.lucene.index.IndexWriter.doFlush(IndexWriter.java:n/a)
+        at org.apache.lucene.index.IndexWriter.flush(IndexWriter.java:4255)
+        at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:2546)
+        at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:2500)
+        at org.apache.lucene.index.Test2783.runTest(Test2783.java:157)
+        at org.apache.lucene.index.Test2783.testAtomicUpdates(Test2783.java:209)
+        at junit.framework.TestCase.runTest(TestCase.java:176)
+        at junit.framework.TestCase.runBare(TestCase.java:141)
+        at org.apache.lucene.util.LuceneTestCase293.runBare(LuceneTestCase293.java:234)
+        at junit.framework.TestResult$1.protect(TestResult.java:122)
+        at junit.framework.TestResult.runProtected(TestResult.java:142)
+        at junit.framework.TestResult.run(TestResult.java:125)
+        at junit.framework.TestCase.run(TestCase.java:129)
+        at junit.framework.TestSuite.runTest(TestSuite.java:255)
+        at junit.framework.TestSuite.run(TestSuite.java:250)
+        at junit.textui.TestRunner.doRun(TestRunner.java:116)
+        at junit.textui.TestRunner.start(TestRunner.java:183)
+        at junit.textui.TestRunner.main(TestRunner.java:137)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.codehaus.groovy.reflection.ClassInfo.strongMetaClass: {{{
+    Concurrent Read in thread 42 (locks held: {})
+ ---->  at org.codehaus.groovy.reflection.ClassInfo.getMetaClassForClass(ClassInfo.java:144)
+        at org.codehaus.groovy.util.AbstractConcurrentMap.getOrPut(AbstractConcurrentMap.java:35)
+        at org.codehaus.groovy.reflection.ClassInfo.getClassInfo(ClassInfo.java:103)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    42 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.codehaus.groovy.reflection.ClassInfo.setWeakMetaClass(ClassInfo.java:135)
+        at org.codehaus.groovy.reflection.ClassInfo.getMetaClassUnderLock(ClassInfo.java:171)
+        at org.codehaus.groovy.reflection.ClassInfo.getMetaClass(ClassInfo.java:182)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    27 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on field org.codehaus.groovy.reflection.ClassInfo.weakMetaClass: {{{
+    Concurrent Read in thread 42 (locks held: {})
+ ---->  at org.codehaus.groovy.reflection.ClassInfo.getMetaClassForClass(ClassInfo.java:144)
+        at org.codehaus.groovy.reflection.ClassInfo.getMetaClass(ClassInfo.java:177)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    42 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.codehaus.groovy.reflection.ClassInfo.setWeakMetaClass(ClassInfo.java:139)
+        at org.codehaus.groovy.reflection.ClassInfo.setWeakMetaClass(ClassInfo.java:139)
+        at org.codehaus.groovy.reflection.ClassInfo.getMetaClassUnderLock(ClassInfo.java:171)
+        at org.codehaus.groovy.reflection.ClassInfo.getMetaClass(ClassInfo.java:182)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    27 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on field org.codehaus.groovy.runtime.metaclass.MetaMethodIndex$Entry.cachedMethod: {{{
+    Concurrent Read in thread 41 (locks held: {})
+ ---->  at groovy.lang.MetaClassImpl.getMethodWithCachingInternal(MetaClassImpl.java:1173)
+        at groovy.lang.MetaClassImpl.createPojoCallSite(MetaClassImpl.java:3001)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createPojoSite(CallSiteArray.java:114)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallSite(CallSiteArray.java:148)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    41 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at groovy.lang.MetaClassImpl.getMethodWithCachingInternal(MetaClassImpl.java:1182)
+        at groovy.lang.MetaClassImpl.createPojoCallSite(MetaClassImpl.java:3001)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createPojoSite(CallSiteArray.java:114)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallSite(CallSiteArray.java:148)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    27 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on field org.codehaus.groovy.runtime.metaclass.MetaMethodIndex$Entry.cachedMethod: {{{
+    Concurrent Write in thread 28 (locks held: {})
+ ---->  at groovy.lang.MetaClassImpl.getMethodWithCachingInternal(MetaClassImpl.java:1182)
+        at groovy.lang.MetaClassImpl.createPojoCallSite(MetaClassImpl.java:3001)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createPojoSite(CallSiteArray.java:114)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallSite(CallSiteArray.java:148)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    28 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at groovy.lang.MetaClassImpl.getMethodWithCachingInternal(MetaClassImpl.java:1182)
+        at groovy.lang.MetaClassImpl.createPojoCallSite(MetaClassImpl.java:3001)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createPojoSite(CallSiteArray.java:114)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallSite(CallSiteArray.java:148)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    27 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on field org.codehaus.groovy.util.LockableObject.owner: {{{
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.codehaus.groovy.util.LockableObject.lock(LockableObject.java:32)
+        at org.codehaus.groovy.reflection.ClassInfo.lock(ClassInfo.java:268)
+        at org.codehaus.groovy.reflection.ClassInfo.getMetaClass(ClassInfo.java:180)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    27 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Read in thread 28 (locks held: {})
+ ---->  at org.codehaus.groovy.util.LockableObject.tryAcquire(LockableObject.java:50)
+        at org.codehaus.groovy.util.LockableObject.lock(LockableObject.java:34)
+        at org.codehaus.groovy.reflection.ClassInfo.lock(ClassInfo.java:268)
+        at org.codehaus.groovy.reflection.ClassInfo.getMetaClass(ClassInfo.java:180)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    28 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on field org.codehaus.groovy.util.LockableObject.owner: {{{
+    Concurrent Write in thread 35 (locks held: {})
+ ---->  at org.codehaus.groovy.util.LockableObject.tryAcquire(LockableObject.java:46)
+        at org.codehaus.groovy.util.LockableObject.lock(LockableObject.java:34)
+        at org.codehaus.groovy.reflection.ClassInfo.lock(ClassInfo.java:268)
+        at org.codehaus.groovy.reflection.ClassInfo.getMetaClass(ClassInfo.java:180)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    35 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Read in thread 28 (locks held: {})
+ ---->  at org.codehaus.groovy.util.LockableObject.tryAcquire(LockableObject.java:50)
+        at org.codehaus.groovy.util.LockableObject.lock(LockableObject.java:34)
+        at org.codehaus.groovy.reflection.ClassInfo.lock(ClassInfo.java:268)
+        at org.codehaus.groovy.reflection.ClassInfo.getMetaClass(ClassInfo.java:180)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    28 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on field org.codehaus.groovy.util.LockableObject.owner: {{{
+    Concurrent Read in thread 35 (locks held: {})
+ ---->  at org.codehaus.groovy.util.LockableObject.tryAcquire(LockableObject.java:50)
+        at org.codehaus.groovy.util.LockableObject.lock(LockableObject.java:34)
+        at org.codehaus.groovy.reflection.ClassInfo.lock(ClassInfo.java:268)
+        at org.codehaus.groovy.reflection.ClassInfo.getMetaClass(ClassInfo.java:180)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    35 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+    Concurrent Write in thread 27 (locks held: {})
+ ---->  at org.codehaus.groovy.util.LockableObject.tryRelease(LockableObject.java:64)
+        at org.codehaus.groovy.util.LockableObject.unlock(LockableObject.java:38)
+        at org.codehaus.groovy.reflection.ClassInfo.unlock(ClassInfo.java:272)
+        at org.codehaus.groovy.reflection.ClassInfo.getMetaClass(ClassInfo.java:184)
+        at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.getMetaClass(MetaClassRegistryImpl.java:210)
+        at org.codehaus.groovy.runtime.InvokerHelper.getMetaClass(InvokerHelper.java:751)
+        at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:3)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
+        at Script1$_run_closure1_closure4.doCall(Script1.groovy:n/a)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:282)
+        at groovy.lang.Closure.call(Closure.java:277)
+        at groovy.lang.Closure.run(Closure.java:360)
+    27 is created by 
+        at org.codehaus.groovy.runtime.DefaultGroovyStaticMethods.createThread(DefaultGroovyStaticMethods.java:98)
+
+}}} 
+
+Data race on field org.mockito.internal.stubbing.InvocationContainerImpl.invocationForStubbing: {{{
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.mockito.internal.stubbing.InvocationContainerImpl.setInvocationForPotentialStubbing(InvocationContainerImpl.java:37)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:82)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:355)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    29 is created by 
+        at Dbcp270.run(Dbcp270.java:89)
+
+    Concurrent Write in thread 30 (locks held: {})
+ ---->  at org.mockito.internal.stubbing.InvocationContainerImpl.setInvocationForPotentialStubbing(InvocationContainerImpl.java:37)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:82)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.activateObject(PoolableConnectionFactory.java:368)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    30 is created by 
+        at Dbcp270.run(Dbcp270.java:90)
+
+}}} 
+
+Data race on field org.mockito.internal.stubbing.InvocationContainerImpl.invocationForStubbing: {{{
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.mockito.internal.stubbing.InvocationContainerImpl.resetInvocationForPotentialStubbing(InvocationContainerImpl.java:41)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:100)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:355)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    29 is created by 
+        at Dbcp270.run(Dbcp270.java:89)
+
+    Concurrent Write in thread 30 (locks held: {})
+ ---->  at org.mockito.internal.stubbing.InvocationContainerImpl.setInvocationForPotentialStubbing(InvocationContainerImpl.java:37)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:82)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.activateObject(PoolableConnectionFactory.java:368)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    30 is created by 
+        at Dbcp270.run(Dbcp270.java:90)
+
+}}} 
+
+Data race on field org.mockito.internal.stubbing.InvocationContainerImpl.invocationForStubbing: {{{
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.mockito.internal.stubbing.InvocationContainerImpl.resetInvocationForPotentialStubbing(InvocationContainerImpl.java:41)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:100)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.passivateObject(PoolableConnectionFactory.java:355)
+        at org.apache.commons.pool.impl.GenericObjectPool.addObjectToPool(GenericObjectPool.java:863)
+        at org.apache.commons.pool.impl.GenericObjectPool.returnObject(GenericObjectPool.java:854)
+        at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:80)
+        - locked Monitor@1528050512 at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:n/a)
+        at Dbcp270$Thread1.run(Dbcp270.java:42)
+    29 is created by 
+        at Dbcp270.run(Dbcp270.java:89)
+
+    Concurrent Write in thread 30 (locks held: {})
+ ---->  at org.mockito.internal.stubbing.InvocationContainerImpl.resetInvocationForPotentialStubbing(InvocationContainerImpl.java:41)
+        at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:100)
+        at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+        at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:38)
+        at org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:51)
+        at $java.sql.Connection$$EnhancerByMockitoWithCGLIB$$37ca3bfd.setAutoCommit(<generated>:n/a)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.DelegatingConnection.setAutoCommit(DelegatingConnection.java:268)
+        at org.apache.commons.dbcp.PoolableConnectionFactory.activateObject(PoolableConnectionFactory.java:368)
+        at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:936)
+        - locked Monitor@1262476121 at org.apache.commons.pool.impl.GenericObjectPool.evict(GenericObjectPool.java:n/a)
+        at Dbcp270$Thread2.run(Dbcp270.java:57)
+    30 is created by 
+        at Dbcp270.run(Dbcp270.java:90)
+
+}}} 
+

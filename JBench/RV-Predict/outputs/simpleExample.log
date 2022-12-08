@@ -1,32 +1,32 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict8549059660578223632
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/simpleExample
 [RV-Predict] Finished retransforming preloaded classes.
 Data race on field benchmarks.SimpleExample.a:
-    Write in thread 27 holding lock Monitor@2100779993
+    Write in thread 28 holding lock Monitor@540827363
       > at benchmarks.SimpleExample.run(SimpleExample.java:21)
-        - locked Monitor@2100779993 at benchmarks.SimpleExample.run(SimpleExample.java:20)
-    Thread 27 created by thread 1
-        at benchmarks.SimpleExample.main(SimpleExample.java:31)
-
-    Write in thread 28 holding lock Monitor@2110601469
-      > at benchmarks.SimpleExample.run(SimpleExample.java:21)
-        - locked Monitor@2110601469 at benchmarks.SimpleExample.run(SimpleExample.java:20)
+        - locked Monitor@540827363 at benchmarks.SimpleExample.run(SimpleExample.java:20)
     Thread 28 created by thread 1
         at benchmarks.SimpleExample.main(SimpleExample.java:32)
+
+    Write in thread 27 holding lock Monitor@540667764
+      > at benchmarks.SimpleExample.run(SimpleExample.java:21)
+        - locked Monitor@540667764 at benchmarks.SimpleExample.run(SimpleExample.java:20)
+    Thread 27 created by thread 1
+        at benchmarks.SimpleExample.main(SimpleExample.java:31)
 
 
 Data race on field benchmarks.SimpleExample.b:
-    Write in thread 27 holding lock Monitor@2110601469
+    Write in thread 28 holding lock Monitor@540667764
       > at benchmarks.SimpleExample.run(SimpleExample.java:24)
-        - locked Monitor@2110601469 at benchmarks.SimpleExample.run(SimpleExample.java:23)
-    Thread 27 created by thread 1
-        at benchmarks.SimpleExample.main(SimpleExample.java:31)
-
-    Write in thread 28 holding lock Monitor@2100779993
-      > at benchmarks.SimpleExample.run(SimpleExample.java:24)
-        - locked Monitor@2100779993 at benchmarks.SimpleExample.run(SimpleExample.java:23)
+        - locked Monitor@540667764 at benchmarks.SimpleExample.run(SimpleExample.java:23)
     Thread 28 created by thread 1
         at benchmarks.SimpleExample.main(SimpleExample.java:32)
+
+    Write in thread 27 holding lock Monitor@540827363
+      > at benchmarks.SimpleExample.run(SimpleExample.java:24)
+        - locked Monitor@540827363 at benchmarks.SimpleExample.run(SimpleExample.java:23)
+    Thread 27 created by thread 1
+        at benchmarks.SimpleExample.main(SimpleExample.java:31)
 
 

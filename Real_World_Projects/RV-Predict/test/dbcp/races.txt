@@ -1,0 +1,96 @@
+Total Races Found:  4
+Data race on field org.apache.commons.pool2.impl.LinkedBlockingDeque.$state: {{{
+    Concurrent Read in thread 55 (locks held: {})
+ ---->  at org.apache.commons.pool2.impl.GenericObjectPool.returnObject(GenericObjectPool.java:1170)
+        at org.apache.commons.dbcp2.datasources.CPDSConnectionFactory.connectionClosed(CPDSConnectionFactory.java:162)
+        at org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl.notifyListeners(PooledConnectionImpl.java:455)
+        at org.apache.commons.dbcp2.cpdsadapter.ConnectionImpl.close(ConnectionImpl.java:82)
+        at org.apache.commons.dbcp2.TestConnectionPool$TestThread.run(TestConnectionPool.java:209)
+    55 is created by 
+        at org.apache.commons.dbcp2.TestConnectionPool.testThreaded(TestConnectionPool.java:961)
+
+    Concurrent Write in thread 56 (locks held: {})
+ ---->  at org.apache.commons.pool2.impl.GenericObjectPool.returnObject(GenericObjectPool.java:1183)
+        at org.apache.commons.dbcp2.datasources.CPDSConnectionFactory.connectionClosed(CPDSConnectionFactory.java:162)
+        at org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl.notifyListeners(PooledConnectionImpl.java:455)
+        at org.apache.commons.dbcp2.cpdsadapter.ConnectionImpl.close(ConnectionImpl.java:82)
+        at org.apache.commons.dbcp2.TestConnectionPool$TestThread.run(TestConnectionPool.java:209)
+    56 is created by 
+        at org.apache.commons.dbcp2.TestConnectionPool.testThreaded(TestConnectionPool.java:961)
+
+}}} 
+
+Data race on field org.apache.commons.pool2.impl.LinkedBlockingDeque.$state: {{{
+    Concurrent Write in thread 56 (locks held: {})
+ ---->  at org.apache.commons.pool2.impl.GenericObjectPool.returnObject(GenericObjectPool.java:1183)
+        at org.apache.commons.dbcp2.datasources.CPDSConnectionFactory.connectionClosed(CPDSConnectionFactory.java:162)
+        at org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl.notifyListeners(PooledConnectionImpl.java:455)
+        at org.apache.commons.dbcp2.cpdsadapter.ConnectionImpl.close(ConnectionImpl.java:82)
+        at org.apache.commons.dbcp2.TestConnectionPool$TestThread.run(TestConnectionPool.java:209)
+    56 is created by 
+        at org.apache.commons.dbcp2.TestConnectionPool.testThreaded(TestConnectionPool.java:961)
+
+    Concurrent Read in thread 55 (locks held: {})
+ ---->  at org.apache.commons.pool2.impl.GenericObjectPool.returnObject(GenericObjectPool.java:1183)
+        at org.apache.commons.dbcp2.datasources.CPDSConnectionFactory.connectionClosed(CPDSConnectionFactory.java:162)
+        at org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl.notifyListeners(PooledConnectionImpl.java:455)
+        at org.apache.commons.dbcp2.cpdsadapter.ConnectionImpl.close(ConnectionImpl.java:82)
+        at org.apache.commons.dbcp2.TestConnectionPool$TestThread.run(TestConnectionPool.java:209)
+    55 is created by 
+        at org.apache.commons.dbcp2.TestConnectionPool.testThreaded(TestConnectionPool.java:961)
+
+}}} 
+
+Data race on field org.apache.commons.pool2.impl.LinkedBlockingDeque.$state: {{{
+    Concurrent Write in thread 38 (locks held: {})
+ ---->  at org.apache.commons.pool2.impl.GenericObjectPool.destroy(GenericObjectPool.java:602)
+        at org.apache.commons.pool2.impl.GenericObjectPool.returnObject(GenericObjectPool.java:1172)
+        at org.apache.commons.dbcp2.PoolableConnection.close(PoolableConnection.java:184)
+        - locked Monitor@136275579 at org.apache.commons.dbcp2.PoolableConnection.close(PoolableConnection.java:n/a)
+        at org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+        at org.apache.commons.dbcp2.DelegatingConnection.close(DelegatingConnection.java:155)
+        at org.apache.commons.dbcp2.PoolingDataSource$PoolGuardConnectionWrapper.close(PoolingDataSource.java:58)
+        at org.apache.commons.dbcp2.TestDriverManagerConnectionFactory$ConnectionThread.run(TestDriverManagerConnectionFactory.java:65)
+    38 is created by 
+        at org.apache.commons.dbcp2.TestDriverManagerConnectionFactory.testDriverManagerInit(TestDriverManagerConnectionFactory.java:128)
+
+    Concurrent Read in thread 34 (locks held: {})
+ ---->  at org.apache.commons.pool2.impl.GenericObjectPool.returnObject(GenericObjectPool.java:1170)
+        at org.apache.commons.dbcp2.PoolableConnection.close(PoolableConnection.java:184)
+        - locked Monitor@730952953 at org.apache.commons.dbcp2.PoolableConnection.close(PoolableConnection.java:n/a)
+        at org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+        at org.apache.commons.dbcp2.DelegatingConnection.close(DelegatingConnection.java:155)
+        at org.apache.commons.dbcp2.PoolingDataSource$PoolGuardConnectionWrapper.close(PoolingDataSource.java:58)
+        at org.apache.commons.dbcp2.TestDriverManagerConnectionFactory$ConnectionThread.run(TestDriverManagerConnectionFactory.java:65)
+    34 is created by 
+        at org.apache.commons.dbcp2.TestDriverManagerConnectionFactory.testDriverManagerInit(TestDriverManagerConnectionFactory.java:128)
+
+}}} 
+
+Data race on field org.apache.commons.pool2.impl.LinkedBlockingDeque.$state: {{{
+    Concurrent Write in thread 38 (locks held: {})
+ ---->  at org.apache.commons.pool2.impl.GenericObjectPool.destroy(GenericObjectPool.java:602)
+        at org.apache.commons.pool2.impl.GenericObjectPool.returnObject(GenericObjectPool.java:1172)
+        at org.apache.commons.dbcp2.PoolableConnection.close(PoolableConnection.java:184)
+        - locked Monitor@136275579 at org.apache.commons.dbcp2.PoolableConnection.close(PoolableConnection.java:n/a)
+        at org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+        at org.apache.commons.dbcp2.DelegatingConnection.close(DelegatingConnection.java:155)
+        at org.apache.commons.dbcp2.PoolingDataSource$PoolGuardConnectionWrapper.close(PoolingDataSource.java:58)
+        at org.apache.commons.dbcp2.TestDriverManagerConnectionFactory$ConnectionThread.run(TestDriverManagerConnectionFactory.java:65)
+    38 is created by 
+        at org.apache.commons.dbcp2.TestDriverManagerConnectionFactory.testDriverManagerInit(TestDriverManagerConnectionFactory.java:128)
+
+    Concurrent Read in thread 34 (locks held: {})
+ ---->  at org.apache.commons.pool2.impl.GenericObjectPool.destroy(GenericObjectPool.java:602)
+        at org.apache.commons.pool2.impl.GenericObjectPool.returnObject(GenericObjectPool.java:1172)
+        at org.apache.commons.dbcp2.PoolableConnection.close(PoolableConnection.java:184)
+        - locked Monitor@730952953 at org.apache.commons.dbcp2.PoolableConnection.close(PoolableConnection.java:n/a)
+        at org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+        at org.apache.commons.dbcp2.DelegatingConnection.close(DelegatingConnection.java:155)
+        at org.apache.commons.dbcp2.PoolingDataSource$PoolGuardConnectionWrapper.close(PoolingDataSource.java:58)
+        at org.apache.commons.dbcp2.TestDriverManagerConnectionFactory$ConnectionThread.run(TestDriverManagerConnectionFactory.java:65)
+    34 is created by 
+        at org.apache.commons.dbcp2.TestDriverManagerConnectionFactory.testDriverManagerInit(TestDriverManagerConnectionFactory.java:128)
+
+}}} 
+

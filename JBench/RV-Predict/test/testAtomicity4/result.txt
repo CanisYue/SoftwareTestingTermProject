@@ -1,0 +1,12 @@
+Data race on field benchmarks.testcases.TestAtomicity4.x:
+    Write in thread 27
+      > at benchmarks.testcases.TestAtomicity4$1.run(TestAtomicity4.java:25)
+    Thread 27 created by thread 1
+        at benchmarks.testcases.TestAtomicity4.main(TestAtomicity4.java:28)
+
+    Read in thread 1 holding lock Monitor@657733937
+      > at benchmarks.testcases.TestAtomicity4.main(TestAtomicity4.java:43)
+        - locked Monitor@657733937 at benchmarks.testcases.TestAtomicity4.main(TestAtomicity4.java:42)
+    Thread 1 is the main thread
+
+

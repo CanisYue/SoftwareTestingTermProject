@@ -41,53 +41,53 @@ def handleSingleFile(path):
             reg_bug_log = re.compile(r': (.*)')
             bug_log = re.findall(reg_bug_log, line)[0]
             if "invocation of synchronized method" in line and "can cause deadlock" in line:
-                dic["deadlock"].append({"location": bug_location, "code": "3.1.1-sync_loop"})
+                dic["deadlock"].append({"location": bug_location, "code": "3.1.1-sync_loop", "bug type": "deadlock"})
                 bug_type = "deadlock"
             elif "invocation of method" in line and "forms the loop in class dependency graph" in line:
-                dic["deadlock"].append({"location": bug_location, "code": "3.1.2-loop"})
+                dic["deadlock"].append({"location": bug_location, "code": "3.1.2-loop", "bug type": "deadlock"})
                 bug_type = "deadlock"
             elif "Lock" in line and "is requested while holding lock" in line and ", with other thread holding" in line:
-                dic["deadlock"].append({"location": bug_location, "code": "3.1.3-lock"})
+                dic["deadlock"].append({"location": bug_location, "code": "3.1.3-lock", "bug type": "deadlock"})
                 bug_type = "deadlock"
             elif "Method wait() can be invoked with monitor of other object locked" in line:
-                dic["deadlock"].append({"location": bug_location, "code": "3.1.4-wait"})
+                dic["deadlock"].append({"location": bug_location, "code": "3.1.4-wait", "bug type": "deadlock"})
                 bug_type = "deadlock"
             elif "Call sequence to method" in line and "can cause deadlock in wait()" in line:
-                dic["deadlock"].append({"location": bug_location, "code": "3.1.5-wait_path"})
+                dic["deadlock"].append({"location": bug_location, "code": "3.1.5-wait_path", "bug type": "deadlock"})
                 bug_type = "deadlock"
             elif "Synchronized method" in line and "is overridden by non-synchronized method of derived class" in line:
                 # dic["race_condition"].append({"location": bug_location, "code": "3.1.6-nosync"})
                 # bug_type = "race_condition"
-                dic["data race"].append({"location": bug_location, "code": "3.1.6-nosync"})
+                dic["data race"].append({"location": bug_location, "code": "3.1.6-nosync", "bug type": "data race"})
                 bug_type = "data race"
             elif "can be called from different threads and is not synchronized" in line:
                 # dic["race_condition"].append({"location": bug_location, "code": "3.1.7-concurrent_call"})
                 # bug_type = "race_condition"
-                dic["data race"].append({"location": bug_location, "code": "3.1.7-concurrent_call"})
+                dic["data race"].append({"location": bug_location, "code": "3.1.7-concurrent_call", "bug type": "data race"})
                 bug_type = "data race"
             elif "Field" in line and "of class" in line:
                 # dic["race_condition"].append({"location": bug_location, "code": "3.1.8-concurrent_access"})
                 # bug_type = "race_condition"
-                dic["data race"].append({"location": bug_location, "code": "3.1.8-concurrent_access"})
+                dic["data race"].append({"location": bug_location, "code": "3.1.8-concurrent_access", "bug type": "data race"})
                 bug_type = "data race"
             elif "implementing 'Runnable' interface is not synchronized" in line:
                 # dic["race_condition"].append({"location": bug_location, "code": "3.1.9-run_nosync"})
                 # bug_type = "race_condition"
-                dic["data race"].append({"location": bug_location, "code": "3.1.9-run_nosync"})
+                dic["data race"].append({"location": bug_location, "code": "3.1.9-run_nosync", "bug type": "data race"})
                 bug_type = "data race"
             elif "Value of lock" in line and "is changed outside synchronization or constructor" in line:
-                dic["deadlock"].append({"location": bug_location, "code": "3.1.10-loop_assign"})
+                dic["deadlock"].append({"location": bug_location, "code": "3.1.10-loop_assign", "bug type": "deadlock"})
                 bug_type = "deadlock"
             elif "Value of lock" in line and "is changed while (potentially) owning it" in line:
-                dic["deadlock"].append({"location": bug_location, "code": "3.1.11-loop_assign2"})
+                dic["deadlock"].append({"location": bug_location, "code": "3.1.11-loop_assign2", "bug type": "deadlock"})
                 bug_type = "deadlock"
             elif "lock(s):" in line:
-                dic["deadlock"].append({"location": bug_location, "code": "Holding n lock(s)"})
+                dic["deadlock"].append({"location": bug_location, "code": "Holding n lock(s)", "bug type": "deadlock"})
                 bug_type = "deadlock"
             elif "Method" in line and "is called without synchronizing on" in line:
                 # dic["wait_nosync"].append({"location": bug_location, "code": "3.1.12-wait_nosync"})
                 # bug_type = "wait_nosync"
-                dic["data race"].append({"location": bug_location, "code": "3.1.12-wait_nosync"})
+                dic["data race"].append({"location": bug_location, "code": "3.1.12-wait_nosync", "bug type": "data race"})
                 bug_type = "data race"
             else:
                 print(line)

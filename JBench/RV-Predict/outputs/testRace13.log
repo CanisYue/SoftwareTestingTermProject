@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict4990690168797817425
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/testRace13
 [RV-Predict] Finished retransforming preloaded classes.
 x = 17
 No races found.

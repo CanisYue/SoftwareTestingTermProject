@@ -2209,3 +2209,62 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.656 sec
 Running com.google.common.cache.CacheStatsTest
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.472 sec
 Running com.google.common.cache.EmptyCachesTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 632,769.383 sec
+Running com.google.common.cache.ForwardingCacheTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.995 sec
+Running com.google.common.cache.ForwardingLoadingCacheTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.403 sec
+Running com.google.common.cache.LocalCacheMapComputeTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8,751.901 sec
+Running com.google.common.cache.LocalCacheTest
+Tests run: 9567, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 41.409 sec
+Running com.google.common.cache.LocalLoadingCacheTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.952 sec
+Running com.google.common.cache.LongAdderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.common.cache.NullCacheTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.google.common.cache.PopulatedCachesTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 220.882 sec
+Running com.google.common.cache.RemovalNotificationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.common.collect.AbstractBiMapTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec
+Running com.google.common.collect.AbstractIteratorTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.247 sec
+Running com.google.common.collect.AbstractMapEntryTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.common.collect.AbstractSequentialIteratorTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+Running com.google.common.collect.ArrayListMultimapTest
+Tests run: 6044, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.814 sec
+Running com.google.common.collect.ArrayTableTest
+Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.239 sec
+Running com.google.common.collect.CollectSpliteratorsTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 sec
+Running com.google.common.collect.Collections2Test
+Tests run: 1284, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.483 sec
+Running com.google.common.collect.CompactHashMapFloodingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.358 sec
+Running com.google.common.collect.CompactHashMapTest
+Tests run: 3838, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.488 sec
+Running com.google.common.collect.CompactHashSetFloodingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.71 sec
+Running com.google.common.collect.CompactHashSetTest
+Tests run: 1568, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.091 sec
+Running com.google.common.collect.CompactLinkedHashMapFloodingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.127 sec
+Running com.google.common.collect.CompactLinkedHashMapTest
+Tests run: 4046, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.423 sec
+Running com.google.common.collect.CompactLinkedHashSetFloodingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.501 sec
+Running com.google.common.collect.CompactLinkedHashSetTest
+Tests run: 1110, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.777 sec
+Running com.google.common.collect.ComparatorsTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec
+Running com.google.common.collect.ComparisonChainTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.google.common.collect.ConcurrentHashMultisetBasherTest
+Destroying 1 processes
+Destroying process..
+Destroyed 1 processes

@@ -1,0 +1,12 @@
+Data race on field testRace.TestRace4.x:
+    Read in thread 27 holding lock Monitor@356075829
+      > at testRace.TestRace4$1.run(TestRace4.java:43)
+        - locked Monitor@356075829 at testRace.TestRace4$1.run(TestRace4.java:42)
+    Thread 27 created by thread 1
+        at testRace.TestRace4.main(TestRace4.java:47)
+
+    Write in thread 1
+      > at testRace.TestRace4.main(TestRace4.java:48)
+    Thread 1 is the main thread
+
+

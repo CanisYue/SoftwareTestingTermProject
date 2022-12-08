@@ -1,44 +1,18 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/groovy4
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JaConTeBe/RV-Predict/test/groovy4
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: groovy6456
 Expected bug type: race
 ********************************
 
-Exception in thread "Thread-11" Exception in thread "Thread-7" Exception in thread "Thread-3" Exception in thread "Thread-4" java.lang.IndexOutOfBoundsException: start 12, end 11, s.length() 31
-	at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:539)
-	at java.lang.StringBuffer.append(StringBuffer.java:356)
+Exception in thread "Thread-10" java.lang.IllegalStateException: No match available
+	at java.util.regex.Matcher.appendReplacement(Matcher.java:798)
+	at java.util.regex.Matcher.replaceAll(Matcher.java:955)
 
-	at java.util.regex.Matcher.appendReplacement(Matcher.java:888)Finished test: Bug has been reproduced successfully.
-
-	at java.util.regex.Matcher.replaceAll(Matcher.java:955)
 	at groovy.servlet.AbstractHttpServlet.applyResourceNameMatcher(AbstractHttpServlet.java:283)
-	at groovy.servlet.AbstractHttpServlet.getScriptUri(AbstractHttpServlet.java:251)
-	at groovy.servlet.Groovy6456$TestThread.run(Groovy6456.java:109)
-java.lang.IndexOutOfBoundsException: start 12, end 11, s.length() 31
-	at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:539)
-	at java.lang.StringBuffer.append(StringBuffer.java:356)
-	at java.util.regex.Matcher.appendReplacement(Matcher.java:888)
-	at java.util.regex.Matcher.replaceAll(Matcher.java:955)
-	at groovy.servlet.AbstractHttpServlet.applyResourceNameMatcher(AbstractHttpServlet.java:283)
-	at groovy.servlet.AbstractHttpServlet.getScriptUri(AbstractHttpServlet.java:251)
-	at groovy.servlet.Groovy6456$TestThread.run(Groovy6456.java:109)
-java.lang.IndexOutOfBoundsException: start 12, end 11, s.length() 31
-	at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:539)
-	at java.lang.StringBuffer.append(StringBuffer.java:356)
-	at java.util.regex.Matcher.appendReplacement(Matcher.java:888)
-	at java.util.regex.Matcher.replaceAll(Matcher.java:955)
-	at groovy.servlet.AbstractHttpServlet.applyResourceNameMatcher(AbstractHttpServlet.java:283)
-	at groovy.servlet.AbstractHttpServlet.getScriptUri(AbstractHttpServlet.java:251)
-	at groovy.servlet.Groovy6456$TestThread.run(Groovy6456.java:109)
-java.lang.IndexOutOfBoundsException: start 20, end 11, s.length() 31
-	at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:539)
-	at java.lang.StringBuffer.append(StringBuffer.java:356)
-	at java.util.regex.Matcher.appendReplacement(Matcher.java:888)
-	at java.util.regex.Matcher.replaceAll(Matcher.java:955)
-	at groovy.servlet.AbstractHttpServlet.applyResourceNameMatcher(AbstractHttpServlet.java:283)
+Finished test: Bug has been reproduced successfully.
 	at groovy.servlet.AbstractHttpServlet.getScriptUri(AbstractHttpServlet.java:251)
 	at groovy.servlet.Groovy6456$TestThread.run(Groovy6456.java:109)
 No races found.

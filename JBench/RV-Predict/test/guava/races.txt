@@ -1,3 +1,4 @@
+5
 Data race on field com.google.common.base.FinalizableReferenceQueueTest.frq: {{{
     Concurrent Write in thread 34 (locks held: {})
  ---->  at com.google.common.base.FinalizableReferenceQueueTest.access$002(FinalizableReferenceQueueTest.java:34)

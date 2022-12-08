@@ -1,0 +1,96 @@
+Data race on field critical.Critical.turn:
+    Write in thread 27
+      > at critical.Section.run(Critical.java:49)
+    Thread 27 created by thread 1
+        at critical.Critical.main(Critical.java:14)
+
+    Read in thread 28
+      > at critical.Section.run(Critical.java:62)
+    Thread 28 created by thread 1
+        at critical.Critical.main(Critical.java:17)
+
+
+Data race on field critical.Critical.turn:
+    Write in thread 27
+      > at critical.Section.run(Critical.java:49)
+    Thread 27 created by thread 1
+        at critical.Critical.main(Critical.java:14)
+
+    Write in thread 28
+      > at critical.Section.run(Critical.java:64)
+    Thread 28 created by thread 1
+        at critical.Critical.main(Critical.java:17)
+
+
+Data race on field critical.Critical.turn:
+    Read in thread 27
+      > at critical.Section.run(Critical.java:51)
+    Thread 27 created by thread 1
+        at critical.Critical.main(Critical.java:14)
+
+    Write in thread 28
+      > at critical.Section.run(Critical.java:60)
+    Thread 28 created by thread 1
+        at critical.Critical.main(Critical.java:17)
+
+
+Data race on field critical.Critical.turn:
+    Write in thread 27
+      > at critical.Section.run(Critical.java:54)
+    Thread 27 created by thread 1
+        at critical.Critical.main(Critical.java:14)
+
+    Write in thread 28
+      > at critical.Section.run(Critical.java:64)
+    Thread 28 created by thread 1
+        at critical.Critical.main(Critical.java:17)
+
+
+Data race on field critical.Critical.turn:
+    Write in thread 27
+      > at critical.Section.run(Critical.java:49)
+    Thread 27 created by thread 1
+        at critical.Critical.main(Critical.java:14)
+
+    Write in thread 28
+      > at critical.Section.run(Critical.java:60)
+    Thread 28 created by thread 1
+        at critical.Critical.main(Critical.java:17)
+
+
+Data race on field critical.Critical.turn:
+    Write in thread 27
+      > at critical.Section.run(Critical.java:54)
+    Thread 27 created by thread 1
+        at critical.Critical.main(Critical.java:14)
+
+    Read in thread 28
+      > at critical.Section.run(Critical.java:62)
+    Thread 28 created by thread 1
+        at critical.Critical.main(Critical.java:17)
+
+
+Data race on field critical.Critical.turn:
+    Read in thread 27
+      > at critical.Section.run(Critical.java:51)
+    Thread 27 created by thread 1
+        at critical.Critical.main(Critical.java:14)
+
+    Write in thread 28
+      > at critical.Section.run(Critical.java:64)
+    Thread 28 created by thread 1
+        at critical.Critical.main(Critical.java:17)
+
+
+Data race on field critical.Critical.turn:
+    Write in thread 27
+      > at critical.Section.run(Critical.java:54)
+    Thread 27 created by thread 1
+        at critical.Critical.main(Critical.java:14)
+
+    Write in thread 28
+      > at critical.Section.run(Critical.java:60)
+    Thread 28 created by thread 1
+        at critical.Critical.main(Critical.java:17)
+
+

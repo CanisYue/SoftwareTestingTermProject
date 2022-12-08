@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict8283250442096618264
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/JGFRayTracerBenchSizeA
 [RV-Predict] Finished retransforming preloaded classes.
 Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 3 - Size A
 Executing on 3 threads

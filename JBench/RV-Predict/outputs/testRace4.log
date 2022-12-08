@@ -1,12 +1,12 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict987894345398978241
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/testRace4
 [RV-Predict] Finished retransforming preloaded classes.
 x = 2
 Data race on field testRace.TestRace4.x:
-    Read in thread 27 holding lock Monitor@2110649445
+    Read in thread 27 holding lock Monitor@356075829
       > at testRace.TestRace4$1.run(TestRace4.java:43)
-        - locked Monitor@2110649445 at testRace.TestRace4$1.run(TestRace4.java:42)
+        - locked Monitor@356075829 at testRace.TestRace4$1.run(TestRace4.java:42)
     Thread 27 created by thread 1
         at testRace.TestRace4.main(TestRace4.java:47)
 

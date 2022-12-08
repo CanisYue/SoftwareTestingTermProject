@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict6698350715192923928
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/dbcp3
 [RV-Predict] Finished retransforming preloaded classes.
 Usage: java [-options] class [args...]
            (to execute a class)

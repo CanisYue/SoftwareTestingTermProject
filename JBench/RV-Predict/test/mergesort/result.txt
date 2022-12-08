@@ -1,0 +1,35 @@
+Data race on field mergesort.MSort.m_iCurrentThreadsAlive:
+    Write in thread 28 holding lock Monitor@657880971
+      > at mergesort.MSort.DecreaseThreadCounter(MSort.java:41)
+        - locked Monitor@657880971 at mergesort.MSort.DecreaseThreadCounter(MSort.java:n/a)
+        at mergesort.MSort.Sorting(MSort.java:254)
+        at mergesort.MSort.run(MSort.java:219)
+    Thread 28 created by thread 1
+        at mergesort.MSort.Sorting(MSort.java:270)
+
+    Read in thread 29 holding lock Monitor@657880659
+      > at mergesort.MSort.DecreaseThreadCounter(MSort.java:41)
+        - locked Monitor@657880659 at mergesort.MSort.DecreaseThreadCounter(MSort.java:n/a)
+        at mergesort.MSort.Sorting(MSort.java:254)
+        at mergesort.MSort.run(MSort.java:219)
+    Thread 29 created by thread 1
+        at mergesort.MSort.Sorting(MSort.java:273)
+
+
+Data race on field mergesort.MSort.m_iCurrentThreadsAlive:
+    Read in thread 28 holding lock Monitor@657977305
+      > at mergesort.MSort.AvailableThreadsState(MSort.java:48)
+        - locked Monitor@657977305 at mergesort.MSort.AvailableThreadsState(MSort.java:n/a)
+        at mergesort.MSort.Sorting(MSort.java:238)
+        at mergesort.MSort.run(MSort.java:219)
+    Thread 28 created by thread 1
+        at mergesort.MSort.Sorting(MSort.java:270)
+
+    Write in thread 1 holding lock Monitor@657851237
+      > at mergesort.MSort.DecreaseThreadCounter(MSort.java:41)
+        - locked Monitor@657851237 at mergesort.MSort.DecreaseThreadCounter(MSort.java:n/a)
+        at mergesort.MSort.Sorting(MSort.java:271)
+        at mergesort.MergeSort.main(MergeSort.java:44)
+    Thread 1 is the main thread
+
+

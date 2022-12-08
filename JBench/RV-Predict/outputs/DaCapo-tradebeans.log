@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict1698358201350740112
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/DaCapo-tradebeans
 [RV-Predict] Finished retransforming preloaded classes.
 Usage: java [-options] class [args...]
            (to execute a class)

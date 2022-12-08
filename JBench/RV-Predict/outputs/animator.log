@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict8857901614712311483
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/animator
 [RV-Predict] Finished retransforming preloaded classes.
 Exception in thread "main" java.awt.HeadlessException: 
 No X11 DISPLAY variable was set, but this program performed an operation which requires it.

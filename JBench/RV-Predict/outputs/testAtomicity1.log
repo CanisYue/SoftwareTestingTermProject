@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict4788169223418151288
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/testAtomicity1
 [RV-Predict] Finished retransforming preloaded classes.
 x = 3
 Data race on field benchmarks.testcases.TestAtomicity1.x:
@@ -9,9 +9,9 @@ Data race on field benchmarks.testcases.TestAtomicity1.x:
     Thread 27 created by thread 1
         at benchmarks.testcases.TestAtomicity1.main(TestAtomicity1.java:21)
 
-    Write in thread 1 holding lock Monitor@1451835027
+    Write in thread 1 holding lock Monitor@657836472
       > at benchmarks.testcases.TestAtomicity1.main(TestAtomicity1.java:25)
-        - locked Monitor@1451835027 at benchmarks.testcases.TestAtomicity1.main(TestAtomicity1.java:23)
+        - locked Monitor@657836472 at benchmarks.testcases.TestAtomicity1.main(TestAtomicity1.java:23)
     Thread 1 is the main thread
 
 
@@ -21,9 +21,9 @@ Data race on field benchmarks.testcases.TestAtomicity1.x:
     Thread 27 created by thread 1
         at benchmarks.testcases.TestAtomicity1.main(TestAtomicity1.java:21)
 
-    Write in thread 1 holding lock Monitor@1451835027
+    Write in thread 1 holding lock Monitor@657836472
       > at benchmarks.testcases.TestAtomicity1.main(TestAtomicity1.java:24)
-        - locked Monitor@1451835027 at benchmarks.testcases.TestAtomicity1.main(TestAtomicity1.java:23)
+        - locked Monitor@657836472 at benchmarks.testcases.TestAtomicity1.main(TestAtomicity1.java:23)
     Thread 1 is the main thread
 
 

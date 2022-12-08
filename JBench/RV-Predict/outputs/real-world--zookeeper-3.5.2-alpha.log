@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict8387859206547322042
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/real-world--zookeeper-3.5.2-alpha
 [RV-Predict] Finished retransforming preloaded classes.
 Usage: java [-options] class [args...]
            (to execute a class)

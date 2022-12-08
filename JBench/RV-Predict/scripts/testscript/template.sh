@@ -13,7 +13,7 @@ function run()
 {
     echo ${test_name}
     jbench_dataset=${jbench}/dataset/benchmark-suite
-    rv-predict -cp ${jbench_dataset}/${test_name}/bin ${class_to_run} &> ${jbench}/RV-Predict/outputs/${test_name}.log
+    rv-predict --base-log-dir ${jbench}/RV-Predict/test --log-dirname ${test_name} -cp ${jbench_dataset}/${test_name}/bin ${class_to_run} &> ${jbench}/RV-Predict/outputs/${test_name}.log
 }
 
 check_env

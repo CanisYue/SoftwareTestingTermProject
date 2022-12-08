@@ -1,12 +1,12 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict8101654041548104148
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/testRace12
 [RV-Predict] Finished retransforming preloaded classes.
 before join 2
-end Star1
 end Star2
 before join 1
+end Star1
 
-3.8817696E7
+1.89990555E12
 [RV-Predict] Error: Window timeout.
 No races found.

@@ -1,0 +1,34 @@
+Data race on array element #2:
+    Read in thread 1
+      > at benchmarks.moldyn.TournamentBarrier.DoBarrier(TournamentBarrier.java:65)
+        at benchmarks.moldyn.mdRunner.run(md.java:273)
+        at benchmarks.moldyn.md.runiters(md.java:88)
+        at benchmarks.moldyn.JGFMolDynBench.JGFapplication(JGFMolDynBench.java:49)
+        at benchmarks.moldyn.JGFMolDynBench.JGFrun(JGFMolDynBench.java:80)
+        at benchmarks.JGFMolDynBenchSizeA.main(JGFMolDynBenchSizeA.java:42)
+    Thread 1 is the main thread
+
+    Write in thread 28
+      > at benchmarks.moldyn.TournamentBarrier.DoBarrier(TournamentBarrier.java:76)
+        at benchmarks.moldyn.mdRunner.run(md.java:273)
+    Thread 28 created by thread 1
+        at benchmarks.moldyn.md.runiters(md.java:84)
+
+
+Data race on array element #0:
+    Write in thread 1
+      > at benchmarks.moldyn.TournamentBarrier.DoBarrier(TournamentBarrier.java:76)
+        at benchmarks.moldyn.mdRunner.run(md.java:273)
+        at benchmarks.moldyn.md.runiters(md.java:88)
+        at benchmarks.moldyn.JGFMolDynBench.JGFapplication(JGFMolDynBench.java:49)
+        at benchmarks.moldyn.JGFMolDynBench.JGFrun(JGFMolDynBench.java:80)
+        at benchmarks.JGFMolDynBenchSizeA.main(JGFMolDynBenchSizeA.java:42)
+    Thread 1 is the main thread
+
+    Read in thread 27
+      > at benchmarks.moldyn.TournamentBarrier.DoBarrier(TournamentBarrier.java:78)
+        at benchmarks.moldyn.mdRunner.run(md.java:273)
+    Thread 27 created by thread 1
+        at benchmarks.moldyn.md.runiters(md.java:84)
+
+

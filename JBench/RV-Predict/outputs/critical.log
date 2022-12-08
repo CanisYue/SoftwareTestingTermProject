@@ -1,11 +1,35 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict5789769878183955452
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/critical
 [RV-Predict] Finished retransforming preloaded classes.
-In critical section, thread number = 1
-Out critical section, thread number = 1
 In critical section, thread number = 0
 Out critical section, thread number = 0
+In critical section, thread number = 1
+Out critical section, thread number = 1
+Data race on field critical.Critical.turn:
+    Write in thread 27
+      > at critical.Section.run(Critical.java:49)
+    Thread 27 created by thread 1
+        at critical.Critical.main(Critical.java:14)
+
+    Read in thread 28
+      > at critical.Section.run(Critical.java:62)
+    Thread 28 created by thread 1
+        at critical.Critical.main(Critical.java:17)
+
+
+Data race on field critical.Critical.turn:
+    Write in thread 27
+      > at critical.Section.run(Critical.java:49)
+    Thread 27 created by thread 1
+        at critical.Critical.main(Critical.java:14)
+
+    Write in thread 28
+      > at critical.Section.run(Critical.java:64)
+    Thread 28 created by thread 1
+        at critical.Critical.main(Critical.java:17)
+
+
 Data race on field critical.Critical.turn:
     Read in thread 27
       > at critical.Section.run(Critical.java:51)
@@ -20,7 +44,7 @@ Data race on field critical.Critical.turn:
 
 Data race on field critical.Critical.turn:
     Write in thread 27
-      > at critical.Section.run(Critical.java:49)
+      > at critical.Section.run(Critical.java:54)
     Thread 27 created by thread 1
         at critical.Critical.main(Critical.java:14)
 
@@ -44,36 +68,12 @@ Data race on field critical.Critical.turn:
 
 Data race on field critical.Critical.turn:
     Write in thread 27
-      > at critical.Section.run(Critical.java:49)
-    Thread 27 created by thread 1
-        at critical.Critical.main(Critical.java:14)
-
-    Read in thread 28
-      > at critical.Section.run(Critical.java:62)
-    Thread 28 created by thread 1
-        at critical.Critical.main(Critical.java:17)
-
-
-Data race on field critical.Critical.turn:
-    Write in thread 27
       > at critical.Section.run(Critical.java:54)
     Thread 27 created by thread 1
         at critical.Critical.main(Critical.java:14)
 
     Read in thread 28
       > at critical.Section.run(Critical.java:62)
-    Thread 28 created by thread 1
-        at critical.Critical.main(Critical.java:17)
-
-
-Data race on field critical.Critical.turn:
-    Write in thread 27
-      > at critical.Section.run(Critical.java:54)
-    Thread 27 created by thread 1
-        at critical.Critical.main(Critical.java:14)
-
-    Write in thread 28
-      > at critical.Section.run(Critical.java:64)
     Thread 28 created by thread 1
         at critical.Critical.main(Critical.java:17)
 

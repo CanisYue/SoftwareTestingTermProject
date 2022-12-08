@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /home/ecelrc/students/yxiong/softwaretesting/JaConTeBe/RV-Predict/test/groovy6
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JaConTeBe/RV-Predict/test/groovy6
 [RV-Predict] Finished retransforming preloaded classes.
 ********************************
 Starting test: groovy4292
@@ -18,7 +18,7 @@ A suspicious endless loop is found
 One of the probable buggy threads is WorkerThread-3
    at java.util.WeakHashMap.get(WeakHashMap.java:403)
    at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.lambda$rvPredictMapGet$29(RVPredictRuntime.java:918)
-   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime$$Lambda$166/273206560.get(Unknown Source)
+   at com.runtimeverification.rvpredict.runtime.RVPredictRuntime$$Lambda$166/289722765.get(Unknown Source)
    at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionAccess(RVPredictRuntime.java:1347)
    at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionReadAccess(RVPredictRuntime.java:1240)
    at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictMapGet(RVPredictRuntime.java:917)

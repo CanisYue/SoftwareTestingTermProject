@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict8486096791844174961
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/testAtomicity9
 [RV-Predict] Finished retransforming preloaded classes.
 Data race on field benchmarks.testcases.TestAtomicity9.h:
     Write in thread 28
@@ -15,26 +15,28 @@ Data race on field benchmarks.testcases.TestAtomicity9.h:
 
 
 Data race on field benchmarks.testcases.TestAtomicity9.g:
-    Write in thread 27
+    Read in thread 27
       > at benchmarks.testcases.TestAtomicity9$1.run(TestAtomicity9.java:31)
     Thread 27 created by thread 1
         at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:50)
 
-    Read in thread 28
+    Write in thread 28
       > at benchmarks.testcases.TestAtomicity9$2.run(TestAtomicity9.java:38)
     Thread 28 created by thread 1
         at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:51)
 
 
-Data race on field benchmarks.testcases.TestAtomicity9.c:
-    Write in thread 28
-      > at benchmarks.testcases.TestAtomicity9$2.run(TestAtomicity9.java:36)
-    Thread 28 created by thread 1
-        at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:51)
+Data race on field benchmarks.testcases.TestAtomicity9.f:
+    Write in thread 27
+      > at benchmarks.testcases.TestAtomicity9$1.run(TestAtomicity9.java:30)
+    Thread 27 created by thread 1
+        at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:50)
 
-    Read in thread 1 holding lock Monitor@2110484097
-      > at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:57)
-        - locked Monitor@2110484097 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
+    Read in thread 1 holding locks Monitor@657918217, Monitor@657918219, Monitor@657918213
+      > at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:62)
+        - locked Monitor@657918213 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:61)
+        - locked Monitor@657918219 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:59)
+        - locked Monitor@657918217 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
     Thread 1 is the main thread
 
 
@@ -44,10 +46,34 @@ Data race on field benchmarks.testcases.TestAtomicity9.c:
     Thread 28 created by thread 1
         at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:51)
 
-    Read in thread 1 holding locks Monitor@2110484097, Monitor@2110484158
+    Read in thread 1 holding locks Monitor@657918217, Monitor@657918219
       > at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:66)
-        - locked Monitor@2110484158 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:59)
-        - locked Monitor@2110484097 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
+        - locked Monitor@657918219 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:59)
+        - locked Monitor@657918217 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
+    Thread 1 is the main thread
+
+
+Data race on field benchmarks.testcases.TestAtomicity9.b:
+    Write in thread 27
+      > at benchmarks.testcases.TestAtomicity9$1.run(TestAtomicity9.java:29)
+    Thread 27 created by thread 1
+        at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:50)
+
+    Read in thread 1 holding lock Monitor@657918217
+      > at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:56)
+        - locked Monitor@657918217 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
+    Thread 1 is the main thread
+
+
+Data race on field benchmarks.testcases.TestAtomicity9.c:
+    Write in thread 28
+      > at benchmarks.testcases.TestAtomicity9$2.run(TestAtomicity9.java:36)
+    Thread 28 created by thread 1
+        at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:51)
+
+    Read in thread 1 holding lock Monitor@657918217
+      > at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:57)
+        - locked Monitor@657918217 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
     Thread 1 is the main thread
 
 
@@ -57,24 +83,24 @@ Data race on field benchmarks.testcases.TestAtomicity9.e:
     Thread 29 created by thread 1
         at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:52)
 
-    Read in thread 1 holding locks Monitor@2110484097, Monitor@2110484158
+    Read in thread 1 holding locks Monitor@657918217, Monitor@657918219
       > at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:67)
-        - locked Monitor@2110484158 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:59)
-        - locked Monitor@2110484097 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
+        - locked Monitor@657918219 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:59)
+        - locked Monitor@657918217 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
     Thread 1 is the main thread
 
 
-Data race on field benchmarks.testcases.TestAtomicity9.f:
-    Write in thread 27
-      > at benchmarks.testcases.TestAtomicity9$1.run(TestAtomicity9.java:30)
-    Thread 27 created by thread 1
-        at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:50)
+Data race on field benchmarks.testcases.TestAtomicity9.i:
+    Write in thread 29
+      > at benchmarks.testcases.TestAtomicity9$3.run(TestAtomicity9.java:47)
+    Thread 29 created by thread 1
+        at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:52)
 
-    Read in thread 1 holding locks Monitor@2110484097, Monitor@2110484158, Monitor@2110484156
-      > at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:62)
-        - locked Monitor@2110484156 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:61)
-        - locked Monitor@2110484158 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:59)
-        - locked Monitor@2110484097 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
+    Read in thread 1 holding locks Monitor@657918217, Monitor@657918219, Monitor@657918213
+      > at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:63)
+        - locked Monitor@657918213 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:61)
+        - locked Monitor@657918219 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:59)
+        - locked Monitor@657918217 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
     Thread 1 is the main thread
 
 
@@ -84,9 +110,9 @@ Data race on field benchmarks.testcases.TestAtomicity9.a:
     Thread 27 created by thread 1
         at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:50)
 
-    Read in thread 1 holding lock Monitor@2110484097
+    Read in thread 1 holding lock Monitor@657918217
       > at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:55)
-        - locked Monitor@2110484097 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
+        - locked Monitor@657918217 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
     Thread 1 is the main thread
 
 
@@ -100,31 +126,5 @@ Data race on field benchmarks.testcases.TestAtomicity9.d:
       > at benchmarks.testcases.TestAtomicity9$3.run(TestAtomicity9.java:44)
     Thread 29 created by thread 1
         at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:52)
-
-
-Data race on field benchmarks.testcases.TestAtomicity9.i:
-    Write in thread 29
-      > at benchmarks.testcases.TestAtomicity9$3.run(TestAtomicity9.java:47)
-    Thread 29 created by thread 1
-        at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:52)
-
-    Read in thread 1 holding locks Monitor@2110484097, Monitor@2110484158, Monitor@2110484156
-      > at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:63)
-        - locked Monitor@2110484156 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:61)
-        - locked Monitor@2110484158 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:59)
-        - locked Monitor@2110484097 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
-    Thread 1 is the main thread
-
-
-Data race on field benchmarks.testcases.TestAtomicity9.b:
-    Write in thread 27
-      > at benchmarks.testcases.TestAtomicity9$1.run(TestAtomicity9.java:29)
-    Thread 27 created by thread 1
-        at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:50)
-
-    Read in thread 1 holding lock Monitor@2110484097
-      > at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:56)
-        - locked Monitor@2110484097 at benchmarks.testcases.TestAtomicity9.main(TestAtomicity9.java:54)
-    Thread 1 is the main thread
 
 

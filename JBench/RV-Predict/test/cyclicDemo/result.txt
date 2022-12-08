@@ -1,0 +1,12 @@
+Data race on field benchmarks.testcases.CyclicDemo.leader:
+    Write in thread 27
+      > at benchmarks.testcases.IncThread.run(IncThread.java:20)
+    Thread 27 created by thread 1
+        at benchmarks.testcases.CyclicDemo.main(CyclicDemo.java:19)
+
+    Write in thread 28
+      > at benchmarks.testcases.IncThread.run(IncThread.java:20)
+    Thread 28 created by thread 1
+        at benchmarks.testcases.CyclicDemo.main(CyclicDemo.java:19)
+
+

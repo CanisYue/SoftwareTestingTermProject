@@ -1,0 +1,70 @@
+Data race on field benchmarks.jpf_test_cases.rax.Event.count:
+    Write in thread 28 holding lock Monitor@657656684
+      > at benchmarks.jpf_test_cases.rax.Event.signal_event(START.java:9)
+        - locked Monitor@657656684 at benchmarks.jpf_test_cases.rax.Event.signal_event(START.java:n/a)
+        at benchmarks.jpf_test_cases.rax.SecondTask.run(START.java:40)
+    Thread 28 created by thread 1
+        at benchmarks.jpf_test_cases.rax.START.main(START.java:54)
+
+    Read in thread 27
+      > at benchmarks.jpf_test_cases.rax.FirstTask.run(START.java:23)
+    Thread 27 created by thread 1
+        at benchmarks.jpf_test_cases.rax.START.main(START.java:54)
+
+
+Data race on field benchmarks.jpf_test_cases.rax.Event.count:
+    Write in thread 27 holding lock Monitor@657833020
+      > at benchmarks.jpf_test_cases.rax.Event.signal_event(START.java:9)
+        - locked Monitor@657833020 at benchmarks.jpf_test_cases.rax.Event.signal_event(START.java:n/a)
+        at benchmarks.jpf_test_cases.rax.FirstTask.run(START.java:26)
+    Thread 27 created by thread 1
+        at benchmarks.jpf_test_cases.rax.START.main(START.java:54)
+
+    Read in thread 28
+      > at benchmarks.jpf_test_cases.rax.SecondTask.run(START.java:43)
+    Thread 28 created by thread 1
+        at benchmarks.jpf_test_cases.rax.START.main(START.java:54)
+
+
+Data race on field benchmarks.jpf_test_cases.rax.Event.count:
+    Write in thread 28 holding lock Monitor@657656684
+      > at benchmarks.jpf_test_cases.rax.Event.signal_event(START.java:9)
+        - locked Monitor@657656684 at benchmarks.jpf_test_cases.rax.Event.signal_event(START.java:n/a)
+        at benchmarks.jpf_test_cases.rax.SecondTask.run(START.java:40)
+    Thread 28 created by thread 1
+        at benchmarks.jpf_test_cases.rax.START.main(START.java:54)
+
+    Read in thread 27
+      > at benchmarks.jpf_test_cases.rax.FirstTask.run(START.java:21)
+    Thread 27 created by thread 1
+        at benchmarks.jpf_test_cases.rax.START.main(START.java:54)
+
+
+Data race on field benchmarks.jpf_test_cases.rax.Event.count:
+    Write in thread 27 holding lock Monitor@657833020
+      > at benchmarks.jpf_test_cases.rax.Event.signal_event(START.java:9)
+        - locked Monitor@657833020 at benchmarks.jpf_test_cases.rax.Event.signal_event(START.java:n/a)
+        at benchmarks.jpf_test_cases.rax.FirstTask.run(START.java:26)
+    Thread 27 created by thread 1
+        at benchmarks.jpf_test_cases.rax.START.main(START.java:54)
+
+    Read in thread 28
+      > at benchmarks.jpf_test_cases.rax.SecondTask.run(START.java:41)
+    Thread 28 created by thread 1
+        at benchmarks.jpf_test_cases.rax.START.main(START.java:54)
+
+
+Data race on field benchmarks.jpf_test_cases.rax.Event.count:
+    Write in thread 28 holding lock Monitor@657656684
+      > at benchmarks.jpf_test_cases.rax.Event.signal_event(START.java:9)
+        - locked Monitor@657656684 at benchmarks.jpf_test_cases.rax.Event.signal_event(START.java:n/a)
+        at benchmarks.jpf_test_cases.rax.SecondTask.run(START.java:40)
+    Thread 28 created by thread 1
+        at benchmarks.jpf_test_cases.rax.START.main(START.java:54)
+
+    Read in thread 27
+      > at benchmarks.jpf_test_cases.rax.FirstTask.run(START.java:25)
+    Thread 27 created by thread 1
+        at benchmarks.jpf_test_cases.rax.START.main(START.java:54)
+
+

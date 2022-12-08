@@ -1,0 +1,118 @@
+Data race on field elevator.Elevator.motionDirection:
+    Read in thread 32 holding lock Monitor@658386477
+      > at elevator.Elevator.getState(Elevator.java:184)
+        - locked Monitor@658386477 at elevator.Elevator.getState(Elevator.java:n/a)
+        at elevator.ElevatorController.getSameFloorElevator(ElevatorController.java:193)
+        at elevator.ElevatorController.summonElevatorUp(ElevatorController.java:36)
+        at elevator.Floor.summonElevatorUp(Floor.java:42)
+        at elevator.Person.run(Person.java:92)
+    Thread 32 created by thread 1
+        at elevator.Person.start(Person.java:76)
+
+    Write in thread 27
+      > at elevator.Elevator.run(Elevator.java:113)
+    Thread 27 created by thread 1
+        at elevator.Elevator.start(Elevator.java:100)
+
+
+Data race on field elevator.Elevator.doorState:
+    Write in thread 27
+      > at elevator.Elevator.closingDoor(Elevator.java:268)
+        at elevator.Elevator.run(Elevator.java:123)
+    Thread 27 created by thread 1
+        at elevator.Elevator.start(Elevator.java:100)
+
+    Read in thread 32
+      > at elevator.Elevator.enterElevator(Elevator.java:163)
+        at elevator.Person.enterElevator(Person.java:285)
+        at elevator.Person.run(Person.java:126)
+    Thread 32 created by thread 1
+        at elevator.Person.start(Person.java:76)
+
+
+Data race on field elevator.Person.elevator:
+    Write in thread 27 holding lock Monitor@761297997
+      > at elevator.Person.elevatorArrived(Person.java:49)
+        - locked Monitor@761297997 at elevator.Person.elevatorArrived(Person.java:n/a)
+        at elevator.Floor.elevatorArrivedUp(Floor.java:60)
+        at elevator.ElevatorController.elevatorArrived(ElevatorController.java:179)
+        at elevator.Elevator.notifyController(Elevator.java:289)
+        at elevator.Elevator.closingDoor(Elevator.java:265)
+        at elevator.Elevator.run(Elevator.java:123)
+    Thread 27 created by thread 1
+        at elevator.Elevator.start(Elevator.java:100)
+
+    Read in thread 32
+      > at elevator.Person.enterElevator(Person.java:285)
+        at elevator.Person.run(Person.java:126)
+    Thread 32 created by thread 1
+        at elevator.Person.start(Person.java:76)
+
+
+Data race on field elevator.Person.elevator:
+    Write in thread 27 holding lock Monitor@761295516
+      > at elevator.Person.elevatorArrived(Person.java:49)
+        - locked Monitor@761295516 at elevator.Person.elevatorArrived(Person.java:n/a)
+        at elevator.Floor.elevatorArrivedUp(Floor.java:60)
+        at elevator.ElevatorController.elevatorArrived(ElevatorController.java:179)
+        at elevator.Elevator.notifyController(Elevator.java:289)
+        at elevator.Elevator.closingDoor(Elevator.java:265)
+        at elevator.Elevator.run(Elevator.java:123)
+    Thread 27 created by thread 1
+        at elevator.Elevator.start(Elevator.java:100)
+
+    Read in thread 34
+      > at elevator.Person.enterElevator(Person.java:287)
+        at elevator.Person.run(Person.java:126)
+    Thread 34 created by thread 1
+        at elevator.Person.start(Person.java:76)
+
+
+Data race on field elevator.Person.elevator:
+    Write in thread 27 holding lock Monitor@761297997
+      > at elevator.Person.elevatorArrived(Person.java:49)
+        - locked Monitor@761297997 at elevator.Person.elevatorArrived(Person.java:n/a)
+        at elevator.Floor.elevatorArrivedUp(Floor.java:60)
+        at elevator.ElevatorController.elevatorArrived(ElevatorController.java:179)
+        at elevator.Elevator.notifyController(Elevator.java:289)
+        at elevator.Elevator.closingDoor(Elevator.java:265)
+        at elevator.Elevator.run(Elevator.java:123)
+    Thread 27 created by thread 1
+        at elevator.Elevator.start(Elevator.java:100)
+
+    Read in thread 32
+      > at elevator.Person.run(Person.java:125)
+    Thread 32 created by thread 1
+        at elevator.Person.start(Person.java:76)
+
+
+Data race on field elevator.Elevator.motionState:
+    Read in thread 34 holding lock Monitor@658386477
+      > at elevator.Elevator.requestOpenDoor(Elevator.java:82)
+        - locked Monitor@658386477 at elevator.Elevator.requestOpenDoor(Elevator.java:n/a)
+        at elevator.Person.leaveElevator(Person.java:319)
+        at elevator.Person.run(Person.java:192)
+    Thread 34 created by thread 1
+        at elevator.Person.start(Person.java:76)
+
+    Write in thread 27
+      > at elevator.Elevator.stopElevator(Elevator.java:335)
+    Thread 27 created by thread 1
+        at elevator.Elevator.start(Elevator.java:100)
+
+
+Data race on field elevator.Elevator.doorState:
+    Read in thread 34
+      > at elevator.Elevator.leaveElevator(Elevator.java:148)
+        at elevator.Person.leaveElevator(Person.java:309)
+        at elevator.Person.run(Person.java:192)
+    Thread 34 created by thread 1
+        at elevator.Person.start(Person.java:76)
+
+    Write in thread 27
+      > at elevator.Elevator.openDoor(Elevator.java:254)
+        at elevator.Elevator.run(Elevator.java:122)
+    Thread 27 created by thread 1
+        at elevator.Elevator.start(Elevator.java:100)
+
+

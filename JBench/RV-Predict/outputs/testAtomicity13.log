@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict5466102796178978832
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/testAtomicity13
 [RV-Predict] Finished retransforming preloaded classes.
 x = 43
 Data race on field benchmarks.testcases.TestAtomicity13.x:

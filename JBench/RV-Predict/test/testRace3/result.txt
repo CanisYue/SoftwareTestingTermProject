@@ -1,0 +1,11 @@
+Data race on field testRace.TestRace3.x:
+    Read in thread 27
+      > at testRace.TestRace3$1.run(TestRace3.java:42)
+    Thread 27 created by thread 1
+        at testRace.TestRace3.main(TestRace3.java:45)
+
+    Write in thread 1
+      > at testRace.TestRace3.main(TestRace3.java:46)
+    Thread 1 is the main thread
+
+

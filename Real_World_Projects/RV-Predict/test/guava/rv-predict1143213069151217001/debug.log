@@ -405,3 +405,52 @@ Unable to find the collection accessed by com.google.common.cache.LocalCache$Ent
 Unable to find the collection accessed by com.google.common.collect.Iterators$ArrayItr@6cccf63e
 Unable to find the collection accessed by com.google.common.collect.Iterators$6@7f386284
 Unable to find the collection accessed by com.google.common.collect.Iterators$ConcatenatedIterator@399c7b85
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 3816616327020280620
+Missing write events on 2837194931188005667
+Unable to find the collection accessed by com.google.common.collect.testing.AbstractIteratorTester$MultiExceptionListIterator@76dc6448
+Unable to find the collection accessed by com.google.common.collect.AbstractIteratorTest$6@44100521
+Unable to find the collection accessed by com.google.common.collect.AbstractIteratorTest$1@5c474f3f
+Unable to find the collection accessed by com.google.common.collect.AbstractIteratorTest$8@526cad76
+Unable to find the collection accessed by com.google.common.collect.AbstractIteratorTest$9@447d9c87
+Unable to find the collection accessed by com.google.common.collect.AbstractIteratorTest$2@324b0340
+Unable to find the collection accessed by com.google.common.collect.AbstractIteratorTest$3@5bcbbdb4
+Unable to find the collection accessed by com.google.common.collect.AbstractIteratorTest$7@4893242e
+Unable to find the collection accessed by com.google.common.collect.AbstractIteratorTest$5@5e025345
+Unable to find the collection accessed by com.google.common.collect.AbstractSequentialIteratorTest$4@c20c091
+Unable to find the collection accessed by com.google.common.collect.AbstractSequentialIteratorTest$5@36650a7b
+Unable to find the collection accessed by com.google.common.collect.AbstractSequentialIteratorTest$6@78d292ed
+Unable to find the collection accessed by com.google.common.collect.AbstractMapBasedMultimap$KeySet$1@3de6aff
+Unable to find the collection accessed by com.google.common.collect.testing.Helpers$2@376d0564
+Unable to find the collection accessed by com.google.common.collect.StandardTable$ColumnKeyIterator@e056f85
+Unable to find the collection accessed by com.google.common.collect.Iterators$5@2c29c8db
+java.lang.IllegalArgumentException: No such block!
+	at com.runtimeverification.rvpredict.trace.Trace.getMemoryAccessBlock(Trace.java:247)
+	at com.runtimeverification.rvpredict.smt.MaximalCausalModel.getRaceAssertion(MaximalCausalModel.java:410)
+	at java.util.HashMap.computeIfAbsent(HashMap.java:1128)
+	at com.runtimeverification.rvpredict.smt.MaximalCausalModel.lambda$null$41(MaximalCausalModel.java:427)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.runtimeverification.rvpredict.smt.MaximalCausalModel.lambda$checkRaceSuspects$42(MaximalCausalModel.java:427)
+	at java.util.HashMap$Values.forEach(HashMap.java:982)
+	at com.runtimeverification.rvpredict.smt.MaximalCausalModel.checkRaceSuspects(MaximalCausalModel.java:425)
+	at com.runtimeverification.rvpredict.engine.main.MaximalRaceDetector.run(MaximalRaceDetector.java:108)
+	at com.runtimeverification.rvpredict.log.VolatileLoggingEngine.runRaceDetection(VolatileLoggingEngine.java:245)
+	at com.runtimeverification.rvpredict.log.VolatileLoggingEngine.claimGID(VolatileLoggingEngine.java:181)
+	at com.runtimeverification.rvpredict.log.VolatileLoggingEngine.access$300(VolatileLoggingEngine.java:62)
+	at com.runtimeverification.rvpredict.log.VolatileLoggingEngine$Buffer.finalizeEvents(VolatileLoggingEngine.java:473)
+	at com.runtimeverification.rvpredict.log.VolatileLoggingEngine$Buffer.unsafeAppend(VolatileLoggingEngine.java:440)
+	at com.runtimeverification.rvpredict.log.VolatileLoggingEngine$Buffer.append(VolatileLoggingEngine.java:388)
+	at com.runtimeverification.rvpredict.log.VolatileLoggingEngine.log(VolatileLoggingEngine.java:257)
+	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.saveAtomicEvent(RVPredictRuntime.java:1446)
+	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionAccess(RVPredictRuntime.java:1351)
+	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.logCollectionReadAccess(RVPredictRuntime.java:1240)
+	at com.runtimeverification.rvpredict.runtime.RVPredictRuntime.rvPredictMapGet(RVPredictRuntime.java:917)
+	at com.google.common.collect.Maps.safeGet(Maps.java:3895)
+	at com.google.common.collect.ConcurrentHashMultiset.count(ConcurrentHashMultiset.java:142)
+	at com.google.common.collect.ConcurrentHashMultisetBasherTest$MutateTask.call(ConcurrentHashMultisetBasherTest.java:141)
+	at com.google.common.collect.ConcurrentHashMultisetBasherTest$MutateTask.call(ConcurrentHashMultisetBasherTest.java:103)
+	at com.runtimeverification.rvpredict.runtime.java.util.concurrent.FutureTask.run(FutureTask.java:294)
+	at com.runtimeverification.rvpredict.runtime.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1220)
+	at com.runtimeverification.rvpredict.runtime.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:648)
+	at java.lang.Thread.run(Thread.java:750)

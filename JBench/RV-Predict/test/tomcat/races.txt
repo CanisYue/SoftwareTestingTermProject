@@ -1,0 +1,2446 @@
+Total Races Found:  72
+Data race on array element #14: {{{
+    Concurrent Read in thread 77 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:726)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    77 is created by 
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:482)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    107 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+}}} 
+
+Data race on array element #15: {{{
+    Concurrent Read in thread 77 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    77 is created by 
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:480)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    107 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+}}} 
+
+Data race on array element #16: {{{
+    Concurrent Read in thread 77 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    77 is created by 
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:478)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    107 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+}}} 
+
+Data race on array element #17: {{{
+    Concurrent Read in thread 77 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    77 is created by 
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:476)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    107 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+}}} 
+
+Data race on array element #18: {{{
+    Concurrent Read in thread 77 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    77 is created by 
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:474)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    107 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+}}} 
+
+Data race on array element #19: {{{
+    Concurrent Read in thread 77 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    77 is created by 
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:472)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    107 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+}}} 
+
+Data race on array element #20: {{{
+    Concurrent Read in thread 77 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    77 is created by 
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:470)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    107 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+}}} 
+
+Data race on array element #21: {{{
+    Concurrent Read in thread 77 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.append(XByteBuffer.java:228)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.write(NonBlockingCoordinator.java:731)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage.<init>(NonBlockingCoordinator.java:644)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.createElectionMsg(NonBlockingCoordinator.java:254)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:198)
+        - locked Monitor@275579198 at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.startElection(NonBlockingCoordinator.java:191)
+        at org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.start(NonBlockingCoordinator.java:456)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.start(ChannelInterceptorBase.java:155)
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:425)
+        - locked Monitor@11902257 at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator$1.run(TestNonBlockingCoordinator.java:53)
+    77 is created by 
+        at org.apache.catalina.tribes.group.interceptors.TestNonBlockingCoordinator.setUp(TestNonBlockingCoordinator.java:63)
+
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.tribes.io.XByteBuffer.toBytes(XByteBuffer.java:468)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    107 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+}}} 
+
+Data race on field java.util.ArrayList.$state: {{{
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.valves.TesterAccessLogValve.log(TesterAccessLogValve.java:48)
+        at org.apache.catalina.core.AccessLogAdapter.log(AccessLogAdapter.java:51)
+        at org.apache.catalina.core.ContainerBase.logAccess(ContainerBase.java:1042)
+        at org.apache.catalina.connector.CoyoteAdapter.event(CoyoteAdapter.java:245)
+        at org.apache.coyote.http11.Http11Nio2Processor.event(Http11Nio2Processor.java:97)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:666)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@2068536000 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket0(Nio2Endpoint.java:594)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket(Nio2Endpoint.java:578)
+        at org.apache.coyote.http11.InternalNio2InputBuffer$1.completed(InternalNio2InputBuffer.java:169)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    107 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.valves.TesterAccessLogValve.validateAccessLog(TesterAccessLogValve.java:79)
+        at org.apache.catalina.comet.TestCometProcessor.doSimpleCometTest(TestCometProcessor.java:347)
+        at org.apache.catalina.comet.TestCometProcessor.testSimpleCometClientReadFail(TestCometProcessor.java:256)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field java.util.ArrayList.$state: {{{
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.valves.TesterAccessLogValve.log(TesterAccessLogValve.java:48)
+        at org.apache.catalina.core.AccessLogAdapter.log(AccessLogAdapter.java:51)
+        at org.apache.catalina.core.ContainerBase.logAccess(ContainerBase.java:1042)
+        at org.apache.catalina.connector.CoyoteAdapter.event(CoyoteAdapter.java:245)
+        at org.apache.coyote.http11.Http11Nio2Processor.event(Http11Nio2Processor.java:97)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:666)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@2068536000 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket0(Nio2Endpoint.java:594)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket(Nio2Endpoint.java:578)
+        at org.apache.coyote.http11.InternalNio2InputBuffer$1.completed(InternalNio2InputBuffer.java:169)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    107 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.valves.TesterAccessLogValve.validateAccessLog(TesterAccessLogValve.java:84)
+        at org.apache.catalina.comet.TestCometProcessor.doSimpleCometTest(TestCometProcessor.java:347)
+        at org.apache.catalina.comet.TestCometProcessor.testSimpleCometClientReadFail(TestCometProcessor.java:256)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field java.util.ArrayList.$state: {{{
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.valves.TesterAccessLogValve.log(TesterAccessLogValve.java:48)
+        at org.apache.catalina.core.AccessLogAdapter.log(AccessLogAdapter.java:51)
+        at org.apache.catalina.core.ContainerBase.logAccess(ContainerBase.java:1042)
+        at org.apache.catalina.connector.CoyoteAdapter.event(CoyoteAdapter.java:245)
+        at org.apache.coyote.http11.Http11Nio2Processor.event(Http11Nio2Processor.java:97)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:666)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@2068536000 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket0(Nio2Endpoint.java:594)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket(Nio2Endpoint.java:578)
+        at org.apache.coyote.http11.InternalNio2InputBuffer$1.completed(InternalNio2InputBuffer.java:169)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    107 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.valves.TesterAccessLogValve.validateAccessLog(TesterAccessLogValve.java:88)
+        at org.apache.catalina.comet.TestCometProcessor.doSimpleCometTest(TestCometProcessor.java:347)
+        at org.apache.catalina.comet.TestCometProcessor.testSimpleCometClientReadFail(TestCometProcessor.java:256)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field java.util.ArrayList.$state: {{{
+    Concurrent Write in thread 107 (locks held: {})
+ ---->  at org.apache.catalina.valves.TesterAccessLogValve.log(TesterAccessLogValve.java:48)
+        at org.apache.catalina.core.AccessLogAdapter.log(AccessLogAdapter.java:51)
+        at org.apache.catalina.core.ContainerBase.logAccess(ContainerBase.java:1042)
+        at org.apache.catalina.connector.CoyoteAdapter.event(CoyoteAdapter.java:245)
+        at org.apache.coyote.http11.Http11Nio2Processor.event(Http11Nio2Processor.java:97)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:666)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@2068536000 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket0(Nio2Endpoint.java:594)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket(Nio2Endpoint.java:578)
+        at org.apache.coyote.http11.InternalNio2InputBuffer$1.completed(InternalNio2InputBuffer.java:169)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    107 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.valves.TesterAccessLogValve.validateAccessLog(TesterAccessLogValve.java:90)
+        at org.apache.catalina.comet.TestCometProcessor.doSimpleCometTest(TestCometProcessor.java:347)
+        at org.apache.catalina.comet.TestCometProcessor.testSimpleCometClientReadFail(TestCometProcessor.java:256)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field java.util.LinkedList.$state: {{{
+    Concurrent Write in thread 31 (locks held: {})
+ ---->  at org.apache.catalina.tribes.transport.nio.NioReceiver.addEvent(NioReceiver.java:152)
+        - locked Monitor@1117929075 at org.apache.catalina.tribes.transport.nio.NioReceiver.addEvent(NioReceiver.java:151)
+        at org.apache.catalina.tribes.transport.nio.NioReplicationTask.registerForRead(NioReplicationTask.java:271)
+        at org.apache.catalina.tribes.transport.nio.NioReplicationTask.drainChannel(NioReplicationTask.java:195)
+        at org.apache.catalina.tribes.transport.nio.NioReplicationTask.run(NioReplicationTask.java:102)
+        - locked Monitor@1765352685 at org.apache.catalina.tribes.transport.nio.NioReplicationTask.run(NioReplicationTask.java:n/a)
+    31 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 29 (locks held: {})
+ ---->  at org.apache.catalina.tribes.transport.nio.NioReceiver.events(NioReceiver.java:160)
+        at org.apache.catalina.tribes.transport.nio.NioReceiver.listen(NioReceiver.java:264)
+        at org.apache.catalina.tribes.transport.nio.NioReceiver.run(NioReceiver.java:419)
+    29 is created by 
+        at org.apache.catalina.tribes.transport.nio.NioReceiver.start(NioReceiver.java:91)
+
+}}} 
+
+Data race on field org.apache.catalina.connector.OutputBuffer.closed: {{{
+    Concurrent Write in thread 35 (locks held: {})
+ ---->  at org.apache.catalina.connector.OutputBuffer.close(OutputBuffer.java:297)
+        at org.apache.catalina.connector.Response.finishResponse(Response.java:453)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:96)
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseThread.run(TestCometProcessor.java:665)
+    35 is created by 
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseValve.invoke(TestCometProcessor.java:648)
+
+    Concurrent Read in thread 34 (locks held: {})
+ ---->  at org.apache.catalina.connector.OutputBuffer.isClosed(OutputBuffer.java:220)
+        at org.apache.catalina.connector.Response.isClosed(Response.java:408)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1526)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1482)
+        - locked Monitor@1117367481 at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1481)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.catalina.connector.OutputBuffer.suspended: {{{
+    Concurrent Write in thread 55 (locks held: {})
+ ---->  at org.apache.catalina.connector.OutputBuffer.setSuspended(OutputBuffer.java:210)
+        at org.apache.catalina.connector.Response.setSuspended(Response.java:392)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:167)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1526)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1482)
+        - locked Monitor@302933629 at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1481)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    55 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 56 (locks held: {})
+ ---->  at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:402)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:97)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:90)
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet$1.run(TestCoyoteAdapter.java:387)
+    56 is created by 
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet.doGet(TestCoyoteAdapter.java:409)
+
+}}} 
+
+Data race on field org.apache.catalina.connector.OutputBuffer.suspended: {{{
+    Concurrent Read in thread 35 (locks held: {})
+ ---->  at org.apache.catalina.connector.OutputBuffer.close(OutputBuffer.java:272)
+        at org.apache.catalina.connector.Response.finishResponse(Response.java:453)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:96)
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseThread.run(TestCometProcessor.java:665)
+    35 is created by 
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseValve.invoke(TestCometProcessor.java:648)
+
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.catalina.connector.OutputBuffer.setSuspended(OutputBuffer.java:210)
+        at org.apache.catalina.connector.Response.setSuspended(Response.java:392)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:167)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1526)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1482)
+        - locked Monitor@1117367481 at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1481)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.catalina.connector.OutputBuffer.suspended: {{{
+    Concurrent Read in thread 35 (locks held: {})
+ ---->  at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:328)
+        at org.apache.catalina.connector.Response.finishResponse(Response.java:453)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:96)
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseThread.run(TestCometProcessor.java:665)
+    35 is created by 
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseValve.invoke(TestCometProcessor.java:648)
+
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.catalina.connector.OutputBuffer.setSuspended(OutputBuffer.java:210)
+        at org.apache.catalina.connector.Response.setSuspended(Response.java:392)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:167)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1526)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1482)
+        - locked Monitor@1117367481 at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1481)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.catalina.connector.Request.comet: {{{
+    Concurrent Read in thread 38 (locks held: {})
+ ---->  at org.apache.catalina.connector.Request.isComet(Request.java:2536)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:97)
+        at org.apache.catalina.comet.TestCometProcessor$SimpleCometServlet.event(TestCometProcessor.java:523)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilterEvent(ApplicationFilterChain.java:470)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilterEvent(ApplicationFilterChain.java:363)
+        at org.apache.catalina.core.StandardWrapperValve.event(StandardWrapperValve.java:408)
+        at org.apache.catalina.core.StandardContextValve.event(StandardContextValve.java:129)
+        at org.apache.catalina.valves.ValveBase.event(ValveBase.java:202)
+        at org.apache.catalina.valves.ValveBase.event(ValveBase.java:202)
+        at org.apache.catalina.core.StandardHostValve.event(StandardHostValve.java:221)
+        at org.apache.catalina.valves.ValveBase.event(ValveBase.java:202)
+        at org.apache.catalina.core.StandardEngineValve.event(StandardEngineValve.java:108)
+        at org.apache.catalina.connector.CoyoteAdapter.event(CoyoteAdapter.java:203)
+        at org.apache.coyote.http11.Http11Nio2Processor.event(Http11Nio2Processor.java:97)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:666)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@887943059 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    38 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 36 (locks held: {})
+ ---->  at org.apache.catalina.connector.Request.setComet(Request.java:2544)
+        at org.apache.tomcat.util.threads.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:141)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket0(Nio2Endpoint.java:592)
+        at org.apache.tomcat.util.net.Nio2Endpoint.processSocket(Nio2Endpoint.java:578)
+        at org.apache.coyote.http11.Http11Nio2Processor.actionInternal(Http11Nio2Processor.java:524)
+        at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:924)
+        at org.apache.coyote.Request.action(Request.java:380)
+        at org.apache.catalina.connector.Request.cometClose(Request.java:2582)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:98)
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseThread.run(TestCometProcessor.java:665)
+    36 is created by 
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseValve.invoke(TestCometProcessor.java:648)
+
+}}} 
+
+Data race on field org.apache.catalina.core.ApplicationFilterFactory.factory: {{{
+    Concurrent Read in thread 45 (locks held: {})
+ ---->  at org.apache.catalina.core.ApplicationFilterFactory.getInstance(ApplicationFilterFactory.java:54)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:178)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    45 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 46 (locks held: {})
+ ---->  at org.apache.catalina.core.ApplicationFilterFactory.getInstance(ApplicationFilterFactory.java:55)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:182)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@107066784 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    46 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.catalina.core.ApplicationFilterFactory.factory: {{{
+    Concurrent Write in thread 46 (locks held: {})
+ ---->  at org.apache.catalina.core.ApplicationFilterFactory.getInstance(ApplicationFilterFactory.java:55)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:182)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@107066784 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    46 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 45 (locks held: {})
+ ---->  at org.apache.catalina.core.ApplicationFilterFactory.getInstance(ApplicationFilterFactory.java:57)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:182)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    45 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.catalina.core.StandardContext.applicationEventListenersObjects: {{{
+    Concurrent Read in thread 57 (locks held: {})
+ ---->  at org.apache.catalina.core.StandardContext.getApplicationEventListeners(StandardContext.java:1155)
+        at org.apache.catalina.core.StandardContext.fireRequestDestroyEvent(StandardContext.java:5920)
+        at org.apache.catalina.connector.CoyoteAdapter.asyncDispatch(CoyoteAdapter.java:282)
+        at org.apache.coyote.http11.AbstractHttp11Processor.asyncDispatch(AbstractHttp11Processor.java:1709)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:651)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1526)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1482)
+        - locked Monitor@302933629 at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1481)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    57 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 50 (locks held: {})
+ ---->  at org.apache.catalina.core.StandardContext.setApplicationEventListeners(StandardContext.java:1161)
+        at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5390)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1090638535 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1424)
+    50 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.catalina.core.StandardContext.cookieProcessor: {{{
+    Concurrent Read in thread 45 (locks held: {})
+ ---->  at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:827)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    45 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 46 (locks held: {})
+ ---->  at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@107066784 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    46 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.catalina.core.StandardContext.cookieProcessor: {{{
+    Concurrent Write in thread 45 (locks held: {})
+ ---->  at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    45 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 46 (locks held: {})
+ ---->  at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@107066784 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    46 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.catalina.core.StandardContext.cookieProcessor: {{{
+    Concurrent Write in thread 45 (locks held: {})
+ ---->  at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:828)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    45 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 46 (locks held: {})
+ ---->  at org.apache.catalina.core.StandardContext.getCookieProcessor(StandardContext.java:830)
+        at org.apache.catalina.connector.Request.parseCookies(Request.java:2956)
+        at org.apache.catalina.connector.Request.getServerCookies(Request.java:2005)
+        at org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId(CoyoteAdapter.java:1205)
+        at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:916)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:513)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@107066784 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    46 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.membership: {{{
+    Concurrent Read in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.getMembers(TcpFailureDetector.java:192)
+        at org.apache.catalina.tribes.group.interceptors.TestTcpFailureDetector.testTcpMcastFail(TestTcpFailureDetector.java:117)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+    Concurrent Write in thread 30 (locks held: {})
+ ---->  at org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.setupMembership(TcpFailureDetector.java:304)
+        - locked Monitor@1373810119 at org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.setupMembership(TcpFailureDetector.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.checkMembers(TcpFailureDetector.java:215)
+        at org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.heartbeat(TcpFailureDetector.java:210)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.heartbeat(ChannelInterceptorBase.java:98)
+        at org.apache.catalina.tribes.group.GroupChannel.heartbeat(GroupChannel.java:157)
+        at org.apache.catalina.tribes.group.GroupChannel$HeartbeatThread.run(GroupChannel.java:697)
+    30 is created by 
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:428)
+
+}}} 
+
+Data race on field org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.membership: {{{
+    Concurrent Read in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.getMembers(TcpFailureDetector.java:193)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.getMembers(ChannelInterceptorBase.java:116)
+        at org.apache.catalina.tribes.group.interceptors.TestTcpFailureDetector.testTcpMcastFail(TestTcpFailureDetector.java:117)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+    Concurrent Write in thread 30 (locks held: {})
+ ---->  at org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.setupMembership(TcpFailureDetector.java:304)
+        - locked Monitor@1373810119 at org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.setupMembership(TcpFailureDetector.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.checkMembers(TcpFailureDetector.java:215)
+        at org.apache.catalina.tribes.group.interceptors.TcpFailureDetector.heartbeat(TcpFailureDetector.java:210)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.heartbeat(ChannelInterceptorBase.java:98)
+        at org.apache.catalina.tribes.group.GroupChannel.heartbeat(GroupChannel.java:157)
+        at org.apache.catalina.tribes.group.GroupChannel$HeartbeatThread.run(GroupChannel.java:697)
+    30 is created by 
+        at org.apache.catalina.tribes.group.GroupChannel.start(GroupChannel.java:428)
+
+}}} 
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg: {{{
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:197)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@1436664465 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@726281927 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@500772834 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestTcpFailureDetector.tearDown(TestTcpFailureDetector.java:130)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+    Concurrent Read in thread 37 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:199)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    37 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+}}} 
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg: {{{
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:197)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@1436664465 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@726281927 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@500772834 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestTcpFailureDetector.tearDown(TestTcpFailureDetector.java:130)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+    Concurrent Read in thread 37 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    37 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+}}} 
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg: {{{
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:197)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@1436664465 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@726281927 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@500772834 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestTcpFailureDetector.tearDown(TestTcpFailureDetector.java:130)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+    Concurrent Read in thread 37 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:206)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    37 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+}}} 
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg: {{{
+    Concurrent Read in thread 37 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:199)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    37 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:286)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@1436664465 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@726281927 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@500772834 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestTcpFailureDetector.tearDown(TestTcpFailureDetector.java:130)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg: {{{
+    Concurrent Read in thread 37 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:204)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    37 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:286)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@1436664465 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@726281927 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@500772834 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestTcpFailureDetector.tearDown(TestTcpFailureDetector.java:130)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.dataPkg: {{{
+    Concurrent Read in thread 37 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:206)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    37 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:286)
+        at org.apache.catalina.tribes.membership.MemberImpl.setCommand(MemberImpl.java:612)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:329)
+        - locked Monitor@1436664465 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@726281927 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@500772834 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestTcpFailureDetector.tearDown(TestTcpFailureDetector.java:130)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.msgCount: {{{
+    Concurrent Write in thread 33 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.inc(MemberImpl.java:155)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:497)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    33 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+    Concurrent Read in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.inc(MemberImpl.java:155)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:497)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:331)
+        - locked Monitor@451131185 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@712256162 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@2028371466 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestOrderInterceptor.tearDown(TestOrderInterceptor.java:143)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.catalina.tribes.membership.MemberImpl.serviceStartTime: {{{
+    Concurrent Read in thread 33 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.getServiceStartTime(MemberImpl.java:470)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:203)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:170)
+        at org.apache.catalina.tribes.membership.MemberImpl.getData(MemberImpl.java:164)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:501)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.send(McastServiceImpl.java:487)
+        at org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread.run(McastServiceImpl.java:575)
+    33 is created by 
+        at org.apache.catalina.tribes.membership.McastServiceImpl.start(McastServiceImpl.java:280)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.catalina.tribes.membership.MemberImpl.setServiceStartTime(MemberImpl.java:590)
+        at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:335)
+        - locked Monitor@451131185 at org.apache.catalina.tribes.membership.McastServiceImpl.stop(McastServiceImpl.java:n/a)
+        at org.apache.catalina.tribes.membership.McastService.stop(McastService.java:372)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:229)
+        - locked Monitor@712256162 at org.apache.catalina.tribes.group.ChannelCoordinator.internalStop(ChannelCoordinator.java:n/a)
+        at org.apache.catalina.tribes.group.ChannelCoordinator.stop(ChannelCoordinator.java:121)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.ChannelInterceptorBase.stop(ChannelInterceptorBase.java:171)
+        at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:444)
+        - locked Monitor@2028371466 at org.apache.catalina.tribes.group.GroupChannel.stop(GroupChannel.java:n/a)
+        at org.apache.catalina.tribes.group.interceptors.TestOrderInterceptor.tearDown(TestOrderInterceptor.java:143)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.coyote.AbstractProcessor.socketWrapper: {{{
+    Concurrent Write in thread 43 (locks held: {})
+ ---->  at org.apache.coyote.AbstractProcessor.setSocketWrapper(AbstractProcessor.java:145)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:279)
+        - locked Monitor@1644917052 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    43 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 42 (locks held: {})
+ ---->  at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:907)
+        at org.apache.coyote.Response.action(Response.java:179)
+        at org.apache.coyote.Response.setWriteListener(Response.java:603)
+        at org.apache.catalina.connector.OutputBuffer.setWriteListener(OutputBuffer.java:668)
+        at org.apache.catalina.connector.CoyoteOutputStream.setWriteListener(CoyoteOutputStream.java:162)
+        at org.apache.catalina.connector.TestCoyoteOutputStream$NonBlockingWriteServlet$AsyncTask.run(TestCoyoteOutputStream.java:199)
+        at org.apache.catalina.core.AsyncContextImpl$RunnableWrapper.run(AsyncContextImpl.java:562)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    42 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.coyote.AbstractProcessor.socketWrapper: {{{
+    Concurrent Read in thread 42 (locks held: {})
+ ---->  at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:907)
+        at org.apache.coyote.Response.action(Response.java:179)
+        at org.apache.coyote.Response.setWriteListener(Response.java:603)
+        at org.apache.catalina.connector.OutputBuffer.setWriteListener(OutputBuffer.java:668)
+        at org.apache.catalina.connector.CoyoteOutputStream.setWriteListener(CoyoteOutputStream.java:162)
+        at org.apache.catalina.connector.TestCoyoteOutputStream$NonBlockingWriteServlet$AsyncTask.run(TestCoyoteOutputStream.java:199)
+        at org.apache.catalina.core.AsyncContextImpl$RunnableWrapper.run(AsyncContextImpl.java:562)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    42 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 41 (locks held: {})
+ ---->  at org.apache.coyote.http11.Http11Processor.recycleInternal(Http11Processor.java:214)
+        at org.apache.coyote.http11.AbstractHttp11Processor.recycle(AbstractHttp11Processor.java:1838)
+        at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.release(Http11Protocol.java:143)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:727)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+        - locked Monitor@1644917052 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    41 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.coyote.AbstractProcessor.socketWrapper: {{{
+    Concurrent Read in thread 50 (locks held: {})
+ ---->  at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:907)
+        at org.apache.coyote.Request.action(Request.java:378)
+        at org.apache.catalina.core.AsyncContextImpl$RunnableWrapper.run(AsyncContextImpl.java:570)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    50 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 52 (locks held: {})
+ ---->  at org.apache.coyote.http11.Http11Nio2Processor.recycleInternal(Http11Nio2Processor.java:306)
+        at org.apache.coyote.http11.Http11Nio2Protocol$Http11ConnectionHandler.release(Http11Nio2Protocol.java:174)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:727)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1879373191 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    52 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.coyote.Request.hook: {{{
+    Concurrent Read in thread 35 (locks held: {})
+ ---->  at org.apache.coyote.Request.action(Request.java:372)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:98)
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseThread.run(TestCometProcessor.java:665)
+    35 is created by 
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseValve.invoke(TestCometProcessor.java:648)
+
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.coyote.Request.action(Request.java:373)
+        at org.apache.catalina.connector.InputBuffer.available(InputBuffer.java:244)
+        at org.apache.catalina.connector.Request.getAvailable(Request.java:2558)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:522)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1526)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1482)
+        - locked Monitor@1117367481 at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1481)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.coyote.Request.hook: {{{
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.coyote.Request.action(Request.java:373)
+        at org.apache.catalina.connector.InputBuffer.available(InputBuffer.java:244)
+        at org.apache.catalina.connector.Request.getAvailable(Request.java:2558)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:522)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1526)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1482)
+        - locked Monitor@1117367481 at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1481)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 35 (locks held: {})
+ ---->  at org.apache.coyote.Request.action(Request.java:376)
+        at org.apache.catalina.connector.Request.cometClose(Request.java:2582)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:98)
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseThread.run(TestCometProcessor.java:665)
+    35 is created by 
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseValve.invoke(TestCometProcessor.java:648)
+
+}}} 
+
+Data race on field org.apache.coyote.Request.hook: {{{
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.coyote.Request.action(Request.java:373)
+        at org.apache.catalina.connector.InputBuffer.available(InputBuffer.java:244)
+        at org.apache.catalina.connector.Request.getAvailable(Request.java:2558)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:522)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1526)
+        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1482)
+        - locked Monitor@1117367481 at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1481)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 35 (locks held: {})
+ ---->  at org.apache.coyote.Request.action(Request.java:380)
+        at org.apache.catalina.connector.Request.cometClose(Request.java:2582)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:98)
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseThread.run(TestCometProcessor.java:665)
+    35 is created by 
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseValve.invoke(TestCometProcessor.java:648)
+
+}}} 
+
+Data race on field org.apache.coyote.RequestInfo.stage: {{{
+    Concurrent Read in thread 36 (locks held: {})
+ ---->  at org.apache.coyote.RequestInfo.getStage(RequestInfo.java:172)
+        at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:924)
+        at org.apache.coyote.Request.action(Request.java:380)
+        at org.apache.catalina.connector.Request.cometClose(Request.java:2582)
+        at org.apache.catalina.connector.CometEventImpl.close(CometEventImpl.java:98)
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseThread.run(TestCometProcessor.java:665)
+    36 is created by 
+        at org.apache.catalina.comet.TestCometProcessor$AsyncCometCloseValve.invoke(TestCometProcessor.java:648)
+
+    Concurrent Write in thread 35 (locks held: {})
+ ---->  at org.apache.coyote.RequestInfo.setStage(RequestInfo.java:176)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1129)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@887943059 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    35 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.coyote.http11.AbstractHttp11Processor.keepAlive: {{{
+    Concurrent Write in thread 68 (locks held: {})
+ ---->  at org.apache.coyote.http11.AbstractHttp11Processor.prepareResponse(AbstractHttp11Processor.java:1547)
+        at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:740)
+        at org.apache.coyote.Response.action(Response.java:179)
+        at org.apache.coyote.http11.AbstractOutputBuffer.doWrite(AbstractOutputBuffer.java:249)
+        at org.apache.coyote.Response.doWrite(Response.java:503)
+        at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:388)
+        at org.apache.tomcat.util.buf.ByteChunk.append(ByteChunk.java:315)
+        at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:418)
+        at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:406)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:97)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:90)
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet$1.run(TestCoyoteAdapter.java:387)
+    68 is created by 
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet.doGet(TestCoyoteAdapter.java:409)
+
+    Concurrent Read in thread 67 (locks held: {})
+ ---->  at org.apache.coyote.http11.Http11Nio2Processor.breakKeepAliveLoop(Http11Nio2Processor.java:279)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@222481124 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    67 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.coyote.http11.AbstractHttp11Processor.keepAlive: {{{
+    Concurrent Write in thread 68 (locks held: {})
+ ---->  at org.apache.coyote.http11.AbstractHttp11Processor.prepareResponse(AbstractHttp11Processor.java:1547)
+        at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:740)
+        at org.apache.coyote.Response.action(Response.java:179)
+        at org.apache.coyote.http11.AbstractOutputBuffer.doWrite(AbstractOutputBuffer.java:249)
+        at org.apache.coyote.Response.doWrite(Response.java:503)
+        at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:388)
+        at org.apache.tomcat.util.buf.ByteChunk.append(ByteChunk.java:315)
+        at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:418)
+        at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:406)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:97)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:90)
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet$1.run(TestCoyoteAdapter.java:387)
+    68 is created by 
+        at org.apache.catalina.connector.TestCoyoteAdapter$AsyncServlet.doGet(TestCoyoteAdapter.java:409)
+
+    Concurrent Read in thread 67 (locks held: {})
+ ---->  at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:998)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@222481124 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    67 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.buf.ByteChunk.charset: {{{
+    Concurrent Read in thread 34 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.ByteChunk.toStringInternal(ByteChunk.java:496)
+        at org.apache.tomcat.util.buf.StringCache.toString(StringCache.java:219)
+        at org.apache.tomcat.util.buf.ByteChunk.toString(ByteChunk.java:492)
+        at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:166)
+        at org.apache.coyote.RequestInfo.updateCounters(RequestInfo.java:167)
+        at org.apache.coyote.Request.updateCounters(Request.java:566)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1153)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1533740994 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 35 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.ByteChunk.toStringInternal(ByteChunk.java:497)
+        at org.apache.tomcat.util.buf.StringCache.toString(StringCache.java:219)
+        at org.apache.tomcat.util.buf.ByteChunk.toString(ByteChunk.java:492)
+        at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:166)
+        at org.apache.catalina.connector.Request.getRequestURI(Request.java:2177)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:202)
+        - locked Monitor@579862135 at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:192)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:187)
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet$1.run(TestAsyncContextImpl.java:710)
+    35 is created by 
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet.doGet(TestAsyncContextImpl.java:715)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.buf.ByteChunk.charset: {{{
+    Concurrent Write in thread 35 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.ByteChunk.toStringInternal(ByteChunk.java:497)
+        at org.apache.tomcat.util.buf.StringCache.toString(StringCache.java:219)
+        at org.apache.tomcat.util.buf.ByteChunk.toString(ByteChunk.java:492)
+        at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:166)
+        at org.apache.catalina.connector.Request.getRequestURI(Request.java:2177)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:202)
+        - locked Monitor@579862135 at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:192)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:187)
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet$1.run(TestAsyncContextImpl.java:710)
+    35 is created by 
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet.doGet(TestAsyncContextImpl.java:715)
+
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.ByteChunk.toStringInternal(ByteChunk.java:497)
+        at org.apache.tomcat.util.buf.StringCache.toString(StringCache.java:219)
+        at org.apache.tomcat.util.buf.ByteChunk.toString(ByteChunk.java:492)
+        at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:166)
+        at org.apache.coyote.RequestInfo.updateCounters(RequestInfo.java:167)
+        at org.apache.coyote.Request.updateCounters(Request.java:566)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1153)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1533740994 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.buf.ByteChunk.charset: {{{
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.ByteChunk.toStringInternal(ByteChunk.java:497)
+        at org.apache.tomcat.util.buf.StringCache.toString(StringCache.java:219)
+        at org.apache.tomcat.util.buf.ByteChunk.toString(ByteChunk.java:492)
+        at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:166)
+        at org.apache.coyote.RequestInfo.updateCounters(RequestInfo.java:167)
+        at org.apache.coyote.Request.updateCounters(Request.java:566)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1153)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1533740994 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 35 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.ByteChunk.toStringInternal(ByteChunk.java:502)
+        at org.apache.tomcat.util.buf.StringCache.toString(StringCache.java:219)
+        at org.apache.tomcat.util.buf.ByteChunk.toString(ByteChunk.java:492)
+        at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:166)
+        at org.apache.catalina.connector.Request.getRequestURI(Request.java:2177)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:202)
+        - locked Monitor@579862135 at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:192)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:187)
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet$1.run(TestAsyncContextImpl.java:710)
+    35 is created by 
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet.doGet(TestAsyncContextImpl.java:715)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.buf.MessageBytes.hasStrValue: {{{
+    Concurrent Read in thread 35 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:156)
+        at org.apache.catalina.connector.Request.getRequestURI(Request.java:2177)
+        at org.apache.catalina.connector.Request.getContextPath(Request.java:1917)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:203)
+        - locked Monitor@579862135 at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:192)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:187)
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet$1.run(TestAsyncContextImpl.java:710)
+    35 is created by 
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet.doGet(TestAsyncContextImpl.java:715)
+
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:167)
+        at org.apache.coyote.RequestInfo.updateCounters(RequestInfo.java:167)
+        at org.apache.coyote.Request.updateCounters(Request.java:566)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1153)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1533740994 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.buf.MessageBytes.hasStrValue: {{{
+    Concurrent Write in thread 35 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:167)
+        at org.apache.catalina.connector.Request.getRequestURI(Request.java:2177)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:202)
+        - locked Monitor@579862135 at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:192)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:187)
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet$1.run(TestAsyncContextImpl.java:710)
+    35 is created by 
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet.doGet(TestAsyncContextImpl.java:715)
+
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:167)
+        at org.apache.coyote.RequestInfo.updateCounters(RequestInfo.java:167)
+        at org.apache.coyote.Request.updateCounters(Request.java:566)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1153)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1533740994 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.buf.MessageBytes.strValue: {{{
+    Concurrent Read in thread 35 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:157)
+        at org.apache.catalina.connector.Request.getRequestURI(Request.java:2177)
+        at org.apache.catalina.connector.Request.getContextPath(Request.java:1917)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:203)
+        - locked Monitor@579862135 at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:192)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:187)
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet$1.run(TestAsyncContextImpl.java:710)
+    35 is created by 
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet.doGet(TestAsyncContextImpl.java:715)
+
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:166)
+        at org.apache.coyote.RequestInfo.updateCounters(RequestInfo.java:167)
+        at org.apache.coyote.Request.updateCounters(Request.java:566)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1153)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1533740994 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.buf.MessageBytes.strValue: {{{
+    Concurrent Write in thread 35 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:166)
+        at org.apache.catalina.connector.Request.getRequestURI(Request.java:2177)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:202)
+        - locked Monitor@579862135 at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:192)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:187)
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet$1.run(TestAsyncContextImpl.java:710)
+    35 is created by 
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet.doGet(TestAsyncContextImpl.java:715)
+
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:166)
+        at org.apache.coyote.RequestInfo.updateCounters(RequestInfo.java:167)
+        at org.apache.coyote.Request.updateCounters(Request.java:566)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1153)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1533740994 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.buf.MessageBytes.strValue: {{{
+    Concurrent Write in thread 34 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:166)
+        at org.apache.coyote.RequestInfo.updateCounters(RequestInfo.java:167)
+        at org.apache.coyote.Request.updateCounters(Request.java:566)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1153)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1533740994 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    34 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 35 (locks held: {})
+ ---->  at org.apache.tomcat.util.buf.MessageBytes.toString(MessageBytes.java:168)
+        at org.apache.catalina.connector.Request.getRequestURI(Request.java:2177)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:202)
+        - locked Monitor@579862135 at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:192)
+        at org.apache.catalina.core.AsyncContextImpl.dispatch(AsyncContextImpl.java:187)
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet$1.run(TestAsyncContextImpl.java:710)
+    35 is created by 
+        at org.apache.catalina.core.TestAsyncContextImpl$DispatchingServlet.doGet(TestAsyncContextImpl.java:715)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.http.HttpMessages.st_200: {{{
+    Concurrent Read in thread 45 (locks held: {})
+ ---->  at org.apache.tomcat.util.http.HttpMessages.getMessage(HttpMessages.java:72)
+        at org.apache.coyote.http11.Http11Nio2Processor.<init>(Http11Nio2Processor.java:71)
+        at org.apache.coyote.http11.Http11Nio2Protocol$Http11ConnectionHandler.createProcessor(Http11Nio2Protocol.java:233)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    45 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 48 (locks held: {})
+ ---->  at org.apache.tomcat.util.http.HttpMessages.getMessage(HttpMessages.java:73)
+        at org.apache.coyote.http11.AbstractOutputBuffer.<init>(AbstractOutputBuffer.java:134)
+        at org.apache.coyote.http11.Http11Nio2Processor.<init>(Http11Nio2Processor.java:71)
+        at org.apache.coyote.http11.Http11Nio2Protocol$Http11ConnectionHandler.createProcessor(Http11Nio2Protocol.java:233)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1935195107 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    48 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.http.HttpMessages.st_200: {{{
+    Concurrent Write in thread 42 (locks held: {})
+ ---->  at org.apache.tomcat.util.http.HttpMessages.getMessage(HttpMessages.java:73)
+        at org.apache.coyote.http11.AbstractOutputBuffer.<init>(AbstractOutputBuffer.java:134)
+        at org.apache.coyote.http11.Http11Processor.<init>(Http11Processor.java:60)
+        at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.createProcessor(Http11Protocol.java:171)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+        - locked Monitor@1591252264 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    42 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 43 (locks held: {})
+ ---->  at org.apache.tomcat.util.http.HttpMessages.getMessage(HttpMessages.java:73)
+        at org.apache.coyote.http11.AbstractOutputBuffer.<init>(AbstractOutputBuffer.java:134)
+        at org.apache.coyote.http11.Http11Processor.<init>(Http11Processor.java:60)
+        at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.createProcessor(Http11Protocol.java:171)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+        - locked Monitor@1896715767 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    43 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.http.HttpMessages.st_200: {{{
+    Concurrent Write in thread 48 (locks held: {})
+ ---->  at org.apache.tomcat.util.http.HttpMessages.getMessage(HttpMessages.java:73)
+        at org.apache.coyote.http11.AbstractOutputBuffer.<init>(AbstractOutputBuffer.java:134)
+        at org.apache.coyote.http11.Http11Nio2Processor.<init>(Http11Nio2Processor.java:71)
+        at org.apache.coyote.http11.Http11Nio2Protocol$Http11ConnectionHandler.createProcessor(Http11Nio2Protocol.java:233)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1935195107 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    48 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 45 (locks held: {})
+ ---->  at org.apache.tomcat.util.http.HttpMessages.getMessage(HttpMessages.java:75)
+        at org.apache.coyote.http11.AbstractOutputBuffer.<init>(AbstractOutputBuffer.java:134)
+        at org.apache.coyote.http11.Http11Nio2Processor.<init>(Http11Nio2Processor.java:71)
+        at org.apache.coyote.http11.Http11Nio2Protocol$Http11ConnectionHandler.createProcessor(Http11Nio2Protocol.java:233)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1074)
+        at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1033)
+        - locked Monitor@1832227837 at org.apache.tomcat.util.net.Nio2Endpoint$SocketProcessor.run(Nio2Endpoint.java:1032)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    45 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.net.AbstractEndpoint.executor: {{{
+    Concurrent Read in thread 58 (locks held: {})
+ ---->  at org.apache.tomcat.util.net.AbstractEndpoint.getExecutor(AbstractEndpoint.java:288)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:297)
+        - locked Monitor@775519875 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    58 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tomcat.util.net.AbstractEndpoint.shutdownExecutor(AbstractEndpoint.java:598)
+        at org.apache.tomcat.util.net.JIoEndpoint.stopInternal(JIoEndpoint.java:417)
+        at org.apache.tomcat.util.net.AbstractEndpoint.stop(AbstractEndpoint.java:809)
+        at org.apache.coyote.AbstractProtocol.stop(AbstractProtocol.java:516)
+        at org.apache.catalina.connector.Connector.stopInternal(Connector.java:1011)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1003920374 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:516)
+        - locked Monitor@1835812725 at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:506)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1192027879 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:790)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@413570014 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:347)
+        at org.apache.catalina.startup.TomcatBaseTest.tearDown(TomcatBaseTest.java:212)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.tomcat.util.net.NioEndpoint$Poller.nextExpiration: {{{
+    Concurrent Write in thread 60 (locks held: {})
+ ---->  at org.apache.tomcat.util.net.NioEndpoint$Poller.add(NioEndpoint.java:898)
+        at org.apache.tomcat.util.net.NioEndpoint.processSocket(NioEndpoint.java:609)
+        at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:850)
+        at org.apache.coyote.Request.action(Request.java:378)
+        at org.apache.catalina.core.AsyncContextImpl.complete(AsyncContextImpl.java:95)
+        at org.apache.catalina.core.TestAsyncContextImpl$AsyncStartRunnable$1.run(TestAsyncContextImpl.java:1093)
+        at org.apache.catalina.core.AsyncContextImpl$RunnableWrapper.run(AsyncContextImpl.java:562)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    60 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 56 (locks held: {})
+ ---->  at org.apache.tomcat.util.net.NioEndpoint$Poller.timeout(NioEndpoint.java:1275)
+        at org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:1092)
+    56 is created by 
+        at org.apache.tomcat.util.net.NioEndpoint.startInternal(NioEndpoint.java:426)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.net.NioEndpoint$Poller.nextExpiration: {{{
+    Concurrent Write in thread 60 (locks held: {})
+ ---->  at org.apache.tomcat.util.net.NioEndpoint$Poller.add(NioEndpoint.java:898)
+        at org.apache.tomcat.util.net.NioEndpoint.processSocket(NioEndpoint.java:609)
+        at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:850)
+        at org.apache.coyote.Request.action(Request.java:378)
+        at org.apache.catalina.core.AsyncContextImpl.complete(AsyncContextImpl.java:95)
+        at org.apache.catalina.core.TestAsyncContextImpl$AsyncStartRunnable$1.run(TestAsyncContextImpl.java:1093)
+        at org.apache.catalina.core.AsyncContextImpl$RunnableWrapper.run(AsyncContextImpl.java:562)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    60 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Read in thread 56 (locks held: {})
+ ---->  at org.apache.tomcat.util.net.NioEndpoint$Poller.timeout(NioEndpoint.java:1337)
+        at org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:1092)
+    56 is created by 
+        at org.apache.tomcat.util.net.NioEndpoint.startInternal(NioEndpoint.java:426)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.net.NioEndpoint$Poller.nextExpiration: {{{
+    Concurrent Write in thread 60 (locks held: {})
+ ---->  at org.apache.tomcat.util.net.NioEndpoint$Poller.add(NioEndpoint.java:898)
+        at org.apache.tomcat.util.net.NioEndpoint.processSocket(NioEndpoint.java:609)
+        at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:850)
+        at org.apache.coyote.Request.action(Request.java:378)
+        at org.apache.catalina.core.AsyncContextImpl.complete(AsyncContextImpl.java:95)
+        at org.apache.catalina.core.TestAsyncContextImpl$AsyncStartRunnable$1.run(TestAsyncContextImpl.java:1093)
+        at org.apache.catalina.core.AsyncContextImpl$RunnableWrapper.run(AsyncContextImpl.java:562)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    60 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 56 (locks held: {})
+ ---->  at org.apache.tomcat.util.net.NioEndpoint$Poller.timeout(NioEndpoint.java:1339)
+        at org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:1092)
+    56 is created by 
+        at org.apache.tomcat.util.net.NioEndpoint.startInternal(NioEndpoint.java:426)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.threads.TaskQueue.parent: {{{
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tomcat.util.threads.TaskQueue.setParent(TaskQueue.java:54)
+        at org.apache.tomcat.util.net.AbstractEndpoint.shutdownExecutor(AbstractEndpoint.java:596)
+        at org.apache.tomcat.util.net.JIoEndpoint.stopInternal(JIoEndpoint.java:417)
+        at org.apache.tomcat.util.net.AbstractEndpoint.stop(AbstractEndpoint.java:809)
+        at org.apache.coyote.AbstractProtocol.stop(AbstractProtocol.java:516)
+        at org.apache.catalina.connector.Connector.stopInternal(Connector.java:1011)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1003920374 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:516)
+        - locked Monitor@1835812725 at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:506)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1192027879 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:790)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@413570014 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:347)
+        at org.apache.catalina.startup.TomcatBaseTest.tearDown(TomcatBaseTest.java:212)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+    Concurrent Read in thread 58 (locks held: {})
+ ---->  at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:96)
+        at org.apache.tomcat.util.threads.ThreadPoolExecutor.afterExecute(ThreadPoolExecutor.java:94)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    58 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.util.threads.TaskQueue.parent: {{{
+    Concurrent Read in thread 58 (locks held: {})
+ ---->  at org.apache.tomcat.util.threads.TaskQueue.force(TaskQueue.java:63)
+        at org.apache.tomcat.util.threads.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:141)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:306)
+        - locked Monitor@775519875 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    58 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tomcat.util.threads.TaskQueue.setParent(TaskQueue.java:54)
+        at org.apache.tomcat.util.net.AbstractEndpoint.shutdownExecutor(AbstractEndpoint.java:596)
+        at org.apache.tomcat.util.net.JIoEndpoint.stopInternal(JIoEndpoint.java:417)
+        at org.apache.tomcat.util.net.AbstractEndpoint.stop(AbstractEndpoint.java:809)
+        at org.apache.coyote.AbstractProtocol.stop(AbstractProtocol.java:516)
+        at org.apache.catalina.connector.Connector.stopInternal(Connector.java:1011)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1003920374 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:516)
+        - locked Monitor@1835812725 at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:506)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1192027879 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:790)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@413570014 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:347)
+        at org.apache.catalina.startup.TomcatBaseTest.tearDown(TomcatBaseTest.java:212)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.tomcat.util.threads.TaskQueue.parent: {{{
+    Concurrent Read in thread 58 (locks held: {})
+ ---->  at org.apache.tomcat.util.threads.TaskQueue.offer(TaskQueue.java:70)
+        at org.apache.tomcat.util.threads.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:161)
+        at org.apache.tomcat.util.threads.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:141)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:306)
+        - locked Monitor@775519875 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    58 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tomcat.util.threads.TaskQueue.setParent(TaskQueue.java:54)
+        at org.apache.tomcat.util.net.AbstractEndpoint.shutdownExecutor(AbstractEndpoint.java:596)
+        at org.apache.tomcat.util.net.JIoEndpoint.stopInternal(JIoEndpoint.java:417)
+        at org.apache.tomcat.util.net.AbstractEndpoint.stop(AbstractEndpoint.java:809)
+        at org.apache.coyote.AbstractProtocol.stop(AbstractProtocol.java:516)
+        at org.apache.catalina.connector.Connector.stopInternal(Connector.java:1011)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1003920374 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:516)
+        - locked Monitor@1835812725 at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:506)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1192027879 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:790)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@413570014 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:347)
+        at org.apache.catalina.startup.TomcatBaseTest.tearDown(TomcatBaseTest.java:212)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.tomcat.util.threads.TaskQueue.parent: {{{
+    Concurrent Read in thread 58 (locks held: {})
+ ---->  at org.apache.tomcat.util.threads.TaskQueue.offer(TaskQueue.java:72)
+        at org.apache.tomcat.util.threads.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:161)
+        at org.apache.tomcat.util.threads.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:141)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:306)
+        - locked Monitor@775519875 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    58 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tomcat.util.threads.TaskQueue.setParent(TaskQueue.java:54)
+        at org.apache.tomcat.util.net.AbstractEndpoint.shutdownExecutor(AbstractEndpoint.java:596)
+        at org.apache.tomcat.util.net.JIoEndpoint.stopInternal(JIoEndpoint.java:417)
+        at org.apache.tomcat.util.net.AbstractEndpoint.stop(AbstractEndpoint.java:809)
+        at org.apache.coyote.AbstractProtocol.stop(AbstractProtocol.java:516)
+        at org.apache.catalina.connector.Connector.stopInternal(Connector.java:1011)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1003920374 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:516)
+        - locked Monitor@1835812725 at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:506)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1192027879 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:790)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@413570014 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:347)
+        at org.apache.catalina.startup.TomcatBaseTest.tearDown(TomcatBaseTest.java:212)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.tomcat.util.threads.TaskQueue.parent: {{{
+    Concurrent Read in thread 58 (locks held: {})
+ ---->  at org.apache.tomcat.util.threads.TaskQueue.offer(TaskQueue.java:74)
+        at org.apache.tomcat.util.threads.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:161)
+        at org.apache.tomcat.util.threads.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:141)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:306)
+        - locked Monitor@775519875 at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:259)
+        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    58 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tomcat.util.threads.TaskQueue.setParent(TaskQueue.java:54)
+        at org.apache.tomcat.util.net.AbstractEndpoint.shutdownExecutor(AbstractEndpoint.java:596)
+        at org.apache.tomcat.util.net.JIoEndpoint.stopInternal(JIoEndpoint.java:417)
+        at org.apache.tomcat.util.net.AbstractEndpoint.stop(AbstractEndpoint.java:809)
+        at org.apache.coyote.AbstractProtocol.stop(AbstractProtocol.java:516)
+        at org.apache.catalina.connector.Connector.stopInternal(Connector.java:1011)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1003920374 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:516)
+        - locked Monitor@1835812725 at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:506)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@1192027879 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:790)
+        at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+        - locked Monitor@413570014 at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:n/a)
+        at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:347)
+        at org.apache.catalina.startup.TomcatBaseTest.tearDown(TomcatBaseTest.java:212)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.tomcat.websocket.WsFrameClient.response: {{{
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsFrameClient.<init>(WsFrameClient.java:45)
+        at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:379)
+        at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:169)
+        at org.apache.tomcat.websocket.pojo.TestPojoEndpointBase.testBug54716(TestPojoEndpointBase.java:70)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+    Concurrent Read in thread 36 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsFrameClient.access$200(WsFrameClient.java:31)
+        at org.apache.tomcat.websocket.WsFrameClient$WsFrameClientCompletionHandler.completed(WsFrameClient.java:123)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+    36 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.websocket.WsFrameClient.response: {{{
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsFrameClient.<init>(WsFrameClient.java:45)
+        at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:379)
+        at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:169)
+        at org.apache.tomcat.websocket.pojo.TestPojoEndpointBase.testBug54716(TestPojoEndpointBase.java:70)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+    Concurrent Read in thread 36 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsFrameClient.processSocketRead(WsFrameClient.java:62)
+        at org.apache.tomcat.websocket.WsFrameClient.access$300(WsFrameClient.java:31)
+        at org.apache.tomcat.websocket.WsFrameClient$WsFrameClientCompletionHandler.completed(WsFrameClient.java:125)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+    36 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.websocket.WsFrameClient.response: {{{
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsFrameClient.<init>(WsFrameClient.java:45)
+        at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:379)
+        at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:169)
+        at org.apache.tomcat.websocket.pojo.TestPojoEndpointBase.testBug54716(TestPojoEndpointBase.java:70)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+    Concurrent Read in thread 36 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsFrameClient.processSocketRead(WsFrameClient.java:63)
+        at org.apache.tomcat.websocket.WsFrameClient.access$300(WsFrameClient.java:31)
+        at org.apache.tomcat.websocket.WsFrameClient$WsFrameClientCompletionHandler.completed(WsFrameClient.java:125)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+    36 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.websocket.WsRemoteEndpointImplBase.transformation: {{{
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.setTransformation(WsRemoteEndpointImplBase.java:91)
+        at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:383)
+        at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:169)
+        at org.apache.tomcat.websocket.pojo.TestPojoEndpointBase.testBug54716(TestPojoEndpointBase.java:70)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+        at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+        at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+    1 is the main thread
+
+    Concurrent Read in thread 36 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.startMessage(WsRemoteEndpointImplBase.java:297)
+        at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.startMessageBlock(WsRemoteEndpointImplBase.java:270)
+        at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:570)
+        at org.apache.tomcat.websocket.WsSession.onClose(WsSession.java:510)
+        - locked Monitor@857519963 at org.apache.tomcat.websocket.WsSession.onClose(WsSession.java:502)
+        at org.apache.tomcat.websocket.WsFrameBase.processDataControl(WsFrameBase.java:342)
+        at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+        at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+        at org.apache.tomcat.websocket.WsFrameClient.processSocketRead(WsFrameClient.java:73)
+        at org.apache.tomcat.websocket.WsFrameClient.access$300(WsFrameClient.java:31)
+        at org.apache.tomcat.websocket.WsFrameClient$WsFrameClientCompletionHandler.completed(WsFrameClient.java:125)
+        at org.apache.tomcat.websocket.AsyncChannelWrapperNonSecure.read(AsyncChannelWrapperNonSecure.java:52)
+        at org.apache.tomcat.websocket.WsFrameClient.processSocketRead(WsFrameClient.java:79)
+        at org.apache.tomcat.websocket.WsFrameClient.access$300(WsFrameClient.java:31)
+        at org.apache.tomcat.websocket.WsFrameClient$WsFrameClientCompletionHandler.completed(WsFrameClient.java:125)
+        at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+    36 is created by 
+        at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:1028)
+
+}}} 
+
+Data race on field org.apache.tomcat.websocket.WsWebSocketContainer.backgroundProcessCount: {{{
+    Concurrent Write in thread 36 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsWebSocketContainer.backgroundProcess(WsWebSocketContainer.java:862)
+        at org.apache.tomcat.websocket.BackgroundProcessManager.process(BackgroundProcessManager.java:91)
+        at org.apache.tomcat.websocket.BackgroundProcessManager.access$000(BackgroundProcessManager.java:32)
+        at org.apache.tomcat.websocket.BackgroundProcessManager$WsBackgroundThread.run(BackgroundProcessManager.java:119)
+    36 is created by 
+        at org.apache.tomcat.websocket.BackgroundProcessManager.register(BackgroundProcessManager.java:66)
+
+    Concurrent Read in thread 52 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsWebSocketContainer.backgroundProcess(WsWebSocketContainer.java:862)
+        at org.apache.tomcat.websocket.BackgroundProcessManager.process(BackgroundProcessManager.java:91)
+        at org.apache.tomcat.websocket.BackgroundProcessManager.access$000(BackgroundProcessManager.java:32)
+        at org.apache.tomcat.websocket.BackgroundProcessManager$WsBackgroundThread.run(BackgroundProcessManager.java:119)
+    52 is created by 
+        at org.apache.tomcat.websocket.BackgroundProcessManager.register(BackgroundProcessManager.java:66)
+
+}}} 
+
+Data race on field org.apache.tomcat.websocket.WsWebSocketContainer.backgroundProcessCount: {{{
+    Concurrent Write in thread 52 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsWebSocketContainer.backgroundProcess(WsWebSocketContainer.java:862)
+        at org.apache.tomcat.websocket.BackgroundProcessManager.process(BackgroundProcessManager.java:91)
+        at org.apache.tomcat.websocket.BackgroundProcessManager.access$000(BackgroundProcessManager.java:32)
+        at org.apache.tomcat.websocket.BackgroundProcessManager$WsBackgroundThread.run(BackgroundProcessManager.java:119)
+    52 is created by 
+        at org.apache.tomcat.websocket.BackgroundProcessManager.register(BackgroundProcessManager.java:66)
+
+    Concurrent Read in thread 36 (locks held: {})
+ ---->  at org.apache.tomcat.websocket.WsWebSocketContainer.backgroundProcess(WsWebSocketContainer.java:863)
+        at org.apache.tomcat.websocket.BackgroundProcessManager.process(BackgroundProcessManager.java:91)
+        at org.apache.tomcat.websocket.BackgroundProcessManager.access$000(BackgroundProcessManager.java:32)
+        at org.apache.tomcat.websocket.BackgroundProcessManager$WsBackgroundThread.run(BackgroundProcessManager.java:119)
+    36 is created by 
+        at org.apache.tomcat.websocket.BackgroundProcessManager.register(BackgroundProcessManager.java:66)
+
+}}} 
+
+Data race on field org.apache.tools.ant.taskdefs.StreamPumper$PostStopHandle.inPostStopTasks: {{{
+    Concurrent Write in thread 29 (locks held: {})
+ ---->  at org.apache.tools.ant.taskdefs.StreamPumper$PostStopHandle.access$102(StreamPumper.java:285)
+        at org.apache.tools.ant.taskdefs.StreamPumper.doPostStop(StreamPumper.java:275)
+        at org.apache.tools.ant.taskdefs.StreamPumper.run(StreamPumper.java:147)
+    29 is created by 
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.start(PumpStreamHandler.java:166)
+
+    Concurrent Read in thread 1 (locks held: {})
+ ---->  at org.apache.tools.ant.taskdefs.StreamPumper$PostStopHandle.isInPostStopTasks(StreamPumper.java:295)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.finish(PumpStreamHandler.java:199)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.stop(PumpStreamHandler.java:159)
+        at org.apache.tools.ant.taskdefs.Execute.execute(Execute.java:464)
+        at org.apache.tools.ant.taskdefs.ExecTask.runExecute(ExecTask.java:660)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runParallel(ExecuteOn.java:702)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runExec(ExecuteOn.java:474)
+        at org.apache.tools.ant.taskdefs.ExecTask.execute(ExecTask.java:527)
+        at org.apache.tools.ant.taskdefs.Chmod.execute(Chmod.java:186)
+        at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:299)
+        at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:99)
+        at org.apache.tools.ant.Task.perform(Task.java:350)
+        at org.apache.tools.ant.Target.execute(Target.java:449)
+        at org.apache.tools.ant.Target.performTasks(Target.java:470)
+        at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1401)
+        at org.apache.tools.ant.Project.executeTarget(Project.java:1374)
+        at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+        at org.apache.tools.ant.Project.executeTargets(Project.java:1264)
+        at org.apache.tools.ant.Main.runBuild(Main.java:818)
+        at org.apache.tools.ant.Main.startAnt(Main.java:223)
+        at org.apache.tools.ant.launch.Launcher.run(Launcher.java:284)
+        at org.apache.tools.ant.launch.Launcher.main(Launcher.java:101)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.tools.ant.taskdefs.StreamPumper.postStopHandle: {{{
+    Concurrent Read in thread 28 (locks held: {})
+ ---->  at org.apache.tools.ant.taskdefs.StreamPumper.doPostStop(StreamPumper.java:273)
+        at org.apache.tools.ant.taskdefs.StreamPumper.run(StreamPumper.java:147)
+    28 is created by 
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.start(PumpStreamHandler.java:166)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:228)
+        at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:228)
+        - locked Monitor@223186532 at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:n/a)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.finish(PumpStreamHandler.java:197)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.stop(PumpStreamHandler.java:158)
+        at org.apache.tools.ant.taskdefs.Execute.execute(Execute.java:464)
+        at org.apache.tools.ant.taskdefs.ExecTask.runExecute(ExecTask.java:660)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runParallel(ExecuteOn.java:702)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runExec(ExecuteOn.java:474)
+        at org.apache.tools.ant.taskdefs.ExecTask.execute(ExecTask.java:527)
+        at org.apache.tools.ant.taskdefs.Chmod.execute(Chmod.java:186)
+        at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:299)
+        at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:99)
+        at org.apache.tools.ant.Task.perform(Task.java:350)
+        at org.apache.tools.ant.Target.execute(Target.java:449)
+        at org.apache.tools.ant.Target.performTasks(Target.java:470)
+        at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1401)
+        at org.apache.tools.ant.Project.executeTarget(Project.java:1374)
+        at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+        at org.apache.tools.ant.Project.executeTargets(Project.java:1264)
+        at org.apache.tools.ant.Main.runBuild(Main.java:818)
+        at org.apache.tools.ant.Main.startAnt(Main.java:223)
+        at org.apache.tools.ant.launch.Launcher.run(Launcher.java:284)
+        at org.apache.tools.ant.launch.Launcher.main(Launcher.java:101)
+    1 is the main thread
+
+}}} 
+
+Data race on field org.apache.tools.ant.taskdefs.StreamPumper.postStopHandle: {{{
+    Concurrent Read in thread 29 (locks held: {})
+ ---->  at org.apache.tools.ant.taskdefs.StreamPumper.doPostStop(StreamPumper.java:274)
+        at org.apache.tools.ant.taskdefs.StreamPumper.run(StreamPumper.java:147)
+    29 is created by 
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.start(PumpStreamHandler.java:166)
+
+    Concurrent Write in thread 1 (locks held: {})
+ ---->  at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:228)
+        at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:228)
+        - locked Monitor@592005669 at org.apache.tools.ant.taskdefs.StreamPumper.stop(StreamPumper.java:n/a)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.finish(PumpStreamHandler.java:197)
+        at org.apache.tools.ant.taskdefs.PumpStreamHandler.stop(PumpStreamHandler.java:159)
+        at org.apache.tools.ant.taskdefs.Execute.execute(Execute.java:464)
+        at org.apache.tools.ant.taskdefs.ExecTask.runExecute(ExecTask.java:660)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runParallel(ExecuteOn.java:702)
+        at org.apache.tools.ant.taskdefs.ExecuteOn.runExec(ExecuteOn.java:474)
+        at org.apache.tools.ant.taskdefs.ExecTask.execute(ExecTask.java:527)
+        at org.apache.tools.ant.taskdefs.Chmod.execute(Chmod.java:186)
+        at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:299)
+        at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:99)
+        at org.apache.tools.ant.Task.perform(Task.java:350)
+        at org.apache.tools.ant.Target.execute(Target.java:449)
+        at org.apache.tools.ant.Target.performTasks(Target.java:470)
+        at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1401)
+        at org.apache.tools.ant.Project.executeTarget(Project.java:1374)
+        at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+        at org.apache.tools.ant.Project.executeTargets(Project.java:1264)
+        at org.apache.tools.ant.Main.runBuild(Main.java:818)
+        at org.apache.tools.ant.Main.startAnt(Main.java:223)
+        at org.apache.tools.ant.launch.Launcher.run(Launcher.java:284)
+        at org.apache.tools.ant.launch.Launcher.main(Launcher.java:101)
+    1 is the main thread
+
+}}} 
+

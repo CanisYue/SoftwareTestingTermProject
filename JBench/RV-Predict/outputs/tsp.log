@@ -1,6 +1,6 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict404302613762944810
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/tsp
 [RV-Predict] Finished retransforming preloaded classes.
 java.io.FileNotFoundException: ../src/tspfiles/map16c (No such file or directory)
 	at java.io.FileInputStream.open0(Native Method)

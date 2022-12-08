@@ -212,5 +212,6 @@ for line in sys.stdin:
         state = State.initial
 
 oraces = OrderedDict(sorted(races.items()))
+print(len(oraces))
 for race in oraces.values():
     print(race,"\n")

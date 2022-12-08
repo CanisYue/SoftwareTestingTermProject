@@ -1,7 +1,7 @@
 
 ----------------Instrumented execution to record the trace-----------------
-[RV-Predict] Log directory: /tmp/rv-predict4280413430266932129
+[RV-Predict] Log directory: /misc/scratch/sftwtest/SoftwareTestingTermProject/JBench/RV-Predict/test/sor
 [RV-Predict] Finished retransforming preloaded classes.
-Sor-10	7086
+Sor-10	7209
 Exiting. red_sum = 38.702114, black_sum = 38.385063
 No races found.

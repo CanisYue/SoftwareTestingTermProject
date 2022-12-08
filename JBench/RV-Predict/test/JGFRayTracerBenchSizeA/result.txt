@@ -1,0 +1,16 @@
+Data race on array element #0:
+    Write in thread 1
+      > at benchmarks.raytracer.TournamentBarrier.DoBarrier(TournamentBarrier.java:76)
+        at benchmarks.raytracer.RayTracerRunner.run(JGFRayTracerBench.java:165)
+        at benchmarks.raytracer.JGFRayTracerBench.JGFapplication(JGFRayTracerBench.java:66)
+        at benchmarks.raytracer.JGFRayTracerBench.JGFrun(JGFRayTracerBench.java:111)
+        at benchmarks.JGFRayTracerBenchSizeA.main(JGFRayTracerBenchSizeA.java:42)
+    Thread 1 is the main thread
+
+    Read in thread 27
+      > at benchmarks.raytracer.TournamentBarrier.DoBarrier(TournamentBarrier.java:78)
+        at benchmarks.raytracer.RayTracerRunner.run(JGFRayTracerBench.java:165)
+    Thread 27 created by thread 1
+        at benchmarks.raytracer.JGFRayTracerBench.JGFapplication(JGFRayTracerBench.java:62)
+
+
